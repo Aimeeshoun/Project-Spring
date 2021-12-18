@@ -43,4 +43,4 @@ public class SpawnRandomPoints : MonoBehaviour
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
     }
-}ccdd wew 
+}

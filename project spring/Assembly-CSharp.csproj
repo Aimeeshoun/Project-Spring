@@ -47,7 +47,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\SpawnRandomPoints.cs" />
+     <Compile Include="Assets\scripts\SpawnRandomPoints.cs" />
+     <Compile Include="Assets\scripts\SceneLoader.cs" />
+     <Compile Include="Assets\scripts\OnClick.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity 2021.1.20f1/2020.3.25f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -624,8 +626,14 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>C:/Program Files/Unity 2021.1.20f1/2020.3.25f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>C:/Users/Aimul/Documents/school/project spring/Project-Spring/project spring/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/Aimul/Documents/school/project spring/Project-Spring/project spring/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>C:/Users/Aimul/Documents/school/project spring/Project-Spring/project spring/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Notifications">
  <HintPath>C:/Users/Aimul/Documents/school/project spring/Project-Spring/project spring/Library/ScriptAssemblies/Unity.Notifications.dll</HintPath>
