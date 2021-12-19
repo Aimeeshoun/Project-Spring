@@ -2,21 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroy: MonoBehaviour
+public class Destroy : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        //Check to see if the tag on the collider is equal to Enemy
 
-        if (gameObject.tag = "Player")
+
+    public GameObject gamobj;
+
+    public GameObject gamobj2;
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (this.gameObject.tag == "Player")
+
         {
-            if (other.tag == "enemy")
+            if (other.gameObject.tag == "enemy")
             {
-                Destroy(gameObject);
+                Destroy(this.gamobj);
+                Destroy(this.gamobj2);
             }
         }
-                
-       
-        }
     }
+
+
+
 }
