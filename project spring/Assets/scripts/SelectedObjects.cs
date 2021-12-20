@@ -6,40 +6,37 @@ public class SelectedObjects : MonoBehaviour
 
 {
 
+    public GameObject[] myWeaponList2;
 
-    public gameObject weapon1;
-    public gameObject weapon2;
-    public gameObject weapon3;
-    public gameObject weapon4;
-    public gameObject weapon5;
-    public gameObject weapon6;
-    public gameObject weapon7;
-    public gameObject weapon8;
-    public gameObject weapon9;
-    public gameObject weapon10;
-    WeaponList myWAL = new ArrayList();
+    private GameObject currentWeapon;
+    private int index;
+    public GameObject target;
+   
 
 
-    public  void OnStart()
+    public void Start()
 
-    { 
+    {
+       // selectRandomObjects();
+        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        index = Random.Range(0, myWeaponList2.Length);
+        currentWeapon = myWeaponList2[index];
+        currentWeapon = Instantiate(currentWeapon, target.transform.position, target.transform.rotation) as GameObject;
+        currentWeapon.transform.parent = gameObject.transform;
 
-
-        myWAL.Add("weapon1");
-        myWAL.Add("weapon2");
-        myWAL.Add("weapon3");
-        myWAL.Add("weapon4");
-        myWAL.Add("weapon5");
-        myWAL.Add("weapon6");
-        myWAL.Add("weapon7");
-        myWAL.Add("weapon8");
-        myWAL.Add("weapon9");
-        myWAL.Add("weapon10");
+    }
 
 
-    
-        Print(myWAL);
- 
-}
+   // public void selectRandomObjects()
+
+       // {
+       // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        //    index = Random.Range(0, myWeaponList2.Length);
+        //    currentWeapon = myWeaponList2[index];
+     //   currentWeapon = Instantiate(currentWeapon, target.transform.position, target.transform.rotation) as GameObject;
+     //   currentWeapon.transform.parent = gameObject.transform;
+        
+    }
+
 
 
