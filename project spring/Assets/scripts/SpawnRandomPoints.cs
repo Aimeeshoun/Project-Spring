@@ -9,8 +9,8 @@ public class SpawnRandomPoints : MonoBehaviour
     public GameObject[] spawnPoints;
     private GameObject currentPoint;
     private int index;
-    public int spawnAmount = 5;
-    public float spawnRate = 5.0f;
+    public int spawnAmount = 100;
+    public float spawnRate = 10.0f;
     private bool spawning;
 
 
@@ -45,18 +45,27 @@ public class SpawnRandomPoints : MonoBehaviour
     public IEnumerator SpawnMonster()
     {
 
-        index = Random.Range(0, myWeaponList2.Length);
+        selectRandomObjects();
         index = Random.Range(0, spawnPoints.Length);
         currentPoint = spawnPoints[index];
-        currentWeapon = myWeaponList2[index2];
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
+
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
     }
 
+    public void selectRandomObjects()
 
+    {
+        // selectRandomObjects();
+        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        index = Random.Range(0, myWeaponList2.Length);
+        currentWeapon = myWeaponList2[index];
+        
+
+    }
 
 
 
