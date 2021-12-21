@@ -6,7 +6,7 @@ public class CharacterSpawnRandom : MonoBehaviour
 
 {
 
-    public GameObject[] myWeaponList2;
+    public GameObject[] myCharacterList;
     public GameObject[] spawnPoints;
     private GameObject currentPoint;
     private int index;
@@ -22,7 +22,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     private float spawnTime;
 
     private float time;
-    private GameObject currentWeapon;
+    private GameObject currentCharacter;
     private int index2;
 
 
@@ -34,7 +34,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
-        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
+        myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
         SetRandomTime();
         time = 0;
 
@@ -77,9 +77,9 @@ public class CharacterSpawnRandom : MonoBehaviour
         selectRandomObjects();
         index = Random.Range(0, spawnPoints.Length);
         currentPoint = spawnPoints[index];
-        currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
-        currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 3.5f);
+        currentCharacter = Instantiate(currentCharacter, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
+        currentCharacter.transform.parent = gameObject.transform;
+        Destroy(currentCharacter, 3.5f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
@@ -89,9 +89,9 @@ public class CharacterSpawnRandom : MonoBehaviour
 
     {
         // selectRandomObjects();
-        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
-        index = Random.Range(0, myWeaponList2.Length);
-        currentWeapon = myWeaponList2[index];
+        myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
+        index = Random.Range(0, myCharacterList.Length);
+        currentCharacter = myCharacterList[index];
 
 
     }
@@ -105,6 +105,3 @@ public class CharacterSpawnRandom : MonoBehaviour
 }
 
 
-
-
-}
