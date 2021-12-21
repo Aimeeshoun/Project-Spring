@@ -28,9 +28,14 @@ public class SelectedObjects : MonoBehaviour
         currentWeapon.transform.parent = gameObject.transform;
    
 
+        
+
+
+
+
     }
 
-    
+ 
 
 }
 
