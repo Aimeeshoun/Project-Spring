@@ -1,15 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleSystem : MonoBehaviour
-
+public class particleSystem : MonoBehaviour
 {
-    public ParticleSystem particleSystemObj;
+    public ParticleSystem Particles;
+    public float value = 3f;
 
-    public void RunParticleSystem()
+    public void Awake()
+
+
     {
-        particleSystemObj.Emit(100);
-    }
-}
 
+            Particles.Emit(540);
+
+    }
+
+}
