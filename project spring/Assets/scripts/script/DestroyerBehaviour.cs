@@ -6,7 +6,7 @@ public class DestroyerBehaviour : MonoBehaviour
 {
 
 
-{
+
     public IntData modValueObj;
     public bool canSelfDestruct;
     public float holdTime = 2f;

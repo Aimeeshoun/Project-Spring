@@ -5,7 +5,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class ImageController : MonoBehaviour
 {
-	public GameAction imageAction;
+	public GameAction2 imageAction;
 	private Image imageComponent;
 	public FloatData data;
 	private void Start()
