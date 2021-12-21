@@ -6,21 +6,21 @@ public class InstanciatePosition : MonoBehaviour
 {
 
 
-    public ParticleSystem particleSystem;
-    public GameObject gameObject;
-    void Start()
+  
+    public GameObject gameObject2;
+    public GameObject gameObject3;
+    
+    void Update()
     {
+        if (this.gameObject == true)
+            {
+            Instantiate(gameObject2, new Vector2(gameObject3.transform.position.x, gameObject3.transform.position.y), Quaternion.identity);
+        }
+           
         
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void ReplaceCoinWithSys(GameObject gameObject, GameObject particleSystem)
-    {
-        Instantiate(particleSystem, new Vector2(gameObject.transform.position.x, gameObject.transform.position.y), Quaternion.identity);
-        
-    }
+
+  
 }
