@@ -3,5 +3,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class WeaponController : ScriptableObject
 {
-    public WeaponSO currentWeapon;
+    public GameObject currentWeapon;
+  //  public WeaponSO.... 
 }
