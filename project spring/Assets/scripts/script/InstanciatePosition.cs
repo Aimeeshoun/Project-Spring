@@ -12,9 +12,9 @@ public class InstanciatePosition : MonoBehaviour
     
     void Update()
     {
-        if (this.gameObject == true)
+        if (this.gameObject == false)
             {
-            Instantiate(gameObject2, new Vector2(gameObject3.transform.position.x, gameObject3.transform.position.y), Quaternion.identity);
+            Instantiate(gameObject2, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y), Quaternion.identity);
         }
            
         
