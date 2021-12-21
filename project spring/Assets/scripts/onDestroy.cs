@@ -10,7 +10,7 @@ public class onDestroy : MonoBehaviour
     private void OnDestroy()
 
     {
-        DestroyEventt.Invoke();
+        DestroyEvent.Invoke();
     }
 
 }
