@@ -12,9 +12,9 @@ public class SelectedObjects : MonoBehaviour
     private int index;
     public GameObject target;
 
+    public GameObject[] currentSelectedWeapon;
 
 
- 
 
 
     public void Start()
