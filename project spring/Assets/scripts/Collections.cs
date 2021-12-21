@@ -4,43 +4,40 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Collections : ScriptableObject
 {
-    public List<Object> weaponList;
 
-    public List<FloatData> FloatDatas;
+    public GameObject selectedWeaponsList;
 
-    public List<GameObject> GameObjects;
+    public List<GameObject> ActiveWeapons;
+
+    public List<GameObject> RandomWeapons;
 
 
-    public void FindObjectType(Object obj)
+    public void FindObjectType(GameObject obj)
     {
-        foreach (var currentObj in objectList)
+        foreach (var currentObj in RandomWeapons)
         {
-            if (currentObj == obj)
+            if (currentObj == selectedWeaponsList)
             {
-                void OnTriggerEnter(Collider other)
-                {
-                    if (other.gameObject.CompareTag("CharacterRandomObj"))
-                    {
-                        Destroy(other.gameObject);
-                    }
-                }
+                currentObj.tag = "ActiveWeapons";
             }
         }
     }
 
-    public void AddToList(Object obj)
+    public void AddToList(GameObject obj)
     {
-        objectList.Add(obj);
+        ActiveWeapons.Add(obj);
     }
 
-    public void RemoveFromList(Object obj)
+    public void RemoveFromList(GameObject obj)
     {
-        foreach (var currentObj in objectList)
+        foreach (var currentObj in RandomWeapons)
         {
             if (currentObj == obj)
             {
-                objectList.Remove(obj);
+                ActiveWeapons.Remove(obj);
             }
         }
     }
+
+
 }

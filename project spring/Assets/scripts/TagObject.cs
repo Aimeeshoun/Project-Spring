@@ -5,17 +5,18 @@ using UnityEngine;
 public class TagObject : MonoBehaviour
 {
 
-    void Start()
+//    void Start()
 
-        gameObject.tag = "Player";
-    }
+  //      gameObject.tag = "Player";
+  //  }
 
-    private void OnTriggerEnter(Collider other)
-    {
+ //   private void OnTriggerEnter(Collider other)
+   // {
  
-        if (other.tag == "Enemy")
-        {
-            Debug.Log("Triggered by Enemy");
-        }
-    }
-}
+     //   if (other.tag == "Enemy")
+    //    {
+      //      Debug.Log("Triggered by Enemy");
+      //  }
+   // }
+}//
+//

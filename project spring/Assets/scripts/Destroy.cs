@@ -13,13 +13,13 @@ public class Destroy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (this.gameObject.tag == "Player")
+        if (this.gameObject.tag == "Square")
 
         {
-            if (other.gameObject.tag == "enemy")
+            if (other.gameObject.tag == "Test")
             {
-                Destroy(this.gamobj);
-                Destroy(this.gamobj2);
+                Destroy(this.gameObject);
+                Destroy(other.gameObject);
             }
         }
     }
