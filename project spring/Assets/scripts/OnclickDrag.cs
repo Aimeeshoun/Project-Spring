@@ -1,30 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 [RequireComponent(typeof(BoxCollider))]
 public class OnclickDrag : MonoBehaviour
 {
-    private Vector3 screenPoint; private Vector3 offset; private float _lockedYPosition;
+
+
+
+    private Vector3 screenPoint;
+    private Vector3 offset;
+    public bool IsDragable = true;
 
     void OnMouseDown()
     {
-        _lockedYPosition = screenPoint.y;
-        offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-        Cursor.visible = false;
+        if (IsDragable)    // Only do if IsDraggable == true
+        {
+            screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 
+            offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+        }
     }
 
     void OnMouseDrag()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-        curPosition.x = _lockedYPosition;
-        transform.position = curPosition;
+        if (IsDragable)    // Only do if IsDraggable == true
+        {
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
+
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
+            transform.position = curPosition;
+        }
     }
 
-    void OnMouseUp()
-    {
-        Cursor.visible = true;
-    }
+
+
 }
-
