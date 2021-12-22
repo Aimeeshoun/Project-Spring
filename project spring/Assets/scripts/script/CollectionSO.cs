@@ -12,7 +12,11 @@ public class CollectionSO : ScriptableObject
     public string name;
     public string tag;
     
-    
+
+
 
 
 }
+
+
+

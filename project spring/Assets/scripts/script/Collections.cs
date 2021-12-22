@@ -1,43 +1,62 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu]
 public class Collections : ScriptableObject
 {
 
-    public GameObject selectedWeaponsList;
+   
 
-    public List<GameObject> ActiveWeapons;
+    public List<CollectionSO> CollectionSOList;
+    public List<WeaponNUmber> WeaponNumberList;
+    public List<WeaponController> WeaponControllerList;
 
-    public List<GameObject> RandomWeapons;
 
+    public InputField weaponselectTagInput;
+    public InputField weaponTagInput;
+    public InputField characterselectTagInput;
+    public InputField characterTagInput;
 
-    public void FindObjectType(GameObject obj)
+    public bool isSelected;
+
+    private GameObject weapon;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        foreach (var currentObj in RandomWeapons)
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    private void Awake()
+    {
+    
+    }
+
+    public void CompareWeapons(CollectionSO obj)
+    {
+
+        foreach (var CollectionSO in CollectionSOList)
         {
-            if (currentObj == selectedWeaponsList)
+            if (weaponTagInput == weaponselectTagInput)
+
             {
-                currentObj.tag = "ActiveWeapons";
+               
             }
+
         }
-    }
 
-    public void AddToList(GameObject obj)
-    {
-        ActiveWeapons.Add(obj);
-    }
-
-    public void RemoveFromList(GameObject obj)
-    {
-        foreach (var currentObj in RandomWeapons)
-        {
-            if (currentObj == obj)
-            {
-                ActiveWeapons.Remove(obj);
-            }
-        }
     }
 
 
-}
+
+
+ }
+
+
