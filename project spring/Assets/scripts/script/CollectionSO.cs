@@ -11,7 +11,6 @@ public class CollectionSO : ScriptableObject
     public Text nameText;
     public string name;
     public string tag;
-    
 
 
 

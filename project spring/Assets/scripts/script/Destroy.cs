@@ -10,20 +10,36 @@ public class Destroy : MonoBehaviour
 
     public GameObject gamobj2;
 
+    public ID id;
+    public ID id2;
+
+
+    public GameObject[] myList;
+
 
     void OnTriggerEnter(Collider other)
     {
-        if (this.gameObject.tag == "Square")
 
+        id = gamobj.GetComponent<ID>();
+        id2 = gamobj2.GetComponent<ID>();
+        SelectedObjects currentSelectedWeapon = GetComponent<SelectedObjects>();
+        //  currentWeap = currentSelectedWeapon.currentSelectedWeapon;
+
+        foreach (var i in myList)
         {
-            if (other.gameObject.tag == "Test")
+            if (i == true)
             {
-                Destroy(this.gameObject);
-                Destroy(other.gameObject);
+
+
+                //     if (currentWeap ==  )
+                {
+                    Destroy(this.gameObject);
+                    Destroy(other.gameObject);
+                }
             }
         }
+
+
+
     }
-
-
-
 }
