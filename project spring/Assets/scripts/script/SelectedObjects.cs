@@ -21,7 +21,7 @@ public class SelectedObjects : MonoBehaviour
 
     {
        // selectRandomObjects();
-        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+       // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
         index = Random.Range(0, myWeaponList2.Length);
         currentWeapon = myWeaponList2[index];
         currentWeapon = Instantiate(currentWeapon, target.transform.position, target.transform.rotation) as GameObject;

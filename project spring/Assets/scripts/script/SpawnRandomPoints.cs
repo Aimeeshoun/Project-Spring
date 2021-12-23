@@ -33,7 +33,7 @@ public class SpawnRandomPoints : MonoBehaviour
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
-        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
+        //myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         SetRandomTime();
         time = 0;
 

@@ -34,7 +34,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
-        myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
+       // myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
         SetRandomTime();
         time = 0;
 
