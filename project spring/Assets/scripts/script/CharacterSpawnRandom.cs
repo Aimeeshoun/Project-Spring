@@ -22,7 +22,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     private float spawnTime;
 
     private float time;
-    private GameObject currentCharacter;
+    public GameObject currentCharacter;
     private int index2;
 
 
@@ -43,6 +43,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
 
 
         time += Time.deltaTime;

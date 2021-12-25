@@ -7,7 +7,7 @@ public class SpawnRandomPoints : MonoBehaviour
 
     public GameObject[] myWeaponList2;
     public GameObject[] spawnPoints;
-    private GameObject currentPoint;
+    public GameObject currentPoint;
     private int index;
     public int spawnAmount;
     public float spawnRate;
@@ -21,7 +21,7 @@ public class SpawnRandomPoints : MonoBehaviour
     private float spawnTime;
 
     private float time;
-    private GameObject currentWeapon;
+    public GameObject currentWeapon;
     private int index2;
 
 

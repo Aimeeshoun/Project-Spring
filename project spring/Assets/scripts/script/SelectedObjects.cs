@@ -8,7 +8,7 @@ public class SelectedObjects : MonoBehaviour
 
     public GameObject[] myWeaponList2;
 
-    private GameObject currentWeapon;
+    public GameObject currentWeapon;
     private int index;
     public GameObject target;
 
