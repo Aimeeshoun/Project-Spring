@@ -16,7 +16,7 @@ public class GetComponents : MonoBehaviour
     // Update is called once per frame
     void Awake()
     {
-        _selectedObjects = GetComponent<SelectedObjects>();
+        _selectedObjects = otherGameObject.GetComponent<SelectedObjects>();
         _spawnRandomPoints = otherGameObject.GetComponent<SpawnRandomPoints>();
         _characterSpawnRandom = otherGameObject.GetComponent<CharacterSpawnRandom>();
         _selectedChar = otherGameObject.GetComponent<SelectedChar>();

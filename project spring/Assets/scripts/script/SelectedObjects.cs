@@ -28,8 +28,7 @@ public class SelectedObjects : MonoBehaviour
         currentWeapon.transform.parent = gameObject.transform;
         currentWeapon.tag = "currentweapon";
 
-        currentWeapon = currentSelectedWeapon[index];
-
+      
 
 
 
