@@ -3352,8 +3352,8 @@ GameObject:
   - component: {fileID: 273291801}
   - component: {fileID: 273291804}
   - component: {fileID: 273291807}
-  - component: {fileID: 273291808}
   - component: {fileID: 273291809}
+  - component: {fileID: 273291808}
   m_Layer: 0
   m_Name: norwhale r s
   m_TagString: CharacterRandomObj
@@ -3484,7 +3484,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -3501,6 +3513,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: cb0d41acdbed02045b9386782b33de3b, type: 2}
+--- !u!1 &275616190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275616192}
+  - component: {fileID: 275616191}
+  m_Layer: 0
+  m_Name: compare objects test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &275616191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275616190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c5a6800a8a1a6449c843f2f7225ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherGameObject: {fileID: 0}
+  _selectedObjects: {fileID: 0}
+  _spawnRandomPoints: {fileID: 0}
+  _otherBoxcol: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  _selectedChar: {fileID: 0}
+  _otherGameObj: {fileID: 0}
+--- !u!4 &275616192
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275616190}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1290437220}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281552823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,10 +3578,10 @@ GameObject:
   - component: {fileID: 281552828}
   - component: {fileID: 281552825}
   - component: {fileID: 281552829}
-  - component: {fileID: 281552832}
   - component: {fileID: 281552833}
   - component: {fileID: 281552834}
   - component: {fileID: 281552831}
+  - component: {fileID: 281552832}
   m_Layer: 0
   m_Name: pony r s
   m_TagString: CharacterRandomObj
@@ -3661,7 +3723,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4401,6 +4475,7 @@ GameObject:
   - component: {fileID: 356437288}
   - component: {fileID: 356437293}
   - component: {fileID: 356437291}
+  - component: {fileID: 356437298}
   - component: {fileID: 356437290}
   - component: {fileID: 356437289}
   - component: {fileID: 356437292}
@@ -4526,7 +4601,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -4570,6 +4657,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &356437298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356437287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c5a6800a8a1a6449c843f2f7225ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  otherGameObject: {fileID: 0}
+  _selectedObjects: {fileID: 0}
+  _spawnRandomPoints: {fileID: 0}
+  _otherBoxcol: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  _selectedChar: {fileID: 0}
+  _otherGameObj: {fileID: 0}
 --- !u!1 &363868258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7767,8 +7873,8 @@ GameObject:
   - component: {fileID: 668369800}
   - component: {fileID: 668369799}
   - component: {fileID: 668369798}
-  - component: {fileID: 668369797}
   - component: {fileID: 668369796}
+  - component: {fileID: 668369797}
   m_Layer: 0
   m_Name: skull r s
   m_TagString: CharacterRandomObj
@@ -7818,7 +7924,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10222,8 +10340,8 @@ GameObject:
   - component: {fileID: 912167602}
   - component: {fileID: 912167605}
   - component: {fileID: 912167608}
-  - component: {fileID: 912167609}
   - component: {fileID: 912167610}
+  - component: {fileID: 912167609}
   m_Layer: 0
   m_Name: octopus r s
   m_TagString: CharacterRandomObj
@@ -10354,7 +10472,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -10583,8 +10713,8 @@ GameObject:
   - component: {fileID: 916458217}
   - component: {fileID: 916458220}
   - component: {fileID: 916458223}
-  - component: {fileID: 916458224}
   - component: {fileID: 916458225}
+  - component: {fileID: 916458224}
   m_Layer: 0
   m_Name: devil r s
   m_TagString: CharacterRandomObj
@@ -10715,7 +10845,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -13578,8 +13720,8 @@ GameObject:
   - component: {fileID: 1232057301}
   - component: {fileID: 1232057304}
   - component: {fileID: 1232057307}
-  - component: {fileID: 1232057308}
   - component: {fileID: 1232057309}
+  - component: {fileID: 1232057308}
   m_Layer: 0
   m_Name: jelly r s
   m_TagString: CharacterRandomObj
@@ -13710,7 +13852,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -14553,6 +14707,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1290437219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1290437220}
+  m_Layer: 0
+  m_Name: compare objects group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1290437220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290437219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 602.90796, y: 405.42737, z: 101.19627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 275616192}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295751805
 GameObject:
   m_ObjectHideFlags: 0
@@ -18143,7 +18328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591782736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 775, y: 0, z: 0}
+  m_LocalPosition: {x: -89.8, y: 0, z: -2.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 342140911}
@@ -19271,8 +19456,8 @@ GameObject:
   - component: {fileID: 1662765442}
   - component: {fileID: 1662765445}
   - component: {fileID: 1662765448}
-  - component: {fileID: 1662765449}
   - component: {fileID: 1662765450}
+  - component: {fileID: 1662765449}
   m_Layer: 0
   m_Name: kitty r s
   m_TagString: CharacterRandomObj
@@ -19403,7 +19588,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -22265,9 +22462,9 @@ GameObject:
   - component: {fileID: 1945293503}
   - component: {fileID: 1945293502}
   - component: {fileID: 1945293505}
-  - component: {fileID: 1945293509}
   - component: {fileID: 1945293510}
   - component: {fileID: 1945293508}
+  - component: {fileID: 1945293509}
   m_Layer: 0
   m_Name: alien r s
   m_TagString: CharacterRandomObj
@@ -22410,7 +22607,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -23040,8 +23249,8 @@ GameObject:
   - component: {fileID: 2002686391}
   - component: {fileID: 2002686394}
   - component: {fileID: 2002686397}
-  - component: {fileID: 2002686398}
   - component: {fileID: 2002686399}
+  - component: {fileID: 2002686398}
   m_Layer: 0
   m_Name: pink pony r s
   m_TagString: CharacterRandomObj
@@ -23172,7 +23381,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerEnterEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 275616191}
+        m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
+        m_MethodName: Awake
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
