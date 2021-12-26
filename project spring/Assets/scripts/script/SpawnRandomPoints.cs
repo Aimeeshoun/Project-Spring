@@ -78,7 +78,7 @@ public class SpawnRandomPoints : MonoBehaviour
         currentPoint = spawnPoints[index];
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 3.5f);
+        Destroy(currentWeapon, 7f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 

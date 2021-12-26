@@ -179,7 +179,7 @@ public class Spawn : MonoBehaviour
         currentPoint2 = spawnPoints[index3];
         currentCharacter = Instantiate(currentCharacter, currentPoint.transform.position, currentPoint2.transform.rotation) as GameObject;
         currentCharacter.transform.parent = gameObject.transform;
-        Destroy(currentCharacter, 3.5f);
+        Destroy(currentCharacter, 7f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 

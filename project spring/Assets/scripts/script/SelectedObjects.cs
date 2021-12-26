@@ -26,7 +26,7 @@ public class SelectedObjects : MonoBehaviour
         currentWeapon = myWeaponList2[index];
         currentWeapon = Instantiate(currentWeapon, target.transform.position, target.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
-        currentWeapon.tag = "currentweapon";
+      
 
       
 

@@ -207,7 +207,7 @@ public class OjectsList : ScriptableObject
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = currentWeapon.transform;
 
-        Destroy(currentWeapon, 3.5f);
+        Destroy(currentWeapon, 5);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
         
@@ -224,7 +224,7 @@ public class OjectsList : ScriptableObject
         currentchar = Instantiate(currentchar, currentPoint2.transform.position, currentPoint2.transform.rotation) as GameObject;
         currentchar.transform.parent = currentchar.transform;
 
-        Destroy(currentWeapon, 3.5f);
+        Destroy(currentWeapon, 5);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 

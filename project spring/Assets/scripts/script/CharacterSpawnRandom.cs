@@ -80,7 +80,7 @@ public class CharacterSpawnRandom : MonoBehaviour
         currentPoint = spawnPoints[index];
         currentCharacter = Instantiate(currentCharacter, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentCharacter.transform.parent = gameObject.transform;
-        Destroy(currentCharacter, 3.5f);
+        Destroy(currentCharacter, 7);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
