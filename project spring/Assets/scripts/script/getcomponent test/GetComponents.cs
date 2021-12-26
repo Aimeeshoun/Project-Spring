@@ -11,7 +11,7 @@ public class GetComponents : MonoBehaviour
     public BoxCollider _otherBoxcol;
     public CharacterSpawnRandom _characterSpawnRandom;
     public SelectedChar _selectedChar;
- 
+
 
     // Update is called once per frame
     void Awake()
@@ -27,13 +27,16 @@ public class GetComponents : MonoBehaviour
     {
         if (_selectedObjects.currentWeapon == _spawnRandomPoints.currentWeapon)
         {
-           if(_characterSpawnRandom.currentCharacter == _selectedChar.currentChar)
-            
-            Destroy(this.gameObject);
-            Destroy(other.gameObject);
+            if (_characterSpawnRandom.currentCharacter == _selectedChar.currentChar)
+            {
+
+                //   Destroy(_selectedObjects.currentWeapon);
+                //   Destroy(_selectedChar.currentChar);
+
+            }
         }
+
+
+
     }
-
-
-
 }

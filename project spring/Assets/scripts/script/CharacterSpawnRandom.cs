@@ -90,7 +90,7 @@ public class CharacterSpawnRandom : MonoBehaviour
 
     {
         // selectRandomObjects();
-        myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
+       // myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
         index = Random.Range(0, myCharacterList.Length);
         currentCharacter = myCharacterList[index];
 
