@@ -748,6 +748,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WeaponRandomObj
       objectReference: {fileID: 0}
+    - target: {fileID: 7564508931207760424, guid: 1c9f00ab53597734484d4b5cc9390afd,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564508931207760426, guid: 1c9f00ab53597734484d4b5cc9390afd,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c9f00ab53597734484d4b5cc9390afd, type: 3}
 --- !u!1 &65781941
@@ -1777,6 +1787,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 7c96ecee61ae4854f989e59565985479, type: 2}
+--- !u!54 &159728513
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159728510}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &159728518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1791,12 +1817,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _otherdholder: {fileID: 0}
   _thisidholder: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
   otherGameObject: {fileID: 0}
   thisGameObject: {fileID: 0}
   _selectedChar: {fileID: 0}
   _selectedObjects: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
+  _selWeap: {fileID: 0}
+  _spawnWeap: {fileID: 0}
+  _spawnChar: {fileID: 0}
+  _selChar: {fileID: 0}
+  _selWeapId: {fileID: 0}
+  _spawnWeapId: {fileID: 0}
+  _spawnCharId: {fileID: 0}
+  _selCharId: {fileID: 0}
+  _selWeapIdObj: {fileID: 0}
+  _spawnWeapIdObj: {fileID: 0}
+  _spawnCharIdObj: {fileID: 0}
+  _selCharIdObj: {fileID: 0}
+  _selWeapIdObjGO: {fileID: 0}
+  _spawnWeapIdObjGO: {fileID: 0}
+  _spawnCharIdObjGO: {fileID: 0}
+  _selCharIdObjGO: {fileID: 0}
+  _selWeapIdObjName: 
+  _spawnWeapIdObjName: 
+  _spawnCharIdObjName: 
+  _selCharIdObjName: 
+  _thisObjName: 
+  _otherObjName: 
+  thisidtag: {fileID: 0}
+  otheridtag: {fileID: 0}
+  selwepidtag: {fileID: 0}
+  selcharidtag: {fileID: 0}
 --- !u!1 &162025890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,6 +2156,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641614235884233596, guid: 328a2baf5ca74684f83c5a2974bc52d1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641614235884233597, guid: 328a2baf5ca74684f83c5a2974bc52d1,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 328a2baf5ca74684f83c5a2974bc52d1, type: 3}
@@ -3387,6 +3451,7 @@ GameObject:
   - component: {fileID: 273291807}
   - component: {fileID: 273291808}
   - component: {fileID: 273291810}
+  - component: {fileID: 273291806}
   m_Layer: 0
   m_Name: norwhale r s
   m_TagString: CharacterRandomObj
@@ -3436,7 +3501,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273291799}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -3475,6 +3540,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!54 &273291806
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273291799}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &273291807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3505,7 +3586,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -3533,56 +3614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 7da5589c2a9faa947bea7bd956c78f42, type: 2}
---- !u!1 &275616190
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 275616192}
-  - component: {fileID: 275616191}
-  m_Layer: 0
-  m_Name: compare objects test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &275616191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275616190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84c5a6800a8a1a6449c843f2f7225ae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherGameObject: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _spawnRandomPoints: {fileID: 0}
-  _otherBoxcol: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _otherGameObj: {fileID: 0}
---- !u!4 &275616192
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275616190}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1290437220}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281552823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3603,6 +3634,7 @@ GameObject:
   - component: {fileID: 281552831}
   - component: {fileID: 281552832}
   - component: {fileID: 281552835}
+  - component: {fileID: 281552836}
   m_Layer: 0
   m_Name: pony r s
   m_TagString: CharacterRandomObj
@@ -3685,7 +3717,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281552823}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -3745,9 +3777,9 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
-        m_MethodName: Awake
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3798,6 +3830,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 0}
+--- !u!54 &281552836
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281552823}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &315888302
 GameObject:
   m_ObjectHideFlags: 0
@@ -4637,7 +4685,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -7152,6 +7200,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1884313937}
     m_Modifications:
+    - target: {fileID: 314178587351718828, guid: a4ab630e43903b24780df3a4599deb28,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 314178587351718864, guid: a4ab630e43903b24780df3a4599deb28,
         type: 3}
       propertyPath: m_RootOrder
@@ -7206,6 +7259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 314178587351718866, guid: a4ab630e43903b24780df3a4599deb28,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 314178587351718871, guid: a4ab630e43903b24780df3a4599deb28,
         type: 3}
@@ -7936,6 +7994,7 @@ GameObject:
   - component: {fileID: 668369798}
   - component: {fileID: 668369797}
   - component: {fileID: 668369804}
+  - component: {fileID: 668369796}
   m_Layer: 0
   m_Name: skull r s
   m_TagString: CharacterRandomObj
@@ -7958,6 +8017,22 @@ Transform:
   m_Father: {fileID: 1561282478}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &668369796
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668369794}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &668369797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7973,7 +8048,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -8011,7 +8086,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668369794}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -8399,6 +8474,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: e50d4dac35406ee43a9a87f21125894a, type: 2}
+--- !u!54 &717134453
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717134450}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1818360609 &717134454
+RotationConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717134450}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_IsContraintActive: 0
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!114 &717134458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8413,12 +8521,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _otherdholder: {fileID: 0}
   _thisidholder: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
   otherGameObject: {fileID: 0}
   thisGameObject: {fileID: 0}
   _selectedChar: {fileID: 0}
   _selectedObjects: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
+  _selWeap: {fileID: 0}
+  _spawnWeap: {fileID: 0}
+  _spawnChar: {fileID: 0}
+  _selChar: {fileID: 0}
+  _selWeapId: {fileID: 0}
+  _spawnWeapId: {fileID: 0}
+  _spawnCharId: {fileID: 0}
+  _selCharId: {fileID: 0}
+  _selWeapIdObj: {fileID: 0}
+  _spawnWeapIdObj: {fileID: 0}
+  _spawnCharIdObj: {fileID: 0}
+  _selCharIdObj: {fileID: 0}
+  _selWeapIdObjGO: {fileID: 0}
+  _spawnWeapIdObjGO: {fileID: 0}
+  _spawnCharIdObjGO: {fileID: 0}
+  _selCharIdObjGO: {fileID: 0}
+  _selWeapIdObjName: 
+  _spawnWeapIdObjName: 
+  _spawnCharIdObjName: 
+  _selCharIdObjName: 
+  _thisObjName: 
+  _otherObjName: 
+  thisidtag: {fileID: 0}
+  otheridtag: {fileID: 0}
+  selwepidtag: {fileID: 0}
+  selcharidtag: {fileID: 0}
 --- !u!1 &718373865
 GameObject:
   m_ObjectHideFlags: 0
@@ -9021,6 +9157,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1884313937}
     m_Modifications:
+    - target: {fileID: 7668639504135365289, guid: ac38bd13cf0c11545aaf015b1bf74d5f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668639504135365291, guid: ac38bd13cf0c11545aaf015b1bf74d5f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7668639504135365294, guid: ac38bd13cf0c11545aaf015b1bf74d5f,
         type: 3}
       propertyPath: m_Name
@@ -9679,6 +9825,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: WeaponRandomObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 3826060996482042199, guid: 70b29028b8d62f14e8080e8149e02576,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70b29028b8d62f14e8080e8149e02576, type: 3}
@@ -10422,6 +10573,7 @@ GameObject:
   - component: {fileID: 912167608}
   - component: {fileID: 912167609}
   - component: {fileID: 912167611}
+  - component: {fileID: 912167607}
   m_Layer: 0
   m_Name: octopus r s
   m_TagString: CharacterRandomObj
@@ -10492,7 +10644,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912167600}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -10510,6 +10662,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!54 &912167607
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912167600}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &912167608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10540,7 +10708,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -10781,6 +10949,7 @@ GameObject:
   - component: {fileID: 916458223}
   - component: {fileID: 916458224}
   - component: {fileID: 916458226}
+  - component: {fileID: 916458221}
   m_Layer: 0
   m_Name: devil r s
   m_TagString: CharacterRandomObj
@@ -10851,11 +11020,27 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 916458215}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &916458221
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916458215}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &916458222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10899,7 +11084,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -11517,6 +11702,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 8b84a7b64c1cb084091d74c3619e86f6, type: 2}
+--- !u!54 &973303585
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973303582}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &978781133
 GameObject:
   m_ObjectHideFlags: 0
@@ -13232,6 +13433,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1884313937}
     m_Modifications:
+    - target: {fileID: 5069515715638322067, guid: 6d0d9af26065f5f4d884cfa7c5d7ddd6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5069515715638322088, guid: 6d0d9af26065f5f4d884cfa7c5d7ddd6,
         type: 3}
       propertyPath: m_Name
@@ -13788,6 +13994,7 @@ GameObject:
   - component: {fileID: 1232057307}
   - component: {fileID: 1232057308}
   - component: {fileID: 1232057310}
+  - component: {fileID: 1232057306}
   m_Layer: 0
   m_Name: jelly r s
   m_TagString: CharacterRandomObj
@@ -13837,7 +14044,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232057299}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -13876,6 +14083,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!54 &1232057306
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232057299}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1232057307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13906,7 +14129,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -14774,37 +14997,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1290437219
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1290437220}
-  m_Layer: 0
-  m_Name: compare objects group
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1290437220
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290437219}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 602.90796, y: 405.42737, z: 101.19627}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 275616192}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295751805
 GameObject:
   m_ObjectHideFlags: 0
@@ -15532,6 +15724,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 4c4f9a47af7902540be2944bd45ee443, type: 2}
+--- !u!54 &1359989949
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359989946}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1359989954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15546,12 +15754,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _otherdholder: {fileID: 0}
   _thisidholder: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
   otherGameObject: {fileID: 0}
   thisGameObject: {fileID: 0}
   _selectedChar: {fileID: 0}
   _selectedObjects: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
+  _selWeap: {fileID: 0}
+  _spawnWeap: {fileID: 0}
+  _spawnChar: {fileID: 0}
+  _selChar: {fileID: 0}
+  _selWeapId: {fileID: 0}
+  _spawnWeapId: {fileID: 0}
+  _spawnCharId: {fileID: 0}
+  _selCharId: {fileID: 0}
+  _selWeapIdObj: {fileID: 0}
+  _spawnWeapIdObj: {fileID: 0}
+  _spawnCharIdObj: {fileID: 0}
+  _selCharIdObj: {fileID: 0}
+  _selWeapIdObjGO: {fileID: 0}
+  _spawnWeapIdObjGO: {fileID: 0}
+  _spawnCharIdObjGO: {fileID: 0}
+  _selCharIdObjGO: {fileID: 0}
+  _selWeapIdObjName: 
+  _spawnWeapIdObjName: 
+  _spawnCharIdObjName: 
+  _selCharIdObjName: 
+  _thisObjName: 
+  _otherObjName: 
+  thisidtag: {fileID: 0}
+  otheridtag: {fileID: 0}
+  selwepidtag: {fileID: 0}
+  selcharidtag: {fileID: 0}
 --- !u!1 &1364770712
 GameObject:
   m_ObjectHideFlags: 0
@@ -16429,6 +16665,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8033867268111699355, guid: 0cc43d54c59c0304580e59f87b206faa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8033867268111699357, guid: 0cc43d54c59c0304580e59f87b206faa,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cc43d54c59c0304580e59f87b206faa, type: 3}
@@ -17730,6 +17976,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 8e7281c7f2b76914fbc07bd6e4b21acb, type: 2}
+--- !u!54 &1548243951
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548243948}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1548243956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17744,12 +18006,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _otherdholder: {fileID: 0}
   _thisidholder: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
   otherGameObject: {fileID: 0}
   thisGameObject: {fileID: 0}
   _selectedChar: {fileID: 0}
   _selectedObjects: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
+  _selWeap: {fileID: 0}
+  _spawnWeap: {fileID: 0}
+  _spawnChar: {fileID: 0}
+  _selChar: {fileID: 0}
+  _selWeapId: {fileID: 0}
+  _spawnWeapId: {fileID: 0}
+  _spawnCharId: {fileID: 0}
+  _selCharId: {fileID: 0}
+  _selWeapIdObj: {fileID: 0}
+  _spawnWeapIdObj: {fileID: 0}
+  _spawnCharIdObj: {fileID: 0}
+  _selCharIdObj: {fileID: 0}
+  _selWeapIdObjGO: {fileID: 0}
+  _spawnWeapIdObjGO: {fileID: 0}
+  _spawnCharIdObjGO: {fileID: 0}
+  _selCharIdObjGO: {fileID: 0}
+  _selWeapIdObjName: 
+  _spawnWeapIdObjName: 
+  _spawnCharIdObjName: 
+  _selCharIdObjName: 
+  _thisObjName: 
+  _otherObjName: 
+  thisidtag: {fileID: 0}
+  otheridtag: {fileID: 0}
+  selwepidtag: {fileID: 0}
+  selcharidtag: {fileID: 0}
 --- !u!1 &1561282477
 GameObject:
   m_ObjectHideFlags: 0
@@ -17850,6 +18140,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: fd485e5c1dfe58349a5aa3037e10e090, type: 2}
+--- !u!54 &1565701690
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565701687}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1565701695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17864,12 +18170,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _otherdholder: {fileID: 0}
   _thisidholder: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
   otherGameObject: {fileID: 0}
   thisGameObject: {fileID: 0}
   _selectedChar: {fileID: 0}
   _selectedObjects: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
+  _selWeap: {fileID: 0}
+  _spawnWeap: {fileID: 0}
+  _spawnChar: {fileID: 0}
+  _selChar: {fileID: 0}
+  _selWeapId: {fileID: 0}
+  _spawnWeapId: {fileID: 0}
+  _spawnCharId: {fileID: 0}
+  _selCharId: {fileID: 0}
+  _selWeapIdObj: {fileID: 0}
+  _spawnWeapIdObj: {fileID: 0}
+  _spawnCharIdObj: {fileID: 0}
+  _selCharIdObj: {fileID: 0}
+  _selWeapIdObjGO: {fileID: 0}
+  _spawnWeapIdObjGO: {fileID: 0}
+  _spawnCharIdObjGO: {fileID: 0}
+  _selCharIdObjGO: {fileID: 0}
+  _selWeapIdObjName: 
+  _spawnWeapIdObjName: 
+  _spawnCharIdObjName: 
+  _selCharIdObjName: 
+  _thisObjName: 
+  _otherObjName: 
+  thisidtag: {fileID: 0}
+  otheridtag: {fileID: 0}
+  selwepidtag: {fileID: 0}
+  selcharidtag: {fileID: 0}
 --- !u!1 &1566683896
 GameObject:
   m_ObjectHideFlags: 0
@@ -18301,6 +18635,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 56a01704e7259594686e94ed519deff9, type: 2}
+--- !u!54 &1571433958
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571433955}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1571433963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18315,12 +18665,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _otherdholder: {fileID: 0}
   _thisidholder: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
   otherGameObject: {fileID: 0}
   thisGameObject: {fileID: 0}
   _selectedChar: {fileID: 0}
   _selectedObjects: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
+  _selWeap: {fileID: 0}
+  _spawnWeap: {fileID: 0}
+  _spawnChar: {fileID: 0}
+  _selChar: {fileID: 0}
+  _selWeapId: {fileID: 0}
+  _spawnWeapId: {fileID: 0}
+  _spawnCharId: {fileID: 0}
+  _selCharId: {fileID: 0}
+  _selWeapIdObj: {fileID: 0}
+  _spawnWeapIdObj: {fileID: 0}
+  _spawnCharIdObj: {fileID: 0}
+  _selCharIdObj: {fileID: 0}
+  _selWeapIdObjGO: {fileID: 0}
+  _spawnWeapIdObjGO: {fileID: 0}
+  _spawnCharIdObjGO: {fileID: 0}
+  _selCharIdObjGO: {fileID: 0}
+  _selWeapIdObjName: 
+  _spawnWeapIdObjName: 
+  _spawnCharIdObjName: 
+  _selCharIdObjName: 
+  _thisObjName: 
+  _otherObjName: 
+  thisidtag: {fileID: 0}
+  otheridtag: {fileID: 0}
+  selwepidtag: {fileID: 0}
+  selcharidtag: {fileID: 0}
 --- !u!1 &1572499427
 GameObject:
   m_ObjectHideFlags: 0
@@ -19103,6 +19481,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 9a229d41c47f99c40a44da56d59d1540, type: 2}
+--- !u!54 &1621129199
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621129196}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1621129206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621129196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb465b501a9c474cab8025f78d91299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1631868474
 GameObject:
   m_ObjectHideFlags: 0
@@ -19646,6 +20070,7 @@ GameObject:
   - component: {fileID: 1662765448}
   - component: {fileID: 1662765449}
   - component: {fileID: 1662765451}
+  - component: {fileID: 1662765447}
   m_Layer: 0
   m_Name: kitty r s
   m_TagString: CharacterRandomObj
@@ -19716,7 +20141,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1662765440}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -19734,6 +20159,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!54 &1662765447
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662765440}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1662765448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19764,7 +20205,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -21214,6 +21655,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1884313937}
     m_Modifications:
+    - target: {fileID: 5090735474336581064, guid: 975a1edb26d16a748a845f1f0144065a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5090735474336581066, guid: 975a1edb26d16a748a845f1f0144065a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5090735474336581068, guid: 975a1edb26d16a748a845f1f0144065a,
         type: 3}
       propertyPath: m_RootOrder
@@ -22652,6 +23103,7 @@ GameObject:
   - component: {fileID: 1945293508}
   - component: {fileID: 1945293509}
   - component: {fileID: 1945293511}
+  - component: {fileID: 1945293506}
   m_Layer: 0
   m_Name: alien r s
   m_TagString: CharacterRandomObj
@@ -22701,7 +23153,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1945293500}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -22727,6 +23179,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1945293506
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945293500}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1945293507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22782,7 +23250,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -23277,6 +23745,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: 5643dfd5c5c645d41a2bcd6c1e18301f, type: 2}
+--- !u!54 &1985938938
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985938935}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &1985938943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23291,12 +23775,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _otherdholder: {fileID: 0}
   _thisidholder: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
   otherGameObject: {fileID: 0}
   thisGameObject: {fileID: 0}
   _selectedChar: {fileID: 0}
   _selectedObjects: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
+  _selWeap: {fileID: 0}
+  _spawnWeap: {fileID: 0}
+  _spawnChar: {fileID: 0}
+  _selChar: {fileID: 0}
+  _selWeapId: {fileID: 0}
+  _spawnWeapId: {fileID: 0}
+  _spawnCharId: {fileID: 0}
+  _selCharId: {fileID: 0}
+  _selWeapIdObj: {fileID: 0}
+  _spawnWeapIdObj: {fileID: 0}
+  _spawnCharIdObj: {fileID: 0}
+  _selCharIdObj: {fileID: 0}
+  _selWeapIdObjGO: {fileID: 0}
+  _spawnWeapIdObjGO: {fileID: 0}
+  _spawnCharIdObjGO: {fileID: 0}
+  _selCharIdObjGO: {fileID: 0}
+  _selWeapIdObjName: 
+  _spawnWeapIdObjName: 
+  _spawnCharIdObjName: 
+  _selCharIdObjName: 
+  _thisObjName: 
+  _otherObjName: 
+  thisidtag: {fileID: 0}
+  otheridtag: {fileID: 0}
+  selwepidtag: {fileID: 0}
+  selcharidtag: {fileID: 0}
 --- !u!1 &1993163707
 GameObject:
   m_ObjectHideFlags: 0
@@ -23471,6 +23983,7 @@ GameObject:
   - component: {fileID: 2002686397}
   - component: {fileID: 2002686398}
   - component: {fileID: 2002686400}
+  - component: {fileID: 2002686396}
   m_Layer: 0
   m_Name: pink pony r s
   m_TagString: CharacterRandomObj
@@ -23520,7 +24033,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002686389}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -23559,6 +24072,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!54 &2002686396
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002686389}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!114 &2002686397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23589,7 +24118,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275616191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CompareObjects, Assembly-CSharp
         m_MethodName: Awake
         m_Mode: 1
@@ -23806,6 +24335,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: WeaponRandomObj
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605189544692655108, guid: dc673fc3166c99d4d9be52478fd292ca,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5605189544692655110, guid: dc673fc3166c99d4d9be52478fd292ca,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc673fc3166c99d4d9be52478fd292ca, type: 3}
