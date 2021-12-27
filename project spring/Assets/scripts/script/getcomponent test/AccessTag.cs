@@ -63,20 +63,14 @@ public class AccessTag : MonoBehaviour
     void Start()
     {
 
-
-
-
+        
 
     }
 
-    private void Awake()
+    private void Update()
     {
         _thisidholder = this.gameObject.GetComponent<IDholder>();
-        thisidtag = _thisidholder.idObj;
-        selwepidtag = _selWepIdholder.idObj;
-        selcharidtag = _selCharIdholder.idObj;
-
-
+    
         _selectedChar = _selectedChar.GetComponent<SelectedChar>();
         _selectedObjects = _selectedObjects.GetComponent<SelectedObjects>();
 
@@ -92,40 +86,52 @@ public class AccessTag : MonoBehaviour
         _spawnWeapId = _spawnWeap.GetComponent<IDholder>();
         _spawnCharId = _spawnChar.GetComponent<IDholder>();
         _selCharId = _selChar.GetComponent<IDholder>();
-        Destroy(_thisidholder.idObj);
+        
         _selWeapIdObj = _selWeapId.GetComponent<GameObject>() as GameObject;
         _spawnWeapIdObj = _spawnWeapId.GetComponent<GameObject>() as GameObject;
         _spawnCharIdObj = _spawnCharId.GetComponent<GameObject>() as GameObject;
-        _selCharIdObj = _selCharId.GetComponent<GameObject>() as GameObject;
+        _spawnCharIdObj= _selCharId.GetComponent<GameObject>() as GameObject;
 
-        _selWeapIdObjName = _selWeapId.name;
-        _spawnWeapIdObjName  = _spawnWeapId.name;
-        _spawnCharIdObjName  = _spawnCharId.name;
-        _selCharIdObjName  = _selCharId.name;
+
+        _selWeap = _selectedObjects.currentWeapon;
+        _spawnWeap = _spawnRandomPoints.currentWeapon;
+        _spawnChar = _characterSpawnRandom.currentCharacter;
+        _selChar = _selectedChar.currentChar;
+
+
+
+
+        thisidtag = _thisidholder.idObj;
+        selwepidtag = _thisidholder.idObj;
+        selcharidtag = _selCharIdholder.idObj;
+
+        _selWeapIdObjName = _selWepIdholder.name;
+        _thisObjName = _thisidholder.name;
+     
+        _selCharIdObjName  = _selCharIdholder.name;
 
         thisGameObject = this.gameObject;
-    
-        
 
-       // _currentselWeapname = _selWeap.name;
-      // _currentselCharname= _selChar.name;
 
+
+        // _currentselWeapname = _selWeap.name;
+        // _currentselCharname= _selChar.name;
 
     }   
     public void OntriggerEnter(Collider other)
 
     {
-
+       
 
         _otherdholder = other.gameObject.GetComponent<IDholder>();
+        _otherObjName = _otherdholder.name;
         otheridtag = _otherdholder.idObj;
-        otherGameObject = other.gameObject;
-      
+   
         
 
-        if (thisidtag == selwepidtag)
+        if (_thisidholder == _selWeapId)
         {
-            if (otheridtag == selcharidtag)
+            if (_otherdholder == selcharidtag)
             {
                
                    Destroy(_selWeap);
