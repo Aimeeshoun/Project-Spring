@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 7564508931207760426}
   - component: {fileID: 7564508931207760427}
   - component: {fileID: 7564508931207760424}
+  - component: {fileID: 8761086656080328250}
   m_Layer: 0
   m_Name: Sphere 1) (1)
   m_TagString: WeaponRandomObj
@@ -274,3 +275,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8761086656080328250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7564508931207760421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _otherdholder: {fileID: 0}
+  _thisidholder: {fileID: 0}
+  otherGameObject: {fileID: 0}
+  thisGameObject: {fileID: 0}
+  _selectedChar: {fileID: 0}
+  _selectedObjects: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  _spawnRandomPoints: {fileID: 0}

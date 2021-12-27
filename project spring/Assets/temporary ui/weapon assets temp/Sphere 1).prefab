@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 5641614235884233538}
   - component: {fileID: 5641614235884233598}
   - component: {fileID: 5641614235884233599}
+  - component: {fileID: 5520471444550269255}
   - component: {fileID: 5641614235884233596}
   - component: {fileID: 5641614235884233539}
   - component: {fileID: 5641614235884233597}
@@ -229,6 +230,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!114 &5520471444550269255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641614235884233537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _otherdholder: {fileID: 0}
+  _thisidholder: {fileID: 0}
+  otherGameObject: {fileID: 0}
+  thisGameObject: {fileID: 0}
+  _selectedChar: {fileID: 0}
+  _selectedObjects: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  _spawnRandomPoints: {fileID: 0}
 --- !u!135 &5641614235884233596
 SphereCollider:
   m_ObjectHideFlags: 0
