@@ -1973,7 +1973,7 @@ GameObject:
   - component: {fileID: 167252377}
   m_Layer: 0
   m_Name: jelly r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2173,6 +2173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5641614235884233596, guid: 328a2baf5ca74684f83c5a2974bc52d1, type: 3}
+    - {fileID: 5520471444550269255, guid: 328a2baf5ca74684f83c5a2974bc52d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 328a2baf5ca74684f83c5a2974bc52d1, type: 3}
 --- !u!1 &172958319
 GameObject:
@@ -3214,7 +3215,6 @@ MonoBehaviour:
   - {fileID: 445269825}
   currentWeapon: {fileID: 0}
   target: {fileID: 155173391}
-  currentSelectedWeapon: []
 --- !u!1 &263517057
 GameObject:
   m_ObjectHideFlags: 0
@@ -4292,7 +4292,6 @@ MonoBehaviour:
   - {fileID: 445269825}
   currentWeapon: {fileID: 0}
   target: {fileID: 1272310887}
-  currentSelectedWeapon: []
 --- !u!1 &347681755
 GameObject:
   m_ObjectHideFlags: 0
@@ -5022,6 +5021,88 @@ Transform:
   m_Father: {fileID: 2145795532}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &402582649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 402582651}
+  - component: {fileID: 402582652}
+  - component: {fileID: 402582653}
+  m_Layer: 0
+  m_Name: undemy test 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &402582651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402582649}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 765.48444, y: 391.7461, z: -135.39989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402582652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402582649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6a5cde39d1c7c489ec1f6abce656f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idObj: {fileID: 11400000, guid: d62f58b0e20ebe647bd153fd51a792df, type: 2}
+--- !u!114 &402582653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402582649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd7d6a9a3aa68984b94df80e78903a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iDholder: {fileID: 0}
+  Otheridholder: {fileID: 0}
+  _otherID: {fileID: 0}
+  _thisID: {fileID: 0}
+  _selwepidname: {fileID: 0}
+  _selcharidname: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
+  currentWeaponSel: {fileID: 0}
+  _selectedChar: {fileID: 0}
+  _selectedObjects: {fileID: 0}
+  myWeaponList2:
+  - {fileID: 973303582}
+  spawnPoints:
+  - {fileID: 1225180907}
+  spawnAmount: 100
+  spawnRate: 100
+  i: {fileID: 0}
+  maxTime: 0.1
+  minTime: 0.1
+  maxSpawnPerSecond: 2
+  target: {fileID: 494460922}
+  myCharacterList:
+  - {fileID: 1373182341}
+  target2: {fileID: 0}
 --- !u!1 &405077203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5587,7 +5668,7 @@ GameObject:
   - component: {fileID: 445269832}
   m_Layer: 0
   m_Name: norwhale r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6886,7 +6967,7 @@ GameObject:
   - component: {fileID: 574168858}
   m_Layer: 0
   m_Name: 'kitty r s '
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7374,7 +7455,7 @@ GameObject:
   - component: {fileID: 605254562}
   m_Layer: 0
   m_Name: pink pony r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11778,7 +11859,7 @@ GameObject:
   - component: {fileID: 981347141}
   m_Layer: 0
   m_Name: octopus r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12262,7 +12343,6 @@ MonoBehaviour:
   - {fileID: 445269825}
   currentWeapon: {fileID: 0}
   target: {fileID: 1097813036}
-  currentSelectedWeapon: []
 --- !u!1 &1020254764
 GameObject:
   m_ObjectHideFlags: 0
@@ -13737,6 +13817,113 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1192473871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1192473873}
+  - component: {fileID: 1192473872}
+  m_Layer: 0
+  m_Name: udemy test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1192473872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192473871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76170bf0e4c343f48b8ca1c638604a2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MyName: Aimee
+  shoe: 0
+  second_gun: 0
+  hat: 0
+  water_gun: 0
+  gumball: 0
+  ball: 0
+  surge: 0
+  burger: 0
+  heart: 0
+  clown: 0
+  pony: 0
+  alien: 0
+  devil: 0
+  kitty: 0
+  jelly: 0
+  pink_pony: 0
+  octopus: 0
+  norwhale: 0
+  skull: 0
+  weapons:
+  - shoe
+  - second_gun
+  - hat
+  - water_gun
+  - gumball
+  - ball
+  - surge
+  - burger
+  - heart
+  weaponSel:
+  - shoe
+  - second_gun
+  - hat
+  - water_gun
+  - gumball
+  - ball
+  - surge
+  - burger
+  - heart
+  characters:
+  - clown
+  - pony
+  - alien
+  - devil
+  - kitty
+  - jelly
+  - pink_pony
+  - octopus
+  - norwhale
+  - skull
+  characterSel:
+  - clown
+  - pony
+  - alien
+  - devil
+  - kitty
+  - jelly
+  - pink_pony
+  - octopus
+  - norwhale
+  - skull
+  weaponType: 3
+  characterType: 3
+--- !u!4 &1192473873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192473871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 765.48444, y: 391.7461, z: -135.39989}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1198585405
 GameObject:
   m_ObjectHideFlags: 0
@@ -15278,7 +15465,7 @@ GameObject:
   - component: {fileID: 1326104729}
   m_Layer: 0
   m_Name: skull r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15987,7 +16174,7 @@ GameObject:
   - component: {fileID: 1373182347}
   m_Layer: 0
   m_Name: alien r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18204,7 +18391,7 @@ GameObject:
   - component: {fileID: 1566683904}
   m_Layer: 0
   m_Name: pony r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19480,18 +19667,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1621129203 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5520471444550269255, guid: 328a2baf5ca74684f83c5a2974bc52d1,
-    type: 3}
-  m_PrefabInstance: {fileID: 168823907}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621129196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1621129206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19507,9 +19682,9 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1621129203}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20570,7 +20745,6 @@ MonoBehaviour:
   - {fileID: 1723012766}
   currentWeapon: {fileID: 0}
   target: {fileID: 494460922}
-  currentSelectedWeapon: []
 --- !u!4 &1726953199
 Transform:
   m_ObjectHideFlags: 0
@@ -21888,12 +22062,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7d6a9a3aa68984b94df80e78903a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iDholder: {fileID: 0}
+  Otheridholder: {fileID: 0}
+  _otherID: {fileID: 0}
+  _thisID: {fileID: 0}
+  _selwepidname: {fileID: 0}
+  _selcharidname: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
+  currentWeaponSel: {fileID: 0}
+  _selectedChar: {fileID: 0}
+  _selectedObjects: {fileID: 0}
   myWeaponList2:
   - {fileID: 0}
   spawnPoints:
   - {fileID: 0}
   spawnAmount: 100
   spawnRate: 10
+  i: {fileID: 0}
   maxTime: 3
   minTime: 0.5
   maxSpawnPerSecond: 2
@@ -24552,7 +24738,7 @@ GameObject:
   - component: {fileID: 2043644079}
   m_Layer: 0
   m_Name: clown r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24916,7 +25102,7 @@ GameObject:
   - component: {fileID: 2063611967}
   m_Layer: 0
   m_Name: devil r s
-  m_TagString: CharacterRandomObj
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25706,7 +25892,6 @@ MonoBehaviour:
   - {fileID: 445269825}
   currentWeapon: {fileID: 0}
   target: {fileID: 1594429009}
-  currentSelectedWeapon: []
 --- !u!1 &2132022872
 GameObject:
   m_ObjectHideFlags: 0

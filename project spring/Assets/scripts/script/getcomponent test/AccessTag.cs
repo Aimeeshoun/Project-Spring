@@ -56,6 +56,7 @@ public class AccessTag : MonoBehaviour
     public ID selwepidtag;
     public ID selcharidtag;
 
+    
     //   private string _currentselWeapname;
     // private string _currentselCharname;
 
@@ -70,7 +71,7 @@ public class AccessTag : MonoBehaviour
     private void Update()
     {
         _thisidholder = this.gameObject.GetComponent<IDholder>();
-    
+
         _selectedChar = _selectedChar.GetComponent<SelectedChar>();
         _selectedObjects = _selectedObjects.GetComponent<SelectedObjects>();
 

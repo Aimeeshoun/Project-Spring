@@ -5,6 +5,27 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
 
+    // access 
+    public IDholder iDholder;
+    public IDholder Otheridholder;
+
+
+    //
+    public GameObject _otherID;
+    public GameObject _thisID;
+    public GameObject _selwepidname;
+    public GameObject _selcharidname;
+    public IDholder _selWepIdholder;
+    public IDholder _selCharIdholder;
+
+    public SelectedObjects currentWeaponSel;
+    public SelectedChar _selectedChar;
+    public SelectedObjects _selectedObjects;
+
+
+
+
+
     //spawn weapon 
 
     public GameObject[] myWeaponList2;
@@ -14,7 +35,8 @@ public class Spawn : MonoBehaviour
     public int spawnAmount = 2;
     public float spawnRate = 5;
     private bool spawning;
-    
+    public GameObject i;
+
     public float maxTime = 5;
     public float minTime = 1;
     private float spawnTime;
@@ -46,7 +68,7 @@ public class Spawn : MonoBehaviour
 
     private GameObject currentCharacter2;
     private int index4;
-   
+
     public GameObject target2;
 
 
@@ -54,52 +76,76 @@ public class Spawn : MonoBehaviour
     //weapon spawn
 
 
+
     // Use this for initialization
     void Start()
     {
+
+
+        CompareObject();
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
         //myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         SetRandomTime();
- 
+
         time = 0;
-    
-            // selectRandomObjects();
-            // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
-            index2 = Random.Range(0, myWeaponList2.Length);
-            currentWeapon2 = myWeaponList2[index2];
-            currentWeapon2 = Instantiate(currentWeapon2, target.transform.position, target.transform.rotation) as GameObject;
-            currentWeapon2.transform.parent = gameObject.transform;
+
+        // selectRandomObjects();
+        // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        index2 = Random.Range(0, myWeaponList2.Length);
+        currentWeapon2 = myWeaponList2[index2];
+        currentWeapon2 = Instantiate(currentWeapon2, target.transform.position, target.transform.rotation) as GameObject;
+        currentWeapon2.transform.parent = gameObject.transform;
 
 
 
-            // character sel
-
-
-   
-
-            
-                // selectRandomObjects();
-                // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
-                index4 = Random.Range(0, myCharacterList.Length);
-                currentCharacter2 = myCharacterList[index4];
-                currentCharacter2 = Instantiate(currentCharacter2, target2.transform.position, target2.transform.rotation) as GameObject;
-                currentCharacter2.transform.parent = gameObject.transform;
-
-
-
-     
+        // character sel
 
 
 
 
-        }
+
+        // selectRandomObjects();
+        // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        index4 = Random.Range(0, myCharacterList.Length);
+        currentCharacter2 = myCharacterList[index4];
+        currentCharacter2 = Instantiate(currentCharacter2, target2.transform.position, target2.transform.rotation) as GameObject;
+        currentCharacter2.transform.parent = gameObject.transform;
+
+
+
+
+
+
+
+
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
 
 
+
+
+
+
+       
+
+
+        _selWepIdholder = currentWeapon.GetComponent<IDholder>();
+
+
+
+        
+
+
+        _selCharIdholder = currentCharacter2.GetComponent<IDholder>();
+
+        CompareObject();
+
+
+        CompareObject();
         time += Time.deltaTime;
         if (time >= spawnTime)
         {
@@ -148,8 +194,8 @@ public class Spawn : MonoBehaviour
     public void selectRandomWeapons()
 
     {
-        
-        
+
+
         index5 = Random.Range(0, myWeaponList2.Length);
         currentWeapon = myWeaponList2[index5];
 
@@ -188,8 +234,8 @@ public class Spawn : MonoBehaviour
     public void selectRandomCharacter()
 
     {
-  
-     
+
+
         index6 = Random.Range(0, myCharacterList.Length);
         currentCharacter = myCharacterList[index6];
 
@@ -198,11 +244,21 @@ public class Spawn : MonoBehaviour
 
 
 
+    public void CompareObject()
+    {
 
+        iDholder = GetComponent<IDholder>();
+
+        _selWepIdholder = currentWeapon2.GetComponent<IDholder>();
+
+        _selCharIdholder = currentCharacter.GetComponent<IDholder>();
 
 
 
     }
+}
+
+
 
 
 
