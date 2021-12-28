@@ -116,8 +116,8 @@ public class Access4 : MonoBehaviour
             {
                 Destroy(this.gameObject);
                 Destroy(other.gameObject);
-                Destroy(currentWeaponSel2);
-                Destroy(currentCharacterSel2);
+                Destroy(currentWeapon);
+                Destroy(currentChar);
             }
 
         }
