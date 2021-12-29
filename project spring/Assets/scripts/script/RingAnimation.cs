@@ -32,6 +32,7 @@ public class
     {
 
         anim = gameObject.GetComponent<Animation>();
+        
     }
     ////
 
@@ -48,24 +49,24 @@ public class
     {
         // selectRandomObjects();
         // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        DestroyMakeRing();
     }
 
     public void AnimateRing()
     {
-
-        anim.Play("ring animation");
+        
+       
 
     }
 
     private void DestroyMakeRing()
     {
-      
-        if (!Target_)
-        {
+     
             ui_Ring = Instantiate(ui_Ring, Target_.transform.position, Target_.transform.rotation) as GameObject;
             ui_Ring.transform.parent = gameObject.transform;
+       //nim.Play("Ring Animation");
            
-        }
+        
     }
 
 }
