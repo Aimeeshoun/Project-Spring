@@ -19,21 +19,34 @@ public class SelectedObjects : MonoBehaviour
     public void Start()
 
     {
-       // selectRandomObjects();
-       // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
-        index = Random.Range(0, myWeaponList2.Length);
-        currentWeapon = myWeaponList2[index];
-        currentWeapon = Instantiate(currentWeapon, target.transform.position, target.transform.rotation) as GameObject;
-        currentWeapon.transform.parent = gameObject.transform;
-      
+        // selectRandomObjects();
+        // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+       
+        SelectedObject();
 
-      
+
 
 
 
     }
 
+    public void Update()
+    {
+        if (!currentWeapon)
+        {
+            SelectedObject();
+        }
+    }
 
+
+
+    public void SelectedObject()
+    {
+        index = Random.Range(0, myWeaponList2.Length);
+        currentWeapon = myWeaponList2[index];
+        currentWeapon = Instantiate(currentWeapon, target.transform.position, target.transform.rotation) as GameObject;
+        currentWeapon.transform.parent = gameObject.transform;
+    }
 
 }
 
