@@ -40,7 +40,7 @@ public class
     private void Update()
     {
         Target_ = this.gameObject;
-        DestroyMakeRing();
+      
 
     }
 
@@ -49,17 +49,12 @@ public class
     {
         // selectRandomObjects();
         // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
-        DestroyMakeRing();
+        AnimateRing();
     }
 
-    public void AnimateRing()
-    {
-        
-       
 
-    }
 
-    private void DestroyMakeRing()
+    private void AnimateRing()
     {
      
             ui_Ring = Instantiate(ui_Ring, Target_.transform.position, Target_.transform.rotation) as GameObject;
