@@ -49,10 +49,11 @@ public class Access4 : MonoBehaviour
     public GameObject weaponspawner;
     public SelectedObjects selectedObjects;
     public SelectedObjects selectedObjects2;
+    public GameObject other_gameObject;
 
-    public GameObject ring;
-    private GameObject ring_animation_;
-    private Animation ring_animation;
+  //  public GameObject ring;
+    //private GameObject ring_animation_;
+   // private Animation ring_animation;
 
 
     /// </summary>
@@ -61,25 +62,12 @@ public class Access4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        iDholder = this.gameObject.GetComponent<IDholder>();
-        idholder2 = iDholder.idObj;
+    
 
 
-        //  myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
-        // index = Random.Range(0, myWeaponList2.Length);
-        //   currentWeapon = myWeaponList2[index];
-        //    currentWeapon = Instantiate(currentWeapon, target.transform.position, target.transform.rotation) as GameObject;
-        //    currentWeapon.transform.parent = gameObject.transform;
-
-
-        //index2 = Random.Range(0, myCharacterList2.Length);
-        // currentChar = myCharacterList2[index2];
-        //  currentChar2 = Instantiate(currentChar, target2.transform.position, target2.transform.rotation) as GameObject;
-        //   currentChar.transform.parent = gameObject.transform;
-
-        ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
-        ring_animation = ring_animation_.GetComponent<Animation>();
-        ring = GameObject.Find("rings animation group").GetComponent<GameObject>();
+       // ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
+       // ring_animation = ring_animation_.GetComponent<Animation>();
+        //ring = GameObject.Find("rings animation group").GetComponent<GameObject>();
 
     }
 
@@ -87,7 +75,7 @@ public class Access4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+ 
 
         selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
         currentWeapon = selectedObjects.currentWeapon;
@@ -99,7 +87,12 @@ public class Access4 : MonoBehaviour
 
 
 
-     
+        selectedObjects2 = GameObject.Find("character spawner sel").GetComponent<SelectedObjects>();
+        currentChar = selectedObjects2.currentWeapon;
+
+        _selCharIdholder = currentChar.GetComponent<IDholder>();
+        currentcharholder2 = _selCharIdholder.idObj;
+
 
         ///
 
@@ -110,29 +103,22 @@ public class Access4 : MonoBehaviour
 
    
 
-        selectedObjects2 = GameObject.Find("character spawner sel").GetComponent<SelectedObjects>();
-        currentChar = selectedObjects2.currentWeapon;
-
-        _selCharIdholder = currentChar.GetComponent<IDholder>();
-        currentcharholder2 = _selCharIdholder.idObj;
-
-
     }
 
     public void OnTriggerEnter(Collider other)
     {
         Otheridholder = other.gameObject.GetComponent<IDholder>();
         otheridholder2 = Otheridholder.idObj;
-
+        other_gameObject = other.gameObject;
 
 
         if (idholder2 == currentwepholder2)
         {
             if (otheridholder2 == currentcharholder2)
             {
-                ring = Instantiate(ring, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
-                ring.transform.parent = gameObject.transform;
-                ring_animation.Play("ring r s");
+             //   ring = Instantiate(ring, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
+               // ring.transform.parent = gameObject.transform;
+               // ring_animation.Play("ring r s");
 
                 
 

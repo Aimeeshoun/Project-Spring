@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 2568742814964142532}
   - component: {fileID: 5641614235884233596}
   - component: {fileID: 5641614235884233539}
+  - component: {fileID: 3623012820683251870}
   - component: {fileID: 5641614235884233597}
   m_Layer: 0
   m_Name: Sphere 1)
@@ -291,6 +292,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bbdc70b8d4823a46a29ae0667e80e63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iDholder: {fileID: 0}
+  Otheridholder: {fileID: 0}
+  idholder2: {fileID: 0}
+  otheridholder2: {fileID: 0}
+  currentwepholder2: {fileID: 0}
+  currentcharholder2: {fileID: 0}
+  _otherID: {fileID: 0}
+  _thisID: {fileID: 0}
+  _selwepidname: {fileID: 0}
+  _selcharidname: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
+  currentWeaponSel2: {fileID: 0}
+  currentCharacterSel2: {fileID: 0}
+  currentGameObject: {fileID: 0}
+  currentGameObject3: {fileID: 0}
+  myWeaponList2: []
+  myCharacterList2: []
+  currentWeapon: {fileID: 0}
+  currentChar: {fileID: 0}
+  currentChar2: {fileID: 0}
+  target: {fileID: 0}
+  target2: {fileID: 0}
+  weaponspawner: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  selectedObjects2: {fileID: 0}
+  other_gameObject: {fileID: 0}
 --- !u!135 &5641614235884233596
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -323,6 +351,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3623012820683251870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5641614235884233537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d987dcc30000d74ba4e9a7d5067a5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui_Ring: {fileID: 0}
+  target: {fileID: 0}
+  otherGameObject: {fileID: 0}
+  _spawnRandomPoints: {fileID: 0}
+  _otherBoxcol: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  anim: {fileID: 0}
+  thistag: {fileID: 0}
+  othertag: {fileID: 0}
 --- !u!65 &5641614235884233597
 BoxCollider:
   m_ObjectHideFlags: 0

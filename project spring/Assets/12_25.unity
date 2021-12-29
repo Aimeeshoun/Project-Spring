@@ -760,6 +760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7564508931207760426, guid: 1c9f00ab53597734484d4b5cc9390afd, type: 3}
+    - {fileID: 8761086656080328250, guid: 1c9f00ab53597734484d4b5cc9390afd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1c9f00ab53597734484d4b5cc9390afd, type: 3}
 --- !u!1 &65781941
 GameObject:
@@ -1804,54 +1805,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &159728518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159728510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _otherdholder: {fileID: 0}
-  _thisidholder: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  otherGameObject: {fileID: 0}
-  thisGameObject: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
-  _spawnRandomPoints: {fileID: 0}
-  _selWeap: {fileID: 0}
-  _spawnWeap: {fileID: 0}
-  _spawnChar: {fileID: 0}
-  _selChar: {fileID: 0}
-  _selWeapId: {fileID: 0}
-  _spawnWeapId: {fileID: 0}
-  _spawnCharId: {fileID: 0}
-  _selCharId: {fileID: 0}
-  _selWeapIdObj: {fileID: 0}
-  _spawnWeapIdObj: {fileID: 0}
-  _spawnCharIdObj: {fileID: 0}
-  _selCharIdObj: {fileID: 0}
-  _selWeapIdObjGO: {fileID: 0}
-  _spawnWeapIdObjGO: {fileID: 0}
-  _spawnCharIdObjGO: {fileID: 0}
-  _selCharIdObjGO: {fileID: 0}
-  _selWeapIdObjName: 
-  _spawnWeapIdObjName: 
-  _spawnCharIdObjName: 
-  _selCharIdObjName: 
-  _thisObjName: 
-  _otherObjName: 
-  thisidtag: {fileID: 0}
-  otheridtag: {fileID: 0}
-  selwepidtag: {fileID: 0}
-  selcharidtag: {fileID: 0}
 --- !u!1 &162025890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +1855,8 @@ MonoBehaviour:
   _otherBoxcol: {fileID: 0}
   _characterSpawnRandom: {fileID: 0}
   anim: {fileID: 0}
+  thistag: {fileID: 0}
+  othertag: {fileID: 0}
 --- !u!1 &163380291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6588,6 +6543,58 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523891967}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &525776037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 525776039}
+  - component: {fileID: 525776038}
+  m_Layer: 0
+  m_Name: ring test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &525776038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525776037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d987dcc30000d74ba4e9a7d5067a5bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui_Ring: {fileID: 0}
+  target: {fileID: 0}
+  otherGameObject: {fileID: 0}
+  _spawnRandomPoints: {fileID: 0}
+  _otherBoxcol: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  anim: {fileID: 0}
+  thistag: {fileID: 0}
+  othertag: {fileID: 0}
+--- !u!4 &525776039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525776037}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 809.7328, y: 365.76666, z: -132.15428}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527238212
 GameObject:
   m_ObjectHideFlags: 0
@@ -8524,54 +8531,6 @@ RotationConstraint:
   m_IsContraintActive: 0
   m_IsLocked: 0
   m_Sources: []
---- !u!114 &717134458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717134450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _otherdholder: {fileID: 0}
-  _thisidholder: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  otherGameObject: {fileID: 0}
-  thisGameObject: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
-  _spawnRandomPoints: {fileID: 0}
-  _selWeap: {fileID: 0}
-  _spawnWeap: {fileID: 0}
-  _spawnChar: {fileID: 0}
-  _selChar: {fileID: 0}
-  _selWeapId: {fileID: 0}
-  _spawnWeapId: {fileID: 0}
-  _spawnCharId: {fileID: 0}
-  _selCharId: {fileID: 0}
-  _selWeapIdObj: {fileID: 0}
-  _spawnWeapIdObj: {fileID: 0}
-  _spawnCharIdObj: {fileID: 0}
-  _selCharIdObj: {fileID: 0}
-  _selWeapIdObjGO: {fileID: 0}
-  _spawnWeapIdObjGO: {fileID: 0}
-  _spawnCharIdObjGO: {fileID: 0}
-  _selCharIdObjGO: {fileID: 0}
-  _selWeapIdObjName: 
-  _spawnWeapIdObjName: 
-  _spawnCharIdObjName: 
-  _selCharIdObjName: 
-  _thisObjName: 
-  _otherObjName: 
-  thisidtag: {fileID: 0}
-  otheridtag: {fileID: 0}
-  selwepidtag: {fileID: 0}
-  selcharidtag: {fileID: 0}
 --- !u!1 &718373865
 GameObject:
   m_ObjectHideFlags: 0
@@ -15670,45 +15629,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1359989946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d987dcc30000d74ba4e9a7d5067a5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _otherdholder: {fileID: 0}
-  _thisidholder: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
+  ui_Ring: {fileID: 0}
+  target: {fileID: 0}
   otherGameObject: {fileID: 0}
-  thisGameObject: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
-  _selWeap: {fileID: 0}
-  _spawnWeap: {fileID: 0}
-  _spawnChar: {fileID: 0}
-  _selChar: {fileID: 0}
-  _selWeapId: {fileID: 0}
-  _spawnWeapId: {fileID: 0}
-  _spawnCharId: {fileID: 0}
-  _selCharId: {fileID: 0}
-  _selWeapIdObj: {fileID: 0}
-  _spawnWeapIdObj: {fileID: 0}
-  _spawnCharIdObj: {fileID: 0}
-  _selCharIdObj: {fileID: 0}
-  _selWeapIdObjGO: {fileID: 0}
-  _spawnWeapIdObjGO: {fileID: 0}
-  _spawnCharIdObjGO: {fileID: 0}
-  _selCharIdObjGO: {fileID: 0}
-  _selWeapIdObjName: 
-  _spawnWeapIdObjName: 
-  _spawnCharIdObjName: 
-  _selCharIdObjName: 
-  _thisObjName: 
-  _otherObjName: 
-  thisidtag: {fileID: 0}
-  otheridtag: {fileID: 0}
-  selwepidtag: {fileID: 0}
-  selcharidtag: {fileID: 0}
+  _otherBoxcol: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  anim: {fileID: 0}
+  thistag: {fileID: 0}
+  othertag: {fileID: 0}
 --- !u!1 &1364770712
 GameObject:
   m_ObjectHideFlags: 0
@@ -17911,54 +17843,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1548243956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548243948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _otherdholder: {fileID: 0}
-  _thisidholder: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  otherGameObject: {fileID: 0}
-  thisGameObject: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
-  _spawnRandomPoints: {fileID: 0}
-  _selWeap: {fileID: 0}
-  _spawnWeap: {fileID: 0}
-  _spawnChar: {fileID: 0}
-  _selChar: {fileID: 0}
-  _selWeapId: {fileID: 0}
-  _spawnWeapId: {fileID: 0}
-  _spawnCharId: {fileID: 0}
-  _selCharId: {fileID: 0}
-  _selWeapIdObj: {fileID: 0}
-  _spawnWeapIdObj: {fileID: 0}
-  _spawnCharIdObj: {fileID: 0}
-  _selCharIdObj: {fileID: 0}
-  _selWeapIdObjGO: {fileID: 0}
-  _spawnWeapIdObjGO: {fileID: 0}
-  _spawnCharIdObjGO: {fileID: 0}
-  _selCharIdObjGO: {fileID: 0}
-  _selWeapIdObjName: 
-  _spawnWeapIdObjName: 
-  _spawnCharIdObjName: 
-  _selCharIdObjName: 
-  _thisObjName: 
-  _otherObjName: 
-  thisidtag: {fileID: 0}
-  otheridtag: {fileID: 0}
-  selwepidtag: {fileID: 0}
-  selcharidtag: {fileID: 0}
 --- !u!1 &1561282477
 GameObject:
   m_ObjectHideFlags: 0
@@ -18075,54 +17959,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1565701695
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1565701687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _otherdholder: {fileID: 0}
-  _thisidholder: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  otherGameObject: {fileID: 0}
-  thisGameObject: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
-  _spawnRandomPoints: {fileID: 0}
-  _selWeap: {fileID: 0}
-  _spawnWeap: {fileID: 0}
-  _spawnChar: {fileID: 0}
-  _selChar: {fileID: 0}
-  _selWeapId: {fileID: 0}
-  _spawnWeapId: {fileID: 0}
-  _spawnCharId: {fileID: 0}
-  _selCharId: {fileID: 0}
-  _selWeapIdObj: {fileID: 0}
-  _spawnWeapIdObj: {fileID: 0}
-  _spawnCharIdObj: {fileID: 0}
-  _selCharIdObj: {fileID: 0}
-  _selWeapIdObjGO: {fileID: 0}
-  _spawnWeapIdObjGO: {fileID: 0}
-  _spawnCharIdObjGO: {fileID: 0}
-  _selCharIdObjGO: {fileID: 0}
-  _selWeapIdObjName: 
-  _spawnWeapIdObjName: 
-  _spawnCharIdObjName: 
-  _selCharIdObjName: 
-  _thisObjName: 
-  _otherObjName: 
-  thisidtag: {fileID: 0}
-  otheridtag: {fileID: 0}
-  selwepidtag: {fileID: 0}
-  selcharidtag: {fileID: 0}
 --- !u!1 &1566683896
 GameObject:
   m_ObjectHideFlags: 0
@@ -18582,45 +18418,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1571433955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d987dcc30000d74ba4e9a7d5067a5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _otherdholder: {fileID: 0}
-  _thisidholder: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
+  ui_Ring: {fileID: 0}
+  target: {fileID: 0}
   otherGameObject: {fileID: 0}
-  thisGameObject: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
-  _selWeap: {fileID: 0}
-  _spawnWeap: {fileID: 0}
-  _spawnChar: {fileID: 0}
-  _selChar: {fileID: 0}
-  _selWeapId: {fileID: 0}
-  _spawnWeapId: {fileID: 0}
-  _spawnCharId: {fileID: 0}
-  _selCharId: {fileID: 0}
-  _selWeapIdObj: {fileID: 0}
-  _spawnWeapIdObj: {fileID: 0}
-  _spawnCharIdObj: {fileID: 0}
-  _selCharIdObj: {fileID: 0}
-  _selWeapIdObjGO: {fileID: 0}
-  _spawnWeapIdObjGO: {fileID: 0}
-  _spawnCharIdObjGO: {fileID: 0}
-  _selCharIdObjGO: {fileID: 0}
-  _selWeapIdObjName: 
-  _spawnWeapIdObjName: 
-  _spawnCharIdObjName: 
-  _selCharIdObjName: 
-  _thisObjName: 
-  _otherObjName: 
-  thisidtag: {fileID: 0}
-  otheridtag: {fileID: 0}
-  selwepidtag: {fileID: 0}
-  selcharidtag: {fileID: 0}
+  _otherBoxcol: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  anim: {fileID: 0}
+  thistag: {fileID: 0}
+  othertag: {fileID: 0}
 --- !u!1 &1572499427
 GameObject:
   m_ObjectHideFlags: 0
@@ -23558,45 +23367,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1985938935}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e70ad81ce690ab94cbc45647b5ad7cc0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d987dcc30000d74ba4e9a7d5067a5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _otherdholder: {fileID: 0}
-  _thisidholder: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
+  ui_Ring: {fileID: 0}
+  target: {fileID: 0}
   otherGameObject: {fileID: 0}
-  thisGameObject: {fileID: 0}
-  _selectedChar: {fileID: 0}
-  _selectedObjects: {fileID: 0}
-  _characterSpawnRandom: {fileID: 0}
   _spawnRandomPoints: {fileID: 0}
-  _selWeap: {fileID: 0}
-  _spawnWeap: {fileID: 0}
-  _spawnChar: {fileID: 0}
-  _selChar: {fileID: 0}
-  _selWeapId: {fileID: 0}
-  _spawnWeapId: {fileID: 0}
-  _spawnCharId: {fileID: 0}
-  _selCharId: {fileID: 0}
-  _selWeapIdObj: {fileID: 0}
-  _spawnWeapIdObj: {fileID: 0}
-  _spawnCharIdObj: {fileID: 0}
-  _selCharIdObj: {fileID: 0}
-  _selWeapIdObjGO: {fileID: 0}
-  _spawnWeapIdObjGO: {fileID: 0}
-  _spawnCharIdObjGO: {fileID: 0}
-  _selCharIdObjGO: {fileID: 0}
-  _selWeapIdObjName: 
-  _spawnWeapIdObjName: 
-  _spawnCharIdObjName: 
-  _selCharIdObjName: 
-  _thisObjName: 
-  _otherObjName: 
-  thisidtag: {fileID: 0}
-  otheridtag: {fileID: 0}
-  selwepidtag: {fileID: 0}
-  selcharidtag: {fileID: 0}
+  _otherBoxcol: {fileID: 0}
+  _characterSpawnRandom: {fileID: 0}
+  anim: {fileID: 0}
+  thistag: {fileID: 0}
+  othertag: {fileID: 0}
 --- !u!1 &1993163707
 GameObject:
   m_ObjectHideFlags: 0
