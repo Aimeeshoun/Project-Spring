@@ -45,9 +45,15 @@ public class Access4 : MonoBehaviour
     private int index2;
     public GameObject target;
     public GameObject target2;
+    
     public GameObject weaponspawner;
     public SelectedObjects selectedObjects;
     public SelectedObjects selectedObjects2;
+
+    public GameObject ring;
+    private GameObject ring_animation_;
+    private Animation ring_animation;
+
 
     /// </summary>
 
@@ -57,7 +63,7 @@ public class Access4 : MonoBehaviour
     {
         iDholder = this.gameObject.GetComponent<IDholder>();
         idholder2 = iDholder.idObj;
-        
+
 
         //  myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
         // index = Random.Range(0, myWeaponList2.Length);
@@ -70,6 +76,10 @@ public class Access4 : MonoBehaviour
         // currentChar = myCharacterList2[index2];
         //  currentChar2 = Instantiate(currentChar, target2.transform.position, target2.transform.rotation) as GameObject;
         //   currentChar.transform.parent = gameObject.transform;
+
+        ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
+        ring_animation = ring_animation_.GetComponent<Animation>();
+        ring = GameObject.Find("rings animation group").GetComponent<GameObject>();
 
     }
 
@@ -85,8 +95,15 @@ public class Access4 : MonoBehaviour
         currentwepholder2 = _selWepIdholder.idObj;
 
 
+        ///
 
-       
+
+
+     
+
+        ///
+
+
         iDholder = this.gameObject.GetComponent<IDholder>();
         idholder2 = iDholder.idObj;
         /////
@@ -99,8 +116,7 @@ public class Access4 : MonoBehaviour
         _selCharIdholder = currentChar.GetComponent<IDholder>();
         currentcharholder2 = _selCharIdholder.idObj;
 
-    
-      
+
     }
 
     public void OnTriggerEnter(Collider other)
@@ -114,10 +130,21 @@ public class Access4 : MonoBehaviour
         {
             if (otheridholder2 == currentcharholder2)
             {
+                ring = Instantiate(ring, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
+                ring.transform.parent = gameObject.transform;
+                ring_animation.Play("ring r s");
+
+                
+
                 Destroy(this.gameObject);
                 Destroy(other.gameObject);
+                
+             
                 Destroy(currentWeapon);
                 Destroy(currentChar);
+
+              
+
             }
 
         }
