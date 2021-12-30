@@ -54,11 +54,13 @@ public class Access4 : MonoBehaviour
     public GameObject other_gameObject;
     //public Score score;
 
-  //  public GameObject ring;
+    //  public GameObject ring;
     //private GameObject ring_animation_;
-   // private Animation ring_animation;
+    // private Animation ring_animation;
 
+    // boools
 
+ 
     /// </summary>
 
 
@@ -124,14 +126,16 @@ public class Access4 : MonoBehaviour
                 // ring.transform.parent = gameObject.transform;
                 // ring_animation.Play("ring r s");
 
-              //  score.IncrementScore();
+                //  score.IncrementScore();
 
-                Destroy(this.gameObject);
-                Destroy(other.gameObject);
-             
-                Destroy(currentWeapon);
-                Destroy(currentChar);
-                
+
+                this.gameObject.SetActive(false);
+                other.gameObject.SetActive(false);
+                currentWeapon.SetActive(false);
+                currentChar.SetActive(false);
+
+
+
 
             }
 
