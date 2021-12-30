@@ -72,7 +72,7 @@ public class instanciatePrefab : MonoBehaviour
 
         }
 
-        SelectedObject();
+       
 
         
 

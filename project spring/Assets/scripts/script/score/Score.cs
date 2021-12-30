@@ -7,19 +7,23 @@ public class Score : MonoBehaviour
 {
 
 
-    int score = 0;
+    public IntData score;
 
 
 
     public Text scoreText;
 
 
+    private void Update()
+    {
 
+        IncrementScore();
+    }
 
 
     public void IncrementScore()
     {
-        score++;
+        
         scoreText.text = score.ToString();
         print(score);
 

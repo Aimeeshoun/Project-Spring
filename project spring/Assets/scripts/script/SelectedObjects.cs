@@ -27,17 +27,18 @@ public class SelectedObjects : MonoBehaviour
         SelectedObject();
 
 
-
-
+ 
 
     }
 
     public void Update()
     {
-        if (!currentWeapon)
+        if (currentWeapon.activeSelf ==false)
         {
             SelectedObject();
         }
+           
+        
     }
 
 

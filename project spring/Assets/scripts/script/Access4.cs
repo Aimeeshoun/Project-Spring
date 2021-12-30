@@ -50,28 +50,30 @@ public class Access4 : MonoBehaviour
     public GameObject weaponspawner;
     public SelectedObjects selectedObjects;
     public SelectedObjects selectedObjects2;
-  
+    public SelectedObjects selectedObjects3;
+
     public GameObject other_gameObject;
     //public Score score;
-
+    private bool ObjInactive;
     //  public GameObject ring;
     //private GameObject ring_animation_;
     // private Animation ring_animation;
 
     // boools
 
- 
+
     /// </summary>
 
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        ObjInactive = currentWeapon.active;
 
 
-       // ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
-       // ring_animation = ring_animation_.GetComponent<Animation>();
+
+        // ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
+        // ring_animation = ring_animation_.GetComponent<Animation>();
         //ring = GameObject.Find("rings animation group").GetComponent<GameObject>();
 
     }
@@ -81,8 +83,10 @@ public class Access4 : MonoBehaviour
     void Update()
     {
 
-       // score = score.GetComponent<Score>();
-        
+      
+
+        // score = score.GetComponent<Score>();
+
         selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
         currentWeapon = selectedObjects.currentWeapon;
         _selWepIdholder = currentWeapon.GetComponent<IDholder>();
@@ -107,11 +111,15 @@ public class Access4 : MonoBehaviour
         idholder2 = iDholder.idObj;
         /////
 
-   
+        selectedObjects3 = selectedObjects3.GetComponent<SelectedObjects>();
 
+        if (!ObjInactive)
+        {
+            selectedObjects3.SelectedObject();
+        }
     }
 
-    public void OnTriggerEnter(Collider other)
+public void OnTriggerEnter(Collider other)
     {
         Otheridholder = other.gameObject.GetComponent<IDholder>();
         otheridholder2 = Otheridholder.idObj;
@@ -133,6 +141,8 @@ public class Access4 : MonoBehaviour
                 other.gameObject.SetActive(false);
                 currentWeapon.SetActive(false);
                 currentChar.SetActive(false);
+
+                selectedObjects3.SelectedObject();
 
 
 
