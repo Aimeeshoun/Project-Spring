@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterSpawnRandom : MonoBehaviour
-
+public class SpawnBomb : MonoBehaviour
 {
 
-    public GameObject[] myCharacterList;
+
+    public GameObject[] myWeaponList2;
     public GameObject[] spawnPoints;
-    private GameObject currentPoint;
+    public GameObject currentPoint;
     private int index;
     public int spawnAmount;
     public float spawnRate;
@@ -22,7 +22,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     private float spawnTime;
 
     private float time;
-    public GameObject currentCharacter;
+    public GameObject currentWeapon;
     private int index2;
 
 
@@ -32,9 +32,9 @@ public class CharacterSpawnRandom : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint 2");
+        spawnPoints = GameObject.FindGameObjectsWithTag("Spawnpoint 3");
 
-       // myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
+        //myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         SetRandomTime();
         time = 0;
 
@@ -43,7 +43,6 @@ public class CharacterSpawnRandom : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
 
 
         time += Time.deltaTime;
@@ -78,9 +77,9 @@ public class CharacterSpawnRandom : MonoBehaviour
         selectRandomObjects();
         index = Random.Range(0, spawnPoints.Length);
         currentPoint = spawnPoints[index];
-        currentCharacter = Instantiate(currentCharacter, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
-        currentCharacter.transform.parent = gameObject.transform;
-        Destroy(currentCharacter, 4);
+        currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
+        currentWeapon.transform.parent = gameObject.transform;
+        Destroy(currentWeapon, 4f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
@@ -90,9 +89,9 @@ public class CharacterSpawnRandom : MonoBehaviour
 
     {
         // selectRandomObjects();
-       // myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
-        index = Random.Range(0, myCharacterList.Length);
-        currentCharacter = myCharacterList[index];
+        // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
+        index = Random.Range(0, myWeaponList2.Length);
+        currentWeapon = myWeaponList2[index];
 
 
     }
@@ -104,5 +103,9 @@ public class CharacterSpawnRandom : MonoBehaviour
 
     }
 }
+
+
+
+
 
 

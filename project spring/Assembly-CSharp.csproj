@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{F930F4B7-1567-57B7-EE59-4D7BBBCBC4B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -73,6 +74,7 @@
     <Compile Include="Assets\scripts\script\getcomponent test\CompareObjects.cs" />
     <Compile Include="Assets\scripts\script\getcomponent test\AccessTag.cs" />
     <Compile Include="Assets\scripts\script\misc\WeaponNUmber.cs" />
+    <Compile Include="Assets\scripts\script\aniamtion\Animation.cs" />
     <Compile Include="Assets\scripts\script\misc\Collections2.cs" />
     <Compile Include="Assets\scripts\script\Compare.cs" />
     <Compile Include="Assets\scripts\script\OnTriggerEnterEvent.cs" />
@@ -90,6 +92,7 @@
     <Compile Include="Assets\scripts\script\misc\ParticleSystem.cs" />
     <Compile Include="Assets\scripts\script\misc\ID.cs" />
     <Compile Include="Assets\scripts\script\misc\InstanciateObj.cs" />
+    <Compile Include="Assets\scripts\script\aniamtion\Animation position.cs" />
     <Compile Include="Assets\scripts\script\getcomponent test\AccessTagString.cs" />
     <Compile Include="Assets\scripts\script\misc\CollectionSO.cs" />
     <Compile Include="Assets\scripts\script\getcomponent test\AccessTag3.cs" />
@@ -99,8 +102,8 @@
     <Compile Include="Assets\scripts\script\getcomponent test\SelectedChar.cs" />
     <Compile Include="Assets\scripts\script\misc\GameAction2.cs" />
     <Compile Include="Assets\scripts\script\misc\CreateSOData.cs" />
-    <Compile Include="Assets\scripts\script\aniamtion\Animation.cs" />
-    <Compile Include="Assets\scripts\script\aniamtion\Animation position.cs" />
+    <Compile Include="Assets\scripts\script\SpawnBomb.cs" />
+    <Compile Include="Assets\scripts\script\BombDestroy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

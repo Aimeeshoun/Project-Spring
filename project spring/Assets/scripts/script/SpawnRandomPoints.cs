@@ -16,8 +16,8 @@ public class SpawnRandomPoints : MonoBehaviour
 
 
 
-    public float maxTime = 50;
-    public float minTime = 10;
+    public float maxTime;
+    public float minTime;
     private float spawnTime;
 
     private float time;
@@ -25,7 +25,7 @@ public class SpawnRandomPoints : MonoBehaviour
     private int index2;
 
 
-    public float maxSpawnPerSecond = 2f;
+    public float maxSpawnPerSecond;
     private float timer;
 
     // Use this for initialization
@@ -78,7 +78,7 @@ public class SpawnRandomPoints : MonoBehaviour
         currentPoint = spawnPoints[index];
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 7f);
+        Destroy(currentWeapon, 4f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
@@ -88,7 +88,7 @@ public class SpawnRandomPoints : MonoBehaviour
 
     {
         // selectRandomObjects();
-        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
+       // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         index = Random.Range(0, myWeaponList2.Length);
         currentWeapon = myWeaponList2[index];
 
