@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Access4 : MonoBehaviour
+public class ScoreManager : MonoBehaviour
+
 {
 
     public IDholder iDholder;
@@ -26,8 +26,8 @@ public class Access4 : MonoBehaviour
     public GameObject currentWeaponSel2;
     public GameObject currentCharacterSel2;
 
-   
-  
+
+
     public GameObject currentGameObject;
 
     public GameObject currentGameObject3;
@@ -46,31 +46,19 @@ public class Access4 : MonoBehaviour
     private int index2;
     public GameObject target;
     public GameObject target2;
-    
+
     public GameObject weaponspawner;
     public SelectedObjects selectedObjects;
     public SelectedObjects selectedObjects2;
-  
+
     public GameObject other_gameObject;
-    //public Score score;
-
-  //  public GameObject ring;
-    //private GameObject ring_animation_;
-   // private Animation ring_animation;
-
-
-    /// </summary>
-
-
-    // Start is called before the first frame update
+    public Score score;
+   
     void Start()
     {
-    
 
+        score = score.GetComponent<Score>();
 
-       // ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
-       // ring_animation = ring_animation_.GetComponent<Animation>();
-        //ring = GameObject.Find("rings animation group").GetComponent<GameObject>();
 
     }
 
@@ -79,13 +67,13 @@ public class Access4 : MonoBehaviour
     void Update()
     {
 
-       // score = score.GetComponent<Score>();
-        
+         
+
         selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
         currentWeapon = selectedObjects.currentWeapon;
         _selWepIdholder = currentWeapon.GetComponent<IDholder>();
         currentwepholder2 = _selWepIdholder.idObj;
-        
+
 
         ///
 
@@ -105,7 +93,7 @@ public class Access4 : MonoBehaviour
         idholder2 = iDholder.idObj;
         /////
 
-   
+
 
     }
 
@@ -120,18 +108,11 @@ public class Access4 : MonoBehaviour
         {
             if (otheridholder2 == currentcharholder2)
             {
-                //   ring = Instantiate(ring, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
-                // ring.transform.parent = gameObject.transform;
-                // ring_animation.Play("ring r s");
+               
 
-              //  score.IncrementScore();
+                  score.IncrementScore();
 
-                Destroy(this.gameObject);
-                Destroy(other.gameObject);
              
-                Destroy(currentWeapon);
-                Destroy(currentChar);
-                
 
             }
 
@@ -139,8 +120,4 @@ public class Access4 : MonoBehaviour
     }
 
 }
-
-
-
-
 

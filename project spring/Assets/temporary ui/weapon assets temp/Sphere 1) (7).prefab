@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5069515715638322095}
+  - component: {fileID: 3009303411512024098}
   - component: {fileID: 3774813063935737957}
   - component: {fileID: 5069515715638322092}
   - component: {fileID: 5069515715638322066}
@@ -38,6 +39,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3009303411512024098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5069515715638322088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff3b4b926321e9f4292d00eff2541392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iDholder: {fileID: 0}
+  Otheridholder: {fileID: 0}
+  idholder2: {fileID: 0}
+  otheridholder2: {fileID: 0}
+  currentwepholder2: {fileID: 0}
+  currentcharholder2: {fileID: 0}
+  _otherID: {fileID: 0}
+  _thisID: {fileID: 0}
+  _selwepidname: {fileID: 0}
+  _selcharidname: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
+  currentWeaponSel2: {fileID: 0}
+  currentCharacterSel2: {fileID: 0}
+  currentGameObject: {fileID: 0}
+  currentGameObject3: {fileID: 0}
+  myWeaponList2: []
+  myCharacterList2: []
+  currentWeapon: {fileID: 0}
+  currentChar: {fileID: 0}
+  currentChar2: {fileID: 0}
+  target: {fileID: 0}
+  target2: {fileID: 0}
+  weaponspawner: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  selectedObjects2: {fileID: 0}
+  other_gameObject: {fileID: 0}
+  score: {fileID: 0}
 --- !u!114 &3774813063935737957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +200,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5069515715638322088}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
