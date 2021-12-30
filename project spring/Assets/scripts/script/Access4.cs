@@ -49,6 +49,7 @@ public class Access4 : MonoBehaviour
     public GameObject weaponspawner;
     public SelectedObjects selectedObjects;
     public SelectedObjects selectedObjects2;
+  
     public GameObject other_gameObject;
 
   //  public GameObject ring;
@@ -81,7 +82,7 @@ public class Access4 : MonoBehaviour
         currentWeapon = selectedObjects.currentWeapon;
         _selWepIdholder = currentWeapon.GetComponent<IDholder>();
         currentwepholder2 = _selWepIdholder.idObj;
-
+        
 
         ///
 
@@ -116,20 +117,17 @@ public class Access4 : MonoBehaviour
         {
             if (otheridholder2 == currentcharholder2)
             {
-             //   ring = Instantiate(ring, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
-               // ring.transform.parent = gameObject.transform;
-               // ring_animation.Play("ring r s");
+                //   ring = Instantiate(ring, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
+                // ring.transform.parent = gameObject.transform;
+                // ring_animation.Play("ring r s");
 
-                
-
+                GameManager.instance.IncrementScore();
                 Destroy(this.gameObject);
                 Destroy(other.gameObject);
-                
-             
-                Destroy(currentWeapon);
-                Destroy(currentChar);
 
-              
+                selectedObjects.NewWeapon();
+
+                //electedObjects.SelectedObject();
 
             }
 

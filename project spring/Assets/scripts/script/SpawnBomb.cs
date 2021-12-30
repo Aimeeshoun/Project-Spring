@@ -79,7 +79,7 @@ public class SpawnBomb : MonoBehaviour
         currentPoint = spawnPoints[index];
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 4f);
+        Destroy(currentWeapon, 9f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
