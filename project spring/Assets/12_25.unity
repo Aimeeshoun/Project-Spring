@@ -426,6 +426,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1884313937}
     m_Modifications:
+    - target: {fileID: 2892789736421906459, guid: 1c9f00ab53597734484d4b5cc9390afd,
+        type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 589085370}
     - target: {fileID: 7564508931207760420, guid: 1c9f00ab53597734484d4b5cc9390afd,
         type: 3}
       propertyPath: m_RootOrder
@@ -3498,6 +3503,7 @@ GameObject:
   - component: {fileID: 589085369}
   - component: {fileID: 589085368}
   - component: {fileID: 589085367}
+  - component: {fileID: 589085370}
   - component: {fileID: 589085366}
   - component: {fileID: 589085365}
   m_Layer: 0
@@ -3595,6 +3601,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589085370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589085364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fd66aaad30b0ee40991425598e07b9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 2024711622}
 --- !u!1 &614324020
 GameObject:
   m_ObjectHideFlags: 0
