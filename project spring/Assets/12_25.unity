@@ -2126,6 +2126,21 @@ MonoBehaviour:
   - {fileID: 1373182341}
   - {fileID: 2063611961}
   - {fileID: 1326104723}
+  - {fileID: 1326104723}
+  - {fileID: 1326104723}
+  - {fileID: 1326104723}
+  - {fileID: 1326104723}
+  - {fileID: 2063611961}
+  - {fileID: 2063611961}
+  - {fileID: 2063611961}
+  - {fileID: 1373182341}
+  - {fileID: 1373182341}
+  - {fileID: 1373182341}
+  - {fileID: 1373182341}
+  - {fileID: 1373182341}
+  - {fileID: 1326104723}
+  - {fileID: 1326104723}
+  - {fileID: 1326104723}
   currentWeapon: {fileID: 0}
   target: {fileID: 1272310887}
 --- !u!1 &363868258
@@ -2190,15 +2205,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myWeaponList2:
+  - {fileID: 1503271950}
+  - {fileID: 668369794}
+  - {fileID: 916458215}
+  - {fileID: 668369794}
+  - {fileID: 916458215}
+  - {fileID: 1503271950}
+  - {fileID: 916458215}
+  - {fileID: 916458215}
+  - {fileID: 1503271950}
+  - {fileID: 1503271950}
   - {fileID: 668369794}
   - {fileID: 1503271950}
+  - {fileID: 668369794}
   - {fileID: 916458215}
   spawnPoints: []
   currentPoint: {fileID: 0}
   spawnAmount: 100
-  spawnRate: 15
+  spawnRate: 45
   maxTime: 1
-  minTime: 3
+  minTime: 0.5
   currentWeapon: {fileID: 0}
   maxSpawnPerSecond: 6
 --- !u!4 &388631123
@@ -3387,9 +3413,9 @@ MonoBehaviour:
   - {fileID: 717134450}
   spawnPoints: []
   spawnAmount: 100
-  spawnRate: 15
-  maxTime: 2
-  minTime: 4
+  spawnRate: 45
+  maxTime: 1
+  minTime: 0.5
   currentCharacter: {fileID: 0}
   maxSpawnPerSecond: 6
 --- !u!1 &564377258
@@ -4059,12 +4085,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668369794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 494.93158, y: -14.2, z: 185}
+  m_LocalPosition: {x: 86.03157, y: 0.099975586, z: 0}
   m_LocalScale: {x: 5.0809693, y: 4.5313206, z: 4.5313206}
   m_Children:
   - {fileID: 1743902431}
-  m_Father: {fileID: 1561282478}
-  m_RootOrder: 1
+  m_Father: {fileID: 1591782737}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &668369796
 Rigidbody:
@@ -7533,8 +7559,8 @@ MonoBehaviour:
   currentPoint: {fileID: 0}
   spawnAmount: 50
   spawnRate: 15
-  maxTime: 2
-  minTime: 0.5
+  maxTime: 5
+  minTime: 2
   currentWeapon: {fileID: 1839136477}
   maxSpawnPerSecond: 1
 --- !u!1 &1312512225
@@ -8696,7 +8722,7 @@ Transform:
   m_Children:
   - {fileID: 1551442966}
   m_Father: {fileID: 1561282478}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1503271952
 Rigidbody:
@@ -9112,7 +9138,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 916458216}
-  - {fileID: 668369795}
   - {fileID: 1503271951}
   m_Father: {fileID: 1591782737}
   m_RootOrder: 1
@@ -9527,6 +9552,7 @@ Transform:
   - {fileID: 1561282478}
   - {fileID: 318608281}
   - {fileID: 1884313937}
+  - {fileID: 668369795}
   m_Father: {fileID: 2014339992}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10025,6 +10051,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myWeaponList2:
   - {fileID: 1978453059}
+  - {fileID: 1262590732}
+  - {fileID: 1123643436}
+  - {fileID: 1262590732}
+  - {fileID: 1262590732}
+  - {fileID: 1978453059}
+  - {fileID: 1978453059}
+  - {fileID: 1123643436}
+  - {fileID: 1978453059}
+  - {fileID: 1123643436}
+  - {fileID: 1262590732}
+  - {fileID: 1978453059}
+  - {fileID: 1123643436}
+  - {fileID: 1262590732}
   - {fileID: 1262590732}
   - {fileID: 1123643436}
   currentWeapon: {fileID: 0}
