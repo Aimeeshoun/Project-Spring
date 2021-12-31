@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Access4 : MonoBehaviour
 {
@@ -56,6 +56,7 @@ public class Access4 : MonoBehaviour
     //public Score score;
     private bool ObjInactive;
     //  public GameObject ring;
+    public UnityEvent Destorys;
     //private GameObject ring_animation_;
     // private Animation ring_animation;
 
@@ -68,8 +69,7 @@ public class Access4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ObjInactive = currentWeapon.active;
-
+   
 
 
         // ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
@@ -113,7 +113,7 @@ public class Access4 : MonoBehaviour
 
         selectedObjects3 = selectedObjects3.GetComponent<SelectedObjects>();
 
-        if (!ObjInactive)
+        if (currentWeapon.activeSelf == false)
         {
             selectedObjects3.SelectedObject();
         }
@@ -144,7 +144,7 @@ public void OnTriggerEnter(Collider other)
 
                 selectedObjects3.SelectedObject();
 
-
+                Destorys.Invoke();
 
 
             }
