@@ -37,8 +37,12 @@ public class SelectedObjects : MonoBehaviour
         {
             SelectedObject();
         }
-           
-        
+        if (currentWeapon == null)
+        {
+            SelectedObject();
+            return;
+        }
+
     }
 
 
