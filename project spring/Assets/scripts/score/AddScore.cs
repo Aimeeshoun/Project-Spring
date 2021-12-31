@@ -7,37 +7,42 @@ public class AddScore : MonoBehaviour
 {
 
     public IntData scoreValue;
-    public bool isBeingdestroy;
-    
+ 
     public Text text;
 
     private void Start()
     {
         text = text.GetComponent<Text>();
-        AddScores();
+   
     }
 
     private void Update()
     {
         text.text = scoreValue.value.ToString();
-        AddScores();
+
     }
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+     
+
+            AddScores();
+        
+    }
 
     public void AddScores()
     {
 
-        if (isBeingdestroy)
-        {
+      
 
 
 
-
-            scoreValue.value++;
-
+            scoreValue.value = scoreValue.value + 1;
 
 
-        }
+
     }
 }
 
