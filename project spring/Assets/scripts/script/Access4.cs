@@ -21,7 +21,7 @@ public class Access4 : MonoBehaviour
     public IDholder _selWepIdholder;
     public IDholder _selCharIdholder;
 
-    public SetScoreText SetScoreText_;
+
 
     public GameObject currentWeaponSel2;
     public GameObject currentCharacterSel2;
@@ -69,7 +69,7 @@ public class Access4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetScoreText_ = SetScoreText_.GetComponent<SetScoreText>();
+      
      
 
 
@@ -144,7 +144,7 @@ public void OnTriggerEnter(Collider other)
                 currentChar.SetActive(false);
 
                 selectedObjects3.SelectedObject();
-                SetScoreText_.AddScores();
+          
                 Destorys.Invoke();
 
 

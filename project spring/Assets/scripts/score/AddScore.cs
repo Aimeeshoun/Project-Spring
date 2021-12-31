@@ -7,44 +7,37 @@ public class AddScore : MonoBehaviour
 {
 
     public IntData scoreValue;
-
+    public bool isBeingdestroy;
     
     public Text text;
 
     private void Start()
     {
         text = text.GetComponent<Text>();
+        AddScores();
     }
 
     private void Update()
     {
         text.text = scoreValue.value.ToString();
+        AddScores();
     }
 
 
-
-    public void OnTriggerEnter(Collider other)
-    {
-    
-        if (other.gameObject.activeSelf == false)
-        {
-          
-
-
-
-               AddScores();
-
-
-
-            
-        }
-   
-    
-    
-    }
     public void AddScores()
     {
-        scoreValue.value++;
+
+        if (isBeingdestroy)
+        {
+
+
+
+
+            scoreValue.value++;
+
+
+
+        }
     }
 }
 
