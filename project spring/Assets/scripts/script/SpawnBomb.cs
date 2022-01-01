@@ -61,7 +61,7 @@ public class SpawnBomb : MonoBehaviour
 
                     if (timer <= 0)
                     {
-                        selectRandomObjects();
+                        
                         StartCoroutine(SpawnMonster());
                       
                         SpawnMonster();
@@ -70,7 +70,7 @@ public class SpawnBomb : MonoBehaviour
                         
                         time = 0;
 
-                       timer = 1 / maxSpawnPerSecond;
+                      // timer = 1 / maxSpawnPerSecond;
                     }
                 }
 
@@ -89,7 +89,7 @@ public class SpawnBomb : MonoBehaviour
   
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 9f);
+        Destroy(currentWeapon, 1.5f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 

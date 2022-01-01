@@ -37,7 +37,9 @@ public class CharacterSpawnRandom : MonoBehaviour
         // myCharacterList = GameObject.FindGameObjectsWithTag("CharacterRandomObj");
         SetRandomTime();
         time = 0;
-    
+        selectRandomObjects();
+        StartCoroutine(SpawnMonster());
+        SpawnMonster();
     }
 
     // Update is called once per frame
@@ -58,14 +60,14 @@ public class CharacterSpawnRandom : MonoBehaviour
 
                     if (timer <= 0)
                     {
-
+                       
                         StartCoroutine(SpawnMonster());
                       SpawnMonster();
                         SetRandomTime();
 
                         time = 0;
 
-                       timer = 1 / maxSpawnPerSecond;
+                     //  timer = 1 / maxSpawnPerSecond;
                     }
                 }
 
@@ -82,7 +84,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     
         currentCharacter = Instantiate(currentCharacter, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentCharacter.transform.parent = gameObject.transform;
-        Destroy(currentCharacter, 4);
+        Destroy(currentCharacter, 3.4f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 

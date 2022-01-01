@@ -1042,7 +1042,6 @@ GameObject:
   m_Component:
   - component: {fileID: 147187245}
   - component: {fileID: 147187255}
-  - component: {fileID: 147187254}
   - component: {fileID: 147187253}
   - component: {fileID: 147187252}
   - component: {fileID: 147187251}
@@ -1201,19 +1200,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147187244}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &147187254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147187244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdbd9ff72f511074cb383994c9291fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsDragable: 1
 --- !u!114 &147187255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2622,12 +2608,12 @@ MonoBehaviour:
   - {fileID: 916458215}
   spawnPoints: []
   currentPoint: {fileID: 0}
-  spawnAmount: 100
-  spawnRate: 70
-  maxTime: 6
-  minTime: 4
+  spawnAmount: 50
+  spawnRate: 200
+  maxTime: 3.6
+  minTime: 0.3
   currentWeapon: {fileID: 0}
-  maxSpawnPerSecond: 1
+  maxSpawnPerSecond: 20
 --- !u!4 &388631123
 Transform:
   m_ObjectHideFlags: 0
@@ -3448,12 +3434,12 @@ MonoBehaviour:
   - {fileID: 1465484595}
   - {fileID: 1332761430}
   spawnPoints: []
-  spawnAmount: 100
-  spawnRate: 70
-  maxTime: 6.1
-  minTime: 4.1
+  spawnAmount: 50
+  spawnRate: 100
+  maxTime: 3.6
+  minTime: 1.5
   currentCharacter: {fileID: 0}
-  maxSpawnPerSecond: 1
+  maxSpawnPerSecond: 20
 --- !u!1 &570633824
 GameObject:
   m_ObjectHideFlags: 0
@@ -3898,7 +3884,6 @@ GameObject:
   m_Component:
   - component: {fileID: 668369795}
   - component: {fileID: 668369805}
-  - component: {fileID: 668369803}
   - component: {fileID: 668369802}
   - component: {fileID: 668369801}
   - component: {fileID: 668369800}
@@ -4044,19 +4029,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668369794}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &668369803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668369794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdbd9ff72f511074cb383994c9291fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsDragable: 1
 --- !u!114 &668369804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5329,7 +5301,6 @@ GameObject:
   - component: {fileID: 916458216}
   - component: {fileID: 916458225}
   - component: {fileID: 916458219}
-  - component: {fileID: 916458222}
   - component: {fileID: 916458218}
   - component: {fileID: 916458217}
   - component: {fileID: 916458220}
@@ -5429,19 +5400,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &916458222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916458215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdbd9ff72f511074cb383994c9291fa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsDragable: 1
 --- !u!114 &916458223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7391,12 +7349,12 @@ MonoBehaviour:
   - {fileID: 1357885235}
   - {fileID: 876111520}
   currentPoint: {fileID: 0}
-  spawnAmount: 100
-  spawnRate: 70
-  maxTime: 11
-  minTime: 9
+  spawnAmount: 50
+  spawnRate: 100
+  maxTime: 7.2
+  minTime: 0.2
   currentWeapon: {fileID: 1839136477}
-  maxSpawnPerSecond: 0.1
+  maxSpawnPerSecond: 20
 --- !u!1 &1312512225
 GameObject:
   m_ObjectHideFlags: 0

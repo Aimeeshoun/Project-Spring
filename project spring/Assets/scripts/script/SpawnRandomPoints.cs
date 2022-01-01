@@ -36,7 +36,7 @@ public class SpawnRandomPoints : MonoBehaviour
         //myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         SetRandomTime();
         time = 0;
-        selectRandomObjects();
+      
         StartCoroutine(SpawnMonster());
         SpawnMonster();
     }
@@ -65,7 +65,7 @@ public class SpawnRandomPoints : MonoBehaviour
                         SetRandomTime();
                         time = 0;
 
-                        timer = 1 / maxSpawnPerSecond;
+                       // timer = 1 / maxSpawnPerSecond;
                     }
                 }
 
@@ -82,7 +82,7 @@ public class SpawnRandomPoints : MonoBehaviour
     
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 7f);
+        Destroy(currentWeapon, 3.4f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
         //selectRandomObjects();
