@@ -26,8 +26,8 @@ public class Access4 : MonoBehaviour
     public GameObject currentWeaponSel2;
     public GameObject currentCharacterSel2;
 
-   
-  
+
+
     public GameObject currentGameObject;
 
     public GameObject currentGameObject3;
@@ -46,7 +46,7 @@ public class Access4 : MonoBehaviour
     private int index2;
     public GameObject target;
     public GameObject target2;
-    
+
     public GameObject weaponspawner;
     public SelectedObjects selectedObjects;
     public SelectedObjects selectedObjects2;
@@ -59,7 +59,7 @@ public class Access4 : MonoBehaviour
     public UnityEvent Destorys;
     //private GameObject ring_animation_;
     // private Animation ring_animation;
-
+    public BringScoreZero _bringScoreZero;
     // boools
 
 
@@ -69,14 +69,16 @@ public class Access4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
-     
+
+
+       
 
 
         // ring_animation_ = GameObject.Find("ring r s").GetComponent<GameObject>();
         // ring_animation = ring_animation_.GetComponent<Animation>();
         //ring = GameObject.Find("rings animation group").GetComponent<GameObject>();
-
+        selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
+        selectedObjects2 = GameObject.Find("character spawner sel").GetComponent<SelectedObjects>();
     }
 
 
@@ -84,17 +86,17 @@ public class Access4 : MonoBehaviour
     void Update()
     {
 
-      
 
-        // score = score.GetComponent<Score>();
+
+
 
         selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
         currentWeapon = selectedObjects.currentWeapon;
         _selWepIdholder = currentWeapon.GetComponent<IDholder>();
         currentwepholder2 = _selWepIdholder.idObj;
-        
 
-        ///
+
+
 
 
 
@@ -105,12 +107,11 @@ public class Access4 : MonoBehaviour
         currentcharholder2 = _selCharIdholder.idObj;
 
 
-        ///
 
 
         iDholder = this.gameObject.GetComponent<IDholder>();
         idholder2 = iDholder.idObj;
-        /////
+
 
         selectedObjects3 = selectedObjects3.GetComponent<SelectedObjects>();
 
@@ -120,12 +121,11 @@ public class Access4 : MonoBehaviour
         }
     }
 
-public void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         Otheridholder = other.gameObject.GetComponent<IDholder>();
         otheridholder2 = Otheridholder.idObj;
         other_gameObject = other.gameObject;
-
 
         if (idholder2 == currentwepholder2)
         {
@@ -139,20 +139,25 @@ public void OnTriggerEnter(Collider other)
 
 
                 this.gameObject.SetActive(false);
-                other.gameObject.SetActive(false);
+                 other.gameObject.SetActive(false);
+
+                selectedObjects3.SelectedObject();
+
+                Destorys.Invoke();
+
+
+
                 currentWeapon.SetActive(false);
                 currentChar.SetActive(false);
 
-                selectedObjects3.SelectedObject();
-          
-                Destorys.Invoke();
+
 
 
             }
 
+
         }
     }
-
 }
 
 

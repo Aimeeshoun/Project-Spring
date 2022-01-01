@@ -17,7 +17,7 @@ public Text text;
     void Start()
     {
         text = text.GetComponent<Text>();
-        scoreValue.value = 0;
+        scoreValue.value = 10;
     }
 
     // Update is called once per frame
@@ -26,18 +26,15 @@ public Text text;
         text.text = scoreValue.value.ToString();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
 
-
-        MakeScoreZero();
-
-    }
 
     public void MakeScoreZero()
     {
 
 
+       
+ 
+        
         scoreValue.value = 0;
 
 
