@@ -38,12 +38,16 @@ public class SpawnBomb : MonoBehaviour
         SetRandomTime();
         time = 0;
 
+        selectRandomObjects();
+        StartCoroutine(SpawnMonster());
+        SpawnMonster();
+        SetRandomTime();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        
 
         time += Time.deltaTime;
         if (time >= spawnTime)
@@ -57,12 +61,16 @@ public class SpawnBomb : MonoBehaviour
 
                     if (timer <= 0)
                     {
+                        selectRandomObjects();
                         StartCoroutine(SpawnMonster());
+                      
                         SpawnMonster();
+
                         SetRandomTime();
+                        
                         time = 0;
 
-                        timer = 1 / maxSpawnPerSecond;
+                       timer = 1 / maxSpawnPerSecond;
                     }
                 }
 
@@ -74,9 +82,11 @@ public class SpawnBomb : MonoBehaviour
     public IEnumerator SpawnMonster()
     {
 
+       
+        
         selectRandomObjects();
-        index = Random.Range(0, spawnPoints.Length);
-        currentPoint = spawnPoints[index];
+        //spawning = true;
+  
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
         Destroy(currentWeapon, 9f);
@@ -88,11 +98,12 @@ public class SpawnBomb : MonoBehaviour
     public void selectRandomObjects()
 
     {
-        // selectRandomObjects();
+    
         // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         index = Random.Range(0, myWeaponList2.Length);
         currentWeapon = myWeaponList2[index];
-
+        index = Random.Range(0, spawnPoints.Length);
+        currentPoint = spawnPoints[index];
 
     }
 

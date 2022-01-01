@@ -36,7 +36,9 @@ public class SpawnRandomPoints : MonoBehaviour
         //myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         SetRandomTime();
         time = 0;
-
+        selectRandomObjects();
+        StartCoroutine(SpawnMonster());
+        SpawnMonster();
     }
 
     // Update is called once per frame
@@ -56,8 +58,10 @@ public class SpawnRandomPoints : MonoBehaviour
 
                     if (timer <= 0)
                     {
+
+                        selectRandomObjects();
                         StartCoroutine(SpawnMonster());
-                       // SpawnMonster();
+                       SpawnMonster();
                         SetRandomTime();
                         time = 0;
 
@@ -74,21 +78,25 @@ public class SpawnRandomPoints : MonoBehaviour
     {
 
         selectRandomObjects();
-        index = Random.Range(0, spawnPoints.Length);
-        currentPoint = spawnPoints[index];
+       // spawning = true;
+    
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 4f);
+        Destroy(currentWeapon, 7f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
+        //selectRandomObjects();
+       
 
     }
 
     public void selectRandomObjects()
 
     {
-        // selectRandomObjects();
-       // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
+
+        // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
+        index = Random.Range(0, spawnPoints.Length);
+        currentPoint = spawnPoints[index];
         index = Random.Range(0, myWeaponList2.Length);
         currentWeapon = myWeaponList2[index];
 
