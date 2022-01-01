@@ -59,7 +59,7 @@ public class CharacterSpawnRandom : MonoBehaviour
                     if (timer <= 0)
                     {
                         StartCoroutine(SpawnMonster());
-                        SpawnMonster();
+                       // SpawnMonster();
                         SetRandomTime();
                         time = 0;
 
