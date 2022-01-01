@@ -17,6 +17,7 @@ public Text text;
     void Start()
     {
         text = text.GetComponent<Text>();
+        scoreValue.value = 0;
     }
 
     // Update is called once per frame
