@@ -10727,6 +10727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1644582633}
+  - component: {fileID: 1644582638}
   - component: {fileID: 1644582636}
   - component: {fileID: 1644582634}
   - component: {fileID: 1644582640}
@@ -10811,6 +10812,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1644582638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644582632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab5b42ebde218640b3e12e1e9538756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
+  text: {fileID: 2024711622}
 --- !u!114 &1644582639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12156,7 +12171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 10ca6f871f9c7f7419f3dbe05ad2f1f9, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8da2dc99882e1d9408110b0d6bf255f1, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
