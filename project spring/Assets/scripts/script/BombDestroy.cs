@@ -1,19 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class BombDestroy : MonoBehaviour
 {
 
     
-    public BringScoreZero bringScoreZero;
+  //  public BringScoreZero bringScoreZero;
 
 
 
     private void Start()
     {
-        bringScoreZero = bringScoreZero.GetComponent<BringScoreZero>();
+      //  bringScoreZero = bringScoreZero.GetComponent<BringScoreZero>();
       
     }
 
@@ -21,7 +21,7 @@ public class BombDestroy : MonoBehaviour
     {
 
 
-        bringScoreZero.MakeScoreZero();
+       // bringScoreZero.MakeScoreZero();
         other.gameObject.SetActive(false);
         this.gameObject.SetActive(false);
        

@@ -146,7 +146,7 @@ private void OnTriggerEnter(Collider other)
 
 
 
-            scoreValue.value = scoreValue.value + 1;
+            scoreValue.value +=  1;
 
 
 

@@ -7,5 +7,5 @@ using UnityEngine;
 public class IntData : ScriptableObject
 
 {
-    public int value= 0;
+    public int value;
 }

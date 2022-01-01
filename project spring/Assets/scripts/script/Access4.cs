@@ -59,7 +59,7 @@ public class Access4 : MonoBehaviour
     public UnityEvent Destorys;
     //private GameObject ring_animation_;
     // private Animation ring_animation;
-    public BringScoreZero _bringScoreZero;
+    
     // boools
 
 
