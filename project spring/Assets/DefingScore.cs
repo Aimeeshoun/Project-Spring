@@ -18,7 +18,7 @@ public class DefingScore : MonoBehaviour
     {
         text = text.GetComponent<Text>();
         text.text = scoreValue.value.ToString();
-        scoreValue.value = 0;
+        scoreValue.value = 1;
     }
 
 }

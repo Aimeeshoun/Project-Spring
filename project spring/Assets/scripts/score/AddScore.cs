@@ -66,7 +66,7 @@ public class AddScore : MonoBehaviour
     private void Start()
 
     {
-        scoreValue.value = 1;
+      
         text = text.GetComponent<Text>();
    
     }
