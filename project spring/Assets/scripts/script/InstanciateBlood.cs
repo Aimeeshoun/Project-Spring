@@ -4,25 +4,17 @@ using UnityEngine;
 
 public class InstanciateBlood : MonoBehaviour
 {
-    public GameObject[] bloodsplatter;
-   
+    public GameObject[] bloodsplatter;  
     private int index;
     private bool spawning;
     public GameObject currentBlood;
-
     /// 
-   
+    public float spawnRate;
     public SpawnRandomPoints selectedObjects2;
-    public SelectedObjects selectedObjects3;
-
     public GameObject currentWeapon;
-
     public GameObject position;
- 
     // Start is called before the first frame update
-
     public SpawnRandomPoints spawnRandomPoints;
-
     /// <summary>
     /// /
     /// </summary>
@@ -47,10 +39,11 @@ public class InstanciateBlood : MonoBehaviour
 
         if (currentWeapon.activeSelf == false)
         {
+            StartCoroutine(BloodSplasts());
             BloodSplasts();
         }
     }
-    public void  BloodSplasts()
+    public IEnumerator BloodSplasts()
         {
 
 
@@ -60,9 +53,9 @@ public class InstanciateBlood : MonoBehaviour
 
             currentBlood = Instantiate(currentBlood, position.transform.position, position.transform.rotation) as GameObject;
             currentBlood.transform.parent = gameObject.transform;
-            Destroy(currentBlood, 1.5f);
-           // yield return new WaitForSeconds(3);
-          //  spawning = false;
+            Destroy(currentBlood, .1f);
+            yield return new WaitForSeconds(spawnRate);
+            spawning = false;
 
         }
 
