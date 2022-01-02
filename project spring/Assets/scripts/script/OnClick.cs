@@ -1,17 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 public class OnClick : MonoBehaviour
 {
-//	public Button yourButton;
+	public Button yourButton;
 
-	//void Start()
-	//{
+
+	void Start()
+	{
 	//	Button btn = yourButton.GetComponent<Button>();
-	//	btn.onClick.AddListener(LoadScene);
-	//}
-//	public void LoadScene(string sceneName)
-	//{
-//		SceneManager.LoadScene(sceneName);
-	//}
+///	btn.onClick.AddListener(LoadScene);
+	}
+	public void LoadScene(string sceneName)
+	{
+		SceneManager.LoadScene(sceneName);
+	}
 }
