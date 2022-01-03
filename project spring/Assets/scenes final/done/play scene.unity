@@ -5947,11 +5947,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bloodsplatter: {fileID: 0}
-  currentBlood: []
+  bloodsplatter: {fileID: 1343542032}
+  currentBlood:
+  - {fileID: 4891350}
   currentBlood_: {fileID: 0}
   currentBlood__: {fileID: 0}
-  spawnRate: 0
+  spawnRate: 2
   selectedObjects2: {fileID: 0}
   position: {fileID: 0}
   spawnRandomPoints: {fileID: 0}
@@ -8608,7 +8609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.89411765}
+  m_Color: {r: 1, g: 0.3339622, b: 0.3339622, a: 0.89411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11294,7 +11295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
