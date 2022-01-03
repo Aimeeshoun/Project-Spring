@@ -57,13 +57,26 @@ public class AddScore : MonoBehaviour
     //public Score score;
     private bool ObjInactive;
     //  public GameObject ring;
-
+   
 
     public IntData scoreValue;
  
     public Text text;
 
-    public bool isgoingup;
+
+
+    public GameObject bloodsplatter;
+
+    private bool spawning;
+   
+    /// 
+    public float spawnRate;
+
+
+    public GameObject position;
+    // Start is called before the first frame update
+    public SpawnRandomPoints spawnRandomPoints;
+
     private void Start()
 
     {
@@ -105,15 +118,16 @@ public class AddScore : MonoBehaviour
 
         selectedObjects3 = selectedObjects3.GetComponent<SelectedObjects>();
 
-        if (currentWeapon.activeSelf == false)
-        {
-            selectedObjects3.SelectedObject();
-        }
+
+        ////
+        ///
+        position = this.gameObject;
+
+
     }
 
 
-
-private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
 
     Otheridholder = other.gameObject.GetComponent<IDholder>();
@@ -133,7 +147,8 @@ private void OnTriggerEnter(Collider other)
                 //  currentChar.SetActive(false);
 
                 //  selectedObjects3.SelectedObject();
-
+                StartCoroutine(BloodSplasts());
+                BloodSplasts();
 
             }
 
@@ -145,13 +160,26 @@ private void OnTriggerEnter(Collider other)
     public void AddScores()
     {
 
-      
 
 
 
-            scoreValue.value +=  1;
-        isgoingup = true;
+        
+        scoreValue.value +=  1;
+   
 
+    }
+
+
+    public IEnumerator BloodSplasts()
+    {
+
+
+
+        bloodsplatter = Instantiate(bloodsplatter, position.transform.position, position.transform.rotation) as GameObject;
+        bloodsplatter.transform.parent = gameObject.transform;
+        Destroy(bloodsplatter, .1f);
+        yield return new WaitForSeconds(spawnRate);
+        spawning = false;
 
     }
 }

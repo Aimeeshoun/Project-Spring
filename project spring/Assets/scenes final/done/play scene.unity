@@ -1075,7 +1075,6 @@ GameObject:
   - component: {fileID: 147187245}
   - component: {fileID: 147187255}
   - component: {fileID: 147187253}
-  - component: {fileID: 147187252}
   - component: {fileID: 147187251}
   - component: {fileID: 147187250}
   - component: {fileID: 147187249}
@@ -1211,19 +1210,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!135 &147187252
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147187244}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &147187253
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1274,7 +1260,10 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
   text: {fileID: 2024711622}
-  isgoingup: 1
+  bloodsplatter: {fileID: 2137083208}
+  spawnRate: 1
+  position: {fileID: 147187244}
+  spawnRandomPoints: {fileID: 0}
 --- !u!114 &147187256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1318,9 +1307,9 @@ MonoBehaviour:
   Destorys:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 276555197}
+      - m_Target: {fileID: 64605654}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3845,7 +3834,6 @@ GameObject:
   - component: {fileID: 668369795}
   - component: {fileID: 668369805}
   - component: {fileID: 668369802}
-  - component: {fileID: 668369801}
   - component: {fileID: 668369800}
   - component: {fileID: 668369799}
   - component: {fileID: 668369798}
@@ -3980,19 +3968,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!135 &668369801
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668369794}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &668369802
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4056,7 +4031,10 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
   text: {fileID: 2024711622}
-  isgoingup: 1
+  bloodsplatter: {fileID: 2137083208}
+  spawnRate: 1
+  position: {fileID: 668369794}
+  spawnRandomPoints: {fileID: 0}
 --- !u!114 &668369806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4668,80 +4646,6 @@ Transform:
   m_Father: {fileID: 2014339992}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &866903083
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 866903085}
-  - component: {fileID: 866903084}
-  m_Layer: 0
-  m_Name: add up object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &866903084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866903083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67cb25f25edb844294a0f4478152c72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iDholder: {fileID: 0}
-  Otheridholder: {fileID: 0}
-  idholder2: {fileID: 0}
-  otheridholder2: {fileID: 0}
-  currentwepholder2: {fileID: 0}
-  currentcharholder2: {fileID: 0}
-  _otherID: {fileID: 0}
-  _thisID: {fileID: 0}
-  _selwepidname: {fileID: 0}
-  _selcharidname: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  currentWeaponSel2: {fileID: 0}
-  currentCharacterSel2: {fileID: 0}
-  currentGameObject: {fileID: 0}
-  currentGameObject3: {fileID: 0}
-  myWeaponList2: []
-  myCharacterList2: []
-  currentWeapon: {fileID: 0}
-  currentChar: {fileID: 0}
-  currentChar2: {fileID: 0}
-  target: {fileID: 0}
-  target2: {fileID: 0}
-  weaponspawner: {fileID: 0}
-  selectedObjects: {fileID: 0}
-  selectedObjects2: {fileID: 0}
-  selectedObjects3: {fileID: 0}
-  other_gameObject: {fileID: 0}
-  scoreValue: {fileID: 0}
-  text: {fileID: 0}
-  isgoingup: 0
---- !u!4 &866903085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866903083}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 705.6631, y: 361.50302, z: -45.511642}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873584871
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,11 +5043,8 @@ GameObject:
   - component: {fileID: 916458216}
   - component: {fileID: 916458225}
   - component: {fileID: 916458219}
-  - component: {fileID: 916458222}
-  - component: {fileID: 916458218}
   - component: {fileID: 916458217}
   - component: {fileID: 916458220}
-  - component: {fileID: 916458223}
   - component: {fileID: 916458224}
   - component: {fileID: 916458226}
   - component: {fileID: 916458221}
@@ -5189,19 +5090,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!135 &916458218
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916458215}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &916458219
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5239,48 +5127,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &916458222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916458215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodsplatter:
-  - {fileID: 2137083208}
-  currentBlood: {fileID: 0}
-  spawnRate: 0
-  selectedObjects2: {fileID: 0}
-  currentWeapon: {fileID: 0}
-  position: {fileID: 0}
-  spawnRandomPoints: {fileID: 0}
-  _skull: {fileID: 0}
-  _alien: {fileID: 0}
-  _devil: {fileID: 0}
-  _isgoingup: 0
-  _isgoingup2: 0
-  _isgoingup3: 0
-  _isgoingup4: 0
---- !u!114 &916458223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916458215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a43be4b005db684cadc2f083ba0e2bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DestroyEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &916458224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5365,7 +5211,10 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
   text: {fileID: 2024711622}
-  isgoingup: 1
+  bloodsplatter: {fileID: 2137083208}
+  spawnRate: 1
+  position: {fileID: 916458215}
+  spawnRandomPoints: {fileID: 0}
 --- !u!114 &916458226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5422,7 +5271,7 @@ MonoBehaviour:
   Destorys:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2137083210}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
@@ -5464,6 +5313,7 @@ GameObject:
   - component: {fileID: 922274945}
   - component: {fileID: 922274954}
   - component: {fileID: 922274946}
+  - component: {fileID: 922274951}
   m_Layer: 0
   m_Name: 'burger r s '
   m_TagString: WeaponRandomObj
@@ -5592,6 +5442,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &922274951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922274943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodsplatter: {fileID: 0}
+  currentBlood: {fileID: 0}
+  spawnRate: 0
+  selectedObjects2: {fileID: 0}
+  position: {fileID: 0}
+  spawnRandomPoints: {fileID: 0}
 --- !u!114 &922274952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5656,9 +5524,9 @@ MonoBehaviour:
   Destorys:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BringScoreZero, Assembly-CSharp
-        m_MethodName: MakeScoreZero
+      - m_Target: {fileID: 922274951}
+        m_TargetAssemblyTypeName: InstanciateBlood, Assembly-CSharp
+        m_MethodName: BloodSpawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7422,6 +7290,7 @@ GameObject:
   - component: {fileID: 1332761442}
   - component: {fileID: 1332761433}
   - component: {fileID: 1332761432}
+  - component: {fileID: 1332761438}
   m_Layer: 0
   m_Name: water gun
   m_TagString: WeaponRandomObj
@@ -7550,6 +7419,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1332761438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332761430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodsplatter: {fileID: 0}
+  currentBlood: {fileID: 0}
+  spawnRate: 0
+  selectedObjects2: {fileID: 0}
+  position: {fileID: 0}
+  spawnRandomPoints: {fileID: 0}
 --- !u!33 &1332761439
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7614,9 +7501,9 @@ MonoBehaviour:
   Destorys:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BringScoreZero, Assembly-CSharp
-        m_MethodName: MakeScoreZero
+      - m_Target: {fileID: 1332761438}
+        m_TargetAssemblyTypeName: InstanciateBlood, Assembly-CSharp
+        m_MethodName: BloodSpawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8484,6 +8371,7 @@ GameObject:
   - component: {fileID: 1465484607}
   - component: {fileID: 1465484598}
   - component: {fileID: 1465484597}
+  - component: {fileID: 1465484603}
   m_Layer: 0
   m_Name: second gun
   m_TagString: WeaponRandomObj
@@ -8612,6 +8500,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1465484603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465484595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodsplatter: {fileID: 0}
+  currentBlood: {fileID: 0}
+  spawnRate: 0
+  selectedObjects2: {fileID: 0}
+  position: {fileID: 0}
+  spawnRandomPoints: {fileID: 0}
 --- !u!33 &1465484604
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -8676,9 +8582,9 @@ MonoBehaviour:
   Destorys:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: BringScoreZero, Assembly-CSharp
-        m_MethodName: MakeScoreZero
+      - m_Target: {fileID: 1465484603}
+        m_TargetAssemblyTypeName: InstanciateBlood, Assembly-CSharp
+        m_MethodName: BloodSpawn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12203,7 +12109,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2137083209}
-  - component: {fileID: 2137083210}
   m_Layer: 0
   m_Name: blood
   m_TagString: Untagged
@@ -12226,33 +12131,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2137083210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2137083208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodsplatter:
-  - {fileID: 892058718}
-  currentBlood: {fileID: 892058718}
-  spawnRate: 2
-  selectedObjects2: {fileID: 0}
-  currentWeapon: {fileID: 0}
-  position: {fileID: 0}
-  spawnRandomPoints: {fileID: 388631122}
-  _skull: {fileID: 0}
-  _alien: {fileID: 0}
-  _devil: {fileID: 0}
-  _isgoingup: 1
-  _isgoingup2: 1
-  _isgoingup3: 1
-  _isgoingup4: 1
 --- !u!1 &2143108147
 GameObject:
   m_ObjectHideFlags: 0

@@ -138,19 +138,18 @@ public class Access4 : MonoBehaviour
                 //  score.IncrementScore();
 
 
-                this.gameObject.SetActive(false);
-                 other.gameObject.SetActive(false);
-
+         
                 selectedObjects3.SelectedObject();
 
                 Destorys.Invoke();
 
 
 
-                currentWeapon.SetActive(false);
+            
                 currentChar.SetActive(false);
-
-
+                currentWeapon.SetActive(false);
+                other.gameObject.SetActive(false);
+                this.gameObject.SetActive(false);
 
 
             }
