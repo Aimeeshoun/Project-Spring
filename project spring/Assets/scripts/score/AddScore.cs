@@ -63,6 +63,7 @@ public class AddScore : MonoBehaviour
  
     public Text text;
 
+    public bool isgoingup;
     private void Start()
 
     {
@@ -149,7 +150,7 @@ private void OnTriggerEnter(Collider other)
 
 
             scoreValue.value +=  1;
-
+        isgoingup = true;
 
 
     }
