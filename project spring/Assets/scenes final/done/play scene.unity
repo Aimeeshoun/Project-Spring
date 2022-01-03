@@ -980,7 +980,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 147187245}
-  - component: {fileID: 147187255}
   - component: {fileID: 147187253}
   - component: {fileID: 147187251}
   - component: {fileID: 147187250}
@@ -989,6 +988,8 @@ GameObject:
   - component: {fileID: 147187247}
   - component: {fileID: 147187246}
   - component: {fileID: 147187256}
+  - component: {fileID: 147187252}
+  - component: {fileID: 147187254}
   m_Layer: 0
   m_Name: alien r s
   m_TagString: Untagged
@@ -1117,6 +1118,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &147187252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147187244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a43be4b005db684cadc2f083ba0e2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &147187253
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1125,7 +1141,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147187244}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &147187255
+--- !u!114 &147187254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1167,8 +1183,8 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
   text: {fileID: 2024711622}
-  bloodsplatter: {fileID: 1343542032}
-  spawnRate: 1
+  bloodsplatter: {fileID: 2137083208}
+  spawnRate: 2
   position: {fileID: 147187244}
   spawnRandomPoints: {fileID: 0}
 --- !u!114 &147187256
@@ -1213,19 +1229,7 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   Destorys:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 147187255}
-        m_TargetAssemblyTypeName: AddScore, Assembly-CSharp
-        m_MethodName: AddScores
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &150386545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,6 +1411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160149616}
+  - component: {fileID: 160149617}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -1429,6 +1434,52 @@ Transform:
   m_Father: {fileID: 1561282478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160149617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160149615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67cb25f25edb844294a0f4478152c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iDholder: {fileID: 0}
+  Otheridholder: {fileID: 0}
+  idholder2: {fileID: 0}
+  otheridholder2: {fileID: 0}
+  currentwepholder2: {fileID: 0}
+  currentcharholder2: {fileID: 0}
+  _otherID: {fileID: 0}
+  _thisID: {fileID: 0}
+  _selwepidname: {fileID: 0}
+  _selcharidname: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
+  currentWeaponSel2: {fileID: 0}
+  currentCharacterSel2: {fileID: 0}
+  currentGameObject: {fileID: 0}
+  currentGameObject3: {fileID: 0}
+  myWeaponList2: []
+  myCharacterList2: []
+  currentWeapon: {fileID: 0}
+  currentChar: {fileID: 0}
+  currentChar2: {fileID: 0}
+  target: {fileID: 0}
+  target2: {fileID: 0}
+  weaponspawner: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  selectedObjects2: {fileID: 0}
+  selectedObjects3: {fileID: 0}
+  other_gameObject: {fileID: 0}
+  scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
+  text: {fileID: 2024711622}
+  bloodsplatter: {fileID: 2137083208}
+  spawnRate: 1
+  position: {fileID: 916458215}
+  spawnRandomPoints: {fileID: 0}
 --- !u!1 &196067612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3941,7 +3992,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 668369795}
-  - component: {fileID: 668369805}
   - component: {fileID: 668369802}
   - component: {fileID: 668369800}
   - component: {fileID: 668369799}
@@ -3950,6 +4000,8 @@ GameObject:
   - component: {fileID: 668369804}
   - component: {fileID: 668369796}
   - component: {fileID: 668369806}
+  - component: {fileID: 668369801}
+  - component: {fileID: 668369803}
   m_Layer: 0
   m_Name: skull r s
   m_TagString: Untagged
@@ -4077,15 +4129,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!33 &668369802
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668369794}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &668369804
+--- !u!114 &668369801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4094,11 +4138,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 668369794}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6a5cde39d1c7c489ec1f6abce656f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a43be4b005db684cadc2f083ba0e2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: cb0d41acdbed02045b9386782b33de3b, type: 2}
---- !u!114 &668369805
+  DestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!33 &668369802
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668369794}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &668369803
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4141,9 +4195,22 @@ MonoBehaviour:
   scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
   text: {fileID: 2024711622}
   bloodsplatter: {fileID: 4891350}
-  spawnRate: 1
+  spawnRate: 2
   position: {fileID: 668369794}
   spawnRandomPoints: {fileID: 0}
+--- !u!114 &668369804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668369794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6a5cde39d1c7c489ec1f6abce656f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idObj: {fileID: 11400000, guid: cb0d41acdbed02045b9386782b33de3b, type: 2}
 --- !u!114 &668369806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4186,19 +4253,7 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   Destorys:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &702147136
 GameObject:
   m_ObjectHideFlags: 0
@@ -5222,7 +5277,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916458216}
-  - component: {fileID: 916458225}
   - component: {fileID: 916458219}
   - component: {fileID: 916458217}
   - component: {fileID: 916458220}
@@ -5230,6 +5284,8 @@ GameObject:
   - component: {fileID: 916458226}
   - component: {fileID: 916458221}
   - component: {fileID: 916458227}
+  - component: {fileID: 916458218}
+  - component: {fileID: 916458222}
   m_Layer: 0
   m_Name: devil r s
   m_TagString: Untagged
@@ -5271,6 +5327,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &916458218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916458215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a43be4b005db684cadc2f083ba0e2bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &916458219
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5308,49 +5379,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0
---- !u!114 &916458224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 916458215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7eb465b501a9c474cab8025f78d91299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerEnterEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 916458225}
-        m_TargetAssemblyTypeName: AddScore, Assembly-CSharp
-        m_MethodName: AddScores
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  triggerExitEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &916458225
+--- !u!114 &916458222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5392,10 +5421,40 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
   text: {fileID: 2024711622}
-  bloodsplatter: {fileID: 2137083208}
-  spawnRate: 1
+  bloodsplatter: {fileID: 1343542032}
+  spawnRate: 2
   position: {fileID: 916458215}
   spawnRandomPoints: {fileID: 0}
+--- !u!114 &916458224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916458215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb465b501a9c474cab8025f78d91299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  triggerExitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &916458226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5451,31 +5510,7 @@ MonoBehaviour:
   other_gameObject: {fileID: 0}
   Destorys:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 916458215}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &922274943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5492,9 +5527,7 @@ GameObject:
   - component: {fileID: 922274948}
   - component: {fileID: 922274947}
   - component: {fileID: 922274945}
-  - component: {fileID: 922274954}
   - component: {fileID: 922274946}
-  - component: {fileID: 922274951}
   m_Layer: 0
   m_Name: 'burger r s '
   m_TagString: WeaponRandomObj
@@ -5590,7 +5623,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DestroyEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 922274943}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &922274949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5623,26 +5668,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &922274951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922274943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodsplatter: {fileID: 0}
-  currentBlood: []
-  currentBlood_: {fileID: 0}
-  currentBlood__: {fileID: 0}
-  spawnRate: 0
-  selectedObjects2: {fileID: 0}
-  position: {fileID: 0}
-  spawnRandomPoints: {fileID: 0}
 --- !u!114 &922274952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5664,61 +5689,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922274943}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &922274954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922274943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bbdc70b8d4823a46a29ae0667e80e63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iDholder: {fileID: 0}
-  Otheridholder: {fileID: 0}
-  idholder2: {fileID: 0}
-  otheridholder2: {fileID: 0}
-  currentwepholder2: {fileID: 0}
-  currentcharholder2: {fileID: 0}
-  _otherID: {fileID: 0}
-  _thisID: {fileID: 0}
-  _selwepidname: {fileID: 0}
-  _selcharidname: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  currentWeaponSel2: {fileID: 0}
-  currentCharacterSel2: {fileID: 0}
-  currentGameObject: {fileID: 0}
-  currentGameObject3: {fileID: 0}
-  myWeaponList2: []
-  myCharacterList2: []
-  currentWeapon: {fileID: 0}
-  currentChar: {fileID: 0}
-  currentChar2: {fileID: 0}
-  target: {fileID: 0}
-  target2: {fileID: 0}
-  weaponspawner: {fileID: 0}
-  selectedObjects: {fileID: 0}
-  selectedObjects2: {fileID: 0}
-  selectedObjects3: {fileID: 0}
-  other_gameObject: {fileID: 0}
-  Destorys:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 922274951}
-        m_TargetAssemblyTypeName: InstanciateBlood, Assembly-CSharp
-        m_MethodName: BloodSpawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &976873908
 GameObject:
   m_ObjectHideFlags: 0
@@ -5909,10 +5879,8 @@ GameObject:
   - component: {fileID: 1033626578}
   - component: {fileID: 1033626577}
   - component: {fileID: 1033626576}
-  - component: {fileID: 1033626575}
   - component: {fileID: 1033626574}
   - component: {fileID: 1033626573}
-  - component: {fileID: 1033626572}
   m_Layer: 0
   m_Name: water gun (1)
   m_TagString: WeaponRandomObj
@@ -5929,33 +5897,12 @@ Transform:
   m_GameObject: {fileID: 1033626570}
   m_LocalRotation: {x: -0, y: -0, z: -0.21124178, w: 0.97743386}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 24.756813, y: 15.627599, z: 15.627599}
+  m_LocalScale: {x: 16.526905, y: 10.432516, z: 10.432516}
   m_Children:
   - {fileID: 1668331272}
   m_Father: {fileID: 1884313937}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -24.39}
---- !u!114 &1033626572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033626570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodsplatter: {fileID: 1343542032}
-  currentBlood:
-  - {fileID: 4891350}
-  currentBlood_: {fileID: 0}
-  currentBlood__: {fileID: 0}
-  spawnRate: 2
-  selectedObjects2: {fileID: 0}
-  position: {fileID: 0}
-  spawnRandomPoints: {fileID: 0}
 --- !u!54 &1033626573
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5985,61 +5932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: e50d4dac35406ee43a9a87f21125894a, type: 2}
---- !u!114 &1033626575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1033626570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bbdc70b8d4823a46a29ae0667e80e63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iDholder: {fileID: 0}
-  Otheridholder: {fileID: 0}
-  idholder2: {fileID: 0}
-  otheridholder2: {fileID: 0}
-  currentwepholder2: {fileID: 0}
-  currentcharholder2: {fileID: 0}
-  _otherID: {fileID: 0}
-  _thisID: {fileID: 0}
-  _selwepidname: {fileID: 0}
-  _selcharidname: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  currentWeaponSel2: {fileID: 0}
-  currentCharacterSel2: {fileID: 0}
-  currentGameObject: {fileID: 0}
-  currentGameObject3: {fileID: 0}
-  myWeaponList2: []
-  myCharacterList2: []
-  currentWeapon: {fileID: 0}
-  currentChar: {fileID: 0}
-  currentChar2: {fileID: 0}
-  target: {fileID: 0}
-  target2: {fileID: 0}
-  weaponspawner: {fileID: 0}
-  selectedObjects: {fileID: 0}
-  selectedObjects2: {fileID: 0}
-  selectedObjects3: {fileID: 0}
-  other_gameObject: {fileID: 0}
-  Destorys:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1033626572}
-        m_TargetAssemblyTypeName: InstanciateBlood, Assembly-CSharp
-        m_MethodName: BloodSpawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1033626576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6385,7 +6277,7 @@ RectTransform:
   m_GameObject: {fileID: 1111311309}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.21187428, y: 0.21187425, z: 0.21187425}
+  m_LocalScale: {x: 0.21187428, y: 0.15871924, z: 0.21187425}
   m_Children: []
   m_Father: {fileID: 831902816}
   m_RootOrder: 0
@@ -6415,7 +6307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9a6bbd1958041364c9f1ccee52fcb34d, type: 3}
+  m_Texture: {fileID: 2800000, guid: 48000389755fafe4f91fb3f7f43bb529, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -7467,10 +7359,8 @@ GameObject:
   - component: {fileID: 1332761436}
   - component: {fileID: 1332761435}
   - component: {fileID: 1332761434}
-  - component: {fileID: 1332761442}
   - component: {fileID: 1332761433}
   - component: {fileID: 1332761432}
-  - component: {fileID: 1332761438}
   m_Layer: 0
   m_Name: water gun
   m_TagString: WeaponRandomObj
@@ -7599,26 +7489,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1332761438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332761430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40d1a6250638ad54ea5b625cac89510d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bloodsplatter: {fileID: 0}
-  currentBlood: []
-  currentBlood_: {fileID: 0}
-  currentBlood__: {fileID: 0}
-  spawnRate: 0
-  selectedObjects2: {fileID: 0}
-  position: {fileID: 0}
-  spawnRandomPoints: {fileID: 0}
 --- !u!33 &1332761439
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7640,61 +7510,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
---- !u!114 &1332761442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332761430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bbdc70b8d4823a46a29ae0667e80e63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iDholder: {fileID: 0}
-  Otheridholder: {fileID: 0}
-  idholder2: {fileID: 0}
-  otheridholder2: {fileID: 0}
-  currentwepholder2: {fileID: 0}
-  currentcharholder2: {fileID: 0}
-  _otherID: {fileID: 0}
-  _thisID: {fileID: 0}
-  _selwepidname: {fileID: 0}
-  _selcharidname: {fileID: 0}
-  _selWepIdholder: {fileID: 0}
-  _selCharIdholder: {fileID: 0}
-  currentWeaponSel2: {fileID: 0}
-  currentCharacterSel2: {fileID: 0}
-  currentGameObject: {fileID: 0}
-  currentGameObject3: {fileID: 0}
-  myWeaponList2: []
-  myCharacterList2: []
-  currentWeapon: {fileID: 0}
-  currentChar: {fileID: 0}
-  currentChar2: {fileID: 0}
-  target: {fileID: 0}
-  target2: {fileID: 0}
-  weaponspawner: {fileID: 0}
-  selectedObjects: {fileID: 0}
-  selectedObjects2: {fileID: 0}
-  selectedObjects3: {fileID: 0}
-  other_gameObject: {fileID: 0}
-  Destorys:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1332761438}
-        m_TargetAssemblyTypeName: InstanciateBlood, Assembly-CSharp
-        m_MethodName: BloodSpawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &1338972847
 GameObject:
   m_ObjectHideFlags: 0
@@ -8201,6 +8016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370469908}
+  - component: {fileID: 1370469909}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -8223,6 +8039,52 @@ Transform:
   m_Father: {fileID: 1561282478}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1370469909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370469907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67cb25f25edb844294a0f4478152c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iDholder: {fileID: 0}
+  Otheridholder: {fileID: 0}
+  idholder2: {fileID: 0}
+  otheridholder2: {fileID: 0}
+  currentwepholder2: {fileID: 0}
+  currentcharholder2: {fileID: 0}
+  _otherID: {fileID: 0}
+  _thisID: {fileID: 0}
+  _selwepidname: {fileID: 0}
+  _selcharidname: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
+  currentWeaponSel2: {fileID: 0}
+  currentCharacterSel2: {fileID: 0}
+  currentGameObject: {fileID: 0}
+  currentGameObject3: {fileID: 0}
+  myWeaponList2: []
+  myCharacterList2: []
+  currentWeapon: {fileID: 0}
+  currentChar: {fileID: 0}
+  currentChar2: {fileID: 0}
+  target: {fileID: 0}
+  target2: {fileID: 0}
+  weaponspawner: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  selectedObjects2: {fileID: 0}
+  selectedObjects3: {fileID: 0}
+  other_gameObject: {fileID: 0}
+  scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
+  text: {fileID: 2024711622}
+  bloodsplatter: {fileID: 4891350}
+  spawnRate: 1
+  position: {fileID: 668369794}
+  spawnRandomPoints: {fileID: 0}
 --- !u!1 &1373182341
 GameObject:
   m_ObjectHideFlags: 0
@@ -8609,7 +8471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.3339622, b: 0.3339622, a: 0.89411765}
+  m_Color: {r: 0.5019608, g: 1, b: 0.75393176, a: 0.89411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8658,7 +8520,7 @@ RectTransform:
   m_GameObject: {fileID: 1453247008}
   m_LocalRotation: {x: -0, y: -0, z: -0.10377692, w: 0.9946006}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20591305, y: 0.117394574, z: 0.205913}
+  m_LocalScale: {x: 0.30370116, y: 0.17314526, z: 0.3037011}
   m_Children: []
   m_Father: {fileID: 1668331272}
   m_RootOrder: 0
@@ -11272,7 +11134,7 @@ RectTransform:
   m_GameObject: {fileID: 1998763266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.68594354, y: 0.68594354, z: 0.68594354}
+  m_LocalScale: {x: 0.68594354, y: 0.5614242, z: 0.68594354}
   m_Children: []
   m_Father: {fileID: 222182442}
   m_RootOrder: 0
@@ -11302,7 +11164,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9a6bbd1958041364c9f1ccee52fcb34d, type: 3}
+  m_Texture: {fileID: 2800000, guid: 48000389755fafe4f91fb3f7f43bb529, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -11632,6 +11494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2036804418}
+  - component: {fileID: 2036804419}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -11654,6 +11517,52 @@ Transform:
   m_Father: {fileID: 1561282478}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2036804419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2036804417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67cb25f25edb844294a0f4478152c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iDholder: {fileID: 0}
+  Otheridholder: {fileID: 0}
+  idholder2: {fileID: 0}
+  otheridholder2: {fileID: 0}
+  currentwepholder2: {fileID: 0}
+  currentcharholder2: {fileID: 0}
+  _otherID: {fileID: 0}
+  _thisID: {fileID: 0}
+  _selwepidname: {fileID: 0}
+  _selcharidname: {fileID: 0}
+  _selWepIdholder: {fileID: 0}
+  _selCharIdholder: {fileID: 0}
+  currentWeaponSel2: {fileID: 0}
+  currentCharacterSel2: {fileID: 0}
+  currentGameObject: {fileID: 0}
+  currentGameObject3: {fileID: 0}
+  myWeaponList2: []
+  myCharacterList2: []
+  currentWeapon: {fileID: 0}
+  currentChar: {fileID: 0}
+  currentChar2: {fileID: 0}
+  target: {fileID: 0}
+  target2: {fileID: 0}
+  weaponspawner: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  selectedObjects2: {fileID: 0}
+  selectedObjects3: {fileID: 0}
+  other_gameObject: {fileID: 0}
+  scoreValue: {fileID: 11400000, guid: 393374084e0e45b4ea2af0ca55299d9a, type: 2}
+  text: {fileID: 2024711622}
+  bloodsplatter: {fileID: 1343542032}
+  spawnRate: 1
+  position: {fileID: 147187244}
+  spawnRandomPoints: {fileID: 0}
 --- !u!1 &2044142291
 GameObject:
   m_ObjectHideFlags: 0

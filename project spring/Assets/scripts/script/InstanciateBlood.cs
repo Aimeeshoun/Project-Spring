@@ -59,7 +59,7 @@ public class InstanciateBlood : MonoBehaviour
         {
             currentBlood__ = Instantiate(currentBlood__, position.transform.position, position.transform.rotation) as GameObject;
             currentBlood__.transform.parent = gameObject.transform;
-            Destroy(currentBlood_, .3f);
+            Destroy(currentBlood_, 2f);
             yield return new WaitForSeconds(spawnRate);
             spawning = false;
 

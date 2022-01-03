@@ -77,6 +77,10 @@ public class AddScore : MonoBehaviour
     // Start is called before the first frame update
     public SpawnRandomPoints spawnRandomPoints;
 
+
+
+    int count = 0;
+
     private void Start()
 
     {
@@ -140,22 +144,31 @@ public class AddScore : MonoBehaviour
             if (otheridholder2 == currentwepholder2)
             {
 
+
+                // for (int i = 0; i < 1; ++i)
+                // {
+
+                // }
                 AddScores();
+
                 // this.gameObject.SetActive(false);
                 // other.gameObject.SetActive(false);
                 // currentWeapon.SetActive(false);
                 //  currentChar.SetActive(false);
 
                 //  selectedObjects3.SelectedObject();
-                
-                if (other.gameObject.activeSelf)
-                {
-                    StartCoroutine(BloodSplasts());
+
+                // if (other.gameObject.activeSelf)
+                // {
+                StartCoroutine(BloodSplasts());
                     BloodSplasts();
+                AddScores();
+                
+                Destroy(this.gameObject,.5f);
 
-                }
+                //  }
 
-              
+
             }
 
         }
@@ -168,10 +181,16 @@ public class AddScore : MonoBehaviour
 
 
 
+      
+{
+                scoreValue.value += 1;
+         
 
-        
-        scoreValue.value +=  1;
-   
+            
+
+            
+           
+        } 
 
     }
 
@@ -183,10 +202,11 @@ public class AddScore : MonoBehaviour
 
         bloodsplatter = Instantiate(bloodsplatter, position.transform.position, position.transform.rotation) as GameObject;
         bloodsplatter.transform.parent = gameObject.transform;
-        Destroy(bloodsplatter, .5f);
+        Destroy(bloodsplatter, 3f);
+ 
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
-
+        AddScores();
     }
 }
 
