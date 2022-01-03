@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class InstanciateBlood : MonoBehaviour
 {
-    public GameObject bloodsplatter;  
+    public GameObject bloodsplatter;
     private int index;
     private bool spawning;
-    public GameObject currentBlood;
+    public GameObject[] currentBlood;
+    public GameObject currentBlood_;
+    public GameObject currentBlood__;
     /// 
     public float spawnRate;
     public SpawnRandomPoints selectedObjects2;
@@ -53,14 +55,17 @@ public class InstanciateBlood : MonoBehaviour
     public IEnumerator BloodSplasts()
         {
 
-
-
-            currentBlood = Instantiate(currentBlood, position.transform.position, position.transform.rotation) as GameObject;
-            currentBlood.transform.parent = gameObject.transform;
-            Destroy(currentBlood, .3f);
+        foreach (GameObject currentBlood_ in currentBlood)
+        {
+            currentBlood__ = Instantiate(currentBlood__, position.transform.position, position.transform.rotation) as GameObject;
+            currentBlood__.transform.parent = gameObject.transform;
+            Destroy(currentBlood_, .3f);
             yield return new WaitForSeconds(spawnRate);
             spawning = false;
 
+        }
+
+     
         }
 
 

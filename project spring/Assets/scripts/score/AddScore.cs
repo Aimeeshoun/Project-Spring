@@ -147,9 +147,15 @@ public class AddScore : MonoBehaviour
                 //  currentChar.SetActive(false);
 
                 //  selectedObjects3.SelectedObject();
-                StartCoroutine(BloodSplasts());
-                BloodSplasts();
+                
+                if (other.gameObject.activeSelf)
+                {
+                    StartCoroutine(BloodSplasts());
+                    BloodSplasts();
 
+                }
+
+              
             }
 
         }
@@ -177,7 +183,7 @@ public class AddScore : MonoBehaviour
 
         bloodsplatter = Instantiate(bloodsplatter, position.transform.position, position.transform.rotation) as GameObject;
         bloodsplatter.transform.parent = gameObject.transform;
-        Destroy(bloodsplatter, .1f);
+        Destroy(bloodsplatter, .5f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
