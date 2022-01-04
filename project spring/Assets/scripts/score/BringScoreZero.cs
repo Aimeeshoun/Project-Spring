@@ -55,7 +55,7 @@ public class BringScoreZero : MonoBehaviour
         public SelectedObjects selectedObjects3;
 
         public GameObject other_gameObject;
-        //public Score score;
+    
         private bool ObjInactive;
         //  public GameObject ring;
 
@@ -83,7 +83,6 @@ public class BringScoreZero : MonoBehaviour
             text.text = scoreValue.value.ToString();
 
 
-            // score = score.GetComponent<Score>();
 
             selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
             currentWeapon = selectedObjects.currentWeapon;
@@ -137,19 +136,18 @@ public class BringScoreZero : MonoBehaviour
             other_gameObject = other.gameObject;
 
 
-            if (otheridholder2 == currentcharholder2 || otheridholder2 == currentwepholder2)
+            if (otheridholder2 != currentwepholder2)
             {
               
                 
                     MakeScoreZero();
-                     this.gameObject.SetActive(false);
-                     other.gameObject.SetActive(false);
+         
                   
 
            
 
             }
-
+           
 
         }
 

@@ -15,16 +15,17 @@ public class OnTriggerEnterEvent : MonoBehaviour
     public UnityEvent triggerEnterEvent, triggerExitEvent;
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            triggerEnterEvent.Invoke();
+        //// if (other.gameObject.CompareTag("Player"))
+        // {
+        triggerEnterEvent.Invoke();
 
-        }
+        //  }
+        // }}
     }
-
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-            triggerExitEvent.Invoke();
+        //  if (other.gameObject.CompareTag("Player"))
+        triggerExitEvent.Invoke();
+        // }
     }
 }

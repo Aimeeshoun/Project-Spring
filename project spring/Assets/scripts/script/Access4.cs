@@ -115,7 +115,7 @@ public class Access4 : MonoBehaviour
 
         selectedObjects3 = selectedObjects3.GetComponent<SelectedObjects>();
 
-        if (currentWeapon.activeSelf == false)
+        if (currentChar.activeSelf == false)
         {
             selectedObjects3.SelectedObject();
         }
@@ -127,8 +127,8 @@ public class Access4 : MonoBehaviour
         otheridholder2 = Otheridholder.idObj;
         other_gameObject = other.gameObject;
 
-        if (idholder2 == currentwepholder2)
-        {
+       // if (idholder2 == currentwepholder2)
+       // {
             if (otheridholder2 == currentcharholder2)
             {
                 //   ring = Instantiate(ring, other.gameObject.transform.position, other.gameObject.transform.rotation) as GameObject;
@@ -142,17 +142,17 @@ public class Access4 : MonoBehaviour
                 
 
                 currentChar.SetActive(false);
-                currentWeapon.SetActive(false);
+             //   currentWeapon.SetActive(false);
                
           
                 Destroy(other.gameObject);//.SetActive(false);
-                Destroy(this.gameObject);//.SetActive(false);
+              //  Destroy(this.gameObject);//.SetActive(false);
 
                 
             }
 
 
-        }
+       // }
     }
 }
 

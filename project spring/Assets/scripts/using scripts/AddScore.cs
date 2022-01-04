@@ -80,12 +80,14 @@ public class AddScore : MonoBehaviour
 
 
     int count = 0;
-
+    //
+    public BringScoreZero _bringscorezero;
     private void Start()
 
     {
       
         text = text.GetComponent<Text>();
+        _bringscorezero = _bringscorezero.GetComponent<BringScoreZero>();
    
     }
 
@@ -96,10 +98,10 @@ public class AddScore : MonoBehaviour
 
         // score = score.GetComponent<Score>();
 
-        selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
-        currentWeapon = selectedObjects.currentWeapon;
-        _selWepIdholder = currentWeapon.GetComponent<IDholder>();
-        currentwepholder2 = _selWepIdholder.idObj;
+     //   selectedObjects = GameObject.Find("weaponspawner").GetComponent<SelectedObjects>();
+       // currentWeapon = selectedObjects.currentWeapon;
+      //  _selWepIdholder = currentWeapon.GetComponent<IDholder>();
+      //  currentwepholder2 = _selWepIdholder.idObj;
 
 
         ///
@@ -137,11 +139,11 @@ public class AddScore : MonoBehaviour
     Otheridholder = other.gameObject.GetComponent<IDholder>();
     otheridholder2 = Otheridholder.idObj;
     other_gameObject = other.gameObject;
+        position = other.gameObject;
 
-
-        if (idholder2 == currentcharholder2)
-        {
-            if (otheridholder2 == currentwepholder2)
+        //  if (idholder2 == currentcharholder2)
+        //  {
+        if (otheridholder2 == currentcharholder2)
             {
 
 
@@ -162,16 +164,19 @@ public class AddScore : MonoBehaviour
                 // {
                 StartCoroutine(BloodSplasts());
                     BloodSplasts();
-                AddScores();
+             //   AddScores();
                 
-                Destroy(this.gameObject,.5f);
+            //    Destroy(this.gameObject,.5f);
 
                 //  }
 
 
             }
-
+            else
+        {
+            _bringscorezero.MakeScoreZero();
         }
+      //  }
 
         
     }
