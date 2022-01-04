@@ -1,12 +1,8 @@
-using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
-[RequireComponent(typeof(Collider))]
-public class OnTriggerEnterEvent : MonoBehaviour
 
-
-
+public class Ontriggerenter : MonoBehaviour
 {
 
 
@@ -53,13 +49,6 @@ public class OnTriggerEnterEvent : MonoBehaviour
     public GameObject other_gameObject;
 
     //  public GameObject ring;
-
-
-    public IntData scoreValue;
-
-    public Text text;
-
-
     public void Start()
     {
 
@@ -72,38 +61,16 @@ public class OnTriggerEnterEvent : MonoBehaviour
         GetComponent<Collider>().isTrigger = true;
     }
 
- 
+    private void OnTriggerEnter(Collider other)
 
-    public UnityEvent triggerEnterEvent, triggerExitEvent;
-    void OnTriggerEnter(Collider other)
     {
         Otheridholder = other.gameObject.GetComponent<IDholder>();
         otheridholder2 = Otheridholder.idObj;
         other_gameObject = other.gameObject;
-
-
         if (otheridholder2 == currentcharholder2)
         {
 
-            triggerEnterEvent.Invoke();
+            Destroy(other.gameObject);
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        Otheridholder = other.gameObject.GetComponent<IDholder>();
-        otheridholder2 = Otheridholder.idObj;
-        other_gameObject = other.gameObject;
-
-
-        if (otheridholder2 == currentcharholder2)
-        {
-
-         
-            triggerExitEvent.Invoke();
-       
-        }
-
-
-    } 
-
 }

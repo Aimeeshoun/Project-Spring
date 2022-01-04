@@ -7,8 +7,8 @@ public class InstanciateBlood : MonoBehaviour
     public GameObject bloodsplatter;
     private int index;
     private bool spawning;
-    public GameObject[] currentBlood;
-    public GameObject currentBlood_;
+  //  public GameObject[] currentBlood;
+   // public GameObject currentBlood_;
     public GameObject currentBlood__;
     /// 
     public float spawnRate;
@@ -26,8 +26,6 @@ public class InstanciateBlood : MonoBehaviour
     void Start()
     {
 
-        selectedObjects2 = GameObject.Find("Enemy Spawner").GetComponent<SpawnRandomPoints>();
-
    
 
 
@@ -41,29 +39,36 @@ public class InstanciateBlood : MonoBehaviour
     void Update()
     {
       
-        position = selectedObjects2.currentPoint;
-
-        StartCoroutine(BloodSplasts());
-        BloodSplasts();
-
-
+        position = this.gameObject;
 
 
 
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.gameObject)
+        {
+            StartCoroutine(BloodSplasts());
+            BloodSplasts();
+
+        }
+    }
+
+
     public IEnumerator BloodSplasts()
         {
 
-        foreach (GameObject currentBlood_ in currentBlood)
-        {
+      //  foreach (GameObject currentBlood_ in currentBlood)
+      //  {
             currentBlood__ = Instantiate(currentBlood__, position.transform.position, position.transform.rotation) as GameObject;
             currentBlood__.transform.parent = gameObject.transform;
-            Destroy(currentBlood_, 2f);
+            Destroy(currentBlood__, 2f);
             yield return new WaitForSeconds(spawnRate);
             spawning = false;
 
-        }
+       // }
 
      
         }

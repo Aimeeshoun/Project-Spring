@@ -14,8 +14,9 @@ public class SelectedObjects : MonoBehaviour
 
     public GameObject target;
 
+    public IDholder iDholder;
 
-
+    public ID currentwepholder2;
 
 
     public void Start()
@@ -42,6 +43,8 @@ public class SelectedObjects : MonoBehaviour
             SelectedObject();
             return;
         }
+        iDholder = currentWeapon.GetComponent<IDholder>();
+       currentwepholder2 = iDholder.idObj;
 
     }
 
