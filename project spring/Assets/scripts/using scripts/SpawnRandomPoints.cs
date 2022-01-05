@@ -7,6 +7,7 @@ public class SpawnRandomPoints : MonoBehaviour
 
     public GameObject[] myWeaponList2;
     public GameObject[] spawnPoints;
+    public GameObject[] spawnedCharacters;
     public GameObject currentPoint;
     private int index;
     public int spawnAmount;
@@ -14,7 +15,7 @@ public class SpawnRandomPoints : MonoBehaviour
     private bool spawning;
 
 
-
+    public GameObject currentChar;
 
     public float maxTime;
     public float minTime;
@@ -60,7 +61,7 @@ public class SpawnRandomPoints : MonoBehaviour
                     {
 
                         selectRandomObjects();
-                        StartCoroutine(SpawnMonster());
+                        StartCoroutine(SpawnMonster()); 
                        SpawnMonster();
                         SetRandomTime();
                         time = 0;
@@ -78,11 +79,15 @@ public class SpawnRandomPoints : MonoBehaviour
     {
 
         selectRandomObjects();
-       // spawning = true;
-    
-        currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
-        currentWeapon.transform.parent = gameObject.transform;
-        Destroy(currentWeapon, 80f);
+        // spawning = true;
+
+
+        currentChar = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
+       currentChar = spawnedCharacters[1];
+
+        currentChar.transform.parent = currentChar.transform;
+    //  currentWeapon = spawnedCharacters[1];
+        Destroy(currentChar, 80f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
         //selectRandomObjects();
