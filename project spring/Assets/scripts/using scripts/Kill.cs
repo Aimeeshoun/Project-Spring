@@ -37,18 +37,20 @@ public class Kill : MonoBehaviour
 
     public GameObject other_gameObject;
     public GameObject this_gameObject;
+
+    public Rigidbody _rb;
  
 
     void Start()
     {
-
+        _rb = this.gameObject.GetComponent<Rigidbody>();
         selectedObjects2 = GameObject.Find("character spawner sel").GetComponent<SelectedObjects>();
     }
     // Update is called once per frame
     void Update()
     {
-      
 
+      
         currentcharholder2 = selectedObjects2.currentwepholder2;
 
         Otheridholder = this.gameObject.GetComponent<IDholder>();
@@ -79,11 +81,12 @@ public class Kill : MonoBehaviour
 
         StartCoroutine(BloodSplasts());
         BloodSplasts();
-        Destroy(this.gameObject,3f);
+            _rb.useGravity = false;
+           Destroy(this.gameObject,50f);
+        
 
 
-
-    }
+        }
 
        if (otheridholder2 != currentcharholder2)
         {
@@ -110,7 +113,7 @@ public class Kill : MonoBehaviour
         //  {
         currentBlood__ = Instantiate(currentBlood__, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
         currentBlood__.transform.parent = gameObject.transform;
-        Destroy(currentBlood__, 3f);
+        Destroy(currentBlood__, 50f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 

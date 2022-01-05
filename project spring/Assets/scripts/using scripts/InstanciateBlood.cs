@@ -45,15 +45,12 @@ public class InstanciateBlood : MonoBehaviour
 
 
     }
-
-    private void OnTriggerEnter(Collider other)
+    void OnMouseDown()
     {
-        if (!other.gameObject)
-        {
-            StartCoroutine(BloodSplasts());
+        StartCoroutine(BloodSplasts());
             BloodSplasts();
 
-        }
+        
     }
 
 
