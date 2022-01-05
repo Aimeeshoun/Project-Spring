@@ -5,13 +5,15 @@ using UnityEngine.AI;
 
 public class Aibehavior : MonoBehaviour
 {
-
-
+    private CharacterController _characterController;
+    private GameObject this_gameobject;
     private WaitForFixedUpdate wffu = new WaitForFixedUpdate();
     private NavMeshAgent agent;
     public Transform destination;
     private bool canHunt, canPatrol;
     public List<Transform> patrolPoints;
+    public bool isStopped_;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -33,12 +35,16 @@ public class Aibehavior : MonoBehaviour
 
         StartCoroutine(canHunt ? OnTriggerEnter(other) : Patrol());
     }
-    private void OnTriggerExit(Collider other)
+    private void OnMouseDown()
     {
-        canHunt = false;
-        StartCoroutine(Patrol());
-    }
+        this_gameobject= this.gameObject;
+        agent = this_gameobject.GetComponent<NavMeshAgent>();
+       // isStopped_ = agent.isStopped;
+        agent.enabled = false;
+        agent.stoppingDistance = .1f;                                                                                                
 
+    }
+  
     private int i = 0;
     private IEnumerator Patrol()
     {
