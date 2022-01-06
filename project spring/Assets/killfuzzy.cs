@@ -34,24 +34,23 @@ public class killfuzzy : MonoBehaviour
         other_gameObject = other.gameObject;
           if (other.tag == "Fuzzy")
         {
-            
-            StartCoroutine(BloodSplasts());
+
             BloodSplasts();
-            Destroy(other.gameObject, 3f);
+      //      BloodSplasts();
+            Destroy(other_gameObject);
         }
 
     }
 
 
-    public IEnumerator BloodSplasts()
+    void  BloodSplasts()
     {
 
       
         currentBlood__ = Instantiate(currentBlood__, other_gameObject.transform.position, other_gameObject.gameObject.transform.rotation) as GameObject;
         currentBlood__.transform.parent = gameObject.transform;
         Destroy(currentBlood__, 3f);
-        yield return new WaitForSeconds(spawnRate);
-        spawning = false;
+     
 
        
 
