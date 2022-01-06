@@ -23,6 +23,7 @@ public class Instancer : MonoBehaviour
 
 
         newbullet = Instantiate(bullet, gun.transform.position, gun.transform.rotation) as  GameObject;
+        Destroy(newbullet, 3f);
 
     }
 
