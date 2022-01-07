@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 707ea0767f6a9344091ba54c052b88dc, type: 3}
   m_Name: cow health 3
   m_EditorClassIdentifier: 
-  value: 0.19999993
+  value: -0.1
   setValueEvent:
     m_PersistentCalls:
       m_Calls:
@@ -33,7 +33,19 @@ MonoBehaviour:
       m_Calls: []
   lessThanZeroEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 4c392fe00868fdd40858d36d4bfed675, type: 2}
+        m_TargetAssemblyTypeName: GameAction2, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   lessThanZeroEvent2:
     m_PersistentCalls:
       m_Calls: []
