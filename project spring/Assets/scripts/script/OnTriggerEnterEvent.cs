@@ -57,9 +57,6 @@ public class OnTriggerEnterEvent : MonoBehaviour
     //  public GameObject ring;
 
 
-    public IntData scoreValue;
-
-    public Text text;
 
 
     public void Start()
