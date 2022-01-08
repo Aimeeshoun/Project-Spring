@@ -83,8 +83,11 @@ public class OnTriggerEnterEvent : MonoBehaviour
 
       //  if (otheridholder2 == currentcharholder2)
       //  {
-
+      if(other.tag == "Fuzzy")
+        {
             triggerEnterEvent.Invoke();
+        }
+            
      //   }
     }
     private void OnTriggerExit(Collider other)

@@ -10,7 +10,7 @@ public class FloatDataScript : ScriptableObject
     public float value;
     public UnityEvent setValueEvent, updateValueEvent, lessThanZeroEvent, lessThanZeroEvent2;
 
-
+  
     public void SetValue(float number)
     {
         value = number;
@@ -41,12 +41,12 @@ public class FloatDataScript : ScriptableObject
             value = 1;
         }
     }
-    public void AddScore(IntData score)
-    {
-        if (value <= 0)
-        {
-            lessThanZeroEvent2.Invoke();
+  //  public void AddScore(IntData score)
+   // {
+  //      if (value <= 0)
+  //      {
+     //       lessThanZeroEvent2.Invoke();
 
-        }
-    }
+   //     }
+   // }
 }

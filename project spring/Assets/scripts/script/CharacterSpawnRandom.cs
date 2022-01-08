@@ -15,7 +15,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     private bool spawning;
 
 
-
+    public float destroytime;
 
     public float maxTime;
     public float minTime;
@@ -84,7 +84,7 @@ public class CharacterSpawnRandom : MonoBehaviour
     
         currentCharacter = Instantiate(currentCharacter, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentCharacter.transform.parent = gameObject.transform;
-        Destroy(currentCharacter, 3.4f);
+      //  Destroy(currentCharacter, destroytime);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 
