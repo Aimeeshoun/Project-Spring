@@ -26,7 +26,17 @@ public class Movemnent1 : MonoBehaviour
         {
             characterSpeed = fastSpeed;
         }
+        // if (Input.GetKey(KeyCode.UpArrow))
+        // {
+        //rotate the sprite about the Z axis in the positive direction
+        //    transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * m_Speed, Space.World);
+        // }
 
+        //  if (Input.GetKey(KeyCode.DownArrow))
+        // {
+        //rotate the sprite about the Z axis in the negative direction
+        //  transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * m_Speed, Space.World);
+        //   }
     }
 
 
