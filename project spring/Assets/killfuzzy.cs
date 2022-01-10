@@ -43,7 +43,7 @@ public class killfuzzy : MonoBehaviour
     }
 
 
-    void  BloodSplasts()
+    public void  BloodSplasts()
     {
 
       
@@ -56,6 +56,9 @@ public class killfuzzy : MonoBehaviour
 
     }
 
-
+    public void DestroyBomb()
+    {
+        Destroy(this.gameObject,3f);
+    }
 
 }

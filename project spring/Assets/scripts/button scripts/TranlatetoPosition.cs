@@ -14,24 +14,27 @@ public class TranlatetoPosition : MonoBehaviour
 
     public float spawnRate;
 
-
+    public GameObject parentObj_;
     public GameObject position;
-
+    public GameObject newObj;
+  
     /// /
     /// </summary>
     /// 
     // Start is called before the first frame update
     void Start()
     {
-       
-   
+
+
+
+
+
 }
 
     // Update is called once per frame
     void Update()
     {
-
-        position = this.gameObject;
+      
     }
 
 
@@ -40,8 +43,8 @@ public class TranlatetoPosition : MonoBehaviour
 
         //  foreach (GameObject currentBlood_ in currentBlood)
         //  {
-        obj_= Instantiate(obj_, position.transform.position, position.transform.rotation) as GameObject;
-        obj_.transform.parent = gameObject.transform;
+        newObj = Instantiate(obj_, position.transform.position, position.transform.rotation);
+        newObj.transform.parent = parentObj_.transform;
       //  Destroy(obj_, 2f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
@@ -50,7 +53,7 @@ public class TranlatetoPosition : MonoBehaviour
 
 
     }
-        void TranlateObj()
+     public   void TranlateObj()
 {
     StartCoroutine(TranslateObj());
         TranslateObj();
