@@ -8,14 +8,14 @@ public class InstanciatePosition : MonoBehaviour
 
   
     public GameObject gameObject2;
-    public GameObject gameObject3;
+
     
-    void Update()
+   public void Instances()
     {
-      //  if (//this.gameObject.activeSelf(false);
-          //  {
-        //    Instantiate(gameObject2, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y), Quaternion.identity);
-      //  }
+    
+            {
+            Instantiate(gameObject2, new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y), Quaternion.identity);
+        }
            
         
     }
