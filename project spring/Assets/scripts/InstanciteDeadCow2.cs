@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InstanciteDeadCow2 : MonoBehaviour
 {
@@ -17,35 +18,55 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public Vector3 _postion;
     public Quaternion _rotation;
 
+    public Text text;
+    public string text_;
+    public IntData score;
+    public Image scorebar;
+    public GameObject scorebar_;
+    public GameObject Textbar_;
     public void Start()
     {
-        //   this_gamObj = this.gameObject;
-        //  this_gamObj = this_gamObj.GetComponentInChildren<GameObject>();
-       
-    //    this_gamObj2= this_gamObj.GetComponentInChildren<GameObject>()as GameObject;
+        scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
+        Textbar_ = GameObject.FindGameObjectWithTag("Text score");
+        position_ = this_gamObj2.GetComponent<Transform>();
+        scorebar = scorebar_.GetComponent<Image>();
+        text = Textbar_.GetComponent<Text>();
+
+
     }
     // Update is called once per frame
     public void Update()
     {
-        
-        position_ = this_gamObj2.GetComponent<Transform>();
+
         _postion = position_.position;
         _rotation = position_.rotation;
+
+        text.text = score.value.ToString();
+        scorebar.fillAmount = score.value;
 
     }
 
     public void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Fuzzy")
+
+        if (other.tag == "Fuzzy")
         {
-            
+
             StartCoroutine(Killcow());
             Killcow();
             this_gamObj.SetActive(false);
+            score.value += 1;
         }
     }
-   
-       
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Fuzzy")
+        {
+
+            // Destroy(deadcow2);
+        }
+    }
 
 
 
@@ -64,7 +85,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
     {
         deadcow2 = Instantiate(deadcow2, this_gamObj.transform.position, this_gamObj.transform.rotation) as GameObject;
         deadcow2.transform.parent = gameObject.transform;
-        Destroy(deadcow2, 4f);
+
         yield return new WaitForSeconds(spawnRate);
         spawning2 = false;
 
