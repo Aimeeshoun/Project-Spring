@@ -3631,12 +3631,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232315679}
   m_CullTransparentMesh: 1
---- !u!1 &233159155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8309797611505927449, guid: 8910f2d64e9f2f34d916f0248af5c70d,
-    type: 3}
-  m_PrefabInstance: {fileID: 474102066452619211}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &233159156 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4160545354167902096, guid: 8910f2d64e9f2f34d916f0248af5c70d,
@@ -6950,8 +6944,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadcow: {fileID: 2058209076}
   deadcow2: {fileID: 1051462}
-  this_gamObj: {fileID: 407425925}
+  this_gamObj: {fileID: 0}
+  this_gamObj2: {fileID: 0}
   spawnRate: 1
+  position_: {fileID: 0}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &412113191
 GameObject:
   m_ObjectHideFlags: 0
@@ -12015,7 +12013,11 @@ MonoBehaviour:
   deadcow: {fileID: 0}
   deadcow2: {fileID: 0}
   this_gamObj: {fileID: 0}
+  this_gamObj2: {fileID: 0}
   spawnRate: 0
+  position_: {fileID: 0}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &771398161
 GameObject:
   m_ObjectHideFlags: 0
@@ -12513,6 +12515,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783898530}
   m_CullTransparentMesh: 1
+--- !u!1 &785317246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785317247}
+  - component: {fileID: 785317248}
+  m_Layer: 0
+  m_Name: cow instanc 1 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &785317247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785317246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1467780023}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785317248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785317246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadcow: {fileID: 6347782859428020714, guid: 6b31963e7841927418b34f6397b67942, type: 3}
+  deadcow2: {fileID: 0}
+  this_gamObj: {fileID: 919132149155446097, guid: 70fbed6bd7bf1cb4580503f7717754c6,
+    type: 3}
+  this_gamObj2: {fileID: 8309797611505927449, guid: 8910f2d64e9f2f34d916f0248af5c70d,
+    type: 3}
+  spawnRate: 1
+  position_: {fileID: 4160545354167902096, guid: 8910f2d64e9f2f34d916f0248af5c70d,
+    type: 3}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &790293811
 GameObject:
   m_ObjectHideFlags: 0
@@ -16691,7 +16747,11 @@ MonoBehaviour:
   deadcow: {fileID: 1865519631}
   deadcow2: {fileID: 473284975}
   this_gamObj: {fileID: 0}
+  this_gamObj2: {fileID: 0}
   spawnRate: 1
+  position_: {fileID: 0}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1103828108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16908,6 +16968,60 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106732096}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1108376382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1108376383}
+  - component: {fileID: 1108376384}
+  m_Layer: 0
+  m_Name: cow instanc 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1108376383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108376382}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1467780023}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1108376384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108376382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadcow: {fileID: 8309797611505927449, guid: 8910f2d64e9f2f34d916f0248af5c70d, type: 3}
+  deadcow2: {fileID: 0}
+  this_gamObj: {fileID: 6842954557578566795, guid: d94243c3625a49943ac78bf09acf8cd6,
+    type: 3}
+  this_gamObj2: {fileID: 7595423439818779169, guid: 18c71096868529741837efbfd5590ac8,
+    type: 3}
+  spawnRate: 1
+  position_: {fileID: 7701354144008348281, guid: 18c71096868529741837efbfd5590ac8,
+    type: 3}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1111311309
 GameObject:
   m_ObjectHideFlags: 0
@@ -18292,12 +18406,6 @@ Transform:
   m_Father: {fileID: 1962820174}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1204639465 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6347782859428020714, guid: 6b31963e7841927418b34f6397b67942,
-    type: 3}
-  m_PrefabInstance: {fileID: 7829881868808679896}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1204639466 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5869497086228967580, guid: 6b31963e7841927418b34f6397b67942,
@@ -22908,6 +23016,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467269375}
   m_CullTransparentMesh: 1
+--- !u!1 &1467780022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1467780023}
+  m_Layer: 0
+  m_Name: cow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1467780023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467780022}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 626.4335, y: 419.40604, z: 170.66772}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1934551970}
+  - {fileID: 785317247}
+  - {fileID: 1108376383}
+  - {fileID: 1745133315}
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1470516079
 GameObject:
   m_ObjectHideFlags: 0
@@ -24555,7 +24697,11 @@ MonoBehaviour:
   deadcow: {fileID: 1865519631}
   deadcow2: {fileID: 473284975}
   this_gamObj: {fileID: 0}
+  this_gamObj2: {fileID: 0}
   spawnRate: 1
+  position_: {fileID: 0}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1578491261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26659,6 +26805,157 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1745133313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745133315}
+  - component: {fileID: 1745133316}
+  - component: {fileID: 1745133318}
+  - component: {fileID: 1745133317}
+  - component: {fileID: 1745133319}
+  m_Layer: 0
+  m_Name: cow instanciate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1745133315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745133313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1467780023}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1745133316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745133313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671c126bc7c19574ab1acba429345bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameAction: {fileID: 11400000, guid: d8d62f1beb624024faa16749b726cf9d, type: 2}
+  handlerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1108376384}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  holdTime: 0
+--- !u!114 &1745133317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745133313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671c126bc7c19574ab1acba429345bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameAction: {fileID: 11400000, guid: 55d45eb41504aad4eb81ebd40cc45f36, type: 2}
+  handlerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1934551971}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  holdTime: 0
+--- !u!114 &1745133318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745133313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671c126bc7c19574ab1acba429345bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameAction: {fileID: 11400000, guid: be955238005e704469e69c1f75de0201, type: 2}
+  handlerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 785317248}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  holdTime: 0
+--- !u!114 &1745133319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745133313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671c126bc7c19574ab1acba429345bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameAction: {fileID: 11400000, guid: 2ba666b1be981564b8c6576c4f19c64b, type: 2}
+  handlerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6842954557578566795, guid: d94243c3625a49943ac78bf09acf8cd6,
+          type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  holdTime: 0
 --- !u!1 &1746822312
 GameObject:
   m_ObjectHideFlags: 0
@@ -29395,6 +29692,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929667929}
   m_CullTransparentMesh: 1
+--- !u!1 &1934551969
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1934551970}
+  - component: {fileID: 1934551971}
+  m_Layer: 0
+  m_Name: cow instanc 1 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1934551970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934551969}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1467780023}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1934551971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934551969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadcow: {fileID: 6842954557578566795, guid: d94243c3625a49943ac78bf09acf8cd6, type: 3}
+  deadcow2: {fileID: 0}
+  this_gamObj: {fileID: 919132149155446097, guid: 70fbed6bd7bf1cb4580503f7717754c6,
+    type: 3}
+  this_gamObj2: {fileID: 8309797611505927449, guid: 8910f2d64e9f2f34d916f0248af5c70d,
+    type: 3}
+  spawnRate: 1
+  position_: {fileID: 4160545354167902096, guid: 8910f2d64e9f2f34d916f0248af5c70d,
+    type: 3}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1937262489
 GameObject:
   m_ObjectHideFlags: 0
@@ -29546,7 +29897,11 @@ MonoBehaviour:
   deadcow: {fileID: 1865519631}
   deadcow2: {fileID: 473284975}
   this_gamObj: {fileID: 0}
+  this_gamObj2: {fileID: 0}
   spawnRate: 1
+  position_: {fileID: 0}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &1937262496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33297,16 +33652,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 188858788}
     m_Modifications:
-    - target: {fileID: 3930215779865842682, guid: 18c71096868529741837efbfd5590ac8,
-        type: 3}
-      propertyPath: deadcow
-      value: 
-      objectReference: {fileID: 233159155}
-    - target: {fileID: 3930215779865842682, guid: 18c71096868529741837efbfd5590ac8,
-        type: 3}
-      propertyPath: deadcow2
-      value: 
-      objectReference: {fileID: 1204639465}
     - target: {fileID: 7595423439818779169, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_Name
