@@ -56,7 +56,9 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         cowIsDead = animator.GetBool("cow dead");
 
-       
+        StartCoroutine(cowWalking());
+        cowWalking();
+
     }
     // Update is called once per frame
     public void Update()
@@ -64,20 +66,25 @@ public class InstanciteDeadCow2 : MonoBehaviour
        
         _postion = position_.position;
         _rotation = position_.rotation;
-        cowAwake = true;
-        cowIsChilling = true;
+      
+     
         text.text = score.value.ToString();
         scorebar.fillAmount = score.value;
 
     }
 
+    public void Awake()
+    {
+        StartCoroutine(cowWalking());
+        cowWalking();
+    }
     public void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Fuzzy")
         {
 
-
+            cowIsChilling = false;
             StartCoroutine(cowScared()); 
             cowScared();
 
