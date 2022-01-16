@@ -31,8 +31,6 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public bool cowIsChilling;
     public bool cowIsScared;
     public bool cowIsDying;
-    public bool cowAwake;
-    public bool cowMoving;
     public bool cowIsDead;
 
     public GameObject Cow_forAnimation;
@@ -55,9 +53,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
         
 
         cowIsDead = animator.GetBool("cow dead");
-
-        StartCoroutine(cowWalking());
-        cowWalking();
+        cowIsDead = false;
 
     }
     // Update is called once per frame
@@ -73,29 +69,27 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
     }
 
-    public void Awake()
-    {
-        StartCoroutine(cowWalking());
-        cowWalking();
-    }
+
     public void OnTriggerEnter(Collider other)
     {
 
         if (other.tag == "Fuzzy")
         {
 
-            cowIsChilling = false;
+            
             StartCoroutine(cowScared()); 
-            cowScared();
+            
 
         }
 
         if(cowIsDead)
         {
-            StartCoroutine(Killcow());
-            Killcow();
-            //  this_gamObj.SetActive(false);
+      
             score.value += 1;
+            
+                StartCoroutine(Killcow());
+                Killcow();
+              this.gameObject.SetActive(false);
         }
     }
 
@@ -142,15 +136,6 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
     }
 
-    public IEnumerator cowWalking()
-    {
-        cowAwake = true;
-         yield return new WaitForSeconds(3);
-        cowAwake = false;
-       
-        cowIdle();
-
-    }
     public void cowIdle()
     {
         cowIsChilling = true;
@@ -163,7 +148,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
         yield return new WaitForSeconds(4);
         cowIsScared = false;
         StartCoroutine(cowDying());
-        cowDying();
+       
         cowIsDying = true;
     }
     public IEnumerator cowDying()
@@ -173,5 +158,6 @@ public class InstanciteDeadCow2 : MonoBehaviour
         cowIsDying = false;
     
         cowIsDead = true;
+
     }
 }
