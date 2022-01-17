@@ -34,17 +34,26 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public bool cowIsDead;
 
     public GameObject Cow_forAnimation;
+    public GameObject eye_ball;
+    public GameObject eye_ball2;
+    public GameObject eye_ball3;
+    public Transform eye_ball_;
+
+    public Vector3 new_scale;
     
     public void Start()
     {
-
-     
-        scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
+  
+       scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
         Textbar_ = GameObject.FindGameObjectWithTag("Text score");
-        position_ = this_gamObj2.GetComponent<Transform>();
+        
         scorebar = scorebar_.GetComponent<Image>();
         text = Textbar_.GetComponent<Text>();
         Cow_forAnimation =  GameObject.FindGameObjectWithTag("COW ALIVE");
+        eye_ball = GameObject.FindGameObjectWithTag("eyeball");
+        eye_ball_ = eye_ball.GetComponent<Transform>();
+        
+
         animator = Cow_forAnimation.GetComponent<Animator>();
         
         cowIsChilling = animator.GetBool("cow is chilling");
@@ -66,7 +75,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
      
         text.text = score.value.ToString();
         scorebar.fillAmount = score.value;
-
+        
     }
 
 
@@ -75,8 +84,9 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         if (other.tag == "Fuzzy")
         {
-
             
+            //new_scale = new Vector3(2, 2, 2);
+            // eye_ball.transform.localScale += new_scale;
             StartCoroutine(cowScared()); 
             
 
@@ -84,12 +94,12 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         if(cowIsDead)
         {
-      
+            
             score.value += 1;
             
                 StartCoroutine(Killcow());
-                Killcow();
-              this.gameObject.SetActive(false);
+           //   Killcow();
+          
         }
     }
 
@@ -106,34 +116,36 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
     public IEnumerator Killcow()
     {
-        deadcow = Instantiate(deadcow, _postion, _rotation) as GameObject;
-        deadcow.transform.parent = gameObject.transform;
-        Destroy(deadcow, 4f);
-        yield return new WaitForSeconds(spawnRate);
+        Instantiate(eye_ball2, eye_ball.transform.position, eye_ball.transform.rotation);
+        //eye_ball3.transform.parent = eye_ball.transform;
+        eye_ball2.transform.SetParent(eye_ball_);
+        yield return new WaitForSeconds(1);
+      
         spawning = false;
-        StartCoroutine(Killcow2());
-        Killcow2();
+        
+        
        
 
-    }
-    public IEnumerator Killcow2()
-    {
-        deadcow2 = Instantiate(deadcow2, _postion, _rotation) as GameObject;
-        deadcow2.transform.parent = gameObject.transform;
-        Destroy(deadcow, 4f);
-        yield return new WaitForSeconds(spawnRate);
-        spawning2 = false;
-        StartCoroutine(Killcow3());
-        Killcow3();
 
     }
+public IEnumerator Killcow2()
+ {
+      Destroy(deadcow);
+      deadcow2 = Instantiate(deadcow2, _postion, _rotation) as GameObject;
+      deadcow2.transform.parent = gameObject.transform;
+     
+      yield return new WaitForSeconds(4);
+     spawning2 = false;
+  
+
+ }
     public IEnumerator Killcow3()
     {
         deadcow3 = Instantiate(deadcow3, _postion, _rotation) as GameObject;
         deadcow3.transform.parent = gameObject.transform;
-        yield return new WaitForSeconds(spawnRate);
+        yield return new WaitForSeconds(2);
         spawning3 = false;
-
+        this.gameObject.SetActive(false);
     }
 
     public void cowIdle()
@@ -145,19 +157,20 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public IEnumerator cowScared()
     {
         cowIsScared = true;
-        yield return new WaitForSeconds(4);
-        cowIsScared = false;
+        yield return new WaitForSeconds(2);
+    
         StartCoroutine(cowDying());
-       
+        StartCoroutine(Killcow2());
         cowIsDying = true;
     }
     public IEnumerator cowDying()
     {
         cowIsDying = true;
-        yield return new WaitForSeconds(4);
-        cowIsDying = false;
-    
-        cowIsDead = true;
 
+        yield return new WaitForSeconds(1);
+        cowIsDying = false;
+      
+        StartCoroutine(Killcow3());
+        cowIsDead = true;
     }
 }
