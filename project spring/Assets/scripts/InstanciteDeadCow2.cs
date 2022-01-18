@@ -33,7 +33,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public bool cowIsDying;
     public bool cowIsDead;
 
-    public GameObject Cow_forAnimation;
+    public GameObject Cow_;
     public GameObject eye_ball;
     public GameObject eye_ball2;
     public GameObject eye_ball3;
@@ -42,6 +42,12 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public Vector3 new_scale;
     public int Timer = 0;
     public int HowManyCanDie = 30;
+
+
+    public GameObject healthobj_;
+    public HealthClamp healthtoGameOver;
+
+    public GameObject score_;
     public void Start()
     {
       
@@ -50,12 +56,12 @@ public class InstanciteDeadCow2 : MonoBehaviour
         
         scorebar = scorebar_.GetComponent<Image>();
         text = Textbar_.GetComponent<Text>();
-        Cow_forAnimation =  GameObject.FindGameObjectWithTag("COW ALIVE");
+        Cow_ =  GameObject.FindGameObjectWithTag("COW ALIVE");
         eye_ball = GameObject.FindGameObjectWithTag("eyeball");
         eye_ball_ = eye_ball.GetComponent<Transform>();
         
 
-        animator = Cow_forAnimation.GetComponent<Animator>();
+        animator = Cow_.GetComponent<Animator>();
         
         cowIsChilling = animator.GetBool("cow is chilling");
         cowIsScared = animator.GetBool("cow is scared");
@@ -70,13 +76,14 @@ public class InstanciteDeadCow2 : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-       
+        healthobj_ = healthobj_ = GameObject.FindGameObjectWithTag("health obj");
+        healthtoGameOver = healthobj_.GetComponent<HealthClamp>();
         _postion = position_.position;
         _rotation = position_.rotation;
-      
-     
+        
+
         text.text = score.value.ToString();
-        scorebar.fillAmount = score.value;
+   //     scorebar.fillAmount = score.value;
        
      
     }
@@ -87,11 +94,17 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         if (other.tag == "Fuzzy")
         {
+      
+            
+            
             Timer = +1;
 
             if(Timer <= 1)
             {
+               
+
                 score.value += 1;
+                healthtoGameOver.AddTotHealth();
                 Timer = 0;
                 //new_scale = new Vector3(2, 2, 2);
                 // eye_ball.transform.localScale += new_scale;

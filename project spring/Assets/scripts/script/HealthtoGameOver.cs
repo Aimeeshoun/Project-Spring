@@ -45,7 +45,7 @@ public class HealthtoGameOver : MonoBehaviour
             GameOverScene();
 
         }
-
+                                                                                                      
     }
 
     public void GameOverScene()

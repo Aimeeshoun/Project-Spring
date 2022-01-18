@@ -6491,7 +6491,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -6499,6 +6499,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!1 &412113191
 GameObject:
   m_ObjectHideFlags: 0
@@ -7289,6 +7292,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448272980}
   m_CullTransparentMesh: 1
+--- !u!114 &452590776 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6810246611909620695, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
+    type: 3}
+  m_PrefabInstance: {fileID: 6810246612476500116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &458907315
 GameObject:
   m_ObjectHideFlags: 0
@@ -11137,7 +11152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90.136}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122, y: -219.1}
+  m_AnchoredPosition: {x: 122, y: -198}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755964809
@@ -11153,7 +11168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.85566986, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11606,7 +11621,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -11614,6 +11629,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!1 &771398161
 GameObject:
   m_ObjectHideFlags: 0
@@ -12178,7 +12196,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -12186,6 +12204,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!1 &785784357
 GameObject:
   m_ObjectHideFlags: 0
@@ -12659,9 +12680,10 @@ GameObject:
   - component: {fileID: 808190978}
   - component: {fileID: 808190977}
   - component: {fileID: 808190976}
+  - component: {fileID: 808190981}
   m_Layer: 0
   m_Name: hold starting score
-  m_TagString: Untagged
+  m_TagString: health obj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12681,7 +12703,7 @@ MonoBehaviour:
   cowsDead: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
   valueOfDead: 30
   grabIntData_: {fileID: 0}
-  cowAlive_: {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154,
+  cowAlive_: {fileID: 919132149155446097, guid: 7de1f672f9197254c9e4c27a037a5813,
     type: 3}
   Textbar_: {fileID: 1257378392}
   text: {fileID: 1257378394}
@@ -12705,7 +12727,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808190975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -12761,6 +12783,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &808190981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808190975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1286b017a9204fa48ab2e4610a5c7994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 10
+  healthBarLength: 0
+  healthBar_: {fileID: 452590776}
+  _currentHealth: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
+  valueOfDead: 30
+  grabIntData_: {fileID: 0}
+  cowAlive_: {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154,
+    type: 3}
+  Textbar_: {fileID: 0}
+  text: {fileID: 0}
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  currentHealth__: 0
 --- !u!1 &831902815
 GameObject:
   m_ObjectHideFlags: 0
@@ -16175,7 +16222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.99027395, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16604,7 +16651,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -16612,6 +16659,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!114 &1103828108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16895,7 +16945,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -16903,6 +16953,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!1 &1111311309
 GameObject:
   m_ObjectHideFlags: 0
@@ -24318,7 +24371,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -24326,6 +24379,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!114 &1578491261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30701,7 +30757,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -30709,6 +30765,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!1 &1937262489
 GameObject:
   m_ObjectHideFlags: 0
@@ -30878,7 +30937,7 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
-  Cow_forAnimation: {fileID: 0}
+  Cow_: {fileID: 0}
   eye_ball: {fileID: 0}
   eye_ball2: {fileID: 0}
   eye_ball3: {fileID: 0}
@@ -30886,6 +30945,9 @@ MonoBehaviour:
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
   HowManyCanDie: 30
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  score_: {fileID: 0}
 --- !u!114 &1937262496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31525,14 +31587,14 @@ RectTransform:
   m_GameObject: {fileID: 2009089894}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 79}
-  m_LocalScale: {x: 0.66973, y: 0.22311, z: 1}
+  m_LocalScale: {x: 0.21485715, y: 0.22311, z: 1}
   m_Children: []
   m_Father: {fileID: 903469373}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127.3, y: -187}
+  m_AnchoredPosition: {x: 113, y: -168}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009089896
@@ -31548,7 +31610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -34213,12 +34275,12 @@ PrefabInstance:
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 175.29999
+      value: 185.29999
       objectReference: {fileID: 0}
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -186.99997
+      value: -172.99997
       objectReference: {fileID: 0}
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
@@ -34244,6 +34306,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Text score
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
+      propertyPath: m_Text
+      value: 00
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f8c57940012106449ef00065ef1e78c, type: 3}
@@ -34494,7 +34576,7 @@ PrefabInstance:
     - target: {fileID: 6810246611909620693, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
       propertyPath: m_Name
-      value: Image (1)
+      value: health bar image
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
@@ -34544,17 +34626,17 @@ PrefabInstance:
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5387138
+      value: 0.5602623
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.08651331
+      value: 0.08997384
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.024028827
+      value: 0.02498998
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
@@ -34599,7 +34681,7 @@ PrefabInstance:
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -219.1
+      value: -198
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
@@ -34618,8 +34700,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620695, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
-      propertyPath: m_FillAmount
+      propertyPath: m_Color.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810246611909620695, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810246611909620695, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6810246611909620695, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfa73ef9fec9fc84c8b8a0038e60daee, type: 3}
