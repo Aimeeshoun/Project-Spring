@@ -41,11 +41,11 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
     public Vector3 new_scale;
     public int Timer = 0;
-
+    public int HowManyCanDie = 30;
     public void Start()
     {
-  
-       scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
+      
+        scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
         Textbar_ = GameObject.FindGameObjectWithTag("Text score");
         
         scorebar = scorebar_.GetComponent<Image>();
@@ -64,8 +64,8 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         cowIsDead = animator.GetBool("cow dead");
         cowIsDead = false;
-        
-       
+     
+
     }
     // Update is called once per frame
     public void Update()
@@ -77,7 +77,8 @@ public class InstanciteDeadCow2 : MonoBehaviour
      
         text.text = score.value.ToString();
         scorebar.fillAmount = score.value;
-        
+       
+     
     }
 
 
@@ -86,9 +87,9 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         if (other.tag == "Fuzzy")
         {
-            Timer = 1;
+            Timer = +1;
 
-            if(Timer == 1)
+            if(Timer <= 1)
             {
                 score.value += 1;
                 Timer = 0;
@@ -183,4 +184,6 @@ public IEnumerator Killcow2()
         StartCoroutine(Killcow3());
         cowIsDead = true;
     }
+
+ 
 }

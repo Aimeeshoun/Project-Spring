@@ -3,29 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class HealthtoGameOver : MonoBehaviour
 {
 
 
     public IntData cowsDead;
-   
-    public int valueOfDead=100;
+
+    public int valueOfDead = 30;
     public InstanciteDeadCow2 grabIntData_;
     public GameObject cowAlive_;
     public GameObject Textbar_;
     public Text text;
+  //  public string scoreee;
 
-    
     // Start is called before the first frame update
     void Start()
     {
-        cowAlive_ = this.gameObject;
-       grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
-        cowsDead = grabIntData_.score;
-  
+
+
+        cowsDead.value = 0;
         Textbar_ = GameObject.FindGameObjectWithTag("Text score");
         text = Textbar_.GetComponent<Text>();
-    
+
 
 
 
@@ -34,17 +34,22 @@ public class HealthtoGameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //    text.text = cowsDead.value.ToString();
 
-        if (cowsDead.value == valueOfDead)
+        cowAlive_ = GameObject.FindGameObjectWithTag("COW ALIVE");
+        grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
+        cowsDead = grabIntData_.score;
+     //   scoreee = cowsDead.ToString();
+        //    text.text = cowsDead.value.ToString();
+        if (cowsDead.value >= valueOfDead)
         {
             GameOverScene();
 
         }
+
     }
 
     public void GameOverScene()
     {
-        SceneManager.LoadScene("game over scene");
+        SceneManager.LoadScene("game over menu");
     }
 }
