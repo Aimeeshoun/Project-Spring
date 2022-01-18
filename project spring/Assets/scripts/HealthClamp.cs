@@ -50,7 +50,7 @@ public class HealthClamp : MonoBehaviour
         _maxHealth = healthtoGameOver.valueOfDead;
         currentHealth__ = _currentHealth.value;
     
-        healthBar_.fillAmount = currentHealth__ *  .1f;
+        healthBar_.fillAmount = currentHealth__ * 1f / _maxHealth;
     }
 
 
@@ -71,8 +71,7 @@ public class HealthClamp : MonoBehaviour
             currentHealth__ = _maxHealth;
 
        
-   //     healthBarLength = (Screen.width /2) * (currentHealth__ / (float)_maxHealth);
-    //    GUI.Box(new Rect(10, 10, healthBarLength, 20), _currentHealth + "/" + _maxHealth);
+
     }
 }
 
