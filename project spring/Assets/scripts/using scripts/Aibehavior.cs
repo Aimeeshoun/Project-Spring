@@ -11,8 +11,15 @@ public class Aibehavior : MonoBehaviour
     private NavMeshAgent agent;
     public Transform destination;
     private bool canHunt, canPatrol;
-    public List<Transform> patrolPoints;
+  //  public Transform[] patrolPoints;
+    public Transform patrolPoint_;
     public bool isStopped_;
+    public GameObject cowEatPoint_;
+    public Transform cowTransform;
+    public Vector3 position_;
+    public Vector3[] position_s;
+
+    public GameObject[] eatSpawnPoints;
 
     private void Start()
     {
@@ -20,11 +27,24 @@ public class Aibehavior : MonoBehaviour
         StartCoroutine(Patrol());
     }
 
+    public void Update()
+    {
+        
+        eatSpawnPoints = GameObject.FindGameObjectsWithTag("eat cow point");
+        foreach (GameObject cowEatPoint_ in eatSpawnPoints)
+        {
+            patrolPoint_ = cowEatPoint_.GetComponent<Transform>();
+            position_ = patrolPoint_.position;
+            position_s[0] = position_;
+            
+        }
+    }
+
     private IEnumerator OnTriggerEnter(Collider other)
     {
         canHunt = true;
         canPatrol = false;
-        agent.destination = destination.position;
+        agent.destination = position_;
         var distance = agent.remainingDistance;
         while (distance <= 0.25f)
         {
@@ -39,7 +59,7 @@ public class Aibehavior : MonoBehaviour
     {
         this_gameobject= this.gameObject;
         agent = this_gameobject.GetComponent<NavMeshAgent>();
-       // isStopped_ = agent.isStopped;
+        isStopped_ = agent.isStopped;
         agent.enabled = false;
         agent.stoppingDistance = .1f;                                                                                                
 
@@ -53,9 +73,9 @@ public class Aibehavior : MonoBehaviour
         {
             yield return wffu;
             if (agent.pathPending || !(agent.remainingDistance < 0.5f)) continue;
-            yield return new WaitForSeconds(1);
-            agent.destination = patrolPoints[i].position;
-            i = (i + 1) % patrolPoints.Count;
+            yield return new WaitForSeconds(2);
+            agent.destination = position_s[0];
+       //     i = (i + 1) % position_s.Length;
         }
     }
 }

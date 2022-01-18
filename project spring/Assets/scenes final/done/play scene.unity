@@ -322,8 +322,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  patrolPoints: []
+  patrolPoint_: {fileID: 0}
   isStopped_: 0
+  cowEatPoint_: {fileID: 0}
+  cowTransform: {fileID: 0}
+  position_: {x: 0, y: 0, z: 0}
+  position_s: []
+  eatSpawnPoints: []
 --- !u!54 &1051472
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2151,12 +2156,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 191714162}
-  patrolPoints:
-  - {fileID: 191714162}
-  - {fileID: 663518596}
-  - {fileID: 771398162}
+  destination: {fileID: 0}
+  patrolPoint_: {fileID: 0}
   isStopped_: 0
+  cowEatPoint_: {fileID: 0}
+  cowTransform: {fileID: 0}
+  position_: {x: 0, y: 0, z: 0}
+  position_s: []
+  eatSpawnPoints: []
 --- !u!114 &147187257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6440,8 +6447,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  patrolPoints: []
+  patrolPoint_: {fileID: 0}
   isStopped_: 0
+  cowEatPoint_: {fileID: 0}
+  cowTransform: {fileID: 0}
+  position_: {x: 0, y: 0, z: 0}
+  position_s: []
+  eatSpawnPoints: []
 --- !u!54 &407425935
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10339,12 +10351,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 663518596}
-  patrolPoints:
-  - {fileID: 191714162}
-  - {fileID: 663518596}
-  - {fileID: 771398162}
+  destination: {fileID: 0}
+  patrolPoint_: {fileID: 0}
   isStopped_: 0
+  cowEatPoint_: {fileID: 0}
+  cowTransform: {fileID: 0}
+  position_: {x: 0, y: 0, z: 0}
+  position_s: []
+  eatSpawnPoints: []
 --- !u!114 &668369807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11144,7 +11158,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755964807}
   m_LocalRotation: {x: 0.49940687, y: -0.5005925, z: 0.5005924, w: 0.49940687}
-  m_LocalPosition: {x: 0, y: 0, z: 42}
+  m_LocalPosition: {x: 0, y: 0, z: -182}
   m_LocalScale: {x: 0.6622743, y: 0.10635618, z: 0.029540127}
   m_Children: []
   m_Father: {fileID: 903469373}
@@ -11152,7 +11166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90.136}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 122, y: -198}
+  m_AnchoredPosition: {x: 106, y: -198}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755964809
@@ -14389,12 +14403,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 771398162}
-  patrolPoints:
-  - {fileID: 191714162}
-  - {fileID: 663518596}
-  - {fileID: 771398162}
+  destination: {fileID: 0}
+  patrolPoint_: {fileID: 0}
   isStopped_: 0
+  cowEatPoint_: {fileID: 0}
+  cowTransform: {fileID: 0}
+  position_: {x: 0, y: 0, z: 0}
+  position_s: []
+  eatSpawnPoints: []
 --- !u!1 &917772513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e71c3e0b76a863346ab8d1123074906a,
@@ -21421,10 +21437,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  patrolPoint_: {fileID: 0}
   isStopped_: 0
+  cowEatPoint_: {fileID: 0}
+  cowTransform: {fileID: 0}
+  position_: {x: 0, y: 0, z: 0}
+  position_s: []
+  eatSpawnPoints: []
 --- !u!143 &1385028268
 CharacterController:
   m_ObjectHideFlags: 0
@@ -31586,15 +31605,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009089894}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 79}
-  m_LocalScale: {x: 0.21485715, y: 0.22311, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -180.28}
+  m_LocalScale: {x: 0.104098335, y: 0.108096845, z: 0.4845002}
   m_Children: []
   m_Father: {fileID: 903469373}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 113, y: -168}
+  m_AnchoredPosition: {x: 109, y: -151.29}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009089896
@@ -32673,8 +32692,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  patrolPoints: []
+  patrolPoint_: {fileID: 0}
   isStopped_: 0
+  cowEatPoint_: {fileID: 0}
+  cowTransform: {fileID: 0}
+  position_: {x: 0, y: 0, z: 0}
+  position_s: []
+  eatSpawnPoints: []
 --- !u!54 &2058209086
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -34239,6 +34263,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4845002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4845002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4845002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -34250,7 +34289,7 @@ PrefabInstance:
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 74.00001
+      value: -183
       objectReference: {fileID: 0}
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
@@ -34275,12 +34314,12 @@ PrefabInstance:
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 185.29999
+      value: 109
       objectReference: {fileID: 0}
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -172.99997
+      value: -151
       objectReference: {fileID: 0}
     - target: {fileID: 4296677769650163676, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
@@ -34310,7 +34349,7 @@ PrefabInstance:
     - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
       propertyPath: m_Text
-      value: 00
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
@@ -34325,6 +34364,11 @@ PrefabInstance:
     - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
         type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -34651,7 +34695,7 @@ PrefabInstance:
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42
+      value: -182
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
@@ -34676,7 +34720,7 @@ PrefabInstance:
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 122
+      value: 106
       objectReference: {fileID: 0}
     - target: {fileID: 6810246611909620694, guid: dfa73ef9fec9fc84c8b8a0038e60daee,
         type: 3}
