@@ -34,10 +34,10 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public bool cowIsDead;
 
     public GameObject Cow_;
-    public GameObject eye_ball;
-    public GameObject eye_ball2;
-    public GameObject eye_ball3;
-    public Transform eye_ball_;
+  //  public GameObject eye_ball;
+  //  public GameObject eye_ball2;
+  //  public GameObject eye_ball3;
+  //  public Transform eye_ball_;
 
     public Vector3 new_scale;
     public int Timer = 0;
@@ -57,8 +57,8 @@ public class InstanciteDeadCow2 : MonoBehaviour
         scorebar = scorebar_.GetComponent<Image>();
         text = Textbar_.GetComponent<Text>();
         Cow_ =  GameObject.FindGameObjectWithTag("COW ALIVE");
-        eye_ball = GameObject.FindGameObjectWithTag("eyeball");
-        eye_ball_ = eye_ball.GetComponent<Transform>();
+    //    eye_ball = GameObject.FindGameObjectWithTag("eyeball");
+    //    eye_ball_ = eye_ball.GetComponent<Transform>();
         
 
         animator = Cow_.GetComponent<Animator>();
@@ -94,14 +94,14 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         if (other.tag == "Fuzzy")
         {
-      
-            
-            
+
+
+
             Timer = +1;
 
-            if(Timer <= 1)
+            if (Timer <= 1)
             {
-               
+
 
                 score.value += 1;
                 healthtoGameOver.AddTotHealth();
@@ -110,21 +110,21 @@ public class InstanciteDeadCow2 : MonoBehaviour
                 // eye_ball.transform.localScale += new_scale;
                 StartCoroutine(cowScared());
             }
-            
-    
-            
+
+
+
 
         }
 
-        if(cowIsDead)
-        {
-            
-           
-            
-                StartCoroutine(Killcow());
-           //   Killcow();
-          
-        }
+        //  if(cowIsDead)
+        //   {
+
+
+
+        //          StartCoroutine(Killcow());
+        //   Killcow();
+
+        //     }
     }
 
     public void OnTriggerExit(Collider other)
@@ -138,20 +138,20 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
 
 
-    public IEnumerator Killcow()
-    {
-        Instantiate(eye_ball2, eye_ball.transform.position, eye_ball.transform.rotation);
+ //   public IEnumerator Killcow()
+ //   {
+   //     Instantiate(eye_ball2, eye_ball.transform.position, eye_ball.transform.rotation);
         //eye_ball3.transform.parent = eye_ball.transform;
-        eye_ball2.transform.SetParent(eye_ball_);
-        yield return new WaitForSeconds(1);
+    //    eye_ball2.transform.SetParent(eye_ball_);
+   //     yield return new WaitForSeconds(1);
       
-        spawning = false;
+   //     spawning = false;
         
         
        
 
 
-    }
+  //  }
 public IEnumerator Killcow2()
  {
       Destroy(deadcow);
