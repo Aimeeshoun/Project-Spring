@@ -40,7 +40,8 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public Transform eye_ball_;
 
     public Vector3 new_scale;
-    
+    public int Timer = 0;
+
     public void Start()
     {
   
@@ -63,7 +64,8 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         cowIsDead = animator.GetBool("cow dead");
         cowIsDead = false;
-
+        
+       
     }
     // Update is called once per frame
     public void Update()
@@ -84,10 +86,18 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
         if (other.tag == "Fuzzy")
         {
+            Timer = 1;
+
+            if(Timer == 1)
+            {
+                score.value += 1;
+                Timer = 0;
+                //new_scale = new Vector3(2, 2, 2);
+                // eye_ball.transform.localScale += new_scale;
+                StartCoroutine(cowScared());
+            }
             
-            //new_scale = new Vector3(2, 2, 2);
-            // eye_ball.transform.localScale += new_scale;
-            StartCoroutine(cowScared()); 
+    
             
 
         }
@@ -95,7 +105,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
         if(cowIsDead)
         {
             
-            score.value += 1;
+           
             
                 StartCoroutine(Killcow());
            //   Killcow();

@@ -246,3 +246,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8838013065538525120}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2639153617476250051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6775320624101637635, guid: 18c71096868529741837efbfd5590ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8838013065538525120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5415177139974070788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3566988224986822084, guid: 18c71096868529741837efbfd5590ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8838013065538525120}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639153617476250051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4514389211085784388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639153617476250051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa4c805ed2fef14896dece96f82a517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowsDead: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
+  valueOfDead: 30
+  grabIntData_: {fileID: 5415177139974070788}
+  cowAlive_: {fileID: 2639153617476250051}
+  Textbar_: {fileID: 4296677769650163677, guid: 3f8c57940012106449ef00065ef1e78c,
+    type: 3}
+  text: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c, type: 3}
