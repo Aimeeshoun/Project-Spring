@@ -65,8 +65,8 @@ public class killfuzzy : MonoBehaviour
     public void Awake()
     {
         this_gameObject = this.gameObject;
-        this_object = this_gameObject.transform;
-        particle_ = particle_.GetComponent<ParticleSystem>();
+       
+       
     }
     // Update is called once per frame
     public void Update()
@@ -85,6 +85,8 @@ public class killfuzzy : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
+        this_object = this_gameObject.transform;
+        particle_ = particle_.GetComponent<ParticleSystem>();
         this_obj_ = this_object.position;
         other_obj_rotation = this_object.rotation;
         other_gameObject_ = other.gameObject;
