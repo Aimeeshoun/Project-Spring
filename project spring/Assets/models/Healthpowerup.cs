@@ -32,7 +32,7 @@ public class Healthpowerup : MonoBehaviour
     private void OnMouseDown()
     {
         Timer = 1;
-        particle_.Emit(25);
+        
 
 
 
@@ -40,15 +40,15 @@ public class Healthpowerup : MonoBehaviour
         {
             
             particle_.transform.position = _position;
-            particle_.Emit(25);
+           
             Timer2 = 1;
             if (Timer2 == 1)
             {
 
                 UpdateImage();
-                particle_.Emit(25);
+                particle_.Play();
                 Timer2 = 0;
-                particle_.Emit(25);
+               
                 Destroy(this.gameObject, .3f);
             }
 
