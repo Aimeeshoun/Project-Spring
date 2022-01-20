@@ -129,7 +129,7 @@ public class killfuzzy : MonoBehaviour
         
      
        
-        currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation) as GameObject;
+        currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
         currentBlood__.transform.parent = gameObject.transform;
         particle_.Play();
         
