@@ -11,7 +11,7 @@ public class HealthtonextLevel : MonoBehaviour
 
     public IntData aliensDead;
 
-    public int valueOfAlienDead = 30;
+    public int valueOfDead = 30;
     public killfuzzy grabIntData_;
     public GameObject alienAlive_;
     public GameObject Textbar_;
@@ -42,7 +42,7 @@ public class HealthtonextLevel : MonoBehaviour
         aliensDead = grabIntData_.alienScore;
         scoreee = aliensDead.ToString();
         text.text = aliensDead.value.ToString();
-        if (aliensDead.value >= valueOfAlienDead)
+        if (aliensDead.value >= valueOfDead)
         {
             //      NextLevel();
 

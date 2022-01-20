@@ -49,9 +49,10 @@ public class Healthclamp2 : MonoBehaviour
         fuzzies = GameObject.FindGameObjectWithTag("Fuzzy");
             grabIntData_ = fuzzies.GetComponent<killfuzzy>();
             _currentHealth = grabIntData_.alienScore;
-            _maxHealth = healthtoNextLevel.valueOfAlienDead;
+            _maxHealth = healthtoNextLevel.valueOfDead;
             currentHealth__ = _currentHealth.value;
-        healthBar_.fillAmount = currentHealth__ * 1f / _maxHealth;
+        
+
 
     }
 
@@ -72,6 +73,12 @@ public class Healthclamp2 : MonoBehaviour
 
 
 
+    }
+
+    public void UpdateImage(IntData data)
+
+    {
+        healthBar_.fillAmount = data.value * 1f / _maxHealth;
     }
 }
 

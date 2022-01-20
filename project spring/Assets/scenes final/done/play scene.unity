@@ -18431,7 +18431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aliensDead: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
-  valueOfAlienDead: 30
+  valueOfDead: 30
   grabIntData_: {fileID: 0}
   alienAlive_: {fileID: 0}
   Textbar_: {fileID: 327262140}
@@ -21124,6 +21124,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5062203138048016285}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &993576235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993576234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 671c126bc7c19574ab1acba429345bdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameAction: {fileID: 11400000, guid: 7d80661d80a8c8c45a3811b1cc30f04f, type: 2}
+  handlerEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 808190982}
+        m_TargetAssemblyTypeName: Healthclamp2, Assembly-CSharp
+        m_MethodName: UpdateImage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  holdTime: 0
 --- !u!1 &995729703
 GameObject:
   m_ObjectHideFlags: 0
@@ -30228,6 +30258,7 @@ GameObject:
   - component: {fileID: 1497164632}
   - component: {fileID: 1497164631}
   - component: {fileID: 1497164637}
+  - component: {fileID: 1497164638}
   m_Layer: 0
   m_Name: bullet
   m_TagString: bullet
@@ -30371,6 +30402,68 @@ MonoBehaviour:
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
   Alien_: {fileID: 0}
+--- !u!114 &1497164638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497164630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774c2ecf4779ec84da68feefe8ccd8a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  awakeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7d80661d80a8c8c45a3811b1cc30f04f, type: 2}
+        m_TargetAssemblyTypeName: GameAction2, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7d80661d80a8c8c45a3811b1cc30f04f, type: 2}
+        m_TargetAssemblyTypeName: GameAction2, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEnableEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 7d80661d80a8c8c45a3811b1cc30f04f, type: 2}
+        m_TargetAssemblyTypeName: GameAction2, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDisableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  holdTime: 0
+  repeatOnStart: 0
 --- !u!1 &1501048587
 GameObject:
   m_ObjectHideFlags: 0
@@ -42376,7 +42469,7 @@ PrefabInstance:
     - target: {fileID: 5062203137993187668, guid: e253c4b5c4a5a2949ac4fa9ac8f93e0a,
         type: 3}
       propertyPath: m_TagString
-      value: score bar 2
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5062203137993187670, guid: e253c4b5c4a5a2949ac4fa9ac8f93e0a,
         type: 3}
@@ -42392,7 +42485,7 @@ PrefabInstance:
     - target: {fileID: 5062203137993187670, guid: e253c4b5c4a5a2949ac4fa9ac8f93e0a,
         type: 3}
       propertyPath: m_FillAmount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5062203137993187670, guid: e253c4b5c4a5a2949ac4fa9ac8f93e0a,
         type: 3}

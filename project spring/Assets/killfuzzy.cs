@@ -37,7 +37,7 @@ public class killfuzzy : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        scorebar_ = GameObject.FindGameObjectWithTag("score bar 2");
+     //   scorebar_ = GameObject.FindGameObjectWithTag("score bar 2");
         Textbar_ = GameObject.FindGameObjectWithTag("text score 2");
         scorebar = scorebar_.GetComponent<Image>();
    
