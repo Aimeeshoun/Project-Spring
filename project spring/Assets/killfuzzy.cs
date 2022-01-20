@@ -20,7 +20,7 @@ public class killfuzzy : MonoBehaviour
     public GameObject this_gameObject;
 
     public IntData alienScore;
-    public int valueOfAliensDead = 30;
+    public int valueOfDead = 30;
     public Text text;
     public string scoreee;
     public GameObject Textbar_;
