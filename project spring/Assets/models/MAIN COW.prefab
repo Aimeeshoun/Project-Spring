@@ -367,6 +367,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8838013065538525120}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2639153617476250051 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6775320624101637635, guid: 18c71096868529741837efbfd5590ac8,
+    type: 3}
+  m_PrefabInstance: {fileID: 8838013065538525120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3453126870758568825 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6146593913961768121, guid: 18c71096868529741837efbfd5590ac8,
@@ -402,3 +408,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!114 &719729195014258113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639153617476250051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa70b2aa508de474ab1427bc019d947b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowHealth_: 0
+  cowMaxHealth_: 300

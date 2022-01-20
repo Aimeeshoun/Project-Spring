@@ -33,6 +33,9 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public bool cowIsDying;
     public bool cowIsDead;
 
+    public CowHealth cowHealth_;
+    public int currentCowHealth_;
+
     public GameObject Cow_;
   //  public GameObject eye_ball;
   //  public GameObject eye_ball2;
@@ -50,7 +53,8 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public GameObject score_;
     public void Start()
     {
-      
+        cowHealth_ =this.gameObject.GetComponent<CowHealth>();
+        
         scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
         Textbar_ = GameObject.FindGameObjectWithTag("Text score");
         
@@ -80,7 +84,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
         healthtoGameOver = healthobj_.GetComponent<HealthClamp>();
         _postion = position_.position;
         _rotation = position_.rotation;
-        
+        currentCowHealth_ = cowHealth_.cowHealth_;
 
         text.text = score.value.ToString();
    //     scorebar.fillAmount = score.value;
@@ -95,25 +99,27 @@ public class InstanciteDeadCow2 : MonoBehaviour
         if (other.tag == "Fuzzy")
         {
 
-
-
-            Timer = +1;
-
-            if (Timer <= 1)
+            if(currentCowHealth_ <= 0)
             {
+                Timer = +1;
+
+                if (Timer <= 1)
+                {
 
 
-                score.value += 1;
-                healthtoGameOver.AddTotHealth();
-          
-                //new_scale = new Vector3(2, 2, 2);
-                // eye_ball.transform.localScale += new_scale;
-                StartCoroutine(cowScared());
-                Timer = 0;
+                    score.value += 1;
+                    healthtoGameOver.AddTotHealth();
+
+                    //new_scale = new Vector3(2, 2, 2);
+                    // eye_ball.transform.localScale += new_scale;
+                    StartCoroutine(cowScared());
+                    Timer = 0;
+                }
+
+
             }
 
-
-
+ 
 
         }
 

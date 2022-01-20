@@ -103,13 +103,13 @@ public class killfuzzy : MonoBehaviour
 
                     alienScore.value += 1;
                     healthtoNextLevel.AddTotHealth2();
-                  
-                 
-            
+
+                Destroy(other_gameObject_);
+
                 Timer = 0;
                 }
 
-            Destroy(other_gameObject_);
+      
 
             //  BloodSplasts();
             //    Destroy(other_gameObject);
