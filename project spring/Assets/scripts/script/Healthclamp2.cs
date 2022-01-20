@@ -3,40 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthClamp : MonoBehaviour
-
+public class Healthclamp2 : MonoBehaviour
 {
-  
+
+
     public int _maxHealth;
-    
+
 
     public float healthBarLength;
     public Image healthBar_;
     public IntData _currentHealth;
 
     public int valueOfDead = 30;
-    public InstanciteDeadCow2 grabIntData_;
-    public GameObject cowAlive_;
+    public killfuzzy grabIntData_;
+    public GameObject fuzzies;
+   /// public GameObject fuzzy_;
+   
+  //  public GameObject alienAlive_;
     public GameObject Textbar_;
     public Text text;
 
     public GameObject healthobj_;
 
-    public HealthtoGameOver healthtoGameOver;
+    public HealthtonextLevel healthtoNextLevel;
     public int currentHealth__;
 
     // Use this for initialization
     public void Start()
     {
         healthBar_ = healthBar_.GetComponent<Image>();
-        
-    //    healthBarLength = Screen.width / 2;
-        Textbar_ = GameObject.FindGameObjectWithTag("Text score");
+
+        //    healthBarLength = Screen.width / 2;
+        Textbar_ = GameObject.FindGameObjectWithTag("text score 2");
         text = Textbar_.GetComponent<Text>();
 
-        healthobj_ =  GameObject.FindGameObjectWithTag("health obj");
-        healthtoGameOver = healthobj_.GetComponent<HealthtoGameOver>();
-      
+        healthobj_ = GameObject.FindGameObjectWithTag("health obj");
+        healthtoNextLevel = healthobj_.GetComponent<HealthtonextLevel>();
 
 
     }
@@ -44,22 +46,20 @@ public class HealthClamp : MonoBehaviour
     public void Update()
     {
 
-        cowAlive_ = GameObject.FindGameObjectWithTag("COW ALIVE");
-        grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
-        _currentHealth = grabIntData_.score;
-        _maxHealth = healthtoGameOver.valueOfDead;
-        currentHealth__ = _currentHealth.value;
-    
+        fuzzies = GameObject.FindGameObjectWithTag("Fuzzy");
+            grabIntData_ = fuzzies.GetComponent<killfuzzy>();
+            _currentHealth = grabIntData_.alienScore;
+            _maxHealth = healthtoNextLevel.valueOfAlienDead;
+            currentHealth__ = _currentHealth.value;
         healthBar_.fillAmount = currentHealth__ * 1f / _maxHealth;
+
     }
 
 
-
-
-    public void AddTotHealth()
+    public void AddTotHealth2()
     {
 
-   //     currentHealth__ += 1;
+        //     currentHealth__ += 1;
 
         if (currentHealth__ < 0)
             currentHealth__ = 0;
@@ -70,7 +70,7 @@ public class HealthClamp : MonoBehaviour
         if (currentHealth__ < _maxHealth)
             currentHealth__ = _maxHealth;
 
-       
+
 
     }
 }

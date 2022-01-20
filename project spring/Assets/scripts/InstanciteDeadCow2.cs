@@ -76,7 +76,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        healthobj_ = healthobj_ = GameObject.FindGameObjectWithTag("health obj");
+        healthobj_ =  GameObject.FindGameObjectWithTag("health obj");
         healthtoGameOver = healthobj_.GetComponent<HealthClamp>();
         _postion = position_.position;
         _rotation = position_.rotation;
@@ -105,10 +105,11 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
                 score.value += 1;
                 healthtoGameOver.AddTotHealth();
-                Timer = 0;
+          
                 //new_scale = new Vector3(2, 2, 2);
                 // eye_ball.transform.localScale += new_scale;
                 StartCoroutine(cowScared());
+                Timer = 0;
             }
 
 
@@ -127,14 +128,14 @@ public class InstanciteDeadCow2 : MonoBehaviour
         //     }
     }
 
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "Fuzzy")
-        {
+  //  public void OnTriggerExit(Collider other)
+  //  {
+  //      if (other.tag == "Fuzzy")
+  //      {
 
             // Destroy(deadcow2);
-        }
-    }
+    //    }
+ //   }
 
 
 

@@ -15,10 +15,10 @@ public class HealthtoGameOver : MonoBehaviour
     public GameObject cowAlive_;
     public GameObject Textbar_;
     public Text text;
-  //  public string scoreee;
+    public string scoreee;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
 
 
@@ -32,14 +32,14 @@ public class HealthtoGameOver : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   public void Update()
     {
 
         cowAlive_ = GameObject.FindGameObjectWithTag("COW ALIVE");
         grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
         cowsDead = grabIntData_.score;
-     //   scoreee = cowsDead.ToString();
-        //    text.text = cowsDead.value.ToString();
+        scoreee = cowsDead.ToString();
+            text.text = cowsDead.value.ToString();
         if (cowsDead.value >= valueOfDead)
         {
             GameOverScene();
