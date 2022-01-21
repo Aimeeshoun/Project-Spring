@@ -137,7 +137,7 @@ public class killfuzzy : MonoBehaviour
             if (Timer == 2)
         {
             BloodSplasts();
-            
+            Timer = 0;
         }
 
         //  BloodSplasts();
@@ -156,10 +156,10 @@ public class killfuzzy : MonoBehaviour
        
         currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
         currentBlood__.transform.parent = gameObject.transform;
-        particle_.Play();
-        Destroy(currentBlood__, 3f);
-        particle_.Stop();
-        Destroy(this.gameObject,3f);
+        particle_.Emit(100);
+        Destroy(currentBlood__,2);
+        particle_.Emit(100);
+        Destroy(this.gameObject,2f);
 
 
     }

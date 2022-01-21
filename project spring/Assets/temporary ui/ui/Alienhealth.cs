@@ -30,7 +30,7 @@ public class Alienhealth : MonoBehaviour
     public void Awake()
     {
         Timer = 0;
-        alienMaxHealth_ = 4;
+        alienMaxHealth_ = 6;
         alienHealth_ = alienMaxHealth_;
     }
 

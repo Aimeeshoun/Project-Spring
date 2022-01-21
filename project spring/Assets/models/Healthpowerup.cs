@@ -47,7 +47,7 @@ public class Healthpowerup : MonoBehaviour
             {
 
                 UpdateImage();
-                particle_.Play();
+                particle_.Emit(100);
                 Timer2 = 0;
                
                 Destroy(this.gameObject, .3f);

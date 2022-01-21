@@ -14,9 +14,7 @@ public class SelectedObjects : MonoBehaviour
 
     public GameObject target;
 
-    public IDholder iDholder;
 
-    public ID currentwepholder2;
 
 
     public void Start()
@@ -27,24 +25,21 @@ public class SelectedObjects : MonoBehaviour
        
         SelectedObject();
 
-
+        
  
 
     }
 
     public void Update()
     {
-        if (currentWeapon.activeSelf ==false)
-        {
-            SelectedObject();
-        }
-        if (currentWeapon == null)
+
+
+       
+        if (currentWeapon==null)
         {
             SelectedObject();
             return;
         }
-        iDholder = currentWeapon.GetComponent<IDholder>();
-       currentwepholder2 = iDholder.idObj;
 
     }
 
