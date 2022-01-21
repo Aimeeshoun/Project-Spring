@@ -82,7 +82,7 @@ public class Kill : MonoBehaviour
         StartCoroutine(BloodSplasts());
         BloodSplasts();
             _rb.useGravity = false;
-           Destroy(this.gameObject,3f);
+           Destroy(this.gameObject,7f);
         
 
 
@@ -113,7 +113,7 @@ public class Kill : MonoBehaviour
         //  {
         currentBlood__ = Instantiate(currentBlood__, this.gameObject.transform.position, this.gameObject.transform.rotation) as GameObject;
         currentBlood__.transform.parent = gameObject.transform;
-        Destroy(currentBlood__, 3f);
+    //  Destroy(currentBlood__, 3f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
 

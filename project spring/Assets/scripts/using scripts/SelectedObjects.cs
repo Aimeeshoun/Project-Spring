@@ -17,6 +17,18 @@ public class SelectedObjects : MonoBehaviour
     public GameObject target;
 
 
+ 
+    
+    
+    
+    public IntData aliensDead;
+
+    public int valueOfDead = 30;
+    public killfuzzy grabIntData_;
+    public GameObject alienAlive_;
+    public GameObject Textbar_;
+
+    public string scoreee;
 
 
     public void Start()
@@ -25,10 +37,12 @@ public class SelectedObjects : MonoBehaviour
         // selectRandomObjects();
         // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
        
-        SelectedObject();
+    //  SelectedObject();
 
-    //    selectedObjects = currentWeapon.GetComponent<SelectedObjects>();
-        
+        //    selectedObjects = currentWeapon.GetComponent<SelectedObjects>();
+
+      
+    
 
 
 
@@ -36,12 +50,22 @@ public class SelectedObjects : MonoBehaviour
 
     public void Update()
     {
-    //    currentWeapon2 = selectedObjects.currentWeapon;
+        //    currentWeapon2 = selectedObjects.currentWeapon;
 
-        if(currentWeapon == null)
-        {
-            SelectedObject();
-        }
+
+
+        alienAlive_ = GameObject.FindGameObjectWithTag("Fuzzy");
+
+        grabIntData_ = alienAlive_.GetComponent<killfuzzy>();
+        aliensDead = grabIntData_.alienScore;
+
+
+
+
+
+    
+
+
 
     }
 
@@ -59,6 +83,8 @@ public class SelectedObjects : MonoBehaviour
 
 
 }
+
+
 
 
 
