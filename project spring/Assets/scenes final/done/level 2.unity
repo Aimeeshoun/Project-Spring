@@ -7008,6 +7008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 1909881093}
   currentBlood__: {fileID: 1909881093}
   spawnRate: 1
@@ -7031,6 +7032,9 @@ MonoBehaviour:
   this_obj_: {x: 0, y: 0, z: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
 --- !u!114 &136772233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7110,6 +7114,7 @@ GameObject:
   - component: {fileID: 147187255}
   - component: {fileID: 147187256}
   - component: {fileID: 147187257}
+  - component: {fileID: 147187258}
   m_Layer: 0
   m_Name: alien r s
   m_TagString: Fuzzy
@@ -7330,6 +7335,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228ff1ca0d534a149a7911b64f0408e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &147187258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147187244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2339d80fcb60fa44aa148d7abca593a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienHealth_: 0
+  alienMaxHealth_: 0
 --- !u!1 &150386545
 GameObject:
   m_ObjectHideFlags: 0
@@ -7669,6 +7688,7 @@ GameObject:
   - component: {fileID: 160149616}
   - component: {fileID: 160149620}
   - component: {fileID: 160149618}
+  - component: {fileID: 160149617}
   m_Layer: 0
   m_Name: GameObject (2)
   m_TagString: Untagged
@@ -7691,6 +7711,20 @@ Transform:
   m_Father: {fileID: 1561282478}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160149617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160149615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2339d80fcb60fa44aa148d7abca593a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienHealth_: 0
+  alienMaxHealth_: 0
 --- !u!54 &160149618
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9764,6 +9798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 2137083208}
   currentBlood__: {fileID: 2137083208}
   spawnRate: 1
@@ -9787,6 +9822,9 @@ MonoBehaviour:
   this_obj_: {x: 0, y: 0, z: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
 --- !u!54 &278394492
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -15863,6 +15901,7 @@ GameObject:
   - component: {fileID: 668369805}
   - component: {fileID: 668369806}
   - component: {fileID: 668369807}
+  - component: {fileID: 668369808}
   m_Layer: 0
   m_Name: skull r s
   m_TagString: Fuzzy
@@ -16083,6 +16122,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228ff1ca0d534a149a7911b64f0408e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &668369808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668369794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2339d80fcb60fa44aa148d7abca593a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienHealth_: 0
+  alienMaxHealth_: 0
 --- !u!1 &671897037
 GameObject:
   m_ObjectHideFlags: 0
@@ -20180,6 +20233,7 @@ GameObject:
   - component: {fileID: 916458224}
   - component: {fileID: 916458227}
   - component: {fileID: 916458225}
+  - component: {fileID: 916458228}
   m_Layer: 0
   m_Name: devil r s
   m_TagString: Fuzzy
@@ -20385,6 +20439,20 @@ MonoBehaviour:
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
+--- !u!114 &916458228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916458215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2339d80fcb60fa44aa148d7abca593a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alienHealth_: 0
+  alienMaxHealth_: 0
 --- !u!1 &917772513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e71c3e0b76a863346ab8d1123074906a,
@@ -21523,6 +21591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 2137083208}
   currentBlood__: {fileID: 2137083208}
   spawnRate: 1
@@ -21546,6 +21615,9 @@ MonoBehaviour:
   this_obj_: {x: 0, y: 0, z: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
 --- !u!114 &1001075089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27625,6 +27697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 2137083208}
   currentBlood__: {fileID: 2137083208}
   spawnRate: 1
@@ -27648,6 +27721,9 @@ MonoBehaviour:
   this_obj_: {x: 0, y: 0, z: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
 --- !u!54 &1347332276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30682,6 +30758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 1829147091}
   currentBlood__: {fileID: 1829147091}
   spawnRate: 1
@@ -30707,6 +30784,9 @@ MonoBehaviour:
   this_obj_: {x: 0, y: 0, z: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
 --- !u!114 &1497164638
 MonoBehaviour:
   m_ObjectHideFlags: 0

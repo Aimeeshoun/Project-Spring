@@ -21,6 +21,7 @@ public class Healthpowerup : MonoBehaviour
 
     public void Awake()
     {
+
         data = GetComponent<IntData>();
     }
     public void Update()

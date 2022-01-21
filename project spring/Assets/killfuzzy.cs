@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class killfuzzy : MonoBehaviour
 {
-
+    public int Timer2 = 0;
     public GameObject bloodsplatter;
 
     private bool spawning;
@@ -43,12 +43,20 @@ public class killfuzzy : MonoBehaviour
     public Vector3 this_obj_;
     public Quaternion other_obj_rotation;
     public GameObject other_gameObject_;
+
+    public Alienhealth alienhealth;
+    public int currentAlienHealth;
+
+    public GameObject grabAlienhealth;
     //    public GameObject[] Aliens_;
 
     // Start is called before the first frame update
     public void Start()
     {
-     //   scorebar_ = GameObject.FindGameObjectWithTag("score bar 2");
+
+        
+        
+        //   scorebar_ = GameObject.FindGameObjectWithTag("score bar 2");
         Textbar_ = GameObject.FindGameObjectWithTag("text score 2");
         scorebar = scorebar_.GetComponent<Image>();
    
@@ -65,13 +73,20 @@ public class killfuzzy : MonoBehaviour
     public void Awake()
     {
         this_gameObject = this.gameObject;
-       
-       
+
+        Timer = 0;
+        Timer2 = 0;
     }
     // Update is called once per frame
     public void Update()
     {
-        Alien_ = GameObject.FindGameObjectWithTag("Fuzzy");
+
+
+        currentAlienHealth = alienhealth.alienHealth_;
+
+
+
+
         healthobj_ = GameObject.FindGameObjectWithTag("health obj");
         healthtoNextLevel = healthobj_.GetComponent<Healthclamp2>();
         //   _postion = position_.position;
@@ -90,38 +105,48 @@ public class killfuzzy : MonoBehaviour
         this_obj_ = this_object.position;
         other_obj_rotation = this_object.rotation;
         other_gameObject_ = other.gameObject;
-
+        alienhealth = other_gameObject_.GetComponent<Alienhealth>();
 
         if (other_gameObject_.tag == "Fuzzy")
+
+            if (currentAlienHealth <= 0)
             {
+                Timer = 1;
 
-                Timer = +1;
-            BloodSplasts();
-            if (Timer <= 1)
-                {
+                
+                    
+                    if (Timer == 1)
+                    {
 
-
+                       
+                        
+                        healthtoNextLevel.AddTotHealth2();
+                 
+                    Destroy(other_gameObject_);
                     alienScore.value += 1;
-                    healthtoNextLevel.AddTotHealth2();
+                    Timer = 2;
+                        
+                    }
+                  
 
-                Destroy(other_gameObject_);
-
-                Timer = 0;
-                }
+                
+            
+            }
 
       
-
-            //  BloodSplasts();
-            //    Destroy(other_gameObject);
-            //   BloodSplasts();
-
+            if (Timer == 2)
+        {
+            BloodSplasts();
+            
         }
+
+        //  BloodSplasts();
+        //    Destroy(other_gameObject);
+        //   BloodSplasts();
+
+    }
      
         
-       
-        
-    }
-
 
 
     public void  BloodSplasts()
@@ -132,10 +157,9 @@ public class killfuzzy : MonoBehaviour
         currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
         currentBlood__.transform.parent = gameObject.transform;
         particle_.Play();
-        
         Destroy(currentBlood__, 3f);
-     
-
+        particle_.Stop();
+        Destroy(this.gameObject,3f);
 
 
     }

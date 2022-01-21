@@ -51,8 +51,8 @@ public class CowHealth : MonoBehaviour
                 cowHealth_ = 0;
             }
         }
-   
-        }
+// INSTANCIATE AN IMAGE, HEALTH BAR WHEN COWS ARE DYING 
+    }
 
     }
 
