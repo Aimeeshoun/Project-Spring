@@ -47,7 +47,7 @@ public class Access4 : MonoBehaviour
 
 
 
-        currentcharholder2 = selectedObjects2.currentwepholder2;
+    //    currentcharholder2 = selectedObjects2.currentwepholder2;
 
 
        

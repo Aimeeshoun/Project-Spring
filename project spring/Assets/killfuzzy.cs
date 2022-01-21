@@ -48,14 +48,21 @@ public class killfuzzy : MonoBehaviour
     public int currentAlienHealth;
 
     public GameObject grabAlienhealth;
+
+    public SelectedObjects selectedObjects;
+    public GameObject weaponSpawner;
+    public particlesystem particleSystem_obj;
+
     //    public GameObject[] Aliens_;
 
     // Start is called before the first frame update
     public void Start()
     {
+        weaponSpawner = GameObject.FindGameObjectWithTag("weaponspawner");
+        selectedObjects = weaponSpawner.GetComponent<SelectedObjects>();
+       
 
-        
-        
+
         //   scorebar_ = GameObject.FindGameObjectWithTag("score bar 2");
         Textbar_ = GameObject.FindGameObjectWithTag("text score 2");
         scorebar = scorebar_.GetComponent<Image>();
@@ -106,7 +113,8 @@ public class killfuzzy : MonoBehaviour
         other_obj_rotation = this_object.rotation;
         other_gameObject_ = other.gameObject;
         alienhealth = other_gameObject_.GetComponent<Alienhealth>();
-
+        particleSystem_obj = other_gameObject_.GetComponent<particlesystem>();
+        
         if (other_gameObject_.tag == "Fuzzy")
 
             if (currentAlienHealth <= 0)
@@ -121,7 +129,7 @@ public class killfuzzy : MonoBehaviour
                        
                         
                         healthtoNextLevel.AddTotHealth2();
-                 
+                    particleSystem_obj.EmitParticles();
                     Destroy(other_gameObject_);
                     alienScore.value += 1;
                     Timer = 2;
@@ -160,7 +168,8 @@ public class killfuzzy : MonoBehaviour
         Destroy(currentBlood__,2);
         particle_.Emit(100);
         Destroy(this.gameObject,2f);
-
+ 
+        selectedObjects.SelectedObject();
 
     }
 

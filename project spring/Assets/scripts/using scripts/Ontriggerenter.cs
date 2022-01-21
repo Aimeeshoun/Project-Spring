@@ -57,7 +57,7 @@ public class Ontriggerenter : MonoBehaviour
     }
     public void Update()
     {
-        currentcharholder2 = selectedObjects2.currentwepholder2;
+       // currentcharholder2 = selectedObjects2.currentwepholder2;
         GetComponent<Collider>().isTrigger = true;
     }
 

@@ -9,7 +9,9 @@ public class SelectedObjects : MonoBehaviour
     public GameObject[] myWeaponList2;
 
     public GameObject currentWeapon;
-  
+    public SelectedObjects selectedObjects;
+    public GameObject currentWeapon2;
+
     private int index;
 
     public GameObject target;
@@ -25,20 +27,20 @@ public class SelectedObjects : MonoBehaviour
        
         SelectedObject();
 
+    //    selectedObjects = currentWeapon.GetComponent<SelectedObjects>();
         
- 
+
+
 
     }
 
     public void Update()
     {
+    //    currentWeapon2 = selectedObjects.currentWeapon;
 
-
-       
-        if (currentWeapon==null)
+        if(currentWeapon == null)
         {
             SelectedObject();
-            return;
         }
 
     }

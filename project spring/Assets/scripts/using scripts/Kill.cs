@@ -51,7 +51,7 @@ public class Kill : MonoBehaviour
     {
 
       
-        currentcharholder2 = selectedObjects2.currentwepholder2;
+      //  currentcharholder2 = selectedObjects2.currentwepholder2;
 
         Otheridholder = this.gameObject.GetComponent<IDholder>();
         otheridholder2 = Otheridholder.idObj;

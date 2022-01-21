@@ -56,7 +56,7 @@ public SelectedObjects selectedObjects;
     void FixedUpdate()
     {
         currentCharacter_ = characterSel.currentChar;
-         currentcharholder2 = selectedObjects.currentwepholder2;
+     //    currentcharholder2 = selectedObjects.currentwepholder2;
 
         time += Time.deltaTime;
         if (time >= spawnTime)
