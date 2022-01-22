@@ -128,7 +128,7 @@ public class killfuzzy : MonoBehaviour
                   
 
                     healthtoNextLevel.AddTotHealth2();
-              //    particleSystem_obj.EmitParticles();
+                    particleSystem_obj.EmitParticles();
                     Destroy(other_gameObject_);
                     alienScore.value += 1;
                     Timer = 2;
@@ -144,8 +144,8 @@ public class killfuzzy : MonoBehaviour
 
         if (Timer == 2)
         {
-            particle_.transform.position = this_obj_;
-            particle_.transform.rotation = other_obj_rotation;
+          particle_.transform.position = this_obj_;
+          particle_.transform.rotation = other_obj_rotation;
             BloodSplasts();
             Timer = 0;
         }
@@ -166,12 +166,13 @@ public class killfuzzy : MonoBehaviour
 
         currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
         currentBlood__.transform.parent = gameObject.transform;
+        particle.transform.DetachChildren();
       particle_.Emit(100);
-        Destroy(currentBlood__, 2);
+        Destroy(currentBlood__, 9);
     //particle_.Emit(100);
-        Destroy(this.gameObject, 2f);
+        Destroy(this.gameObject, 9f);
 
-        selectedObjects.SelectedObject();
+     // selectedObjects.SelectedObject();
 
     }
 

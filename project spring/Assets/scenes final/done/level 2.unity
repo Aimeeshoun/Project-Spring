@@ -30897,12 +30897,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1281031723}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1287983134 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 770354781905145268, guid: ba2d724cab25caf49991cc5fd9dc278b,
-    type: 3}
-  m_PrefabInstance: {fileID: 770354783050522026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &1287983137 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 770354781905145227, guid: ba2d724cab25caf49991cc5fd9dc278b,
@@ -35366,7 +35360,8 @@ MonoBehaviour:
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
   Alien_: {fileID: 0}
-  particle: {fileID: 1287983134}
+  particle: {fileID: 6514841061353978092, guid: b742c3bcb5996954f933de8e8e57cc4a,
+    type: 3}
   particle_: {fileID: 1287983137}
   this_object: {fileID: 0}
   this_obj_: {x: 0, y: 0, z: 0}
@@ -56736,6 +56731,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 770354781905145227, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 770354782092585913, guid: ba2d724cab25caf49991cc5fd9dc278b,
         type: 3}
