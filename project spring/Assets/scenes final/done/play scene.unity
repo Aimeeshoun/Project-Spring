@@ -7008,11 +7008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 1909881093}
   currentBlood__: {fileID: 1909881093}
   spawnRate: 1
   target: {fileID: 360515567}
-  other_gameObject: {fileID: 0}
   this_gameObject: {fileID: 136772231}
   alienScore: {fileID: 0}
   valueOfDead: 30
@@ -7026,6 +7026,18 @@ MonoBehaviour:
   healthobj_: {fileID: 0}
   healthtoNextLevel: {fileID: 0}
   Alien_: {fileID: 0}
+  particle: {fileID: 0}
+  particle_: {fileID: 0}
+  this_object: {fileID: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  weaponSpawner: {fileID: 0}
+  particleSystem_obj: {fileID: 0}
 --- !u!114 &136772233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9759,11 +9771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 2137083208}
   currentBlood__: {fileID: 2137083208}
   spawnRate: 1
   target: {fileID: 0}
-  other_gameObject: {fileID: 0}
   this_gameObject: {fileID: 0}
   alienScore: {fileID: 0}
   valueOfDead: 30
@@ -9777,6 +9789,18 @@ MonoBehaviour:
   healthobj_: {fileID: 0}
   healthtoNextLevel: {fileID: 0}
   Alien_: {fileID: 0}
+  particle: {fileID: 0}
+  particle_: {fileID: 0}
+  this_object: {fileID: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  weaponSpawner: {fileID: 0}
+  particleSystem_obj: {fileID: 0}
 --- !u!54 &278394492
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10873,9 +10897,15 @@ MonoBehaviour:
   - {fileID: 2063611961}
   - {fileID: 1326104723}
   currentWeapon: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  currentWeapon2: {fileID: 0}
   target: {fileID: 1272310887}
-  iDholder: {fileID: 0}
-  currentwepholder2: {fileID: 0}
+  aliensDead: {fileID: 0}
+  valueOfDead: 30
+  grabIntData_: {fileID: 0}
+  alienAlive_: {fileID: 0}
+  Textbar_: {fileID: 0}
+  scoreee: 
 --- !u!1 &351326240
 GameObject:
   m_ObjectHideFlags: 0
@@ -11879,6 +11909,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
@@ -13821,6 +13853,8 @@ MonoBehaviour:
   minTime: 20
   currentCharacter: {fileID: 0}
   maxSpawnPerSecond: 1
+  particle_obj: {fileID: 0}
+  _the_particleSystem: {fileID: 0}
 --- !u!1 &562319978
 GameObject:
   m_ObjectHideFlags: 0
@@ -17365,6 +17399,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
@@ -17936,6 +17972,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
@@ -21488,11 +21526,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 2137083208}
   currentBlood__: {fileID: 2137083208}
   spawnRate: 1
   target: {fileID: 0}
-  other_gameObject: {fileID: 0}
   this_gameObject: {fileID: 0}
   alienScore: {fileID: 0}
   valueOfDead: 30
@@ -21506,6 +21544,18 @@ MonoBehaviour:
   healthobj_: {fileID: 0}
   healthtoNextLevel: {fileID: 0}
   Alien_: {fileID: 0}
+  particle: {fileID: 0}
+  particle_: {fileID: 0}
+  this_object: {fileID: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  weaponSpawner: {fileID: 0}
+  particleSystem_obj: {fileID: 0}
 --- !u!114 &1001075089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22952,6 +23002,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
@@ -23242,6 +23294,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
@@ -27581,11 +27635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 2137083208}
   currentBlood__: {fileID: 2137083208}
   spawnRate: 1
   target: {fileID: 0}
-  other_gameObject: {fileID: 0}
   this_gameObject: {fileID: 0}
   alienScore: {fileID: 0}
   valueOfDead: 30
@@ -27599,6 +27653,18 @@ MonoBehaviour:
   healthobj_: {fileID: 0}
   healthtoNextLevel: {fileID: 0}
   Alien_: {fileID: 0}
+  particle: {fileID: 0}
+  particle_: {fileID: 0}
+  this_object: {fileID: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  weaponSpawner: {fileID: 0}
+  particleSystem_obj: {fileID: 0}
 --- !u!54 &1347332276
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30348,6 +30414,8 @@ MonoBehaviour:
   minTime: 10
   currentCharacter: {fileID: 0}
   maxSpawnPerSecond: 1
+  particle_obj: {fileID: 0}
+  _the_particleSystem: {fileID: 0}
 --- !u!1 &1480875532 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b47bffbb9e3383047992add34914ee7c,
@@ -30633,11 +30701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af5fdc05b9139243899fffc0057814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer2: 0
   bloodsplatter: {fileID: 2137083208}
   currentBlood__: {fileID: 2137083208}
   spawnRate: 1
   target: {fileID: 0}
-  other_gameObject: {fileID: 0}
   this_gameObject: {fileID: 1497164630}
   alienScore: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
   valueOfDead: 30
@@ -30651,6 +30719,18 @@ MonoBehaviour:
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
   Alien_: {fileID: 0}
+  particle: {fileID: 0}
+  particle_: {fileID: 0}
+  this_object: {fileID: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  other_gameObject_: {fileID: 0}
+  alienhealth: {fileID: 0}
+  currentAlienHealth: 0
+  grabAlienhealth: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  weaponSpawner: {fileID: 0}
+  particleSystem_obj: {fileID: 0}
 --- !u!114 &1497164638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31761,6 +31841,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
@@ -34737,9 +34819,15 @@ MonoBehaviour:
   - {fileID: 278394489}
   - {fileID: 1347332273}
   currentWeapon: {fileID: 0}
+  selectedObjects: {fileID: 0}
+  currentWeapon2: {fileID: 0}
   target: {fileID: 608912182}
-  iDholder: {fileID: 0}
-  currentwepholder2: {fileID: 0}
+  aliensDead: {fileID: 0}
+  valueOfDead: 30
+  grabIntData_: {fileID: 0}
+  alienAlive_: {fileID: 0}
+  Textbar_: {fileID: 0}
+  scoreee: 
 --- !u!4 &1726953199
 Transform:
   m_ObjectHideFlags: 0
@@ -38214,6 +38302,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0
@@ -38390,6 +38480,8 @@ MonoBehaviour:
   cowIsScared: 0
   cowIsDying: 0
   cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
   Cow_: {fileID: 0}
   new_scale: {x: 0, y: 0, z: 0}
   Timer: 0

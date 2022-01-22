@@ -30,7 +30,7 @@ public class SceneLoader : MonoBehaviour
     }
     public void PlayScene()
     {
-        SceneManager.LoadScene("play scene");
+        SceneManager.LoadScene("level 2");
     }
     public void LoadingScene()
     {
