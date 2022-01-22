@@ -108,7 +108,7 @@ public class killfuzzy : MonoBehaviour
         this_object = this_gameObject.transform;
         particle_ = particle_.GetComponent<ParticleSystem>();
         this_obj_ = this_object.position;
-        other_obj_rotation = this_object.rotation;
+        other_obj_rotation = this.gameObject.transform.rotation;
         other_gameObject_ = other.gameObject;
         alienhealth = other_gameObject_.GetComponent<Alienhealth>();
         particleSystem_obj = other_gameObject_.GetComponent<particlesystem>();
@@ -144,8 +144,9 @@ public class killfuzzy : MonoBehaviour
 
         if (Timer == 2)
         {
+            particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
           particle_.transform.position = this_obj_;
-          particle_.transform.rotation = other_obj_rotation;
+        particle_.transform.rotation = other_obj_rotation;
             BloodSplasts();
             Timer = 0;
         }

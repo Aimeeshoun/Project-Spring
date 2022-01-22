@@ -29,6 +29,9 @@ public class CharacterSpawnRandom : MonoBehaviour
     public float maxSpawnPerSecond;
     private float timer;
 
+    public GameObject particle_obj;
+    public ParticleSystem _the_particleSystem;
+
     // Use this for initialization
     void Start()
     {
@@ -40,6 +43,10 @@ public class CharacterSpawnRandom : MonoBehaviour
         selectRandomObjects();
         StartCoroutine(SpawnMonster());
         SpawnMonster();
+
+        _the_particleSystem = particle_obj.GetComponent<ParticleSystem>();
+
+
     }
 
     // Update is called once per frame
@@ -81,9 +88,9 @@ public class CharacterSpawnRandom : MonoBehaviour
 
         selectRandomObjects();
         //spawning = true;
-    
+       
         currentCharacter = Instantiate(currentCharacter, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
-        currentCharacter.transform.parent = gameObject.transform;
+     // currentCharacter.transform.parent = gameObject.transform;
       //  Destroy(currentCharacter, destroytime);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
