@@ -43,22 +43,15 @@ public class Healthpowerup : MonoBehaviour
         if (Timer == 1)
         {
             UpdateImage();
-            particle = Instantiate(particle, _position, _rotation);
-            particle.transform.position = _position;
-            particle_.Play();
-            Timer2 = 1;
-        //    Destroy(this.gameObject, .3f);
-            if (Timer2 == 1)
-            {
+            particle_ = Instantiate(particle_, _position, _rotation);
+            //  particle = Instantiate(particle, _position, _rotation);
+            particle_.transform.position = _position;
+            particle_.Emit(500);
+          //  Timer2 = 1;
+            Destroy(this.gameObject);
+            Timer = 0;
+
             
-             
-               
-            
-                particle_ = Instantiate(particle_, _position, _rotation);
-                Timer2 = 0;
-                Timer = 0;
-                
-            }
 
             
         }
