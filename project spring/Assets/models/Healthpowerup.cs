@@ -7,6 +7,7 @@ public class Healthpowerup : MonoBehaviour
 {
     public Transform position_;
     public Vector3 _position;
+    public Quaternion _rotation;
     public GameObject particle;
     public ParticleSystem particle_;
     public IntData data;
@@ -16,17 +17,19 @@ public class Healthpowerup : MonoBehaviour
     public void Start()
     {
         position_ = this.gameObject.GetComponent<Transform>();
-        particle_ = particle.GetComponent<ParticleSystem>();
+        particle_ = gameObject.GetComponent<ParticleSystem>();
+       
     }
 
     public void Awake()
     {
-
+        _position = position_.position;
+        _rotation = position_.rotation;
         data = GetComponent<IntData>();
     }
     public void Update()
     {
-        _position = position_.position;
+    
     }
 
 
@@ -39,18 +42,22 @@ public class Healthpowerup : MonoBehaviour
 
         if (Timer == 1)
         {
-            
-            particle_.transform.position = _position;
-           
+            UpdateImage();
+            particle = Instantiate(particle, _position, _rotation);
+            particle.transform.position = _position;
+            particle_.Play();
             Timer2 = 1;
+        //    Destroy(this.gameObject, .3f);
             if (Timer2 == 1)
             {
-
-                UpdateImage();
-                particle_.Emit(100);
-                Timer2 = 0;
+            
+             
                
-                Destroy(this.gameObject, .3f);
+            
+                particle_ = Instantiate(particle_, _position, _rotation);
+                Timer2 = 0;
+                Timer = 0;
+                
             }
 
             

@@ -27,6 +27,8 @@ public class MoveObj : MonoBehaviour
     public Vector3 obj_vector_;
     public Quaternion obj_rotation;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,11 +72,11 @@ public class MoveObj : MonoBehaviour
       //      obj_vector_ = obj_transfrom_.position;
 
             z = Target_position.z;
-            y = Target_position.y;
+           y = Target_position.y;
             x = Target_position.x;
 
 
-            obj_vector_ = obj_transfrom_.transform.position = new Vector3(x, y, z);
+           obj_vector_ = obj_transfrom_.transform.position = new Vector3(x, y, z);
 
          //   z = 0;
          //   y = 0;
@@ -83,8 +85,7 @@ public class MoveObj : MonoBehaviour
         }
 
 
-
-   
+    
 
 
 
