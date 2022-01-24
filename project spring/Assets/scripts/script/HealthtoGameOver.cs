@@ -17,6 +17,9 @@ public class HealthtoGameOver : MonoBehaviour
     public Text text;
     public string scoreee;
 
+
+ 
+
     // Start is called before the first frame update
     public void Start()
     {
