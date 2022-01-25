@@ -30,36 +30,9 @@ public class cHANGEcOLOR : MonoBehaviour
         the_mat2 = the_mats[2];
     }
     // Update is called once per frame
-    public void Update()
-    {
-     
-
-       
+ 
 
 
-
-     
-    }
-
-
-
-    public void ChangeColor()
-    {
-
-        //  the_mats[0] = the_mat2;
-
-        the_obj.GetComponent<Renderer>().material = the_mat2;
-
-
-    }
-
-
-    public void ChangeBackColor()
-    {
-        //the_mats[0] = the_mat;
-
-        the_obj.GetComponent<Renderer>().material = the_mat;
-    }
 }
 
 

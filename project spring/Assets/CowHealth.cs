@@ -22,14 +22,14 @@ public class CowHealth : MonoBehaviour
     int Timer = 0;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-       
+
+
 
     }
     public void Awake()
@@ -41,30 +41,52 @@ public class CowHealth : MonoBehaviour
         material2_ = cHANGcolor_.the_mat2;
     }
 
-    
+
 
     public void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Fuzzy")
+        if (other.tag == "Fuzzy")
         {
             Timer++;
             if (Timer <= 1)
             {
 
-                
+
                 cowHealth_ -= 1;
-                gameObject_.GetComponent<Renderer>().material = material2_;
-                gameObject_.GetComponent<Renderer>().material = material_;
+                StartCoroutine(ChangeColor());
+
                 Timer = 0;
             }
-        
-            if (cowHealth_<= 0)
+            StartCoroutine(ChangeBackColor());
+            if (cowHealth_ <= 0)
             {
                 cowHealth_ = 0;
             }
+
+
         }
-// INSTANCIATE AN IMAGE, HEALTH BAR WHEN COWS ARE DYING 
+
     }
+    public IEnumerator ChangeColor()
+    {
+
+        //  the_mats[0] = the_mat2;
+
+        gameObject_.GetComponent<Renderer>().material = material_;
+        yield return new WaitForSeconds(1f);
+
+
+
 
     }
 
+    public IEnumerator ChangeBackColor()
+    {
+        //the_mats[0] = the_mat;
+        yield return new WaitForSeconds(1f);
+        gameObject_.GetComponent<Renderer>().material = material2_;
+
+
+
+    }
+}
