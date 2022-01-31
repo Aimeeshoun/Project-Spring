@@ -28,12 +28,22 @@ public class FenceGraber : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scriptHolder = GameObject.FindGameObjectWithTag("line");
-      fenseMaker_ = scriptHolder.GetComponent<FenseMaker2>();
-        linePoint3 = fenseMaker_.linePoint;
-        linePoint4 = fenseMaker_.linePoint2;
-        scriptHolder2 = GameObject.FindGameObjectWithTag("line2");
-        lineREnder = scriptHolder2.GetComponent<LineRenderer>();
+     
+            scriptHolder = GameObject.FindGameObjectWithTag("line");
+            fenseMaker_ = scriptHolder.GetComponent<FenseMaker2>();
+            linePoint3 = fenseMaker_.linePoint;
+            linePoint4 = fenseMaker_.linePoint2;
+            scriptHolder2 = GameObject.FindGameObjectWithTag("line2");
+            lineREnder = scriptHolder2.GetComponent<LineRenderer>();
+
+
+
+
+    }
+
+    public void MakeLine()
+    {
+
         lineREnder.SetPosition(0, linePoint3);
         lineREnder.SetPosition(1, linePoint4);
 
@@ -41,12 +51,8 @@ public class FenceGraber : MonoBehaviour
 
         lineREnder.material = new Material(Shader.Find("Sprite/Default"));
         lineREnder.startWidth = 1f;
-        lineREnder.endWidth = 8f;
-
-  
-
-
+        lineREnder.endWidth = 1f;
 
     }
 
-    }
+}
