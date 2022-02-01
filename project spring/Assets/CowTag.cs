@@ -38,7 +38,7 @@ public class CowTag : MonoBehaviour
     {
         other_gamobj = other.gameObject;
 
-        if (other_gamobj.tag == "COW ALIVE")
+        if (other_gamobj.tag == "cowww")
         {
             onmouseDown_.Invoke();
         }

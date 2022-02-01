@@ -5996,9 +5996,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timer: 0
   Timer2: 0
-  currentcow__: {fileID: 3761963821254427557, guid: b7ec7d5e059209241a2bb74dd0f29a54,
+  currentcow__: {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154,
     type: 3}
   spawnRate: 0
+  boxTag_: {fileID: 0}
+  cowTag_: {fileID: 0}
+  boxtag: {fileID: 0}
+  cowtag: {fileID: 0}
+  boxtag2: {fileID: 0}
+  cowtag2: {fileID: 0}
+  box_transform: {fileID: 0}
+  cow_transfrom: {fileID: 0}
+  box_Vec: {x: 0, y: 0, z: 0}
+  cow_vec: {x: 0, y: 0, z: 0}
+  box_rotation: {x: 0, y: 0, z: 0, w: 0}
+  cow_rotation: {x: 0, y: 0, z: 0, w: 0}
   this_object: {fileID: 0}
   this_obj_: {x: 0, y: 0, z: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
@@ -6006,6 +6018,9 @@ MonoBehaviour:
   this_gameObject: {fileID: 0}
   all_cows: []
   _cow: []
+  destroybox: {fileID: 0}
+  destroyboxs: []
+  box: {fileID: 0}
 --- !u!1 &318608280
 GameObject:
   m_ObjectHideFlags: 0

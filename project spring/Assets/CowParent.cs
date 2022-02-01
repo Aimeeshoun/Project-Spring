@@ -15,7 +15,23 @@ public class CowParent : MonoBehaviour
     public float spawnRate;
 
 
+    public BoxTag boxTag_;
+    public CowTag cowTag_;
 
+    public GameObject boxtag;
+    public GameObject cowtag;
+
+    public GameObject boxtag2;
+    public GameObject cowtag2;
+
+    public Transform box_transform;
+    public Transform cow_transfrom;
+
+    public Vector3 box_Vec;
+    public Vector3 cow_vec;
+
+    public Quaternion box_rotation;
+    public Quaternion cow_rotation;
 
 
 
@@ -29,49 +45,73 @@ public class CowParent : MonoBehaviour
     public GameObject[] _cow;
 
 
+    public GameObject destroybox;
+    public GameObject[] destroyboxs;
+    public GameObject box;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+     
     }
 
     // Update is called once per frame
     void Update()
     {
-        all_cows = GameObject.FindGameObjectsWithTag("COW ALIVE");
+      //destroybox = GameObject.FindGameObjectWithTag("Cowbox");
 
-        foreach(GameObject _cow in all_cows)
+
+        all_cows = GameObject.FindGameObjectsWithTag("Cowbox");
+   
+        destroyboxs = GameObject.FindGameObjectsWithTag("boxes");
+      
+   
+   
+        foreach (GameObject _cow in all_cows)
         {
-            this_obj_ = this_object.position;
-            other_obj_rotation = this.gameObject.transform.rotation;
-            this_object = this_gameObject.transform;
+            boxTag_ = _cow.GetComponent<BoxTag>();
+            boxtag2 = boxTag_.other_gamobj; 
+
+            if (boxTag_.other_gamobj.tag == "boxes")
+            {
+                boxTag_ = _cow.GetComponent<BoxTag>();
+                boxtag2 = boxTag_.other_gamobj;
+                box_transform = boxtag2.transform;
+                box_Vec = box_transform.position;
+                box_rotation = box_transform.rotation;
+               
+
+
+                    Destroy(cowtag2);
+                    InstanciateCowParent();
+
+
+            }
+         
 
         }
 
-       
-
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        other_gameObject_ = other.gameObject;
-        if (other.tag == "boxes")
+ foreach (GameObject box in destroyboxs)
         {
-            Destroy(this_gameObject);
-            InstanciateCowParent();
-
-
+            cowTag_ = box.GetComponent<CowTag>();
+            cowtag2 = cowTag_.other_gamobj;
+            cow_transfrom = cowtag2.transform;
+            cow_vec = cow_transfrom.position;
+            cow_rotation = cow_transfrom.rotation;
         }
+
+
+
     }
 
     public void DestroyObject()
     {
-        Destroy(this_gameObject);
+        Destroy(cowtag2);
     }
 
     public void InstanciateCowParent()
     {
-        currentcow__ = Instantiate(currentcow__, this_obj_, other_obj_rotation);
-        currentcow__.transform.parent = other_gameObject_.transform;
+        currentcow__ = Instantiate(currentcow__, box_Vec, box_rotation);
+        currentcow__.transform.parent = boxtag2.transform;
     }
 }
