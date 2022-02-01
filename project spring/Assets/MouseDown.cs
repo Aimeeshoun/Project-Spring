@@ -17,13 +17,19 @@ public class MouseDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnMouseDown();
+        OnMouseUp();
     }
 
-    public void OnMouseDown()
-    {
+  //  public void OnMouseDown()
+  //  {
         // Destroy the gameObject after clicking on it
+    //    onmouseDown_.Invoke();
+   // }
+
+    private void OnMouseUp()
+    {
         onmouseDown_.Invoke();
     }
+
 
 }
