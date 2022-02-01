@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7772847377357330128}
   m_Layer: 0
   m_Name: SPAWN POINT COW
-  m_TagString: eat cow point
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 7675659090409050159}
   - component: {fileID: 2299399726500062543}
   m_Layer: 0
-  m_Name: MAIN COW
+  m_Name: MAIN COW 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ PrefabInstance:
     - target: {fileID: 195316728452554240, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_TagString
-      value: cow
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 314037526079676781, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
@@ -369,6 +369,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3566988224986822084, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566988224986822084, guid: 18c71096868529741837efbfd5590ac8,
+        type: 3}
       propertyPath: scorebar_
       value: 
       objectReference: {fileID: 6213469719463205468, guid: 57b3e3be31e799c4ba80bd58b0255b8b,
@@ -376,7 +381,7 @@ PrefabInstance:
     - target: {fileID: 4313891256277367661, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_TagString
-      value: cow
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5233252772463147728, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
@@ -391,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 6240586005966624875, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_TagString
-      value: cow
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6457436303117059898, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
@@ -401,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 6775320624101637635, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_TagString
-      value: COW ALIVE
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7028774013300568271, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
@@ -431,7 +436,7 @@ PrefabInstance:
     - target: {fileID: 7530536364076407230, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_TagString
-      value: cow
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7595423439818779169, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
@@ -516,7 +521,7 @@ PrefabInstance:
     - target: {fileID: 8198362298445242663, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_TagString
-      value: cow
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8265978084488888754, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
@@ -581,29 +586,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &6139867843205065210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427275421157539297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8119f5a8cd8afd4888060e9b91a36fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Timer: 0
-  Timer2: 0
-  currentcow__: {fileID: 3761963821254427557}
-  spawnRate: 0.1
-  this_object: {fileID: 0}
-  this_obj_: {x: 0, y: 0, z: 0}
-  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
-  other_gameObject_: {fileID: 0}
-  this_gameObject: {fileID: 0}
-  all_cows: []
-  _cow: []
 --- !u!114 &8989488844094206838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,34 +599,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
---- !u!114 &7249605999318628023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427275421157539297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622db7778296ee04bb08ea5800226df8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  other_gamobj: {fileID: 0}
-  onmouseDown_:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: b88912b37f86fd649af3c5fa5d069943, type: 2}
-        m_TargetAssemblyTypeName: GameAction2, Assembly-CSharp
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &719729195014258113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,7 +606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2639153617476250051}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa70b2aa508de474ab1427bc019d947b, type: 3}
   m_Name: 
@@ -670,7 +624,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8412592908793602590}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ad569eb64d17ae44bb641b2122a0c0b, type: 3}
   m_Name: 

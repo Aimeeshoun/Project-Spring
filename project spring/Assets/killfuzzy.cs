@@ -169,7 +169,7 @@ public class killfuzzy : MonoBehaviour
         currentBlood__.transform.parent = gameObject.transform;
         particle.transform.DetachChildren();
         particle_.Emit(100);
-        Destroy(currentBlood__, 9);
+        Destroy(currentBlood__, 9); 
         //particle_.Emit(100);
         Destroy(this.gameObject, 9f);
 
