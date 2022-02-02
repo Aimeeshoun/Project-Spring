@@ -15,6 +15,8 @@ public class ObjectTransform : MonoBehaviour
 
     public GameObject currentcow__;
 
+
+    public GameObject other_obj;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,10 @@ public class ObjectTransform : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "boxes")
+        other_obj= other.gameObject;
+
+
+        if (other_obj.tag == "boxes")
         {
             this_obj = this.gameObject;
             obj_trans = this_obj.transform;
@@ -50,17 +55,26 @@ public class ObjectTransform : MonoBehaviour
             obj_rotation = obj_trans.rotation;
         }
 
-        if (other.gameObject.tag == "cowww")
+        if (other_obj.tag == "cowww")
         {
             this_obj = this.gameObject;
             obj_trans = this_obj.transform;
             obj_position = obj_trans.position;
             obj_rotation = obj_trans.rotation;
 
-            currentcow__ = Instantiate(currentcow__, obj_position, obj_rotation);
-            currentcow__.transform.parent = obj_trans;
+          //  currentcow__ = Instantiate(currentcow__, obj_position, obj_rotation);
+         //   currentcow__.transform.parent = obj_trans;
 
         }
+    }
+    public void DestroyObject()
+    {
+        Destroy(other_obj);
+    }
+    public void InstanciateCowParent()
+    {
+        currentcow__ = Instantiate(currentcow__, obj_position, obj_rotation);
+        currentcow__.transform.parent = obj_trans;
     }
 
 }

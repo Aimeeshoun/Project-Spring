@@ -87,8 +87,17 @@ public class OnTriggerEnterEvent : MonoBehaviour
         {
             triggerEnterEvent.Invoke();
         }
-            
-     //   }
+
+      if(other.tag == "cowww")
+        {
+            if(this.gameObject.tag == "boxes")
+            {
+                triggerExitEvent.Invoke();
+            }
+           
+        }
+    
+        //   }
     }
     private void OnTriggerExit(Collider other)
     {
