@@ -74,7 +74,7 @@ public class ObjectTransform : MonoBehaviour
     }
     public void InstanciateCowParent()
     {
-        currentcow__ = Instantiate(currentcow__, obj_position, obj_rotation);
+        currentcow__ = Instantiate ( currentcow__,  obj_position, obj_rotation)as GameObject; 
         currentcow__.transform.parent = obj_trans;
     }
 
