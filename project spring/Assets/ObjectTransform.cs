@@ -61,9 +61,10 @@ public class ObjectTransform : MonoBehaviour
             obj_trans = this_obj.transform;
             obj_position = obj_trans.position;
             obj_rotation = obj_trans.rotation;
-
+            DestroyObject();
+            InstanciateCowParent();
           //  currentcow__ = Instantiate(currentcow__, obj_position, obj_rotation);
-         //   currentcow__.transform.parent = obj_trans;
+          //   currentcow__.transform.parent = obj_trans;
 
         }
     }
