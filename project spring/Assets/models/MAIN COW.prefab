@@ -369,6 +369,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 3566988224986822084, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3566988224986822084, guid: 18c71096868529741837efbfd5590ac8,
+        type: 3}
       propertyPath: scorebar_
       value: 
       objectReference: {fileID: 6213469719463205468, guid: 57b3e3be31e799c4ba80bd58b0255b8b,
@@ -441,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 7595423439818779169, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: cowww
       objectReference: {fileID: 0}
     - target: {fileID: 7701354144008348281, guid: 18c71096868529741837efbfd5590ac8,
         type: 3}
@@ -609,6 +614,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7972436057710632705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427275421157539297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daab8b6e2f71507408c0f53a1714a151, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  this_obj: {fileID: 1427275421157539297}
+  obj_trans: {fileID: 0}
+  obj_position: {x: 0, y: 0, z: 0}
+  obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  cows_: []
+  boxes_: []
 --- !u!114 &8989488844094206838
 MonoBehaviour:
   m_ObjectHideFlags: 0
