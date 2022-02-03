@@ -30,7 +30,23 @@ public class ObjectTransform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        switch (currentState)
+        {
+            case gameStates.cowChilling:
+                child_obj.SetActive(false);
+                break;
+
+            case gameStates.CowAttached:
+                other_obj.SetActive(false);
+                child_obj.SetActive(true);
+                break;
+            case gameStates.CowTurnIn:
+                child_obj.SetActive(false);
+                break;
+
+
+        }
+
     }
     private void Awake()
     {
@@ -40,45 +56,36 @@ public class ObjectTransform : MonoBehaviour
         obj_rotation = obj_trans.rotation;
 
 
-
+        currentState = gameStates.cowChilling;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        this_obj = this.gameObject;
-        //   child_obj = this_obj.transform.GetChild(1).gameObject;
 
         if (other_obj.tag == "cowww")
         {
             // InstanciateCowParent();
             //   DestroyObject();
-           
+
             currentState = gameStates.CowAttached;
 
             //   Timer = 0;
         }
-        if (other_obj.tag == "destroybox")
+        else if (other_obj.tag == "destroybox")
         {
             currentState = gameStates.CowTurnIn;
         }
-     
-        switch (currentState)
-        {
-            case gameStates.cowChilling:
-                child_obj.SetActive(false);
-                break;
 
-            case gameStates.CowAttached:
-                child_obj.SetActive(true);
-                break;
-            case gameStates.CowTurnIn:
-                child_obj.SetActive(false);
-                break;
-        
 
-        }
+        this_obj = this.gameObject;
+        //   child_obj = this_obj.transform.GetChild(1).gameObject;
+       
+
+    
+
+
 
     }
     private void OnTriggerEnter(Collider other)
@@ -86,41 +93,42 @@ public class ObjectTransform : MonoBehaviour
         other_obj= other.gameObject;
 
 
-        if (other_obj.tag == "boxes")
-        {
-            this_obj = this.gameObject;
-            obj_trans = this_obj.transform;
-            obj_position = obj_trans.position;
-            obj_rotation = obj_trans.rotation;
-        }
+        //   if (other_obj.tag == "boxes")
+        //  {
+        //      this_obj = this.gameObject;
+        //     obj_trans = this_obj.transform;
+        //     obj_position = obj_trans.position;
+        //    obj_rotation = obj_trans.rotation;
+        //  }
 
-        if (other_obj.tag == "cowww")
-        {
-            this_obj = this.gameObject;
-            obj_trans = this_obj.transform;
-            obj_position = obj_trans.position;
-            obj_rotation = obj_trans.rotation;
+        //    if (other_obj.tag == "cowww")
+        //    {
+        //       this_obj = this.gameObject;
+        //      obj_trans = this_obj.transform;
+        //      obj_position = obj_trans.position;
+        //     obj_rotation = obj_trans.rotation;
         //    Timer = 1;
-            child_obj.SetActive(true);
+        //    child_obj.SetActive(true);
 
 
 
-            //  currentcow__ = Instantiate(currentcow__, obj_position, obj_rotation);
-            //   currentcow__.transform.parent = obj_trans;
+        //  currentcow__ = Instantiate(currentcow__, obj_position, obj_rotation);
+        //   currentcow__.transform.parent = obj_trans;
 
-        }
-    
+
+
+
 
 
     }
- //   public void DestroyObject()
-  //  {
-  //      Destroy(other_obj);
-  //  }
-  //  public void InstanciateCowParent()
-  //  {
-  //      currentcow__ = Instantiate ( currentcow__,  obj_position, obj_rotation)as GameObject; 
+    //   public void DestroyObject()
+    //  {
+    //      Destroy(other_obj);
+    //  }
+    //  public void InstanciateCowParent()
+    //  {
+    //      currentcow__ = Instantiate ( currentcow__,  obj_position, obj_rotation)as GameObject; 
     //    currentcow__.transform.parent = obj_trans;
-  //  }
+    //  }
 
 }
