@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CowScoreTurnIn : MonoBehaviour
 {
 
     public IntData CowTurnInNumber;
     public GameObject destroy_box;
-
+    public int CowthatAreTurnedin = 1;
     public GameObject ScoreBox;
 
     public GameObject cow_destroyed;
@@ -22,7 +23,7 @@ public class CowScoreTurnIn : MonoBehaviour
     public int Timer=0;
     public int Timer2 = 0;
 
-    public int Score;
+    public int Score=0;
 
     public GameObject other_gameObj;
     // Start is called before the first frame update
@@ -33,8 +34,8 @@ public class CowScoreTurnIn : MonoBehaviour
         text = ScoreBox.GetComponent<Text>();
         CowTurnInNumber = int_data.GetComponent<IntData>();
         objectTransform_ = objectTransform_.GetComponent<ObjectTransform>();
-     
 
+        CowTurnInNumber.value = Score;
 
     }
 
@@ -55,7 +56,7 @@ public class CowScoreTurnIn : MonoBehaviour
         // }
         //  }
 
-        if (other_gameObj.tag == "boxes")
+        if (other_gameObj.tag == "turn in")
         {
             //  if (objectTransform_.istriggered == true)
             //  {
@@ -70,6 +71,27 @@ public class CowScoreTurnIn : MonoBehaviour
             Timer = 0;
         }
         Timer = 0;
+        if (CowTurnInNumber.value == 5)
+        {
+            SceneManager.LoadScene("level 2");
+
+        }
+        if (CowTurnInNumber.value == 10)
+        {
+            SceneManager.LoadScene("level 3");
+
+        }
+        if (CowTurnInNumber.value == 20)
+        {
+            SceneManager.LoadScene("level 4");
+
+        }
+        if (CowTurnInNumber.value == 30)
+        {
+            SceneManager.LoadScene("level 5");
+
+        }
+   
     }
 
     public void UpdateScore()
@@ -97,6 +119,9 @@ public class CowScoreTurnIn : MonoBehaviour
     {
         Timer2 = 0;
     }
+
+  
+  
 }
 
 
