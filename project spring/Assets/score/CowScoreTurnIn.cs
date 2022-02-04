@@ -33,7 +33,7 @@ public class CowScoreTurnIn : MonoBehaviour
         text = ScoreBox.GetComponent<Text>();
         CowTurnInNumber = int_data.GetComponent<IntData>();
         objectTransform_ = objectTransform_.GetComponent<ObjectTransform>();
-        Score = CowTurnInNumber.value;
+     
 
 
     }
@@ -43,17 +43,32 @@ public class CowScoreTurnIn : MonoBehaviour
     {
        
         text.text = CowTurnInNumber.value.ToString();
-      // if(objectTransform_.istriggered == true)
-       // {
-         //   Timer = 1;
-         //   if (Timer == 1)
-          //  {
-          //      UpdateScore();
-           //     Timer = 0;
-           // }
-      //  }
-        
-    
+
+
+        // if(objectTransform_.istriggered == true)
+        // {
+        //   Timer = 1;
+        //   if (Timer == 1)
+        //  {
+        //      UpdateScore();
+        //     Timer = 0;
+        // }
+        //  }
+
+        if (other_gameObj.tag == "boxes")
+        {
+            //  if (objectTransform_.istriggered == true)
+            //  {
+            Timer2 = 1;
+            if (Timer2 == 1)
+            {
+                UpdateScore();
+                Timer2 = 0;
+            }
+
+            //  }
+
+        }
 
     }
 
@@ -63,20 +78,7 @@ public class CowScoreTurnIn : MonoBehaviour
         //  if (Timer2 == 1)
         //  {
         CowTurnInNumber.value += 1;
-        if (other_gameObj.tag == "destroybox")
-        {
-            if (objectTransform_.istriggered == true)
-            {
-                Timer2 = 1;
-                if (Timer2 == 1)
-                {
-                   UpdateScore();
-                    Timer2 = 0;
-                }
-               
-            }
-
-        }
+ 
         //     Timer2 = 0;
         //  }
     }
@@ -87,4 +89,5 @@ public class CowScoreTurnIn : MonoBehaviour
      
     }
 }
+
 
