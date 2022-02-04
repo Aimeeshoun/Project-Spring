@@ -626,6 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daab8b6e2f71507408c0f53a1714a151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Timer: 0
   this_obj: {fileID: 1427275421157539297}
   obj_trans: {fileID: 0}
   obj_position: {x: 0, y: 0, z: 0}
@@ -635,6 +636,9 @@ MonoBehaviour:
   currentcow__: {fileID: 2664301865898290117, guid: e709d97aac623054a9c2705c30112f88,
     type: 3}
   other_obj: {fileID: 0}
+  child_obj: {fileID: 0}
+  istriggered: 0
+  currentState: 1
 --- !u!114 &8989488844094206838
 MonoBehaviour:
   m_ObjectHideFlags: 0

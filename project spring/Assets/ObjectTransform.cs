@@ -30,22 +30,9 @@ public class ObjectTransform : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch (currentState)
-        {
-            case gameStates.cowChilling:
-                child_obj.SetActive(false);
-                break;
-
-            case gameStates.CowAttached:
-                other_obj.SetActive(false);
-                child_obj.SetActive(true);
-                break;
-            case gameStates.CowTurnIn:
-                child_obj.SetActive(false);
-                break;
-
-
-        }
+       currentState = gameStates.cowChilling;
+        child_obj = this_obj.transform.GetChild(1).gameObject;
+ 
 
     }
     private void Awake()
@@ -56,14 +43,15 @@ public class ObjectTransform : MonoBehaviour
         obj_rotation = obj_trans.rotation;
 
 
-        currentState = gameStates.cowChilling;
+      
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        this_obj = this.gameObject;
+       
         if (other_obj.tag == "cowww")
         {
             // InstanciateCowParent();
@@ -73,17 +61,30 @@ public class ObjectTransform : MonoBehaviour
 
             //   Timer = 0;
         }
-        else if (other_obj.tag == "destroybox")
+        if (other_obj.tag == "destroybox")
         {
             currentState = gameStates.CowTurnIn;
         }
 
 
-        this_obj = this.gameObject;
-        //   child_obj = this_obj.transform.GetChild(1).gameObject;
-       
+        switch (currentState)
+        {
+            case gameStates.cowChilling:
+                child_obj.SetActive(false);
+                break;
 
-    
+            case gameStates.CowAttached:
+
+                child_obj.SetActive(true);
+                //  other_obj.SetActive(false);
+                break;
+            case gameStates.CowTurnIn:
+                child_obj.SetActive(false);
+                break;
+
+
+        }
+
 
 
 
