@@ -22,18 +22,23 @@ public class ObjectTransform : MonoBehaviour
 
     public bool istriggered= false;
 
-
+    public int Timer3 = 0;
 
 
     public enum gameStates { cowChilling, CowAttached, CowTurnIn }
     public gameStates currentState = gameStates.cowChilling;
+
+    public GameObject CowScoreBox;
+    public CowScoreTurnIn cowscore;
+
     // Start is called before the first frame update
     void Start()
     {
        currentState = gameStates.cowChilling;
         child_obj = this_obj.transform.GetChild(1).gameObject;
- 
 
+        cowscore = CowScoreBox.GetComponent<CowScoreTurnIn>();
+     
     }
     private void Awake()
     {
@@ -43,7 +48,7 @@ public class ObjectTransform : MonoBehaviour
         obj_rotation = obj_trans.rotation;
 
 
-      
+        currentState = gameStates.cowChilling;
 
     }
 
@@ -64,8 +69,20 @@ public class ObjectTransform : MonoBehaviour
         if (other_obj.tag == "destroybox")
         {
             currentState = gameStates.CowTurnIn;
+            Timer3 = 1;
+            if (Timer3 == 1)
+            {
+                if (other_obj.tag == "turn in")
+                {
+                    cowscore.UpdateScore();
+                Timer3 = 0;
+                    }
+            }
+           
         }
-
+       
+            
+        
 
         switch (currentState)
         {
@@ -79,7 +96,13 @@ public class ObjectTransform : MonoBehaviour
                 //  other_obj.SetActive(false);
                 break;
             case gameStates.CowTurnIn:
-                child_obj.SetActive(false);
+              
+               
+                    child_obj.SetActive(false);
+                    
+                   
+             
+
                 break;
 
 

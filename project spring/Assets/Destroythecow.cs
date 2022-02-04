@@ -36,7 +36,7 @@ public class Destroythecow : MonoBehaviour
                 cow = other.gameObject;
 
                  //  Destroy(cow);
-                this_gamObj.SetActive(false);
+             //   this_gamObj.SetActive(false);
 
                 }
             }
