@@ -59,34 +59,43 @@ public class CowScoreTurnIn : MonoBehaviour
         {
             //  if (objectTransform_.istriggered == true)
             //  {
-            Timer2 = 1;
-            if (Timer2 == 1)
+            Timer = 1;
+            if (Timer == 1)
             {
                 UpdateScore();
-                Timer2 = 0;
+                Timer = 0;
             }
 
             //  }
-
+            Timer = 0;
         }
-
+        Timer = 0;
     }
 
     public void UpdateScore()
     {
-        // Timer2 = 1;
-        //  if (Timer2 == 1)
-        //  {
+        
+         if (Timer2 == 1)
+          {
         CowTurnInNumber.value += 1;
- 
-        //     Timer2 = 0;
-        //  }
+
+            Timer2 = 0;
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        other_gameObj= other.gameObject;
+
+        Timer2 = 1;
+
+        other_gameObj = other.gameObject;
      
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Timer2 = 0;
     }
 }
 
