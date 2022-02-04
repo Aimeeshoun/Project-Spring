@@ -5952,6 +5952,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1441365672}
+        m_TargetAssemblyTypeName: CowScoreTurnIn, Assembly-CSharp
+        m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   holdTime: 0
 --- !u!114 &311370911
 MonoBehaviour:
@@ -24211,6 +24223,7 @@ GameObject:
   - component: {fileID: 1074835675}
   - component: {fileID: 1074835680}
   - component: {fileID: 1074835679}
+  - component: {fileID: 1074835681}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: destroybox
@@ -24340,6 +24353,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &1074835681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074835673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248852ca9a92e534f91f72560c358c76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CowTurnInNumber: {fileID: 11400000, guid: f0a76612797ae28449b16aa3b7602506, type: 2}
+  destroy_box: {fileID: 0}
+  ScoreBox: {fileID: 0}
+  cow_destroyed: {fileID: 0}
+  text: {fileID: 0}
+  newScore: 0
+  objectTransform_: {fileID: 0}
+  int_data: {fileID: 0}
+  Timer: 0
+  Timer2: 0
+  Score: 0
+  other_gameObj: {fileID: 0}
 --- !u!198 &1082772073 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8343900518801569476, guid: 43ee3d268067ea740b9d56b55a785545,
@@ -32983,6 +33020,13 @@ MonoBehaviour:
   ScoreBox: {fileID: 1441365669}
   cow_destroyed: {fileID: 785919446}
   text: {fileID: 1464154659}
+  newScore: 0
+  objectTransform_: {fileID: 0}
+  int_data: {fileID: 0}
+  Timer: 0
+  Timer2: 0
+  Score: 0
+  other_gameObj: {fileID: 0}
 --- !u!1001 &1448096084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33272,7 +33316,7 @@ GameObject:
   - component: {fileID: 1464154661}
   m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: cow turn in text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34204,7 +34248,7 @@ MonoBehaviour:
   istriggered: 0
   Timer3: 0
   currentState: 0
-  CowScoreBox: {fileID: 1441365669}
+  CowScoreBox: {fileID: 1612604593}
   cowscore: {fileID: 0}
 --- !u!1 &1497164630
 GameObject:
@@ -41494,6 +41538,119 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 15.356, y: 1.263, z: 9.848}
+--- !u!1 &1612604593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1612604598}
+  - component: {fileID: 1612604597}
+  - component: {fileID: 1612604596}
+  - component: {fileID: 1612604595}
+  - component: {fileID: 1612604594}
+  m_Layer: 0
+  m_Name: Score holder
+  m_TagString: cow score holder
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1612604594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612604593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600b3cb1d5411434d9a7462f63542d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theCowScore: {fileID: 11400000, guid: f0a76612797ae28449b16aa3b7602506, type: 2}
+  scoreHolder: {fileID: 1612604593}
+  CurrentValue: 0
+  text: {fileID: 1464154659}
+  the_text: {fileID: 0}
+--- !u!65 &1612604595
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612604593}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1612604596
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612604593}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1612604597
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612604593}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1612604598
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612604593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1410.3032, y: 26.586815, z: -231.68513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 64
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1620043514
 GameObject:
   m_ObjectHideFlags: 0

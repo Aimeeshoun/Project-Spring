@@ -69,15 +69,7 @@ public class ObjectTransform : MonoBehaviour
         if (other_obj.tag == "destroybox")
         {
             currentState = gameStates.CowTurnIn;
-            Timer3 = 1;
-            if (Timer3 == 1)
-            {
-                if (other_obj.tag == "turn in")
-                {
-                    cowscore.UpdateScore();
-                Timer3 = 0;
-                    }
-            }
+         
            
         }
        
@@ -96,12 +88,25 @@ public class ObjectTransform : MonoBehaviour
                 //  other_obj.SetActive(false);
                 break;
             case gameStates.CowTurnIn:
-              
+
+
+
+
+                //    if (other_obj.tag == "turn in")
+                //    {
+                //       Timer3 = 1;
+                //       if (Timer3 == 1)
+
+                child_obj.SetActive(false);
+                //       {
+                //          istriggered = true;
+                
+              //          Timer3 = 0;
+              //      }
+              //      istriggered = false;
+                
+         //       }
                
-                    child_obj.SetActive(false);
-                    
-                   
-             
 
                 break;
 
@@ -116,6 +121,11 @@ public class ObjectTransform : MonoBehaviour
     {
         other_obj= other.gameObject;
 
+        if(other_obj.tag == "destroybox")
+        {
+            cowscore.UpdateScore();
+
+        }
 
         //   if (other_obj.tag == "boxes")
         //  {
