@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-
+  
 
     public IntData cowsScore;
 
-    public int CowthatAreTurnedin = 1;
+    public int CowthatAreTurnedin;
     public ScoreHolder grabIntData_;
     public GameObject cowTurnIN_;
     public GameObject Textbar_;
@@ -35,7 +35,7 @@ public class NextLevel : MonoBehaviour
         text.text = cowsScore.value.ToString();
         if (cowsScore.value >= CowthatAreTurnedin)
         {
-            SceneManager.LoadScene("level 2");
+           // SceneManager.LoadScene("level 2");
 
         }
 

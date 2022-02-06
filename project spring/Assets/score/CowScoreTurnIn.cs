@@ -6,7 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class CowScoreTurnIn : MonoBehaviour
 {
-
+    public bool isLevelone = false;
+    public bool isLeveltwo = false;
+    public bool isLevelthree = false;
+    public bool isLevelfour = false;
+    public bool isLevelfive = false;
+   
+    
+    
+    
     public IntData CowTurnInNumber;
     public GameObject destroy_box;
     public int CowthatAreTurnedin = 1;
@@ -36,7 +44,7 @@ public class CowScoreTurnIn : MonoBehaviour
         objectTransform_ = objectTransform_.GetComponent<ObjectTransform>();
 
         CowTurnInNumber.value = Score;
-
+      
     }
 
     // Update is called once per frame
@@ -71,24 +79,44 @@ public class CowScoreTurnIn : MonoBehaviour
             Timer = 0;
         }
         Timer = 0;
-        if (CowTurnInNumber.value == 5)
+        if (CowTurnInNumber.value == 1)
         {
-            SceneManager.LoadScene("level 2");
+            if (isLevelone)
+            {
+
+                SceneManager.LoadScene("level 2");
+            }
+        
 
         }
-        if (CowTurnInNumber.value == 10)
+        if (CowTurnInNumber.value == 2)
         {
-            SceneManager.LoadScene("level 3");
+       
+
+            if (isLeveltwo)
+            {
+                SceneManager.LoadScene("level 3");
+            }
 
         }
-        if (CowTurnInNumber.value == 20)
+        if (CowTurnInNumber.value == 3)
         {
-            SceneManager.LoadScene("level 4");
+           
+
+            if (isLevelthree)
+            {
+                SceneManager.LoadScene("level 4");
+            }
 
         }
-        if (CowTurnInNumber.value == 30)
+        if (CowTurnInNumber.value == 4)
         {
-            SceneManager.LoadScene("level 5");
+          
+
+            if (isLevelfour)
+            {
+                SceneManager.LoadScene("level 5");
+            }
 
         }
    
