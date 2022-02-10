@@ -2475,7 +2475,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &121173945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4993,7 +4993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &231364729
 Transform:
   m_ObjectHideFlags: 0
@@ -6678,7 +6678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &311370909
 Transform:
   m_ObjectHideFlags: 0
@@ -20868,6 +20868,7 @@ MonoBehaviour:
   cowsDead: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
   valueOfDead: 100
   grabIntData_: {fileID: 0}
+  cowAlives_: []
   cowAlive_: {fileID: 919132149155446097, guid: 7de1f672f9197254c9e4c27a037a5813,
     type: 3}
   Textbar_: {fileID: 1257378392}
@@ -28687,26 +28688,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f24b2f472a5d840b46605f73a0a219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cow: {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+  cow: {fileID: 4891014641153836495, guid: 33aa07e543809a74fae663b3bea6116d, type: 3}
   enemyNumber: 30
   maxEnemies: 30
   spawnWaitTime: 1
   myCharacterList:
-  - {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+  - {fileID: 4891014641153836495, guid: 33aa07e543809a74fae663b3bea6116d, type: 3}
   spawnPoints: []
   spawnAmount: 20
   spawnRate: 1
   destroytime: 0
-  currentCharacter: {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154,
+  currentCharacter: {fileID: 4891014641153836495, guid: 33aa07e543809a74fae663b3bea6116d,
     type: 3}
   maxSpawnPerSecond: 0.06
-  particle_obj: {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154,
-    type: 3}
+  particle_obj: {fileID: 0}
   _the_particleSystem: {fileID: 0}
   minTime: 0.1
   maxTime: 0.1
   enemies:
-  - {fileID: 3761963821254427557, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+  - {fileID: 4891014641153836495, guid: 33aa07e543809a74fae663b3bea6116d, type: 3}
+  ints: 0
 --- !u!4 &1128739322
 Transform:
   m_ObjectHideFlags: 0
@@ -33882,7 +33883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1352101890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56202,7 +56203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1842304892
 MonoBehaviour:
   m_ObjectHideFlags: 0

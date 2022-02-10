@@ -10,8 +10,9 @@ public class HealthtoGameOver : MonoBehaviour
 
     public IntData cowsDead;
 
-    public int valueOfDead = 30;
+    public int valueOfDead;
     public InstanciteDeadCow2 grabIntData_;
+    public GameObject[] cowAlives_;
     public GameObject cowAlive_;
     public GameObject Textbar_;
     public Text text;
@@ -37,13 +38,18 @@ public class HealthtoGameOver : MonoBehaviour
     // Update is called once per frame
    public void Update()
     {
-
-        cowAlive_ = GameObject.FindGameObjectWithTag("COW ALIVE");
-        grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
-        cowsDead = grabIntData_.score;
-        scoreee = cowsDead.ToString();
-            text.text = cowsDead.value.ToString();
-        if (cowsDead.value >= valueOfDead)
+        
+        cowAlives_ = GameObject.FindGameObjectsWithTag("COW ALIVE");
+        valueOfDead = cowAlives_.Length;
+        foreach(GameObject cowAlive_ in cowAlives_)
+        {
+            grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
+            cowsDead = grabIntData_.score;
+            scoreee = cowsDead.ToString();
+           
+        }
+        text.text = cowsDead.value.ToString();
+        if (cowsDead.value == valueOfDead)
         {
             GameOverScene();
 

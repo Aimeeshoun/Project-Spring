@@ -38,16 +38,24 @@ public class SpawnHerd2 : MonoBehaviour
     public float minTime = 5.0f;
     public float maxTime = 15.0f;
     public GameObject[] enemies;  // Array of enemy prefabs.
+    public int ints;
 
     public void Start()
     {
-
         spawnPoints = GameObject.FindGameObjectsWithTag("cow herd spawn point");
-        StartCoroutine(SpawnObject());
-        SpawnObject();
+   
+       
+       for (int i = 0; i < 10; i++)
+        {
+          
+            StartCoroutine(SpawnObject());
+            SpawnObject();
+        }
+
+     
     }
- // void FixedUpdate()
-  public void Update()
+    // void FixedUpdate()
+    public void Update()
     {
         myCharacterList = GameObject.FindGameObjectsWithTag("Cowbox");
         time += Time.deltaTime;
