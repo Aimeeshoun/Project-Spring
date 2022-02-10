@@ -10,57 +10,71 @@ public class CowAI : MonoBehaviour
     private GameObject this_gameobject;
     private WaitForFixedUpdate wffu = new WaitForFixedUpdate();
     private NavMeshAgent agent;
-    public Transform destination;
-    private bool canHunt, canPatrol;
-    public List<Transform> patrolPoints;
-    public bool isStopped_;
 
+    public Transform patrolPoint;
+    private bool canHunt, canPatrol;
+    public GameObject food;
+ //   public Vector3 position_food;
+
+ //   public float distance;
+
+   public Vector3 destination;
+  
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        StartCoroutine(Patrol());
-    }
+     //   Patrol();
 
-    private IEnumerator OnTriggerEnter(Collider other)
-    {
-        canHunt = true;
-        canPatrol = false;
-        agent.destination = destination.position;
-        var distance = agent.remainingDistance;
-        while (distance <= 0.25f)
-        {
-            distance = agent.remainingDistance;
-            yield return wffu;
-        }
-        yield return new WaitForSeconds(2f);
-
-        StartCoroutine(canHunt ? OnTriggerEnter(other) : Patrol());
-    }
-    private void OnMouseDown()
-    {
+        food = GameObject.FindGameObjectWithTag("cow eats food");
+        patrolPoint = food.GetComponent<Transform>();
+        destination = patrolPoint.position;
         this_gameobject = this.gameObject;
         agent = this_gameobject.GetComponent<NavMeshAgent>();
-        // isStopped_ = agent.isStopped;
-        agent.enabled = false;
-        agent.stoppingDistance = .1f;
+    
+    }
+    public void OnAwake()
+    {
+      
+    }
+    public void Update()
+    {
+        destination = patrolPoint.position;
+     
+        StartCoroutine(Patrol());
 
+        agent.destination = destination;
     }
 
+
+    private void OnMouseDown()
+    {
+    //    agent.enabled = true;
+        var distance = agent.remainingDistance;
+    }
     private int i = 0;
     private IEnumerator Patrol()
     {
         canPatrol = true;
         while (canPatrol)
         {
+          
             yield return wffu;
-            if (agent.pathPending || !(agent.remainingDistance < 0.5f)) continue;
-            yield return new WaitForSeconds(1);
-            agent.destination = patrolPoints[i].position;
-            i = (i + 1) % patrolPoints.Count;
-        }
+            if (agent.pathPending || !(agent.remainingDistance <1f)) continue;
+            yield return new WaitForSeconds(.1f);
+       
+      //      agent.stoppingDistance = .1f;
+       //     agent.enabled = false;
+   
+
+          //  canPatrol = false;
+            //     i = (i + 1) % position_s.Length;
+       
+        
+        
+   }
+     //   agent.stoppingDistance = .1f;
+      //  agent.enabled = false;
     }
+
 }
-
-
-
 

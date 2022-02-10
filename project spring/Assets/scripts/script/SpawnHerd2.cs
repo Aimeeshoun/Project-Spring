@@ -45,7 +45,7 @@ public class SpawnHerd2 : MonoBehaviour
         spawnPoints = GameObject.FindGameObjectsWithTag("cow herd spawn point");
    
        
-       for (int i = 0; i < 10; i++)
+       for (int i = 0; i < 5; i++)
         {
           
             StartCoroutine(SpawnObject());

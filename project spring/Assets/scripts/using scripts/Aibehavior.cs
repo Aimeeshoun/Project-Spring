@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Aibehavior : MonoBehaviour
 {
-    private CharacterController _characterController;
+ //   private CharacterController _characterController;
     private GameObject this_gameobject;
     private WaitForFixedUpdate wffu = new WaitForFixedUpdate();
     private NavMeshAgent agent;
@@ -25,6 +25,7 @@ public class Aibehavior : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         StartCoroutine(Patrol());
+        Patrol();
     }
 
     public void Update()
