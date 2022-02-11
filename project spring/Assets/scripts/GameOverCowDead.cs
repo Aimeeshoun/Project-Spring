@@ -8,7 +8,8 @@ public class GameOverCowDead : MonoBehaviour
     public GameObject[] cowsAlive_;
     public GameObject[] cowsdead;
     public GameObject cow;
-    public int liveamount=2;
+    public int liveamount=5;
+    public bool isAlive;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,15 @@ public class GameOverCowDead : MonoBehaviour
         cowsdead = GameObject.FindGameObjectsWithTag("dead cowww");
         cowsAlive_ = GameObject.FindGameObjectsWithTag("Cowbox");
 
+
         if (cowsAlive_.Length >= liveamount)
+        {
+            isAlive = true;
+
+        }
+
+
+        if (isAlive)
         {
             if (cowsdead.Length == cowsAlive_.Length)
             {
@@ -32,7 +41,6 @@ public class GameOverCowDead : MonoBehaviour
 
             }
         }
-    
 
     }
 
