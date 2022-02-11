@@ -166,7 +166,7 @@ public IEnumerator Killcow2()
       deadcow2 = Instantiate(deadcow2, _postion, _rotation) as GameObject;
       deadcow2.transform.parent = gameObject.transform;
      
-      yield return new WaitForSeconds(4);
+      yield return new WaitForSeconds(.5f);
      spawning2 = false;
   
 
@@ -178,7 +178,7 @@ public IEnumerator Killcow2()
         
         //    deadcow3 = Instantiate(deadcow3, _postion, _rotation) as GameObject;
      //   deadcow3.transform.parent = gameObject.transform;
-       yield return new WaitForSeconds(2);
+       yield return new WaitForSeconds(.1f);
         spawning3 = false;
        this.gameObject.SetActive(false);
     }
@@ -192,7 +192,7 @@ public IEnumerator Killcow2()
     public IEnumerator cowScared()
     {
         cowIsScared = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(.1f);
     
         StartCoroutine(cowDying());
         StartCoroutine(Killcow2());
@@ -202,7 +202,7 @@ public IEnumerator Killcow2()
     {
         cowIsDying = true;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.1f);
         cowIsDying = false;
       
         StartCoroutine(Killcow3());

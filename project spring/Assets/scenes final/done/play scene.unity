@@ -22168,11 +22168,13 @@ MonoBehaviour:
   valueOfDead: 100
   grabIntData_: {fileID: 0}
   cowAlives_: []
+  cowsdead: []
   cowAlive_: {fileID: 919132149155446097, guid: 7de1f672f9197254c9e4c27a037a5813,
     type: 3}
   Textbar_: {fileID: 1257378392}
   text: {fileID: 1257378394}
   scoreee: 
+  isAlive: 0
 --- !u!65 &808190977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34338,6 +34340,7 @@ MonoBehaviour:
   cowsdead: []
   cow: {fileID: 0}
   liveamount: 1
+  isAlive: 0
 --- !u!4 &1316898424
 Transform:
   m_ObjectHideFlags: 0

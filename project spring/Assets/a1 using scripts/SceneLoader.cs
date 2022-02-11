@@ -30,16 +30,16 @@ public class SceneLoader : MonoBehaviour
     }
     public void PlayScene()
     {
-        SceneManager.LoadScene("level 2");
+        SceneManager.LoadScene("play scene");
     }
-    public void LoadingScene()
-    {
-        SceneManager.LoadScene("loading scene");
-    }
-    public void TransitiongScene()
-    {
-        SceneManager.LoadScene("transitional scene");
-    }
+  //  public void LoadingScene()
+  //  {
+  //      SceneManager.LoadScene("loading scene");
+  //  }
+   // public void TransitiongScene()
+   // {
+   //     SceneManager.LoadScene("transitional scene");
+   // }
 
     public void Exit()
    {
