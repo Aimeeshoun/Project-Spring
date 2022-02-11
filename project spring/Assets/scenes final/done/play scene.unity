@@ -34331,39 +34331,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1316898422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
+  m_Script: {fileID: 11500000, guid: 1390bf019bbbfa7478ab21e686f4d22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadcow: {fileID: 0}
-  deadcow2: {fileID: 0}
-  deadcow3: {fileID: 0}
-  this_gamObj: {fileID: 0}
-  this_gamObj2: {fileID: 0}
-  spawnRate: 0
-  position_: {fileID: 0}
-  _postion: {x: 0, y: 0, z: 0}
-  _rotation: {x: 0, y: 0, z: 0, w: 0}
-  text: {fileID: 0}
-  text_: 
-  score: {fileID: 0}
-  scorebar: {fileID: 0}
-  scorebar_: {fileID: 0}
-  Textbar_: {fileID: 0}
-  animator: {fileID: 0}
-  cowIsWalking: 0
-  cowIsChilling: 0
-  cowIsScared: 0
-  cowIsDying: 0
-  cowIsDead: 0
-  cowHealth_: {fileID: 0}
-  currentCowHealth_: 0
-  Cow_: {fileID: 0}
-  new_scale: {x: 0, y: 0, z: 0}
-  Timer: 0
-  HowManyCanDie: 30
-  healthobj_: {fileID: 0}
-  healthtoGameOver: {fileID: 0}
-  score_: {fileID: 0}
+  cowsAlive_: []
+  cowsdead: []
+  cow: {fileID: 0}
+  liveamount: 1
 --- !u!4 &1316898424
 Transform:
   m_ObjectHideFlags: 0

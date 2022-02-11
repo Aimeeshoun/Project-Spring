@@ -5,23 +5,34 @@ using UnityEngine.SceneManagement;
 public class GameOverCowDead : MonoBehaviour
 {
 
-    public GameObject[] cowsAlive;
+    public GameObject[] cowsAlive_;
+    public GameObject[] cowsdead;
     public GameObject cow;
+    public int liveamount=2;
 
     // Start is called before the first frame update
     void Start()
     {
-        cowsAlive= GameObject.FindGameObjectsWithTag("dead cowww");
+
+
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cowsAlive.Length <= 0)
-        {
-            GameOverScene();
+        cowsdead = GameObject.FindGameObjectsWithTag("dead cowww");
+        cowsAlive_ = GameObject.FindGameObjectsWithTag("Cowbox");
 
+        if (cowsAlive_.Length >= liveamount)
+        {
+            if (cowsdead.Length == cowsAlive_.Length)
+            {
+                GameOverScene();
+
+            }
         }
+    
 
     }
 

@@ -173,12 +173,14 @@ public IEnumerator Killcow2()
  }
     public IEnumerator Killcow3()
     {
-        GameObject newObj = Instantiate(deadcow3, _postion, _rotation) as GameObject;
-        deadcow3 = Instantiate(deadcow3, _postion, _rotation) as GameObject;
-        deadcow3.transform.parent = gameObject.transform;
-        yield return new WaitForSeconds(2);
+     //   GameObject newObj = Instantiate(deadcow3, _postion, _rotation) as GameObject;
+   
+        
+        //    deadcow3 = Instantiate(deadcow3, _postion, _rotation) as GameObject;
+     //   deadcow3.transform.parent = gameObject.transform;
+       yield return new WaitForSeconds(2);
         spawning3 = false;
-        this.gameObject.SetActive(false);
+       this.gameObject.SetActive(false);
     }
 
     public void cowIdle()
