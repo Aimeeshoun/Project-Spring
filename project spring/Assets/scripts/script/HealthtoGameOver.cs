@@ -39,7 +39,7 @@ public class HealthtoGameOver : MonoBehaviour
    public void Update()
     {
         
-        cowAlives_ = GameObject.FindGameObjectsWithTag("COW ALIVE");
+        cowAlives_ = GameObject.FindGameObjectsWithTag("Cowbox");
         valueOfDead = cowAlives_.Length;
         foreach(GameObject cowAlive_ in cowAlives_)
         {

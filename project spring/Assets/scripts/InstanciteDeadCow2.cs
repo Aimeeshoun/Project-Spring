@@ -8,6 +8,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
     public GameObject deadcow;
     public GameObject deadcow2;
+
     public GameObject deadcow3;
     public GameObject this_gamObj;
     public GameObject this_gamObj2;
@@ -172,6 +173,7 @@ public IEnumerator Killcow2()
  }
     public IEnumerator Killcow3()
     {
+        GameObject newObj = Instantiate(deadcow3, _postion, _rotation) as GameObject;
         deadcow3 = Instantiate(deadcow3, _postion, _rotation) as GameObject;
         deadcow3.transform.parent = gameObject.transform;
         yield return new WaitForSeconds(2);
