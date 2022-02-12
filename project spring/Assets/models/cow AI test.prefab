@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 4891014641850946336}
   - component: {fileID: 4891014641850946337}
   - component: {fileID: 4891014641850946338}
-  - component: {fileID: 4891014641850946339}
   m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
@@ -259,21 +258,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4891014641850946339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4891014641850946341}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f800ce9b5bbd6f4409a0785927e8e7b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patrolPoint: {fileID: 0}
-  food: {fileID: 0}
-  destination: {x: 0, y: 0, z: 0}
 --- !u!1001 &4891014642744681338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -519,6 +503,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2433592967070383426, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
     - {fileID: 1506264192119181952, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+    - {fileID: 7249605999318628023, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+    - {fileID: 2299399726500062543, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+    - {fileID: 1734777744840676716, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+    - {fileID: 5232809894014117937, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
+    - {fileID: 7972436057710632705, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0fcf3708770978c47afc080a0f8b2154, type: 3}
 --- !u!4 &7585970686265472891 stripped
 Transform:

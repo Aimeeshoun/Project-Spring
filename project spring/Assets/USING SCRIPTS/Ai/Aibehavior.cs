@@ -55,15 +55,7 @@ public class Aibehavior : MonoBehaviour
 
         StartCoroutine(canHunt ? OnTriggerEnter(other) : Patrol());
     }
-    private void OnMouseDown()
-    {
-        this_gameobject= this.gameObject;
-        agent = this_gameobject.GetComponent<NavMeshAgent>();
-        isStopped_ = agent.isStopped;
-        agent.enabled = false;
-        agent.stoppingDistance = .1f;                                                                                                
 
-    }
   
     private int i = 0;
     private IEnumerator Patrol()

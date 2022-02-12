@@ -10,21 +10,14 @@ public class CowAI : MonoBehaviour
     private GameObject this_gameobject;
     private WaitForFixedUpdate wffu = new WaitForFixedUpdate();
     private NavMeshAgent agent;
-
     public Transform patrolPoint;
     private bool canHunt, canPatrol;
     public GameObject food;
-    //   public Vector3 position_food;
-
-    //   public float distance;
-
     public Vector3 destination;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        //   Patrol();
-
         food = GameObject.FindGameObjectWithTag("cow eats food");
         patrolPoint = food.GetComponent<Transform>();
         destination = patrolPoint.position;
@@ -32,23 +25,16 @@ public class CowAI : MonoBehaviour
         agent = this_gameobject.GetComponent<NavMeshAgent>();
 
     }
-    public void OnAwake()
-    {
 
-    }
     public void Update()
     {
         destination = patrolPoint.position;
-
         StartCoroutine(Patrol());
-
         agent.destination = destination;
     }
 
-
     private void OnMouseDown()
     {
-        //    agent.enabled = true;
         var distance = agent.remainingDistance;
     }
     private int i = 0;
@@ -62,18 +48,9 @@ public class CowAI : MonoBehaviour
             if (agent.pathPending || !(agent.remainingDistance < 1f)) continue;
             yield return new WaitForSeconds(.1f);
 
-            //      agent.stoppingDistance = .1f;
-            //     agent.enabled = false;
-
-
-            //  canPatrol = false;
-            //     i = (i + 1) % position_s.Length;
-
-
 
         }
-        //   agent.stoppingDistance = .1f;
-        //  agent.enabled = false;
+
     }
 
 }

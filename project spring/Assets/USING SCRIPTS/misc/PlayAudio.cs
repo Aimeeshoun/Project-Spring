@@ -15,18 +15,6 @@ public class PlayAudio : MonoBehaviour
         Debug.Log("started");
     }
 
-    void OnGUI()
-    {
-      //  if (GUI.Button(new Rect(10, 70, 150, 30), "Pause"))
-      //  {
-       //     audioData.Pause();
-       //     Debug.Log("Pause: " + audioData.time);
-       // }
 
-      //  if (GUI.Button(new Rect(10, 170, 150, 30), "Continue"))
-      //  {
-      //      audioData.UnPause();
-      //  }
-    }
 }
 
