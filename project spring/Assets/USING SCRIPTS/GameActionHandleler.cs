@@ -4,7 +4,7 @@ using UnityEngine.Events;
 public class GameActionHandleler : MonoBehaviour
 {
     public GameAction2 gameAction;
-    public UnityEvent handlerEvent;
+   public UnityEvent handlerEvent;
     public float holdTime = 3f;
     private void Start()
     {

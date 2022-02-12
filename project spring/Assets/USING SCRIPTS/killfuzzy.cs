@@ -6,32 +6,32 @@ using UnityEngine.UI;
 public class killfuzzy : MonoBehaviour
 {
     public int Timer2 = 0;
-    public GameObject bloodsplatter;
+  //  public GameObject bloodsplatter;
 
-    private bool spawning;
+//    private bool spawning;
 
     public GameObject currentBlood__;
     /// 
-    public float spawnRate;
+  //  public float spawnRate;
 
-    public GameObject target;
+ //   public GameObject target;
 
     public GameObject this_gameObject;
     // public GameObject this_gameObject;
 
     public IntData alienScore;
-    public int valueOfDead = 30;
+  //  public int valueOfDead = 30;
     public Text text;
-    public string scoreee;
+ //   public string scoreee;
     public GameObject Textbar_;
-    public IntData score;
+  //  public IntData score;
     public Image scorebar;
     public GameObject scorebar_;
     public int Timer = 0;
 
     public GameObject healthobj_;
     public Healthclamp2 healthtoNextLevel;
-    public GameObject Alien_;
+  //  public GameObject Alien_;
 
 
     // public Transform position_;
@@ -47,7 +47,7 @@ public class killfuzzy : MonoBehaviour
     public Alienhealth alienhealth;
     public int currentAlienHealth;
 
-    public GameObject grabAlienhealth;
+ //   public GameObject grabAlienhealth;
 
     public SelectedObjects selectedObjects;
     public GameObject weaponSpawner;

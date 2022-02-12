@@ -8,11 +8,11 @@ public class Instancer : MonoBehaviour
     public GameObject bullet;
     public GameObject gun;
     public GameObject[] guns;
-    public Transform bulletVelocity;
-    private bool spawning;
-    public float spawnRate;
-    public float BulletSpeed;
-    public AudioClip GunshotSound;
+  //  public Transform bulletVelocity;
+  //  private bool spawning;
+  //  public float spawnRate;
+//    public float BulletSpeed;
+  //  public AudioClip GunshotSound;
     public GameObject newbullet;
 
     

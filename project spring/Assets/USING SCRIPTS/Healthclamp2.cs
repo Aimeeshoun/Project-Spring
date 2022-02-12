@@ -10,11 +10,11 @@ public class Healthclamp2 : MonoBehaviour
     public int _maxHealth;
 
 
-    public float healthBarLength;
+  //  public float healthBarLength;
     public Image healthBar_;
     public IntData _currentHealth;
 
-    public int valueOfDead = 30;
+ //   public int valueOfDead = 30;
     public killfuzzy grabIntData_;
     public GameObject fuzzies;
    /// public GameObject fuzzy_;
@@ -26,7 +26,7 @@ public class Healthclamp2 : MonoBehaviour
     public GameObject healthobj_;
 
     public HealthtonextLevel healthtoNextLevel;
-    public int currentHealth__;
+   public int currentHealth__;
 
     // Use this for initialization
     public void Start()

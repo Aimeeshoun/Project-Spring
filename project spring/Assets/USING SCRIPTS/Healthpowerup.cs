@@ -8,10 +8,10 @@ public class Healthpowerup : MonoBehaviour
     public Transform position_;
     public Vector3 _position;
     public Quaternion _rotation;
-    public GameObject particle;
+  //  public GameObject particle;
     public ParticleSystem particle_;
     public IntData data;
-    public int Timer = 0;
+   public int Timer = 0;
     public int Timer2 = 0;
     public int power = 5;
     public void Start()

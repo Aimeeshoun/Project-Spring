@@ -9,13 +9,13 @@ public class Aibehavior : MonoBehaviour
     private GameObject this_gameobject;
     private WaitForFixedUpdate wffu = new WaitForFixedUpdate();
     private NavMeshAgent agent;
-    public Transform destination;
+//    public Transform destination;
     private bool canHunt, canPatrol;
   //  public Transform[] patrolPoints;
-    public Transform patrolPoint_;
+   public Transform patrolPoint_;
     public bool isStopped_;
-    public GameObject cowEatPoint_;
-    public Transform cowTransform;
+ //   public GameObject cowEatPoint_;
+//    public Transform cowTransform;
     public Vector3 position_;
     public Vector3[] position_s;
 

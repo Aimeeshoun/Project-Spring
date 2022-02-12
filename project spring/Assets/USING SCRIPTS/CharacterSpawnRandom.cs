@@ -15,15 +15,15 @@ public class CharacterSpawnRandom : MonoBehaviour
     private bool spawning;
 
 
-    public float destroytime;
+ //   public float destroytime;
 
     public float maxTime;
     public float minTime;
-    private float spawnTime;
+   private float spawnTime;
 
     private float time;
     public GameObject currentCharacter;
-    private int index2;
+//    private int index2;
 
 
     public float maxSpawnPerSecond;

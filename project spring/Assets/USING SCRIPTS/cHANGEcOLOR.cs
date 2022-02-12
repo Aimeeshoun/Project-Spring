@@ -8,9 +8,9 @@ public class cHANGEcOLOR : MonoBehaviour
     public GameObject the_obj;
     public MeshRenderer meshRenderer_;
     public Material[] the_mats;
-  public Material the_mat;
+ public Material the_mat;
   public Material the_mat2;
-    public Color color_;
+ //   public Color color_;
 
 
 

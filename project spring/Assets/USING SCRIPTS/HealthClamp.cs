@@ -10,7 +10,7 @@ public class HealthClamp : MonoBehaviour
     public int _maxHealth;
     
 
-    public float healthBarLength;
+   // public float healthBarLength;
     public Image healthBar_;
     public IntData _currentHealth;
 

@@ -7,7 +7,7 @@ public class GameOverCowDead : MonoBehaviour
 
     public GameObject[] cowsAlive_;
     public GameObject[] cowsdead;
-    public GameObject cow;
+//    public GameObject cow;
     public int liveamount=5;
     public bool isAlive;
 

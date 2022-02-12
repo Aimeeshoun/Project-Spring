@@ -321,11 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -2553,8 +2550,6 @@ MonoBehaviour:
   position_: {fileID: 121173952}
   _position: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
-  particle: {fileID: 1516161388148593885, guid: a5194e9d42e982f458208a444c6d2f9d,
-    type: 3}
   particle_: {fileID: 1082772073}
   data: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
   Timer: 0
@@ -2849,23 +2844,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer2: 0
-  bloodsplatter: {fileID: 1909881093}
   currentBlood__: {fileID: 1909881093}
-  spawnRate: 1
-  target: {fileID: 360515567}
   this_gameObject: {fileID: 136772231}
   alienScore: {fileID: 0}
-  valueOfDead: 30
   text: {fileID: 0}
-  scoreee: 
   Textbar_: {fileID: 0}
-  score: {fileID: 0}
   scorebar: {fileID: 0}
   scorebar_: {fileID: 0}
   Timer: 0
   healthobj_: {fileID: 0}
   healthtoNextLevel: {fileID: 0}
-  Alien_: {fileID: 0}
   particle: {fileID: 0}
   particle_: {fileID: 0}
   this_object: {fileID: 0}
@@ -2874,7 +2862,6 @@ MonoBehaviour:
   other_gameObject_: {fileID: 0}
   alienhealth: {fileID: 0}
   currentAlienHealth: 0
-  grabAlienhealth: {fileID: 0}
   selectedObjects: {fileID: 0}
   weaponSpawner: {fileID: 0}
   particleSystem_obj: {fileID: 0}
@@ -3289,11 +3276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -6136,23 +6120,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer2: 0
-  bloodsplatter: {fileID: 892058718}
   currentBlood__: {fileID: 892058718}
-  spawnRate: 1
-  target: {fileID: 0}
   this_gameObject: {fileID: 1497164630}
   alienScore: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
-  valueOfDead: 30
   text: {fileID: 327262141}
-  scoreee: 
   Textbar_: {fileID: 327262140}
-  score: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
   scorebar: {fileID: 186443481}
   scorebar_: {fileID: 993576234}
   Timer: 0
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
-  Alien_: {fileID: 0}
   particle: {fileID: 3160573691628451040, guid: 54ca0d8c32fbdc240b7347f058ba8681,
     type: 3}
   particle_: {fileID: 3160573691628451038, guid: 54ca0d8c32fbdc240b7347f058ba8681,
@@ -6163,7 +6140,6 @@ MonoBehaviour:
   other_gameObject_: {fileID: 0}
   alienhealth: {fileID: 0}
   currentAlienHealth: 0
-  grabAlienhealth: {fileID: 0}
   selectedObjects: {fileID: 0}
   weaponSpawner: {fileID: 0}
   particleSystem_obj: {fileID: 0}
@@ -13765,11 +13741,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -15176,11 +15149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -15646,7 +15616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &498467137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15724,8 +15694,6 @@ MonoBehaviour:
   position_: {fileID: 498467144}
   _position: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
-  particle: {fileID: 1516161388148593885, guid: a5194e9d42e982f458208a444c6d2f9d,
-    type: 3}
   particle_: {fileID: 776193137}
   data: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
   Timer: 0
@@ -16452,7 +16420,6 @@ MonoBehaviour:
   - {fileID: 564532405}
   spawnAmount: 5
   spawnRate: 10
-  destroytime: 7
   maxTime: 30
   minTime: 20
   currentCharacter: {fileID: 0}
@@ -17107,11 +17074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -19071,11 +19035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -22166,14 +22127,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cowsDead: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
   valueOfDead: 100
-  grabIntData_: {fileID: 0}
   cowAlives_: []
   cowsdead: []
-  cowAlive_: {fileID: 919132149155446097, guid: 7de1f672f9197254c9e4c27a037a5813,
-    type: 3}
   Textbar_: {fileID: 1257378392}
   text: {fileID: 1257378394}
-  scoreee: 
   isAlive: 0
 --- !u!65 &808190977
 BoxCollider:
@@ -22282,10 +22239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  healthBarLength: 0
   healthBar_: {fileID: 186443481}
   _currentHealth: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
-  valueOfDead: 100
   grabIntData_: {fileID: 0}
   fuzzies: {fileID: 0}
   Textbar_: {fileID: 327262140}
@@ -22306,7 +22261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 100
-  healthBarLength: 0
   healthBar_: {fileID: 29442832}
   _currentHealth: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
   valueOfDead: 100
@@ -25527,11 +25481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -26795,23 +26746,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer2: 0
-  bloodsplatter: {fileID: 892058718}
   currentBlood__: {fileID: 892058718}
-  spawnRate: 1
-  target: {fileID: 0}
   this_gameObject: {fileID: 1497164630}
   alienScore: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
-  valueOfDead: 30
   text: {fileID: 327262141}
-  scoreee: 
   Textbar_: {fileID: 327262140}
-  score: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
   scorebar: {fileID: 186443481}
   scorebar_: {fileID: 993576234}
   Timer: 0
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
-  Alien_: {fileID: 0}
   particle: {fileID: 3160573691628451040, guid: 54ca0d8c32fbdc240b7347f058ba8681,
     type: 3}
   particle_: {fileID: 3160573691628451038, guid: 54ca0d8c32fbdc240b7347f058ba8681,
@@ -26822,7 +26766,6 @@ MonoBehaviour:
   other_gameObject_: {fileID: 0}
   alienhealth: {fileID: 0}
   currentAlienHealth: 0
-  grabAlienhealth: {fileID: 0}
   selectedObjects: {fileID: 0}
   weaponSpawner: {fileID: 0}
   particleSystem_obj: {fileID: 0}
@@ -31211,7 +31154,6 @@ MonoBehaviour:
   the_mats: []
   the_mat: {fileID: 0}
   the_mat2: {fileID: 0}
-  color_: {r: 1, g: 1, b: 1, a: 0}
 --- !u!4 &1174638339
 Transform:
   m_ObjectHideFlags: 0
@@ -35673,23 +35615,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer2: 0
-  bloodsplatter: {fileID: 892058718}
   currentBlood__: {fileID: 892058718}
-  spawnRate: 1
-  target: {fileID: 0}
   this_gameObject: {fileID: 1497164630}
   alienScore: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
-  valueOfDead: 30
   text: {fileID: 327262141}
-  scoreee: 
   Textbar_: {fileID: 327262140}
-  score: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
   scorebar: {fileID: 186443481}
   scorebar_: {fileID: 993576234}
   Timer: 0
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
-  Alien_: {fileID: 0}
   particle: {fileID: 3160573691628451040, guid: 54ca0d8c32fbdc240b7347f058ba8681,
     type: 3}
   particle_: {fileID: 3160573691628451038, guid: 54ca0d8c32fbdc240b7347f058ba8681,
@@ -35700,7 +35635,6 @@ MonoBehaviour:
   other_gameObject_: {fileID: 0}
   alienhealth: {fileID: 0}
   currentAlienHealth: 0
-  grabAlienhealth: {fileID: 0}
   selectedObjects: {fileID: 0}
   weaponSpawner: {fileID: 0}
   particleSystem_obj: {fileID: 0}
@@ -35930,8 +35864,6 @@ MonoBehaviour:
   position_: {fileID: 1352101897}
   _position: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
-  particle: {fileID: 1516161388148593885, guid: a5194e9d42e982f458208a444c6d2f9d,
-    type: 3}
   particle_: {fileID: 828536364}
   data: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
   Timer: 0
@@ -37164,11 +37096,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -39507,7 +39436,6 @@ MonoBehaviour:
   spawnPoints: []
   spawnAmount: 10
   spawnRate: 1
-  destroytime: 5
   maxTime: 15
   minTime: 10
   currentCharacter: {fileID: 0}
@@ -40009,25 +39937,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Timer2: 0
-  bloodsplatter: {fileID: 3798418869041078986, guid: ba2d724cab25caf49991cc5fd9dc278b,
-    type: 3}
   currentBlood__: {fileID: 3798418869041078986, guid: ba2d724cab25caf49991cc5fd9dc278b,
     type: 3}
-  spawnRate: 1
-  target: {fileID: 0}
   this_gameObject: {fileID: 1497164630}
   alienScore: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
-  valueOfDead: 30
   text: {fileID: 327262141}
-  scoreee: 
   Textbar_: {fileID: 327262140}
-  score: {fileID: 11400000, guid: 7d1a00e896df3984597ca42c4988e529, type: 2}
   scorebar: {fileID: 186443481}
   scorebar_: {fileID: 993576234}
   Timer: 0
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
-  Alien_: {fileID: 0}
   particle: {fileID: 6514841061353978092, guid: b742c3bcb5996954f933de8e8e57cc4a,
     type: 3}
   particle_: {fileID: 1287983137}
@@ -40037,7 +39957,6 @@ MonoBehaviour:
   other_gameObject_: {fileID: 0}
   alienhealth: {fileID: 0}
   currentAlienHealth: 0
-  grabAlienhealth: {fileID: 0}
   selectedObjects: {fileID: 0}
   weaponSpawner: {fileID: 0}
   particleSystem_obj: {fileID: 0}
@@ -40138,10 +40057,6 @@ MonoBehaviour:
   - {fileID: 503763779}
   - {fileID: 704552344}
   - {fileID: 1507775839}
-  bulletVelocity: {fileID: 0}
-  spawnRate: 1
-  BulletSpeed: 80
-  GunshotSound: {fileID: 0}
   newbullet: {fileID: 0}
 --- !u!4 &1501048589
 Transform:
@@ -63450,11 +63365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []

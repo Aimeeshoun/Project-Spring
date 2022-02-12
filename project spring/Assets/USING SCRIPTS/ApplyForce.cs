@@ -4,8 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class ApplyForce : MonoBehaviour
 {
-    private Rigidbody rbody;
-    public float force = 38f;
+   private Rigidbody rbody;
+   public float force = 38f;
 
     void Start()
     {

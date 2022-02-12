@@ -10,14 +10,14 @@ public class HealthtoGameOver : MonoBehaviour
 
     public IntData cowsDead;
 
-    public int valueOfDead;
-    public InstanciteDeadCow2 grabIntData_;
+   public int valueOfDead;
+ //   public InstanciteDeadCow2 grabIntData_;
     public GameObject[] cowAlives_;
     public GameObject[] cowsdead;
-    public GameObject cowAlive_;
+//    public GameObject cowAlive_;
     public GameObject Textbar_;
     public Text text;
-    public string scoreee;
+ //   public string scoreee;
     public bool isAlive;
 
 
@@ -40,8 +40,8 @@ public class HealthtoGameOver : MonoBehaviour
    public void Update()
     {
         
-    //    cowAlives_ = GameObject.FindGameObjectsWithTag("dead cowww");
-   //     valueOfDead = cowAlives_.Length;
+     cowAlives_ = GameObject.FindGameObjectsWithTag("dead cowww");
+        valueOfDead = cowAlives_.Length;
    //     foreach(GameObject cowAlive_ in cowAlives_)
    //     {
    //         grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
