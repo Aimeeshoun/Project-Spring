@@ -5,17 +5,16 @@ using UnityEngine.AI;
 
 public class Aibehavior : MonoBehaviour
 {
- //   private CharacterController _characterController;
+
     private GameObject this_gameobject;
     private WaitForFixedUpdate wffu = new WaitForFixedUpdate();
     private NavMeshAgent agent;
-//    public Transform destination;
+
     private bool canHunt, canPatrol;
-  //  public Transform[] patrolPoints;
+
    public Transform patrolPoint_;
     public bool isStopped_;
- //   public GameObject cowEatPoint_;
-//    public Transform cowTransform;
+
     public Vector3 position_;
     public Vector3[] position_s;
 
@@ -76,7 +75,7 @@ public class Aibehavior : MonoBehaviour
             if (agent.pathPending || !(agent.remainingDistance < 0.5f)) continue;
             yield return new WaitForSeconds(2);
             agent.destination = position_s[0];
-       //     i = (i + 1) % position_s.Length;
+
         }
     }
 }

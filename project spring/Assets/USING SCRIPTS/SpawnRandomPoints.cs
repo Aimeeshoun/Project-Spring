@@ -13,39 +13,26 @@ public class SpawnRandomPoints : MonoBehaviour
     public int spawnAmount;
     public float spawnRate;
     private bool spawning;
-
-
     public GameObject currentChar;
-
     public float maxTime;
     public float minTime;
     private float spawnTime;
-
     private float time;
     public GameObject currentWeapon;
-    private int index2;
-
-
     public float maxSpawnPerSecond;
     private float timer;
 
-    // Use this for initialization
     void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-
-     //   myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         SetRandomTime();
         time = 0;
-      
         StartCoroutine(SpawnMonster());
         SpawnMonster();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-       // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
 
         time += Time.deltaTime;
         if (time >= spawnTime)
@@ -66,7 +53,6 @@ public class SpawnRandomPoints : MonoBehaviour
                         SetRandomTime();
                         time = 0;
 
-                       // timer = 1 / maxSpawnPerSecond;
                     }
                 }
 
@@ -77,37 +63,26 @@ public class SpawnRandomPoints : MonoBehaviour
 
     public IEnumerator SpawnMonster()
     {
-
         selectRandomObjects();
-        // spawning = true;
-
-
         currentChar = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
-       currentChar = spawnedCharacters[1];
-
+        currentChar = spawnedCharacters[1];
         currentChar.transform.parent = currentChar.transform;
-       currentWeapon = spawnedCharacters[1];
+        currentWeapon = spawnedCharacters[1];
         Destroy(currentChar, 80f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
-        //selectRandomObjects();
-       
-
     }
 
     public void selectRandomObjects()
 
     {
-
-        
+ 
         index = Random.Range(0, spawnPoints.Length);
         currentPoint = spawnPoints[index];
         index = Random.Range(0, myWeaponList2.Length);
         currentWeapon = myWeaponList2[index];
 
-
     }
-
 
     void SetRandomTime()
     {

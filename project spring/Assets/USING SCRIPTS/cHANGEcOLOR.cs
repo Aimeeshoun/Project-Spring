@@ -8,19 +8,10 @@ public class cHANGEcOLOR : MonoBehaviour
     public GameObject the_obj;
     public MeshRenderer meshRenderer_;
     public Material[] the_mats;
- public Material the_mat;
-  public Material the_mat2;
- //   public Color color_;
+    public Material the_mat;
+    public Material the_mat2;
 
 
-
-    // Start is called before the first frame update
-    public void Start()
-    {
-       
-      //the_mats[0] = the_mat;
-
-    }
     public void Awake()
     {
         the_obj = this.gameObject;
@@ -29,9 +20,6 @@ public class cHANGEcOLOR : MonoBehaviour
         the_mat = the_mats[1];
         the_mat2 = the_mats[2];
     }
-    // Update is called once per frame
- 
-
 
 }
 

@@ -10,7 +10,6 @@ public class GameActionHandleler : MonoBehaviour
     {
         gameAction.action += ActionHandler;
     }
-
     private void ActionHandler()
     {
         Invoke(nameof(OnActionHandler), holdTime);

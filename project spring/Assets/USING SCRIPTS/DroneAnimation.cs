@@ -10,7 +10,6 @@ public class DroneAnimation : MonoBehaviour
     public bool  isClicked;
     public bool  isNotClicked;
     
-    // Start is called before the first frame update
     void Start()
     {
         isClicked = false;
@@ -20,18 +19,11 @@ public class DroneAnimation : MonoBehaviour
         isNotClicked = animator.GetBool("is not clicked");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnMouseDown()
     {
         StartCoroutine(AnimateDrone());
     }
 
-    
     public IEnumerator AnimateDrone()
     {
         isClicked = true;
@@ -39,6 +31,5 @@ public class DroneAnimation : MonoBehaviour
        
         isNotClicked = true;
     }
-
 
 }

@@ -13,38 +13,25 @@ public class SpawnBomb : MonoBehaviour
     public int spawnAmount;
     public float spawnRate;
     private bool spawning;
-
-
-
-
     public float maxTime;
     public float minTime;
     private float spawnTime;
-
     private float time;
     public GameObject currentWeapon;
-    private int index2;
-
-
     public float maxSpawnPerSecond;
     private float timer;
 
-    // Use this for initialization
     void Start()
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("Spawnpoint 3");
-
-        //myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         SetRandomTime();
         time = 0;
-
         selectRandomObjects();
         StartCoroutine(SpawnMonster());
         SpawnMonster();
         SetRandomTime();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         
@@ -70,7 +57,6 @@ public class SpawnBomb : MonoBehaviour
                         
                         time = 0;
 
-                      // timer = 1 / maxSpawnPerSecond;
                     }
                 }
 
@@ -82,36 +68,27 @@ public class SpawnBomb : MonoBehaviour
     public IEnumerator SpawnMonster()
     {
 
-       
-        
         selectRandomObjects();
-        //spawning = true;
-  
         currentWeapon = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
         currentWeapon.transform.parent = gameObject.transform;
         Destroy(currentWeapon, 1.5f);
         yield return new WaitForSeconds(spawnRate);
         spawning = false;
-
     }
 
     public void selectRandomObjects()
 
     {
-    
-        // myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
         index = Random.Range(0, myWeaponList2.Length);
         currentWeapon = myWeaponList2[index];
         index = Random.Range(0, spawnPoints.Length);
         currentPoint = spawnPoints[index];
-
     }
 
 
     void SetRandomTime()
     {
         spawnTime = Random.Range(minTime, maxTime);
-
     }
 }
 

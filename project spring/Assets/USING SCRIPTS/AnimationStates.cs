@@ -12,9 +12,7 @@ public class AnimationStates : MonoBehaviour
         anims = GetComponent<Animator>();
         anims.SetTrigger("WALK");
 
-
     }
-
 
     private void OnTriggerEnter(Collider other)
     {

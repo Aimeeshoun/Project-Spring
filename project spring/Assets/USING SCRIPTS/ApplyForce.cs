@@ -15,7 +15,5 @@ public class ApplyForce : MonoBehaviour
 
     }
 
-
-
 }
 

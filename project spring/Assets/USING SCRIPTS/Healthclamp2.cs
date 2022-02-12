@@ -8,60 +8,37 @@ public class Healthclamp2 : MonoBehaviour
 
 
     public int _maxHealth;
-
-
-  //  public float healthBarLength;
     public Image healthBar_;
     public IntData _currentHealth;
-
- //   public int valueOfDead = 30;
     public killfuzzy grabIntData_;
     public GameObject fuzzies;
-   /// public GameObject fuzzy_;
-   
-  //  public GameObject alienAlive_;
     public GameObject Textbar_;
     public Text text;
-
     public GameObject healthobj_;
-
     public HealthtonextLevel healthtoNextLevel;
-   public int currentHealth__;
+    public int currentHealth__;
 
-    // Use this for initialization
     public void Start()
     {
         healthBar_ = healthBar_.GetComponent<Image>();
-
-        //    healthBarLength = Screen.width / 2;
         Textbar_ = GameObject.FindGameObjectWithTag("text score 2");
         text = Textbar_.GetComponent<Text>();
-
         healthobj_ = GameObject.FindGameObjectWithTag("health obj");
         healthtoNextLevel = healthobj_.GetComponent<HealthtonextLevel>();
-
 
     }
 
     public void Update()
     {
-
         fuzzies = GameObject.FindGameObjectWithTag("Fuzzy");
             grabIntData_ = fuzzies.GetComponent<killfuzzy>();
             _currentHealth = grabIntData_.alienScore;
             _maxHealth = healthtoNextLevel.valueOfDead;
             currentHealth__ = _currentHealth.value;
-        
-
-
     }
-
 
     public void AddTotHealth2()
     {
-
-        //     currentHealth__ += 1;
-
         if (currentHealth__ < 0)
             currentHealth__ = 0;
 
@@ -70,11 +47,7 @@ public class Healthclamp2 : MonoBehaviour
 
         if (currentHealth__ < _maxHealth)
             currentHealth__ = _maxHealth;
-
-
-
     }
-
     public void UpdateImage(IntData data)
 
     {

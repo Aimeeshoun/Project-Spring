@@ -6,27 +6,11 @@ public class Alienhealth : MonoBehaviour
 
 
 {
-
     public int alienHealth_;
     public int alienMaxHealth_;
-
-    //  public IntData cowMaxHealth_;
-
-    //**** MAKE INTO INTDATA FOR MUILTI LEVELS  
-
     int Timer = 0;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
 
 
-
-    }
     public void Awake()
     {
         Timer = 0;
@@ -54,7 +38,7 @@ public class Alienhealth : MonoBehaviour
                 alienHealth_ = 0;
             }
         }
-        // INSTANCIATE AN IMAGE, HEALTH BAR WHEN COWS ARE DYING 
+
     }
 
 }

@@ -7,15 +7,13 @@ using UnityEngine.UI;
 public class OnclickDrag : MonoBehaviour
 {
 
-
-
     private Vector3 screenPoint;
     private Vector3 offset;
     public bool IsDragable = true;
 
     void OnMouseDown()
     {
-        if (IsDragable)    // Only do if IsDraggable == true
+        if (IsDragable)    
         {
             screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 
@@ -25,7 +23,7 @@ public class OnclickDrag : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if (IsDragable)    // Only do if IsDraggable == true
+        if (IsDragable)    
         {
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
@@ -33,7 +31,5 @@ public class OnclickDrag : MonoBehaviour
             transform.position = curPosition;
         }
     }
-
-
 
 }
