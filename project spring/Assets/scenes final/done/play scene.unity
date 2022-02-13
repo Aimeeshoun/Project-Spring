@@ -2592,7 +2592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bd9605837f28145ba07d707cdee400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem_: {fileID: 1287983137}
+  particleSystem_: {fileID: 0}
 --- !u!1 &150386545
 GameObject:
   m_ObjectHideFlags: 0
@@ -13138,12 +13138,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 468870801}
   m_CullTransparentMesh: 1
---- !u!1 &473284975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2113753776386177823, guid: 59785c1eb106ac34aa8d816d5535e100,
-    type: 3}
-  m_PrefabInstance: {fileID: 2113753776586668656}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &473284976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2113753776386177792, guid: 59785c1eb106ac34aa8d816d5535e100,
@@ -13548,9 +13542,9 @@ Transform:
   - {fileID: 788558679}
   - {fileID: 126646079}
   - {fileID: 1761477060}
-  - {fileID: 1580039642}
   - {fileID: 1399809062}
   - {fileID: 1069225997}
+  - {fileID: 1580039642}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16975,7 +16969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bd9605837f28145ba07d707cdee400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem_: {fileID: 1287983137}
+  particleSystem_: {fileID: 0}
 --- !u!1 &668870309
 GameObject:
   m_ObjectHideFlags: 0
@@ -19157,26 +19151,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadcow: {fileID: 6347782859428020714, guid: 6b31963e7841927418b34f6397b67942, type: 3}
+  deadcow: {fileID: 0}
   deadcow2: {fileID: 0}
-  deadcow3: {fileID: 0}
-  this_gamObj: {fileID: 919132149155446097, guid: 70fbed6bd7bf1cb4580503f7717754c6,
-    type: 3}
-  this_gamObj2: {fileID: 8309797611505927449, guid: 8910f2d64e9f2f34d916f0248af5c70d,
-    type: 3}
-  spawnRate: 1
   position_: {fileID: 4160545354167902096, guid: 8910f2d64e9f2f34d916f0248af5c70d,
     type: 3}
   _postion: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
   text: {fileID: 0}
-  text_: 
   score: {fileID: 0}
   scorebar: {fileID: 0}
   scorebar_: {fileID: 0}
   Textbar_: {fileID: 0}
   animator: {fileID: 0}
-  cowIsWalking: 0
   cowIsChilling: 0
   cowIsScared: 0
   cowIsDying: 0
@@ -19184,12 +19170,11 @@ MonoBehaviour:
   cowHealth_: {fileID: 0}
   currentCowHealth_: 0
   Cow_: {fileID: 0}
-  new_scale: {x: 0, y: 0, z: 0}
+  Cows_: []
   Timer: 0
-  HowManyCanDie: 30
   healthobj_: {fileID: 0}
   healthtoGameOver: {fileID: 0}
-  score_: {fileID: 0}
+  iseaten: 0
 --- !u!1 &785784357
 GameObject:
   m_ObjectHideFlags: 0
@@ -22904,7 +22889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75bd9605837f28145ba07d707cdee400, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleSystem_: {fileID: 1287983137}
+  particleSystem_: {fileID: 0}
 --- !u!1 &917772513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e71c3e0b76a863346ab8d1123074906a,
@@ -25106,7 +25091,7 @@ Transform:
   m_LocalScale: {x: 16.72906, y: 1, z: 31.79251}
   m_Children: []
   m_Father: {fileID: 482443978}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074835673
 GameObject:
@@ -25748,23 +25733,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadcow: {fileID: 1865519631}
-  deadcow2: {fileID: 473284975}
-  deadcow3: {fileID: 0}
-  this_gamObj: {fileID: 0}
-  this_gamObj2: {fileID: 0}
-  spawnRate: 1
+  deadcow: {fileID: 0}
+  deadcow2: {fileID: 0}
   position_: {fileID: 0}
   _postion: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
   text: {fileID: 0}
-  text_: 
   score: {fileID: 0}
   scorebar: {fileID: 0}
   scorebar_: {fileID: 0}
   Textbar_: {fileID: 0}
   animator: {fileID: 0}
-  cowIsWalking: 0
   cowIsChilling: 0
   cowIsScared: 0
   cowIsDying: 0
@@ -25772,12 +25751,11 @@ MonoBehaviour:
   cowHealth_: {fileID: 0}
   currentCowHealth_: 0
   Cow_: {fileID: 0}
-  new_scale: {x: 0, y: 0, z: 0}
+  Cows_: []
   Timer: 0
-  HowManyCanDie: 30
   healthobj_: {fileID: 0}
   healthtoGameOver: {fileID: 0}
-  score_: {fileID: 0}
+  iseaten: 0
 --- !u!114 &1103828108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26037,26 +26015,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadcow: {fileID: 8309797611505927449, guid: 8910f2d64e9f2f34d916f0248af5c70d, type: 3}
+  deadcow: {fileID: 0}
   deadcow2: {fileID: 0}
-  deadcow3: {fileID: 0}
-  this_gamObj: {fileID: 6842954557578566795, guid: d94243c3625a49943ac78bf09acf8cd6,
-    type: 3}
-  this_gamObj2: {fileID: 7595423439818779169, guid: 18c71096868529741837efbfd5590ac8,
-    type: 3}
-  spawnRate: 1
   position_: {fileID: 7701354144008348281, guid: 18c71096868529741837efbfd5590ac8,
     type: 3}
   _postion: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
   text: {fileID: 0}
-  text_: 
   score: {fileID: 0}
   scorebar: {fileID: 0}
   scorebar_: {fileID: 0}
   Textbar_: {fileID: 0}
   animator: {fileID: 0}
-  cowIsWalking: 0
   cowIsChilling: 0
   cowIsScared: 0
   cowIsDying: 0
@@ -26064,12 +26034,11 @@ MonoBehaviour:
   cowHealth_: {fileID: 0}
   currentCowHealth_: 0
   Cow_: {fileID: 0}
-  new_scale: {x: 0, y: 0, z: 0}
+  Cows_: []
   Timer: 0
-  HowManyCanDie: 30
   healthobj_: {fileID: 0}
   healthtoGameOver: {fileID: 0}
-  score_: {fileID: 0}
+  iseaten: 0
 --- !u!1 &1111311309
 GameObject:
   m_ObjectHideFlags: 0
@@ -29332,12 +29301,6 @@ Transform:
   m_Father: {fileID: 1884313937}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &1287983137 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 770354781905145227, guid: ba2d724cab25caf49991cc5fd9dc278b,
-    type: 3}
-  m_PrefabInstance: {fileID: 770354783050522026}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1289080696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32807,7 +32770,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 482443978}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400894793
 GameObject:
@@ -35271,6 +35234,7 @@ GameObject:
   - component: {fileID: 1497164631}
   - component: {fileID: 1497164637}
   - component: {fileID: 1497164638}
+  - component: {fileID: 1497164639}
   m_Layer: 0
   m_Name: bullet
   m_TagString: bullet
@@ -35410,7 +35374,7 @@ MonoBehaviour:
   healthtoNextLevel: {fileID: 0}
   particle: {fileID: 6514841061353978092, guid: b742c3bcb5996954f933de8e8e57cc4a,
     type: 3}
-  particle_: {fileID: 1287983137}
+  particle_: {fileID: 0}
   this_object: {fileID: 0}
   this_obj_: {x: 0, y: 0, z: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
@@ -35484,6 +35448,20 @@ MonoBehaviour:
       m_Calls: []
   holdTime: 0
   repeatOnStart: 0
+--- !u!114 &1497164639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497164630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e6f022c7ee4ac43bb1f4e2eed7b642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlessystems_group: []
+  particlessystems_: {fileID: 0}
 --- !u!1 &1499708043
 GameObject:
   m_ObjectHideFlags: 0
@@ -41673,23 +41651,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadcow: {fileID: 1865519631}
-  deadcow2: {fileID: 473284975}
-  deadcow3: {fileID: 0}
-  this_gamObj: {fileID: 0}
-  this_gamObj2: {fileID: 0}
-  spawnRate: 1
+  deadcow: {fileID: 0}
+  deadcow2: {fileID: 0}
   position_: {fileID: 0}
   _postion: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
   text: {fileID: 0}
-  text_: 
   score: {fileID: 0}
   scorebar: {fileID: 0}
   scorebar_: {fileID: 0}
   Textbar_: {fileID: 0}
   animator: {fileID: 0}
-  cowIsWalking: 0
   cowIsChilling: 0
   cowIsScared: 0
   cowIsDying: 0
@@ -41697,12 +41669,11 @@ MonoBehaviour:
   cowHealth_: {fileID: 0}
   currentCowHealth_: 0
   Cow_: {fileID: 0}
-  new_scale: {x: 0, y: 0, z: 0}
+  Cows_: []
   Timer: 0
-  HowManyCanDie: 30
   healthobj_: {fileID: 0}
   healthtoGameOver: {fileID: 0}
-  score_: {fileID: 0}
+  iseaten: 0
 --- !u!114 &1578491261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43444,6 +43415,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636204293}
   m_CullTransparentMesh: 1
+--- !u!1 &1636420708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1636420710}
+  - component: {fileID: 1636420709}
+  m_Layer: 0
+  m_Name: Destroy particle system
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1636420709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636420708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e6f022c7ee4ac43bb1f4e2eed7b642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlessystems_group: []
+  particlessystems_: {fileID: 0}
+--- !u!4 &1636420710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636420708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 582.8168, y: 386.28336, z: 101.51041}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1643186264
 GameObject:
   m_ObjectHideFlags: 0
@@ -53733,12 +53749,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d0e2ff64871a76c4bb3adaba42fafa65, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eb59e5d4365f64409dc138700d7c51c, type: 3}
---- !u!1 &1865519631 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8293079147049562744, guid: 71c11fbeae1ed174e86e6897abc1000c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8293079147369406583}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1865519632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8293079147049562727, guid: 71c11fbeae1ed174e86e6897abc1000c,
@@ -54856,26 +54866,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadcow: {fileID: 6842954557578566795, guid: d94243c3625a49943ac78bf09acf8cd6, type: 3}
+  deadcow: {fileID: 0}
   deadcow2: {fileID: 0}
-  deadcow3: {fileID: 0}
-  this_gamObj: {fileID: 919132149155446097, guid: 70fbed6bd7bf1cb4580503f7717754c6,
-    type: 3}
-  this_gamObj2: {fileID: 8309797611505927449, guid: 8910f2d64e9f2f34d916f0248af5c70d,
-    type: 3}
-  spawnRate: 1
   position_: {fileID: 4160545354167902096, guid: 8910f2d64e9f2f34d916f0248af5c70d,
     type: 3}
   _postion: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
   text: {fileID: 0}
-  text_: 
   score: {fileID: 0}
   scorebar: {fileID: 0}
   scorebar_: {fileID: 0}
   Textbar_: {fileID: 0}
   animator: {fileID: 0}
-  cowIsWalking: 0
   cowIsChilling: 0
   cowIsScared: 0
   cowIsDying: 0
@@ -54883,12 +54885,11 @@ MonoBehaviour:
   cowHealth_: {fileID: 0}
   currentCowHealth_: 0
   Cow_: {fileID: 0}
-  new_scale: {x: 0, y: 0, z: 0}
+  Cows_: []
   Timer: 0
-  HowManyCanDie: 30
   healthobj_: {fileID: 0}
   healthtoGameOver: {fileID: 0}
-  score_: {fileID: 0}
+  iseaten: 0
 --- !u!1 &1937262489
 GameObject:
   m_ObjectHideFlags: 0
@@ -55037,23 +55038,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deadcow: {fileID: 1865519631}
-  deadcow2: {fileID: 473284975}
-  deadcow3: {fileID: 0}
-  this_gamObj: {fileID: 0}
-  this_gamObj2: {fileID: 0}
-  spawnRate: 1
+  deadcow: {fileID: 0}
+  deadcow2: {fileID: 0}
   position_: {fileID: 0}
   _postion: {x: 0, y: 0, z: 0}
   _rotation: {x: 0, y: 0, z: 0, w: 0}
   text: {fileID: 0}
-  text_: 
   score: {fileID: 0}
   scorebar: {fileID: 0}
   scorebar_: {fileID: 0}
   Textbar_: {fileID: 0}
   animator: {fileID: 0}
-  cowIsWalking: 0
   cowIsChilling: 0
   cowIsScared: 0
   cowIsDying: 0
@@ -55061,12 +55056,11 @@ MonoBehaviour:
   cowHealth_: {fileID: 0}
   currentCowHealth_: 0
   Cow_: {fileID: 0}
-  new_scale: {x: 0, y: 0, z: 0}
+  Cows_: []
   Timer: 0
-  HowManyCanDie: 30
   healthobj_: {fileID: 0}
   healthtoGameOver: {fileID: 0}
-  score_: {fileID: 0}
+  iseaten: 0
 --- !u!114 &1937262496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58790,7 +58784,7 @@ PrefabInstance:
     - target: {fileID: 395765776235277154, guid: ba2d724cab25caf49991cc5fd9dc278b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 395765776235277154, guid: ba2d724cab25caf49991cc5fd9dc278b,
         type: 3}
@@ -58856,6 +58850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 770354781905145268, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: m_TagString
+      value: particlesystem
       objectReference: {fileID: 0}
     - target: {fileID: 770354782092585913, guid: ba2d724cab25caf49991cc5fd9dc278b,
         type: 3}

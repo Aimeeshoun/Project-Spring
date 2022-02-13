@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1078554785113980079}
   - component: {fileID: 8223199247858878151}
   - component: {fileID: 683397351806707991}
+  - component: {fileID: 3409167852692211093}
   m_Layer: 0
   m_Name: cow AI test
   m_TagString: Cowbox
@@ -44,7 +45,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4891014641153836495}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -120,6 +121,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 54
   m_CollisionDetection: 0
+--- !u!114 &3409167852692211093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891014641153836495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5a638a9b36d1f4697b1ab078e198d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadcow: {fileID: 0}
+  deadcow2: {fileID: 6347782859428020714, guid: 6b31963e7841927418b34f6397b67942,
+    type: 3}
+  position_: {fileID: 7785500482665730051}
+  _postion: {x: 0, y: 0, z: 0}
+  _rotation: {x: 0, y: 0, z: 0, w: 0}
+  text: {fileID: 4296677769650163679, guid: 3f8c57940012106449ef00065ef1e78c, type: 3}
+  score: {fileID: 11400000, guid: b4e3d1f3d8e73924ca36a23bd15dd451, type: 2}
+  scorebar: {fileID: 1629184342355226516, guid: 5e4fc62a2bfdd3a429c2a09aeff24caa,
+    type: 3}
+  scorebar_: {fileID: 6213469719463205468, guid: 57b3e3be31e799c4ba80bd58b0255b8b,
+    type: 3}
+  Textbar_: {fileID: 4296677769650163677, guid: 3f8c57940012106449ef00065ef1e78c,
+    type: 3}
+  animator: {fileID: 486770654369926051}
+  cowIsChilling: 0
+  cowIsScared: 0
+  cowIsDying: 0
+  cowIsDead: 0
+  cowHealth_: {fileID: 0}
+  currentCowHealth_: 0
+  Cow_: {fileID: 0}
+  Cows_: []
+  Timer: 0
+  healthobj_: {fileID: 0}
+  healthtoGameOver: {fileID: 0}
+  iseaten: 0
 --- !u!1 &4891014641850946341
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +552,18 @@ PrefabInstance:
 --- !u!4 &7585970686265472891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3073310659424211969, guid: 0fcf3708770978c47afc080a0f8b2154,
+    type: 3}
+  m_PrefabInstance: {fileID: 4891014642744681338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7785500482665730051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3453126870758568825, guid: 0fcf3708770978c47afc080a0f8b2154,
+    type: 3}
+  m_PrefabInstance: {fileID: 4891014642744681338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &486770654369926051 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4981267832391739609, guid: 0fcf3708770978c47afc080a0f8b2154,
     type: 3}
   m_PrefabInstance: {fileID: 4891014642744681338}
   m_PrefabAsset: {fileID: 0}
