@@ -43444,6 +43444,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636204293}
   m_CullTransparentMesh: 1
+<<<<<<< Updated upstream
+=======
+--- !u!1 &1636420708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1636420710}
+  - component: {fileID: 1636420709}
+  m_Layer: 0
+  m_Name: Destroy particle system
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1636420709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636420708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e6f022c7ee4ac43bb1f4e2eed7b642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlessystems_group: []
+  particlessystems_: {fileID: 0}
+--- !u!4 &1636420710
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636420708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 582.8168, y: 386.28336, z: 101.51041}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1643186264
 GameObject:
   m_ObjectHideFlags: 0
@@ -58856,6 +58904,26 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 770354781905145268, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: m_TagString
+      value: particlesystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 770354781905145269, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 770354781905145269, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 770354781905145269, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 770354782092585913, guid: ba2d724cab25caf49991cc5fd9dc278b,
         type: 3}
