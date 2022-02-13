@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,10 +39,9 @@ public class DestroyPar : MonoBehaviour
         foreach (GameObject par in pars)
         {
 
-            if (isDetach == true)
-            {
+         
                 Destroy(par, 1f);
-            }
+            
         }
     }
 }

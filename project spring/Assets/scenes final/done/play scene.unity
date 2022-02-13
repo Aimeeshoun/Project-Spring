@@ -2344,6 +2344,7 @@ GameObject:
   - component: {fileID: 147187257}
   - component: {fileID: 147187258}
   - component: {fileID: 147187259}
+  - component: {fileID: 147187248}
   m_Layer: 0
   m_Name: alien r s
   m_TagString: Fuzzy
@@ -2396,6 +2397,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idObj: {fileID: 11400000, guid: d62f58b0e20ebe647bd153fd51a792df, type: 2}
+--- !u!114 &147187248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147187244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b0bde36c41b5b4a923986cad36ea6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killfuzzy_: {fileID: 0}
+  isdetached2: 0
+  isdetached3: 0
+  killFuzz: {fileID: 0}
+  KillFuzzes: []
 --- !u!114 &147187249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,6 +3066,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 165039565}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &166001719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 770354781905145268, guid: ba2d724cab25caf49991cc5fd9dc278b,
+    type: 3}
+  m_PrefabInstance: {fileID: 770354783050522026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180881601
 GameObject:
   m_ObjectHideFlags: 0
@@ -11999,6 +12023,7 @@ GameObject:
   - component: {fileID: 668369807}
   - component: {fileID: 668369808}
   - component: {fileID: 668369809}
+  - component: {fileID: 668369797}
   m_Layer: 0
   m_Name: skull r s
   m_TagString: Fuzzy
@@ -12038,6 +12063,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0
+--- !u!114 &668369797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668369794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b0bde36c41b5b4a923986cad36ea6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killfuzzy_: {fileID: 0}
+  isdetached2: 0
+  isdetached3: 0
+  killFuzz: {fileID: 0}
+  KillFuzzes: []
 --- !u!114 &668369798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17909,6 +17951,7 @@ GameObject:
   - component: {fileID: 916458225}
   - component: {fileID: 916458228}
   - component: {fileID: 916458229}
+  - component: {fileID: 916458222}
   m_Layer: 0
   m_Name: devil r s
   m_TagString: Fuzzy
@@ -18003,6 +18046,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &916458222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916458215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b0bde36c41b5b4a923986cad36ea6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killfuzzy_: {fileID: 0}
+  isdetached2: 0
+  isdetached3: 0
+  killFuzz: {fileID: 0}
+  KillFuzzes: []
 --- !u!195 &916458223
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -30618,8 +30678,7 @@ MonoBehaviour:
   Timer: 0
   healthobj_: {fileID: 808190975}
   healthtoNextLevel: {fileID: 0}
-  particle: {fileID: 6514841061353978092, guid: b742c3bcb5996954f933de8e8e57cc4a,
-    type: 3}
+  particle: {fileID: 166001719}
   particle_: {fileID: 1287983137}
   this_object: {fileID: 0}
   this_obj_: {x: 0, y: 0, z: 0}

@@ -54,19 +54,19 @@ public class killfuzzy : MonoBehaviour
         healthobj_ = GameObject.FindGameObjectWithTag("health obj");
         healthtoNextLevel = healthobj_.GetComponent<Healthclamp2>();
         text.text = alienScore.value.ToString();
-        particlessystems_group=GameObject.FindGameObjectsWithTag("particlesystem");
-      
+        particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
+
 
     }
     public void OnTriggerEnter(Collider other)
     {
         this_object = this_gameObject.transform;
-     //   particle_ = particle_.GetComponent<ParticleSystem>();
+           particle_ = particle_.GetComponent<ParticleSystem>();
         this_obj_ = this_object.position;
         other_obj_rotation = this.gameObject.transform.rotation;
         other_gameObject_ = other.gameObject;
         alienhealth = other_gameObject_.GetComponent<Alienhealth>();
-     //   particleSystem_obj = other_gameObject_.GetComponent<particlesystem>();
+           particleSystem_obj = other_gameObject_.GetComponent<particlesystem>();
 
         if (other_gameObject_.tag == "Fuzzy")
 
@@ -89,9 +89,9 @@ public class killfuzzy : MonoBehaviour
 
         if (Timer == 2)
         {
-        //    particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
-         //   particle_.transform.position = this_obj_;
-         //   particle_.transform.rotation = other_obj_rotation;
+                particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
+              particle_.transform.position = this_obj_;
+               particle_.transform.rotation = other_obj_rotation;
             BloodSplasts();
             Timer = 0;
         }
@@ -104,11 +104,12 @@ public class killfuzzy : MonoBehaviour
         currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
         currentBlood__.transform.parent = gameObject.transform;
         particle.transform.DetachChildren();
-         isdetached=true;
-         particle_.Emit(100);
-        Destroy(currentBlood__, 9); 
-        Destroy(this.gameObject, 9f);
+        isdetached = true;
+        particle_.Emit(100);
+        Destroy(currentBlood__, 9);
         DestroyParticles();
+        Destroy(this.gameObject, 9f);
+      
 
 
 
@@ -121,7 +122,7 @@ public class killfuzzy : MonoBehaviour
     {
         foreach (GameObject particlessystems_ in particlessystems_group)
         {
-            Destroy(particlessystems_,4f);
+            Destroy(particlessystems_, 1f);
         }
     }
 }

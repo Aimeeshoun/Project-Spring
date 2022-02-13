@@ -134,7 +134,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
     }
     public IEnumerator Killcow3()
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
         iseaten = true;
         spawning3 = false;
 
@@ -148,7 +148,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public IEnumerator cowScared()
     {
         cowIsScared = true;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
         StartCoroutine(cowDying());
         Killcow2();
         cowIsDying = true;
@@ -156,7 +156,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public IEnumerator cowDying()
     {
         cowIsDying = true;
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
         cowIsDying = false;
         StartCoroutine(Killcow3());
         cowIsDead = true;
