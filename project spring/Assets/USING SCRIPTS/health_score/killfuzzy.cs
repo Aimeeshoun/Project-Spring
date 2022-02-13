@@ -27,8 +27,9 @@ public class killfuzzy : MonoBehaviour
     public SelectedObjects selectedObjects;
     public GameObject weaponSpawner;
     public particlesystem particleSystem_obj;
-    public GameObject[] particlessystems_group;
-    public GameObject particlessystems_;
+    public bool isdetached;
+
+
 
     public void Start()
     {
@@ -53,8 +54,9 @@ public class killfuzzy : MonoBehaviour
         healthobj_ = GameObject.FindGameObjectWithTag("health obj");
         healthtoNextLevel = healthobj_.GetComponent<Healthclamp2>();
         text.text = alienScore.value.ToString();
-        particlessystems_group=GameObject.FindGameObjectsWithTag("particlesystem");
-      
+  
+ 
+
 
     }
     public void OnTriggerEnter(Collider other)
@@ -102,24 +104,17 @@ public class killfuzzy : MonoBehaviour
 
         currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
         currentBlood__.transform.parent = gameObject.transform;
+        isdetached = true;
         particle.transform.DetachChildren();
         particle_.Emit(100);
-        Destroy(currentBlood__, 9); 
+        Destroy(currentBlood__, 9);
+       
         Destroy(this.gameObject, 9f);
-        DestroyParticles();
-
+    
 
 
 
     }
 
 
-
-    public void DestroyParticles()
-    {
-        foreach (GameObject particlessystems_ in particlessystems_group)
-        {
-            Destroy(particleSystem_obj);
-        }
-    }
 }
