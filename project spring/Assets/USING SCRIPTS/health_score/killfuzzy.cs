@@ -70,7 +70,7 @@ public class killfuzzy : MonoBehaviour
         particleSystem_obj = other_gameObject_.GetComponent<particlesystem>();
 
         if (other_gameObject_.tag == "Fuzzy")
-        {
+
             if (currentAlienHealth <= 0)
             {
                 Timer = 1;
@@ -88,15 +88,15 @@ public class killfuzzy : MonoBehaviour
 
             }
 
-            if (Timer == 2)
-            {
-                particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
-                particle_.transform.position = this_obj_;
-                particle_.transform.rotation = other_obj_rotation;
-                BloodSplasts();
-                Timer = 0;
-            }
+        if (Timer == 2)
+        {
+            particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
+            particle_.transform.position = this_obj_;
+            particle_.transform.rotation = other_obj_rotation;
+            BloodSplasts();
+            Timer = 0;
         }
+
     }
 
     public void BloodSplasts()
