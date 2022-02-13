@@ -7,23 +7,27 @@ public class GameOverCowDead : MonoBehaviour
 
     public GameObject[] cowsAlive_;
     public GameObject[] cowsdead;
-    public int liveamount=5;
+    public object cow;
+ 
     public bool isAlive;
 
     void Update()
     {
-        cowsdead = GameObject.FindGameObjectsWithTag("dead cowww");
+
+      
+
         cowsAlive_ = GameObject.FindGameObjectsWithTag("Cowbox");
 
-        if (cowsAlive_.Length >= liveamount)
-        {
+       
             isAlive = true;
-        }
+       
 
         if (isAlive)
         {
-            if (cowsdead.Length == cowsAlive_.Length)
+            if (cowsAlive_.Length == 0)
             {
+
+
                 GameOverScene();
 
             }

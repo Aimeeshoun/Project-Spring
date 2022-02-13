@@ -65,12 +65,18 @@ public class SpawnRandomPoints : MonoBehaviour
     {
         selectRandomObjects();
         currentChar = Instantiate(currentWeapon, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
-        currentChar = spawnedCharacters[1];
-        currentChar.transform.parent = currentChar.transform;
-        currentWeapon = spawnedCharacters[1];
-        Destroy(currentChar, 80f);
-        yield return new WaitForSeconds(spawnRate);
-        spawning = false;
+      
+
+
+            currentChar = spawnedCharacters[1];
+            currentChar.transform.parent = currentChar.transform;
+            currentWeapon = spawnedCharacters[1];
+            Destroy(currentChar, 80f);
+            yield return new WaitForSeconds(spawnRate);
+            spawning = false;
+     
+
+    
     }
 
     public void selectRandomObjects()
@@ -90,8 +96,6 @@ public class SpawnRandomPoints : MonoBehaviour
 
     }
 }
-
-
 
 
 
