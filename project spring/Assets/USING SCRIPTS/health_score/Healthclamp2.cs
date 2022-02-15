@@ -30,11 +30,16 @@ public class Healthclamp2 : MonoBehaviour
 
     public void Update()
     {
-        fuzzies = GameObject.FindGameObjectWithTag("Fuzzy");
+       fuzzies = GameObject.FindGameObjectWithTag("Fuzzy");
+        if (!fuzzies == null)
+        {
             grabIntData_ = fuzzies.GetComponent<killfuzzy>();
             _currentHealth = grabIntData_.alienScore;
             _maxHealth = healthtoNextLevel.valueOfDead;
             currentHealth__ = _currentHealth.value;
+
+        }
+          
     }
 
     public void AddTotHealth2()

@@ -7,20 +7,20 @@ public class CowHealth : MonoBehaviour
 
     public int cowHealth_;
     public int cowMaxHealth_;
-    public cHANGEcOLOR cHANGcolor_;
-    public GameObject gameObject_;
-    public Material material_;
-    public Material material2_;
+//    public cHANGEcOLOR cHANGcolor_;
+  //  public GameObject gameObject_;
+  //  public Material material_;
+  //  public Material material2_;
     int Timer = 0;
 
 
-    public void Awake()
-    {
-        gameObject_ = GameObject.FindGameObjectWithTag("cow");
-        cHANGcolor_ = gameObject_.GetComponent<cHANGEcOLOR>();
-        material_ = cHANGcolor_.the_mat;
-        material2_ = cHANGcolor_.the_mat2;
-    }
+  //  public void Awake()
+  //  {
+    //    gameObject_ = GameObject.FindGameObjectWithTag("cow");
+     //   cHANGcolor_ = gameObject_.GetComponent<cHANGEcOLOR>();
+      //  material_ = cHANGcolor_.the_mat;
+     //   material2_ = cHANGcolor_.the_mat2;
+  //  }
 
     public void OnTriggerStay(Collider other)
     {
@@ -31,7 +31,7 @@ public class CowHealth : MonoBehaviour
             {
 
                 cowHealth_ -= 1;
-                StartCoroutine(ChangeColor());
+           //     StartCoroutine(ChangeColor());
 
                 Timer = 0;
             }
@@ -44,22 +44,22 @@ public class CowHealth : MonoBehaviour
         }
 
     }
-    public IEnumerator ChangeColor()
-    {
-
-        gameObject_.GetComponent<Renderer>().material = material_;
-        yield return new WaitForSeconds(1f);
-
-
+//   public IEnumerator ChangeColor()
+  //  {
+//
+  //      gameObject_.GetComponent<Renderer>().material = material_;
+  //      yield return new WaitForSeconds(1f);
 
 
-    }
 
-    public IEnumerator ChangeBackColor()
-    {
 
-        yield return new WaitForSeconds(1f);
-        gameObject_.GetComponent<Renderer>().material = material2_;
+  //  }
 
-    }
+ //   public IEnumerator ChangeBackColor()
+//    {
+
+ //       yield return new WaitForSeconds(1f);
+ //       gameObject_.GetComponent<Renderer>().material = material2_;
+
+//    }
 }
