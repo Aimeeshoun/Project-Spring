@@ -108,7 +108,11 @@ public class killfuzzy : MonoBehaviour
         particle_.Emit(100);
         Destroy(currentBlood__, 9);
         DestroyParticles();
-        Destroy(this.gameObject, 9f);
+      if(this_gameObject.tag == "bullet")
+        {
+            Destroy(this.gameObject, 9f);
+        }
+    
       
 
 

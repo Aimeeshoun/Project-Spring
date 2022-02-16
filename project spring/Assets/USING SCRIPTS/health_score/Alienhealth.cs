@@ -20,14 +20,20 @@ public class Alienhealth : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "bullet")
+        if (other.tag == "bullet"|| other.tag == "firepit")
         {
             Timer = 1;
             if (Timer == 1)
             {
 
-
-                alienHealth_ -= 1;
+                if (other.tag == "bullet")
+                {
+                    alienHealth_ -= 1;
+                }
+                if (other.tag == "firepit")
+                {
+                    alienHealth_ -= 6;
+                }
 
 
                 Timer = 0;
