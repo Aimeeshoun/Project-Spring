@@ -9,8 +9,8 @@ public class killfuzzy : MonoBehaviour
     public GameObject currentBlood__;
     public GameObject this_gameObject;
     public IntData alienScore;
-    public Text text;
-    public GameObject Textbar_;
+   public Text text;
+   public GameObject Textbar_;
     public Image scorebar;
     public GameObject scorebar_;
     public int Timer = 0;
@@ -34,10 +34,15 @@ public class killfuzzy : MonoBehaviour
     public void Start()
     {
         weaponSpawner = GameObject.FindGameObjectWithTag("weaponspawner");
-        selectedObjects = weaponSpawner.GetComponent<SelectedObjects>();
-        Textbar_ = GameObject.FindGameObjectWithTag("text score 2");
-        scorebar = scorebar_.GetComponent<Image>();
-        text = Textbar_.GetComponent<Text>();
+     //   scorebar = scorebar_.GetComponent<Image>();
+        if (!weaponSpawner == null)
+        {
+            selectedObjects = weaponSpawner.GetComponent<SelectedObjects>();
+            //     Textbar_ = GameObject.FindGameObjectWithTag("text score 2");
+        
+            //  text = Textbar_.GetComponent<Text>();
+        }
+   
     }
 
     public void Awake()
@@ -50,26 +55,34 @@ public class killfuzzy : MonoBehaviour
 
     public void Update()
     {
-        currentAlienHealth = alienhealth.alienHealth_;
+       
+     
         healthobj_ = GameObject.FindGameObjectWithTag("health obj");
-        healthtoNextLevel = healthobj_.GetComponent<Healthclamp2>();
-        text.text = alienScore.value.ToString();
+    //    healthtoNextLevel = healthobj_.GetComponent<Healthclamp2>();
+   //     text.text = alienScore.value.ToString();
         particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
 
 
     }
     public void OnTriggerEnter(Collider other)
     {
-        this_object = this_gameObject.transform;
-           particle_ = particle_.GetComponent<ParticleSystem>();
-        this_obj_ = this_object.position;
-        other_obj_rotation = this.gameObject.transform.rotation;
-        other_gameObject_ = other.gameObject;
-        alienhealth = other_gameObject_.GetComponent<Alienhealth>();
-           particleSystem_obj = other_gameObject_.GetComponent<particlesystem>();
+       if(!other.gameObject == null) {
 
-        if (other_gameObject_.tag == "Fuzzy")
 
+
+
+            this_object = this_gameObject.transform;
+            particle_ = particle_.GetComponent<ParticleSystem>();
+            this_obj_ = this_object.position;
+            other_obj_rotation = this.gameObject.transform.rotation;
+            other_gameObject_ = other.gameObject;
+
+
+
+            if (other_gameObject_.tag == "Fuzzy")
+                currentAlienHealth = alienhealth.alienHealth_;
+            alienhealth = other_gameObject_.GetComponent<Alienhealth>();
+            particleSystem_obj = other_gameObject_.GetComponent<particlesystem>();
             if (currentAlienHealth <= 0)
             {
                 Timer = 1;
@@ -87,16 +100,24 @@ public class killfuzzy : MonoBehaviour
 
             }
 
-        if (Timer == 2)
-        {
+            if (Timer == 2)
+            {
                 particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
-              particle_.transform.position = this_obj_;
-               particle_.transform.rotation = other_obj_rotation;
-            BloodSplasts();
-            Timer = 0;
+                particle_.transform.position = this_obj_;
+                particle_.transform.rotation = other_obj_rotation;
+                BloodSplasts();
+                Timer = 0;
+            }
+
         }
 
+
+
+
+
     }
+        
+   
 
     public void BloodSplasts()
     {
@@ -112,15 +133,8 @@ public class killfuzzy : MonoBehaviour
         {
             Destroy(this.gameObject, 9f);
         }
-    
-      
-
-
-
-
+  
     }
-
-
 
     public void DestroyParticles()
     {

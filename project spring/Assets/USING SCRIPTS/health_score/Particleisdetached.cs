@@ -15,27 +15,34 @@ public class Particleisdetached : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        KillFuzzes=GameObject.FindGameObjectsWithTag("Fuzzy");
-        foreach (GameObject killFuzz in KillFuzzes)
-        {
-            killfuzzy_ = killFuzz.GetComponent<killfuzzy>();
 
-         
-        }
-        isdetached2 = false;
-        isdetached3 = false;
+        // Update is called once per frame
     }
-    // Update is called once per frame
+    
     public void Update()
     {
-
-        isdetached3 = killfuzzy_.isdetached;
-           
-        if (isdetached3==true)
+        KillFuzzes = GameObject.FindGameObjectsWithTag("Fuzzy");
+        if (KillFuzzes.Length > 0)
+        {
+            foreach (GameObject killFuzz in KillFuzzes)
             {
-            isdetached2 = true;
+            //    killfuzzy_ = killFuzz.GetComponent<killfuzzy>();
+
+           //     isdetached3 = killfuzzy_.isdetached;
+
+
+                if (isdetached3 == true)
+                {
+                    isdetached2 = true;
+                }
             }
-        
+            isdetached2 = false;
+            isdetached3 = false;
+
+        }
+       
+
+
     }
 
 

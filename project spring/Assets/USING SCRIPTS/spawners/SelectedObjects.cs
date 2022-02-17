@@ -17,8 +17,13 @@ public class SelectedObjects : MonoBehaviour
     public void Update()
     {
         alienAlive_ = GameObject.FindGameObjectWithTag("Fuzzy");
-        grabIntData_ = alienAlive_.GetComponent<killfuzzy>();
-        aliensDead = grabIntData_.alienScore;
+        if(!alienAlive_== null)
+        {
+            grabIntData_ = alienAlive_.GetComponent<killfuzzy>();
+            aliensDead = grabIntData_.alienScore;
+
+        }
+       
     }
 
     public void SelectedObject()

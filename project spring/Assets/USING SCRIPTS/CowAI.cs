@@ -27,17 +27,20 @@ public class CowAI : MonoBehaviour
     }
 
     public void Update()
+
     {
+       
         destination = patrolPoint.position;
         StartCoroutine(Patrol());
         agent.destination = destination;
-    }
-
-    private void OnMouseDown()
-    {
         var distance = agent.remainingDistance;
     }
-    private int i = 0;
+
+   // private void OnMouseDown()
+  //  {
+        
+ 
+ //   private int i = 0;
     private IEnumerator Patrol()
     {
         canPatrol = true;

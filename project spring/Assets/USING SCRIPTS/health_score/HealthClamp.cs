@@ -33,11 +33,16 @@ public class HealthClamp : MonoBehaviour
     {
 
         cowAlive_ = GameObject.FindGameObjectWithTag("COW ALIVE");
-        grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
-        _currentHealth = grabIntData_.score;
-        _maxHealth = healthtoGameOver.valueOfDead;
-        currentHealth__ = _currentHealth.value;
-        healthBar_.fillAmount = currentHealth__ * 1f / _maxHealth;
+        if (!cowAlive_ == null)
+        {
+            grabIntData_ = cowAlive_.GetComponent<InstanciteDeadCow2>();
+            _currentHealth = grabIntData_.score;
+            _maxHealth = healthtoGameOver.valueOfDead;
+            currentHealth__ = _currentHealth.value;
+            healthBar_.fillAmount = currentHealth__ * 1f / _maxHealth;
+
+        }
+  
     }
 
     public void AddTotHealth()
