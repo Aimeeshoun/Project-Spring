@@ -28,14 +28,14 @@ public class FireSpawn : MonoBehaviour
     {
         spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
 
-        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        myWeaponList2 = GameObject.FindGameObjectsWithTag("firepit");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        myWeaponList2 = GameObject.FindGameObjectsWithTag("WeaponRandom");
+        myWeaponList2 = GameObject.FindGameObjectsWithTag("firepit");
         if (transform.childCount < spawnAmount && spawning == false)
         {
             StartCoroutine(SpawnMonster());

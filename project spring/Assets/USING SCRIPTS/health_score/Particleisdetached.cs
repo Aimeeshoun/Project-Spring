@@ -26,9 +26,9 @@ public class Particleisdetached : MonoBehaviour
         {
             foreach (GameObject killFuzz in KillFuzzes)
             {
-            //    killfuzzy_ = killFuzz.GetComponent<killfuzzy>();
+               killfuzzy_ = killFuzz.GetComponent<killfuzzy>();
 
-           //     isdetached3 = killfuzzy_.isdetached;
+               isdetached3 = killfuzzy_.isdetached;
 
 
                 if (isdetached3 == true)
