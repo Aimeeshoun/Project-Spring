@@ -30,7 +30,7 @@ public class GameOverTimer : MonoBehaviour
 
         if (time_int == 200000)
         {
-            SceneManager.LoadScene("game over menu");
+            SceneManager.LoadScene("reward screen");
         }
     }
 }
