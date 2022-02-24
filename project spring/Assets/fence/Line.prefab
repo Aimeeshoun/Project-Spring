@@ -75,7 +75,6 @@ LineRenderer:
   m_Positions:
   - {x: 2, y: 0, z: 0}
   - {x: 20, y: 0, z: 0}
-  - {x: 20, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.1
@@ -143,11 +142,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b009aea4332c525478d915b56570d47f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linePoint: {x: 0, y: 0, z: 0}
+  linePoints: []
   timer: 0
-  timerdelay: 1
+  timer2: 0
   currentLine: {fileID: 6872752636253078072}
   lineREnder: {fileID: 6872752636253078074}
   lineWidth: 1
   mat: {fileID: 2100000, guid: 5e29c0af1befe504c8a2a2f9a86b13dd, type: 2}
   linePrefab: {fileID: 6872752636253078072}
+  startPos: {x: 0, y: 0, z: 0}
+  endPos: {x: 0, y: 0, z: 0}
+  newLine: {fileID: 0}
+  positions_: []
+  World_point: {x: 0, y: 0, z: 0}

@@ -31,6 +31,8 @@ public class DestroyPar : MonoBehaviour
         if (isDetach)
         {
             DestroyParticles();
+            
+            
         }
     }
 
