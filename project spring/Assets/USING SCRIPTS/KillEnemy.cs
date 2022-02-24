@@ -41,18 +41,18 @@ public class KillEnemy : MonoBehaviour
         particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
         this_obj_= bear.transform.position;
         other_obj_rotation= bear.transform.rotation;
-        if (Enemyheath <= 0)
-        {
+      //  if (Enemyheath <= 0)
+      //  {
    
 
 
                 //   particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
 
-                BloodSplasts();
+          //      BloodSplasts();
 
               
 
-        }     
+     //   }     
         
      
        
@@ -70,7 +70,7 @@ public class KillEnemy : MonoBehaviour
 
     currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
     currentBlood__.transform.parent = gameObject.transform;
-        Destroy(bear,3f);
+        Destroy(bear,1f);
         //   particle.transform.DetachChildren();
         //   isdetached = true;
         //  particle_.Emit(100);
