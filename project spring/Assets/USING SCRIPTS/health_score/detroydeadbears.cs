@@ -8,26 +8,24 @@ public class detroydeadbears : MonoBehaviour
     public GameObject bear;
     public KillEnemy _killenemy;
     public int healthScore;
-    public Transform this_object;
+    //public Transform this_object;
     public Vector3 this_obj_;
     public Quaternion other_obj_rotation;
     public GameObject blood;
     public GameObject blood_;
     public GameObject bear_;
+    public bool isDead_;
+
+    public int timer = 0;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         blood = GameObject.FindGameObjectWithTag("blooood");
         bears = GameObject.FindGameObjectsWithTag("Fuzzy");
-        bear = bear_  ;
+        
        
         foreach (GameObject bear in bears)
         {
@@ -35,25 +33,39 @@ public class detroydeadbears : MonoBehaviour
 
             _killenemy = bear_.GetComponent<KillEnemy>();
             healthScore = _killenemy.Enemyheath;
-            this_object = _killenemy.this_object;
+         //   this_object = _killenemy.this_object;
             other_obj_rotation = _killenemy.other_obj_rotation;
             this_obj_ = _killenemy.this_obj_;
+            isDead_ = _killenemy.isdead;
 
-            if (healthScore <= 0)
-            {
-                _killenemy.BloodSplasts();
-                Destroy(bear_);
+            // if (isDead_)
+            //  {
+            //   _killenemy.BloodSplasts();
+            //      Destroy(bear_);
 
-            }
+            //   }
 
             //   if(healthScore <= 0)
             //  {
             //  _killenemy.BloodSplasts();
-            //     blood = Instantiate(blood, this_obj_, other_obj_rotation);
-            //     blood_.transform.parent = gameObject.transform;
-            //     }
+            if (isDead_)
+            {
+                timer = 1;
+                //   _killenemy.BloodSplasts();
 
+
+
+            }   //     }
+            if ( timer == 1)
+            {
+                Destroy(bear_);
+                blood = Instantiate(blood, this_obj_, other_obj_rotation);
+                blood_.transform.parent = gameObject.transform;
+                timer = 0;
+            }
+            
+        
         }
-       
+ 
     }
 }

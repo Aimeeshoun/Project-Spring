@@ -11,7 +11,7 @@ public class KillEnemy : MonoBehaviour
     public GameObject currentBlood__;
     public GameObject this_gameObject;
 
-
+    public bool isdead;
 
 
 
@@ -33,44 +33,54 @@ public class KillEnemy : MonoBehaviour
 
 
 
-
+    public void Start()
+    {
+        isdead = false;
+    }
     // Update is called once per frame
     public void Update()
     {
         bear = this.gameObject;
         particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
-        this_obj_= bear.transform.position;
-        other_obj_rotation= bear.transform.rotation;
-      //  if (Enemyheath <= 0)
-      //  {
-   
-
-
-                //   particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
-
-          //      BloodSplasts();
-
-              
-
-     //   }     
+        this_obj_ = bear.transform.position;
+        other_obj_rotation = bear.transform.rotation;
         
-     
-       
+        
+        
+        if (Enemyheath <= 0)
+        {
+
+            isdead = true;
+
+            //   particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);
+
+            //      BloodSplasts();
+
+
+
+            //   }     
+
+
+
+
+
+
+        }
+
 
     }
-
     public void OnMouseDown()
-    {
-        Enemyheath -= 1;
-    }
+     {
+         Enemyheath -= 1;
+     }
 
 
-    public void BloodSplasts()
-    {
+ //  public void BloodSplasts()
+  //  {
 
-    currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
-    currentBlood__.transform.parent = gameObject.transform;
-        Destroy(bear,1f);
+ //   currentBlood__ = Instantiate(currentBlood__, this_obj_, other_obj_rotation);
+  //  currentBlood__.transform.parent = gameObject.transform;
+       // Destroy(bear,1f);
         //   particle.transform.DetachChildren();
         //   isdetached = true;
         //  particle_.Emit(100);
@@ -86,7 +96,7 @@ public class KillEnemy : MonoBehaviour
         //    Destroy(particlessystems_, 1f);
         //     }
         // }
-    }
+  
 
 }
 
