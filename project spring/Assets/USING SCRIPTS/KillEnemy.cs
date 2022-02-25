@@ -31,19 +31,19 @@ public class KillEnemy : MonoBehaviour
     public GameObject particlessystems_;
     public bool isdetached;
 
-
+    public bool ishit;
 
     public void Start()
     {
         isdead = false;
+        ishit = false;
     }
     // Update is called once per frame
     public void Update()
     {
         bear = this.gameObject;
-        particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
-        this_obj_ = bear.transform.position;
-        other_obj_rotation = bear.transform.rotation;
+  //      particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
+     
         
         
         
@@ -72,8 +72,16 @@ public class KillEnemy : MonoBehaviour
     public void OnMouseDown()
      {
          Enemyheath -= 1;
+        this_obj_ = bear.transform.position;
+        other_obj_rotation = bear.transform.rotation;
+        ishit = true;
+
      }
 
+    public void OnMouseUp()
+    {
+        ishit = false;
+    }
 
  //  public void BloodSplasts()
   //  {
