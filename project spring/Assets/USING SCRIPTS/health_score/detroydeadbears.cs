@@ -15,9 +15,10 @@ public class detroydeadbears : MonoBehaviour
     public GameObject blood_;
     public GameObject bear_;
     public bool isDead_;
+    public GameObject deadBear;
 
     public int timer = 0;
-
+    public int timer2 = 0;
 
 
     // Update is called once per frame
@@ -33,9 +34,6 @@ public class detroydeadbears : MonoBehaviour
 
             _killenemy = bear_.GetComponent<KillEnemy>();
             healthScore = _killenemy.Enemyheath;
-         //   this_object = _killenemy.this_object;
-            other_obj_rotation = _killenemy.other_obj_rotation;
-            this_obj_ = _killenemy.this_obj_;
             isDead_ = _killenemy.isdead;
 
             // if (isDead_)
@@ -50,22 +48,33 @@ public class detroydeadbears : MonoBehaviour
             //  _killenemy.BloodSplasts();
             if (isDead_)
             {
-                timer = 1;
+              
+                //   this_object = _killenemy.this_object;
+                other_obj_rotation = _killenemy.other_obj_rotation;
+                this_obj_ = _killenemy.this_obj_;
+             
                 //   _killenemy.BloodSplasts();
 
+                deadBear= bear_ ;
+                timer = 1;
+                if (timer == 1)
+                {
+                    Destroy(deadBear);
+                    timer2 = 1;
+                    if (timer2 == 1)
+                    {
+                        blood = Instantiate(blood, this_obj_, other_obj_rotation);
+                        blood_.transform.parent = gameObject.transform;
+                        timer2 = 0;
+                    }
+
+                    timer = 0;
+                }
 
 
-            }   //     }
-            if ( timer == 1)
-            {
-                Destroy(bear_);
-                blood = Instantiate(blood, this_obj_, other_obj_rotation);
-                blood_.transform.parent = gameObject.transform;
-                timer = 0;
             }
-            
-        
-        }
+
+        }   
  
     }
 }
