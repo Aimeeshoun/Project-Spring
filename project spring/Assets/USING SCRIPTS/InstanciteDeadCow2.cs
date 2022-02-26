@@ -37,6 +37,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
     public bool iseaten;
    public GameObject thisGameobject;
    public GameObject thisGameobjects;
+    public bool Cowisdead2;
 
 
    public GameObject cow1;
@@ -44,13 +45,13 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
     public void Start()
     {
-        
-    //    scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
-    //    Textbar_ = GameObject.FindGameObjectWithTag("Text score");
-   //     scorebar = scorebar_.GetComponent<Image>();
-      //  text = Textbar_.GetComponent<Text>();
 
-      
+        //    scorebar_ = GameObject.FindGameObjectWithTag("Score bar");
+        //    Textbar_ = GameObject.FindGameObjectWithTag("Text score");
+        //     scorebar = scorebar_.GetComponent<Image>();
+        //  text = Textbar_.GetComponent<Text>();
+
+        Cowisdead2 = true;
 
 
     }
@@ -148,9 +149,10 @@ public class InstanciteDeadCow2 : MonoBehaviour
 
     public void Killcow2()
     {
-        if (!deadcow2==null) { 
-        Destroy(deadcow);
-        deadcow3 = Instantiate(deadcow2, _postion, _rotation) as GameObject;
+        if (!deadcow2==null) {
+            //   Destroy(deadcow);
+            Cowisdead2 = true;
+            deadcow3 = Instantiate(deadcow2, _postion, _rotation) as GameObject;
         deadcow3.transform.parent = gameObject.transform;
         spawning2 = false;
     }
@@ -184,6 +186,8 @@ public class InstanciteDeadCow2 : MonoBehaviour
         cowIsDying = false;
         StartCoroutine(Killcow3());
         cowIsDead = true;
+        Cowisdead2 = true;
+        Destroy(deadcow);
     }
 
 

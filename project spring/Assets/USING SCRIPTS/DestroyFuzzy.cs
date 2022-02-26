@@ -28,7 +28,7 @@ public class DestroyFuzzy : MonoBehaviour
     
     {
         
-                Destroy(fuzzies, 30f);
+                Destroy(fuzzies, 50f);
         
     }
 
