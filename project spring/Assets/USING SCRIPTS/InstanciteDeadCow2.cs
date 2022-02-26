@@ -71,7 +71,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
             cowIsChilling = animator.GetBool("cow is chilling");
             cowIsScared = animator.GetBool("cow is scared");
             cowIsDying = animator.GetBool("cow is being eaten");
-            cowIsDead = animator.GetBool("cow dead");
+           cowIsDead = animator.GetBool("cow dead");
         }
         Cows_ = GameObject.FindGameObjectsWithTag("Cowbox");
         foreach (GameObject Cow_ in Cows_)

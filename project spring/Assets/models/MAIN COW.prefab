@@ -200,16 +200,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3761963821254427557}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a92e6efc40770cf4ea139b2152a41c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
   patrolPoint_: {fileID: 0}
   isStopped_: 0
-  cowEatPoint_: {fileID: 0}
-  cowTransform: {fileID: 0}
   position_: {x: 0, y: 0, z: 0}
   position_s: []
   eatSpawnPoints: []
@@ -626,19 +623,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daab8b6e2f71507408c0f53a1714a151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Timer: 0
   this_obj: {fileID: 1427275421157539297}
   obj_trans: {fileID: 0}
   obj_position: {x: 0, y: 0, z: 0}
   obj_rotation: {x: 0, y: 0, z: 0, w: 0}
-  cows_: []
-  boxes_: []
-  currentcow__: {fileID: 2664301865898290117, guid: e709d97aac623054a9c2705c30112f88,
-    type: 3}
   other_obj: {fileID: 0}
   child_obj: {fileID: 0}
-  istriggered: 0
-  Timer3: 0
   currentState: 1
   CowScoreBox: {fileID: 0}
   cowscore: {fileID: 0}
@@ -669,10 +659,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cowHealth_: 300
   cowMaxHealth_: 300
-  cHANGcolor_: {fileID: 0}
-  gameObject_: {fileID: 0}
-  material_: {fileID: 0}
-  material2_: {fileID: 0}
 --- !u!114 &2039625733074833189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,4 +676,3 @@ MonoBehaviour:
   the_mats: []
   the_mat: {fileID: 0}
   the_mat2: {fileID: 0}
-  color_: {r: 0, g: 0, b: 0, a: 0}
