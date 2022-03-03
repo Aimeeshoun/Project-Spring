@@ -54,7 +54,7 @@ public class MakeEyesBig : MonoBehaviour
         gameobject_6 = gameobject_5.transform.GetChild(7).gameObject;
 
         gameobject_1 = gameobject_6.transform.GetChild(0).gameObject;
-      //  gameobject_2 = gameobject_6.transform.GetChild(1).gameObject;
+     //   gameobject_2 = gameobject_6.transform.GetChild(1).gameObject;
         gameobject_3 = gameobject_6.transform.GetChild(2).gameObject;
      //   gameobject_4 = gameobject_6.transform.GetChild(3).gameObject;
 
@@ -72,10 +72,10 @@ public class MakeEyesBig : MonoBehaviour
             {
 
                 gameobject_1.gameObject.transform.localScale += new Vector3(.02f, .02f, .02f);
-          //  gameobject_1.gameObject.transform.localScale += new Vector3(1f, 1f, 1f);
-          
+            //  gameobject_1.gameObject.transform.localScale += new Vector3(1f, 1f, 1f);
 
-            
+         //   gameobject_2.gameObject.transform.localScale += new Vector3(0.02f, 0.02f, 0.02f);
+
             gameobject_3.gameObject.transform.localScale += new Vector3(0.02f, 0.02f, 0.02f);
           //  gameobject_3.gameObject.transform.localScale += new Vector3(1f, 1f, 1f);
           

@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 611018822417838098}
   - component: {fileID: 611018822417838099}
   - component: {fileID: 611018822417838096}
+  - component: {fileID: 7272034416295942410}
   - component: {fileID: 3262428113576914510}
   m_Layer: 0
   m_Name: devil r s
@@ -416,6 +417,22 @@ MonoBehaviour:
   particlessystems_: {fileID: 0}
   isdetached: 0
   ishit: 0
+--- !u!114 &7272034416295942410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611018822417838081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952130502df821d4a8071506e53b7ce0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dead: {fileID: 0}
+  isdead_: 0
+  bear: {fileID: 0}
+  gameobject_1: {fileID: 0}
 --- !u!114 &3262428113576914510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,7 +447,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eyes: []
   eye: {fileID: 0}
-  bears: []
   bear: {fileID: 0}
   thebool: {fileID: 0}
   _ishit_: 0
@@ -449,6 +465,7 @@ MonoBehaviour:
   eyeballs: []
   gameobject_5: {fileID: 0}
   gameobject_6: {fileID: 0}
+  newSize: {x: 0, y: 0, z: 0}
 --- !u!1 &830606796004770531
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,7 +983,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e6024b90fddb6d44e9b5a50eb1c822c0, type: 2}
+  - {fileID: 2100000, guid: feaaddb92868b2f4a87c6c7008f0a829, type: 2}
   - {fileID: 2100000, guid: e6024b90fddb6d44e9b5a50eb1c822c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -1108,7 +1125,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e6024b90fddb6d44e9b5a50eb1c822c0, type: 2}
+  - {fileID: 2100000, guid: feaaddb92868b2f4a87c6c7008f0a829, type: 2}
   - {fileID: 2100000, guid: e6024b90fddb6d44e9b5a50eb1c822c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
