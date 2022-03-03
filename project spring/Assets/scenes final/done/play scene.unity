@@ -10035,6 +10035,7 @@ GameObject:
   - component: {fileID: 278394493}
   - component: {fileID: 278394492}
   - component: {fileID: 278394491}
+  - component: {fileID: 278394500}
   m_Layer: 0
   m_Name: water gun (3)
   m_TagString: bullet
@@ -10223,6 +10224,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!114 &278394500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278394489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4755097cafc0e47a6bd40219ccd7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  IsDragable: 0
+  transform_: {fileID: 0}
 --- !u!1 &283696107
 GameObject:
   m_ObjectHideFlags: 0
@@ -12331,7 +12347,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 0
@@ -33132,6 +33148,7 @@ GameObject:
   - component: {fileID: 1001075090}
   - component: {fileID: 1001075089}
   - component: {fileID: 1001075088}
+  - component: {fileID: 1001075097}
   m_Layer: 0
   m_Name: burger r s  (1)
   m_TagString: bullet
@@ -33332,6 +33349,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001075086}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1001075097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001075086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4755097cafc0e47a6bd40219ccd7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  IsDragable: 0
+  transform_: {fileID: 0}
 --- !u!1 &1001519432
 GameObject:
   m_ObjectHideFlags: 0
@@ -35836,6 +35868,7 @@ GameObject:
   - component: {fileID: 1123643442}
   - component: {fileID: 1123643440}
   - component: {fileID: 1123643443}
+  - component: {fileID: 1123643444}
   m_Layer: 0
   m_Name: burger w s
   m_TagString: WeaponRandomObj
@@ -35941,6 +35974,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 0
+--- !u!114 &1123643444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123643436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4755097cafc0e47a6bd40219ccd7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  IsDragable: 0
+  transform_: {fileID: 0}
 --- !u!1 &1128739320
 GameObject:
   m_ObjectHideFlags: 0
@@ -38333,6 +38381,7 @@ GameObject:
   - component: {fileID: 1262590738}
   - component: {fileID: 1262590736}
   - component: {fileID: 1262590739}
+  - component: {fileID: 1262590740}
   m_Layer: 0
   m_Name: second gun w s
   m_TagString: WeaponRandomObj
@@ -38437,6 +38486,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 0
+--- !u!114 &1262590740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262590732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4755097cafc0e47a6bd40219ccd7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  IsDragable: 0
+  transform_: {fileID: 0}
 --- !u!1 &1267696595
 GameObject:
   m_ObjectHideFlags: 0
@@ -45462,6 +45526,7 @@ GameObject:
   - component: {fileID: 1347332277}
   - component: {fileID: 1347332276}
   - component: {fileID: 1347332275}
+  - component: {fileID: 1347332284}
   m_Layer: 0
   m_Name: water gun (4)
   m_TagString: bullet
@@ -45650,6 +45715,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 1
+--- !u!114 &1347332284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347332273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4755097cafc0e47a6bd40219ccd7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  IsDragable: 0
+  transform_: {fileID: 0}
 --- !u!1001 &1351821964
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60317,6 +60397,7 @@ GameObject:
   - component: {fileID: 1978453065}
   - component: {fileID: 1978453063}
   - component: {fileID: 1978453066}
+  - component: {fileID: 1978453067}
   m_Layer: 0
   m_Name: water gun w s
   m_TagString: WeaponRandomObj
@@ -60421,6 +60502,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsDragable: 0
+--- !u!114 &1978453067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978453059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff4755097cafc0e47a6bd40219ccd7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  IsDragable: 0
+  transform_: {fileID: 0}
 --- !u!1 &2011361917
 GameObject:
   m_ObjectHideFlags: 0
