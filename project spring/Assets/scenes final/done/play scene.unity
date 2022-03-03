@@ -35869,6 +35869,7 @@ GameObject:
   - component: {fileID: 1123643440}
   - component: {fileID: 1123643443}
   - component: {fileID: 1123643444}
+  - component: {fileID: 1123643445}
   m_Layer: 0
   m_Name: burger w s
   m_TagString: WeaponRandomObj
@@ -35989,6 +35990,26 @@ MonoBehaviour:
   weapon: {fileID: 0}
   IsDragable: 0
   transform_: {fileID: 0}
+--- !u!114 &1123643445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123643436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebc9cfdc266894ca97b35840948518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oth_gameObject: {fileID: 0}
+  killScript: {fileID: 0}
+  particlesystem: {fileID: 0}
+  particleSystem_: {fileID: 0}
+  bloodPar_: {fileID: 0}
+  transform_: {fileID: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
 --- !u!1 &1128739320
 GameObject:
   m_ObjectHideFlags: 0
@@ -36352,6 +36373,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154538456}
   m_CullTransparentMesh: 1
+--- !u!1 &1158133422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158133424}
+  - component: {fileID: 1158133423}
+  m_Layer: 0
+  m_Name: particle finds eneny after melee
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1158133423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158133422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebc9cfdc266894ca97b35840948518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oth_gameObject: {fileID: 0}
+  killScript: {fileID: 0}
+  particlesystem: {fileID: 0}
+  particleSystem_: {fileID: 0}
+  bloodPar_: {fileID: 0}
+  transform_: {fileID: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
+--- !u!4 &1158133424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158133422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 731.7775, y: 386.18335, z: 49.247334}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1165885622
 GameObject:
   m_ObjectHideFlags: 0
@@ -38382,6 +38454,7 @@ GameObject:
   - component: {fileID: 1262590736}
   - component: {fileID: 1262590739}
   - component: {fileID: 1262590740}
+  - component: {fileID: 1262590741}
   m_Layer: 0
   m_Name: second gun w s
   m_TagString: WeaponRandomObj
@@ -38501,6 +38574,26 @@ MonoBehaviour:
   weapon: {fileID: 0}
   IsDragable: 0
   transform_: {fileID: 0}
+--- !u!114 &1262590741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1262590732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebc9cfdc266894ca97b35840948518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oth_gameObject: {fileID: 0}
+  killScript: {fileID: 0}
+  particlesystem: {fileID: 0}
+  particleSystem_: {fileID: 0}
+  bloodPar_: {fileID: 0}
+  transform_: {fileID: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
 --- !u!1 &1267696595
 GameObject:
   m_ObjectHideFlags: 0
@@ -60398,6 +60491,7 @@ GameObject:
   - component: {fileID: 1978453063}
   - component: {fileID: 1978453066}
   - component: {fileID: 1978453067}
+  - component: {fileID: 1978453068}
   m_Layer: 0
   m_Name: water gun w s
   m_TagString: WeaponRandomObj
@@ -60517,6 +60611,26 @@ MonoBehaviour:
   weapon: {fileID: 0}
   IsDragable: 0
   transform_: {fileID: 0}
+--- !u!114 &1978453068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978453059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ebc9cfdc266894ca97b35840948518, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oth_gameObject: {fileID: 0}
+  killScript: {fileID: 0}
+  particlesystem: {fileID: 0}
+  particleSystem_: {fileID: 0}
+  bloodPar_: {fileID: 0}
+  transform_: {fileID: 0}
+  other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
+  this_obj_: {x: 0, y: 0, z: 0}
 --- !u!1 &2011361917
 GameObject:
   m_ObjectHideFlags: 0
