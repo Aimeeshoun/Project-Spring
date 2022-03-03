@@ -16,7 +16,8 @@ public class KillEnemy : MonoBehaviour
 
 
     public int Timer = 0;
-
+    public Alienhealth health;
+    public int alienhealth_;
 
     public GameObject particle;
     public ParticleSystem particle_;
@@ -33,6 +34,12 @@ public class KillEnemy : MonoBehaviour
 
     public bool ishit;
 
+    public int Timer3;
+    public int Timer4;
+    public int Timer5;
+    public int Timer6;
+
+
     public void Start()
     {
         isdead = false;
@@ -42,14 +49,42 @@ public class KillEnemy : MonoBehaviour
     public void Update()
     {
         bear = this.gameObject;
-  //      particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
-     
-        
-        
-        
-        if (Enemyheath <= 0)
-        {
+        health = bear.GetComponent<Alienhealth>();
+        alienhealth_ = health.alienHealth_;
 
+        //      particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
+      //  Timer3 = 0;
+       // Timer4 = 0;
+        
+        if (alienhealth_ == 4 || alienhealth_ == 3)
+        {
+            Timer3 = 1;
+            if (Timer3 == 1)
+            {
+                ishit = true;
+            //    Timer3 = 0;
+            }
+
+
+
+        }
+        if (alienhealth_ == 2|| alienhealth_ == 1)
+        {
+             Timer4 = 1;
+        if (Timer4 == 1)
+        {
+            ishit = true;
+             //   Timer4 = 0;
+            }
+
+
+       
+           }
+
+
+        if (Enemyheath <= 0 || alienhealth_ <= 0)
+        {
+           
             isdead = true;
 
             //   particle_ = Instantiate(particle_, this_obj_, other_obj_rotation);

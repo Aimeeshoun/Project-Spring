@@ -25,7 +25,7 @@ public class Alienhealth : MonoBehaviour
     {
         if (alienHealth_ <= 0)
         {
-            Destroy(bear);
+          //  Destroy(bear);
         }
     }
 
@@ -39,7 +39,7 @@ public class Alienhealth : MonoBehaviour
 
                 if (other.tag == "bullet")
                 {
-                    alienHealth_ -= 6;
+                    alienHealth_ -= 1;
                 }
              
 

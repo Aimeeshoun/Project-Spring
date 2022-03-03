@@ -36,7 +36,12 @@ public class detroydeadbears : MonoBehaviour
   
         foreach (GameObject bear in bears)
         {
+           
             bear_ = bear;
+            _killenemy = bear_.GetComponent<KillEnemy>();
+            healthScore = _killenemy.Enemyheath;
+            isDead_ = _killenemy.isdead;
+            ishit_ = _killenemy.ishit;
             if (ishit_ == true)
             {
                 other_obj_rotation = _killenemy.other_obj_rotation;
@@ -45,10 +50,7 @@ public class detroydeadbears : MonoBehaviour
                 bloodPar_.transform.parent = gameObject.transform;
 
             }
-            _killenemy = bear_.GetComponent<KillEnemy>();
-            healthScore = _killenemy.Enemyheath;
-            isDead_ = _killenemy.isdead;
-            ishit_ = _killenemy.ishit;
+          
             // if (isDead_)
             //  {
             //   _killenemy.BloodSplasts();
