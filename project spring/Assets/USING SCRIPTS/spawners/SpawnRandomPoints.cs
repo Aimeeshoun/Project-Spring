@@ -14,8 +14,8 @@ public class SpawnRandomPoints : MonoBehaviour
     public float spawnRate;
     private bool spawning;
     public GameObject currentChar;
-    public float maxTime;
-    public float minTime;
+    public float maxTime=.2f;
+    public float minTime=.2f;
     private float spawnTime;
     private float time;
     public GameObject currentWeapon;
