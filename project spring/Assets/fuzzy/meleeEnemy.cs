@@ -40,7 +40,7 @@ public class meleeEnemy : MonoBehaviour
             other_obj_rotation = transform_.rotation;
             this_obj_ = transform_.position;
             bloodPar_ = Instantiate(particlesystem, this_obj_, other_obj_rotation);
-            bloodPar_.transform.parent = gameObject.transform;
+          //  bloodPar_.transform.parent = gameObject.transform;
         }
 
 
