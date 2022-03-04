@@ -39,6 +39,10 @@ public class KillEnemy : MonoBehaviour
     public int Timer5;
     public int Timer6;
 
+    public Transform this_object2;
+    public Vector3 this_obj_2;
+    public Quaternion other_obj_rotation2;
+
 
     public void Start()
     {
@@ -51,11 +55,12 @@ public class KillEnemy : MonoBehaviour
         bear = this.gameObject;
         health = bear.GetComponent<Alienhealth>();
         alienhealth_ = health.alienHealth_;
-
+        this_obj_2 = bear.transform.position;
+        other_obj_rotation2 = bear.transform.rotation;
         //      particlessystems_group = GameObject.FindGameObjectsWithTag("particlesystem");
-      //  Timer3 = 0;
-       // Timer4 = 0;
-        
+        //  Timer3 = 0;
+        // Timer4 = 0;
+
         if (alienhealth_ == 4 || alienhealth_ == 3)
         {
             Timer3 = 1;
