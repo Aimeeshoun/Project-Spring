@@ -7862,7 +7862,7 @@ GameObject:
   - component: {fileID: 177894475}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: freezeai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7960,10 +7960,11 @@ MonoBehaviour:
   lighting: []
   lightingchild: {fileID: 0}
   lightchildtrans: {fileID: 0}
-  isHit_: 0
   click_: {fileID: 0}
   timer: 0
-  isStopped_: 0
+  speed: 0
+  currentSpeed: 0
+  stop1: 0
 --- !u!1 &180881601
 GameObject:
   m_ObjectHideFlags: 0
@@ -33767,8 +33768,9 @@ MonoBehaviour:
   Quaternions: []
   lighting_: {fileID: 0}
   needinfo: 0
-  ishit: 1
-  ishit2: 1
+  ishit: 0
+  ishit2: 0
+  istrueee: 0
 --- !u!65 &1001798068
 BoxCollider:
   m_ObjectHideFlags: 0

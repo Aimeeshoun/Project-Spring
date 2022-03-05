@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 724565151048246762, guid: 78394be6753144b47958988674167a2f,
         type: 3}
       propertyPath: m_Name
-      value: alien r s 1
+      value: alien r s 1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 724565151048246763, guid: 78394be6753144b47958988674167a2f,
         type: 3}
@@ -69,3 +69,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78394be6753144b47958988674167a2f, type: 3}
+--- !u!1 &4146893709024740715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 724565151048246762, guid: 78394be6753144b47958988674167a2f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3711693905551646849}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5143738140191945818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4146893709024740715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885a597974a70184a8842ddf72e67371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bear: {fileID: 0}
+  agent2_: {fileID: 0}
+  speed: 0
+  currentSpeed: 0

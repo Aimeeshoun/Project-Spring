@@ -19,10 +19,12 @@ public class ClickFreeze : MonoBehaviour
     public Quaternion Quaternion_;
     public Quaternion[] Quaternions;
     public GameObject lighting_;
-    public bool needinfo = false;
-    public bool ishit = false;
+    public bool needinfo;
+    public bool ishit;
     
-    public bool ishit2 = false;
+    public bool ishit2;
+
+    public bool istrueee;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +34,12 @@ public class ClickFreeze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    
         objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
         lighting_ = GameObject.FindGameObjectWithTag("lighting");
-        if (needinfo == true)
-        {
-
+      
+      
 
             foreach (GameObject object_ in objects_)
             {
@@ -52,27 +55,35 @@ public class ClickFreeze : MonoBehaviour
 
                 Quaternion_ = killenemy_.other_obj_rotation2;
 
-                lighting_ = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
-
+            if (ishit2)
+            {
+                istrueee = true;
             }
+            if (istrueee)
+            {
+
+                lighting_ = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
+            }
+
         }
 
-
-
+       
     }
 
     private void OnMouseDown()
     {
         ishit2 = true;
+
         ishit = true;
-           needinfo = true;
+        needinfo = true;
 
 
     }
     private void OnMouseUp()
     {
         needinfo = false;
-
+      
+        ishit = false;
 
     }
 

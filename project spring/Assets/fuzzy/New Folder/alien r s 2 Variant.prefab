@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1277371668523347832, guid: 52032607c0df1a84f83f97be2fb22c7b,
         type: 3}
       propertyPath: m_Name
-      value: alien r s 2
+      value: alien r s 2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1277371668523347839, guid: 52032607c0df1a84f83f97be2fb22c7b,
         type: 3}
@@ -69,3 +69,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52032607c0df1a84f83f97be2fb22c7b, type: 3}
+--- !u!1 &4938171237877476516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1277371668523347832, guid: 52032607c0df1a84f83f97be2fb22c7b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6142287911980598236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4687925975261489144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938171237877476516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885a597974a70184a8842ddf72e67371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bear: {fileID: 0}
+  agent2_: {fileID: 0}
+  speed: 0
+  currentSpeed: 0
