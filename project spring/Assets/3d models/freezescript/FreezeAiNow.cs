@@ -11,6 +11,8 @@ public class FreezeAiNow : MonoBehaviour
     public bool isClicked;
     public bool isclicked2;
     public bool isclicked3;
+
+    public int Timer = 0;
     
     // Start is called before the first frame update
     public void Start()
@@ -41,7 +43,16 @@ public class FreezeAiNow : MonoBehaviour
 
         if (isclicked2)
         {
-            isclicked3 = true;
+            Timer++;
+           if(Timer<= 500)
+            {
+                isclicked3 = true;
+            }
+            if (Timer >= 500)
+            {
+                isclicked3 = false;
+            }
+
         }
 
     }
