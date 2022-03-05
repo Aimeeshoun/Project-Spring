@@ -25,6 +25,8 @@ public class ClickFreeze : MonoBehaviour
     public bool ishit2;
 
     public bool istrueee;
+
+    public int Timer;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +60,15 @@ public class ClickFreeze : MonoBehaviour
             if (ishit2)
             {
                 istrueee = true;
-                lighting_ = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
+                Timer = 1;
+
+                if(Timer == 1)
+                {
+                    lighting_ = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
+                    Timer = 0;
+                }
+
+              
             }
           
 

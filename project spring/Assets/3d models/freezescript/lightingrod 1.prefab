@@ -391,6 +391,7 @@ GameObject:
   - component: {fileID: 2730855138767296023}
   - component: {fileID: 3544959627727802590}
   - component: {fileID: 5918972828082586952}
+  - component: {fileID: 1544269462701346400}
   m_Layer: 0
   m_Name: lightingrod 1
   m_TagString: rod
@@ -447,6 +448,34 @@ MonoBehaviour:
   thisrod: {fileID: 0}
   isclickedon: 0
   click: 0
+  Timer: 0
+--- !u!114 &1544269462701346400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3363664365310315693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0aca23ffe954b47a464860948c2e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects_: []
+  object_: {fileID: 0}
+  object2_: {fileID: 0}
+  killenemy_: {fileID: 0}
+  transforms_: []
+  transform_: {fileID: 0}
+  vecs_: []
+  vec_: {x: 0, y: 0, z: 0}
+  Quaternion_: {x: 0, y: 0, z: 0, w: 0}
+  Quaternions: []
+  lighting_: {fileID: 0}
+  needinfo: 0
+  ishit: 0
+  ishit2: 0
+  istrueee: 0
 --- !u!1 &7442242540407962537
 GameObject:
   m_ObjectHideFlags: 0
