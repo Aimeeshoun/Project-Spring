@@ -7,17 +7,19 @@ public class FreezeAiNow : MonoBehaviour
 
     public ClickonRods clickonRods_;
     public GameObject[] rods;
-  
+
     public bool isClicked;
     public bool isclicked2;
     public bool isclicked3;
 
-    public int Timer = 0;
-    
+    public int Timer;
+
+    public bool timeron;
+
     // Start is called before the first frame update
     public void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -25,35 +27,44 @@ public class FreezeAiNow : MonoBehaviour
     {
         rods = GameObject.FindGameObjectsWithTag("rod");
 
-        foreach ( GameObject rod in rods)
+        foreach (GameObject rod in rods)
         {
-            
-            
-           
-       
-                clickonRods_ = rod.GetComponent<ClickonRods>();
-                isClicked = clickonRods_.isclickedon;
 
-            if (isClicked)
+
+
+            clickonRods_ = rod.GetComponent<ClickonRods>();
+            isClicked = clickonRods_.isclickedon;
+
+           if (isClicked)
             {
-                isclicked2 = true;
+                StartCoroutine(Freeze());
+                Freeze(); ;
             }
+
+
+
+
+
+
 
         }
 
-        if (isclicked2)
-        {
-            Timer++;
-           if(Timer<= 500)
-            {
-                isclicked3 = true;
-            }
-            if (Timer >= 500)
-            {
-                isclicked3 = false;
-            }
 
-        }
+
+
+
+    }
+
+    IEnumerator Freeze()
+    {
+        //Print the time of when the function is first called.
+        isclicked3 = true;
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
+
+        //After we have waited 5 seconds print the time again.
+        isclicked3 = false;
 
     }
 }

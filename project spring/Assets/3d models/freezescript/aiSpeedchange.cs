@@ -12,16 +12,19 @@ public class aiSpeedchange : MonoBehaviour
     public bool isClicked;
     public GameObject grabFreezeholder;
     public FreezeAiNow freeze_;
-    
+    public float oldSpeed;
+
 
     public void Awake()
     {
+
         newSpeed = 0f;
         this_bear = this.gameObject;
         navMeshAgent = this_bear.GetComponent<NavMeshAgent>();
         grabFreezeholder = GameObject.FindGameObjectWithTag("freeze holder");
         freeze_ = grabFreezeholder.GetComponent<FreezeAiNow>();
-      
+        oldSpeed = navMeshAgent.speed;
+
 
 
     }
@@ -31,10 +34,25 @@ public class aiSpeedchange : MonoBehaviour
     {
         isClicked = freeze_.isclicked3;
 
-        if (isClicked== true)
+        if (isClicked == true)
         {
-            navMeshAgent.speed = newSpeed;
+            StartCoroutine(Freeze3());
+            Freeze3();
+
         }
-       
+
+
+        IEnumerator Freeze3()
+        {
+            //Print the time of when the function is first called.
+            navMeshAgent.speed = newSpeed;
+
+            //yield on a new YieldInstruction that waits for 5 seconds.
+            yield return new WaitForSeconds(5);
+
+            //After we have waited 5 seconds print the time again.
+            navMeshAgent.speed = oldSpeed;
+
+        }
     }
 }
