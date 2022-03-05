@@ -16,7 +16,7 @@ public class StopAiSpeed : MonoBehaviour
 
     public ClickFreeze click_;
     public GameObject[] lighting;
-    public GameObject lightingchild;
+    public GameObject[] lightingchild;
     public Transform lightchildtrans;
 
     // Start is called before the first frame update
@@ -40,11 +40,16 @@ public class StopAiSpeed : MonoBehaviour
 
         foreach (GameObject light in lighting)
         {
-            lightingchild = light.transform.GetChild(6).gameObject;
+            lightingchild[0] = light.transform.GetChild(6).gameObject;
 
-            click_ = lightingchild.GetComponent<ClickFreeze>();
+            foreach (GameObject light2 in lightingchild)
+            {
+                click_ = light2.GetComponent<ClickFreeze>();
 
-            ishit3 = click_.istrueee;
+                ishit3 = click_.istrueee;
+            }
+
+           
       
 
 

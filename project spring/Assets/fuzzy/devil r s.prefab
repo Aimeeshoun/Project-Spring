@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 3262428113576914510}
   m_Layer: 0
   m_Name: devil r s
-  m_TagString: Fuzzy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienHealth_: 6
   alienMaxHealth_: 6
+  bear: {fileID: 0}
 --- !u!114 &611018822417838099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,6 +407,8 @@ MonoBehaviour:
   this_gameObject: {fileID: 611018822417838081}
   isdead: 0
   Timer: 0
+  health: {fileID: 0}
+  alienhealth_: 0
   particle: {fileID: 0}
   particle_: {fileID: 0}
   this_object: {fileID: 0}
@@ -417,6 +420,13 @@ MonoBehaviour:
   particlessystems_: {fileID: 0}
   isdetached: 0
   ishit: 0
+  Timer3: 0
+  Timer4: 0
+  Timer5: 0
+  Timer6: 0
+  this_object2: {fileID: 0}
+  this_obj_2: {x: 0, y: 0, z: 0}
+  other_obj_rotation2: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &7272034416295942410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +443,7 @@ MonoBehaviour:
   isdead_: 0
   bear: {fileID: 0}
   gameobject_1: {fileID: 0}
+  transform_: {fileID: 0}
 --- !u!114 &3262428113576914510
 MonoBehaviour:
   m_ObjectHideFlags: 0

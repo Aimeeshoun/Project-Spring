@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: devil r s Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 611018822417838081, guid: 95cea587ef1b3144d80a0f6a63e2ee5f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fuzzy
+      objectReference: {fileID: 0}
     - target: {fileID: 611018822417838094, guid: 95cea587ef1b3144d80a0f6a63e2ee5f,
         type: 3}
       propertyPath: m_RootOrder
@@ -82,7 +87,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7257286819344301544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 885a597974a70184a8842ddf72e67371, type: 3}
   m_Name: 
@@ -91,3 +96,29 @@ MonoBehaviour:
   agent2_: {fileID: 0}
   speed: 0
   currentSpeed: 0
+  Freeze_: {fileID: 0}
+  freezeObj: {fileID: 0}
+  ishit3: 0
+  click_: {fileID: 0}
+  lighting: []
+  lightingchild: {fileID: 0}
+  lightchildtrans: {fileID: 0}
+--- !u!114 &191019906609145439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7257286819344301544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a67e20649d154114a98a11119b840167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  this_bear: {fileID: 0}
+  navMeshAgent: {fileID: 0}
+  Speed: 0
+  newSpeed: 0
+  isClicked: 0
+  grabFreezeholder: {fileID: 0}
+  freeze_: {fileID: 0}

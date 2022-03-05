@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: -2919246790276682923}
   m_Layer: 0
   m_Name: alien r s 3
-  m_TagString: Fuzzy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -771,6 +771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alienHealth_: 6
   alienMaxHealth_: 6
+  bear: {fileID: 0}
 --- !u!114 &3590076385969951948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,6 +804,8 @@ MonoBehaviour:
   this_gameObject: {fileID: 0}
   isdead: 0
   Timer: 0
+  health: {fileID: 0}
+  alienhealth_: 0
   particle: {fileID: 0}
   particle_: {fileID: 0}
   this_object: {fileID: 0}
@@ -814,6 +817,13 @@ MonoBehaviour:
   particlessystems_: {fileID: 0}
   isdetached: 0
   ishit: 0
+  Timer3: 0
+  Timer4: 0
+  Timer5: 0
+  Timer6: 0
+  this_object2: {fileID: 0}
+  this_obj_2: {x: 0, y: 0, z: 0}
+  other_obj_rotation2: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &7795856356235684813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,6 +840,7 @@ MonoBehaviour:
   isdead_: 0
   bear: {fileID: 0}
   gameobject_1: {fileID: 0}
+  transform_: {fileID: 0}
 --- !u!114 &-2919246790276682923
 MonoBehaviour:
   m_ObjectHideFlags: 0
