@@ -19,14 +19,18 @@ public class ClickFreeze : MonoBehaviour
     public Quaternion Quaternion_;
     public Quaternion[] Quaternions;
     public GameObject lighting_;
+    public GameObject lighting2;
     public bool needinfo;
     public bool ishit;
     
     public bool ishit2;
 
     public bool istrueee;
-
+    public ClickonRods click_on_rods;
     public int Timer;
+
+    public bool clickrod;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,58 +44,52 @@ public class ClickFreeze : MonoBehaviour
     
         objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
         lighting_ = GameObject.FindGameObjectWithTag("lighting");
-      
-      
 
-            foreach (GameObject object_ in objects_)
+        click_on_rods = this.gameObject.GetComponent<ClickonRods>();
+        clickrod=click_on_rods.isclickedon;
+
+
+
+        foreach (GameObject object_ in objects_)
+        {
+
+            killenemy_ = object_.GetComponent<KillEnemy>();
+
+
+
+            transform_ = killenemy_.this_object2;
+
+
+            vec_ = killenemy_.this_obj_2;
+
+            Quaternion_ = killenemy_.other_obj_rotation2;
+
+
+            if (clickrod)
             {
 
-                killenemy_ = object_.GetComponent<KillEnemy>();
-
-
-
-                transform_ = killenemy_.this_object2;
-
-
-                vec_ = killenemy_.this_obj_2;
-
-                Quaternion_ = killenemy_.other_obj_rotation2;
-
-            if (ishit2)
-            {
-                istrueee = true;
                 Timer = 1;
 
-                if(Timer == 1)
+                if (Timer == 1)
                 {
-                    lighting_ = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
+                    lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
+                    Destroy(lighting2, .1f);
                     Timer = 0;
                 }
-
-              
+               
+                Timer = 0;
             }
-          
+
+
 
         }
+         
+            
+
+      
 
        
     }
 
-    private void OnMouseDown()
-    {
-        ishit2 = true;
-
-        ishit = true;
-        needinfo = true;
-
-
-    }
-    private void OnMouseUp()
-    {
-        needinfo = false;
-      
-        ishit = false;
-
-    }
 
 }

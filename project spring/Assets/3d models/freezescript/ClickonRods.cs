@@ -10,6 +10,8 @@ public class ClickonRods : MonoBehaviour
     public bool click;
 
     public int Timer;
+
+
     
     // Start is called before the first frame update
   
@@ -57,6 +59,7 @@ public class ClickonRods : MonoBehaviour
 
         //After we have waited 5 seconds print the time again.
         click = false;
+        Destroy(thisrod);
 
     }
 }
