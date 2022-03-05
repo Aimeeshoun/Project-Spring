@@ -31,7 +31,10 @@ public class StopAiSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (ishit3)
+        {
+            agent2_.speed = speed;
+        }
 
         lighting = GameObject.FindGameObjectsWithTag("WeaponRandomObj");
 
@@ -42,10 +45,7 @@ public class StopAiSpeed : MonoBehaviour
             click_ = lightingchild.GetComponent<ClickFreeze>();
 
             ishit3 = click_.istrueee;
-            if (ishit3)
-            {
-                agent2_.speed = speed;
-            }
+      
 
 
         }

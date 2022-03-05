@@ -58,12 +58,9 @@ public class ClickFreeze : MonoBehaviour
             if (ishit2)
             {
                 istrueee = true;
-            }
-            if (istrueee)
-            {
-
                 lighting_ = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
             }
+          
 
         }
 
