@@ -42,7 +42,7 @@ public class KillEnemy : MonoBehaviour
     public Transform this_object2;
     public Vector3 this_obj_2;
     public Quaternion other_obj_rotation2;
-
+    
 
     public void Start()
     {
@@ -115,12 +115,13 @@ public class KillEnemy : MonoBehaviour
         this_obj_ = bear.transform.position;
         other_obj_rotation = bear.transform.rotation;
         ishit = true;
-
-     }
+       
+    }
 
     public void OnMouseUp()
     {
         ishit = false;
+        
     }
 
  //  public void BloodSplasts()

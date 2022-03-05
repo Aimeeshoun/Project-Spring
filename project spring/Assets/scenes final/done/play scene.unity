@@ -7859,6 +7859,7 @@ GameObject:
   - component: {fileID: 177894473}
   - component: {fileID: 177894472}
   - component: {fileID: 177894474}
+  - component: {fileID: 177894475}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -7941,6 +7942,28 @@ MonoBehaviour:
   gameobject_5: {fileID: 0}
   gameobject_6: {fileID: 0}
   newSize: {x: 0, y: 0, z: 0}
+--- !u!114 &177894475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177894471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e506e661ba872d46b2564da9ddfc643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent_: {fileID: 0}
+  bears: []
+  bear: {fileID: 0}
+  lighting: []
+  lightingchild: {fileID: 0}
+  lightchildtrans: {fileID: 0}
+  isHit_: 0
+  click_: {fileID: 0}
+  timer: 0
+  isStopped_: 0
 --- !u!1 &180881601
 GameObject:
   m_ObjectHideFlags: 0
@@ -12345,7 +12368,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 0
+  looping: 1
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -33744,6 +33767,8 @@ MonoBehaviour:
   Quaternions: []
   lighting_: {fileID: 0}
   needinfo: 0
+  ishit: 1
+  ishit2: 1
 --- !u!65 &1001798068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33765,7 +33790,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001798065}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}

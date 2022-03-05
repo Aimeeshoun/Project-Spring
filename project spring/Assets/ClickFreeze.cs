@@ -20,18 +20,20 @@ public class ClickFreeze : MonoBehaviour
     public Quaternion[] Quaternions;
     public GameObject lighting_;
     public bool needinfo = false;
-
+    public bool ishit = false;
+    
+    public bool ishit2 = false;
     // Start is called before the first frame update
     void Start()
     {
-        lighting_ = GameObject.FindGameObjectWithTag("lighting");
+    
     }
 
     // Update is called once per frame
     void Update()
     {
         objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
-
+        lighting_ = GameObject.FindGameObjectWithTag("lighting");
         if (needinfo == true)
         {
 
@@ -61,7 +63,9 @@ public class ClickFreeze : MonoBehaviour
 
     private void OnMouseDown()
     {
-        needinfo = true;
+        ishit2 = true;
+        ishit = true;
+           needinfo = true;
 
 
     }
