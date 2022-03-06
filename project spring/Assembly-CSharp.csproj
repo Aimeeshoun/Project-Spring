@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\USING SCRIPTS\misc\TranlatetoPosition.cs" />
     <Compile Include="Assets\scripts\script\getcomponent test\EnumAccessTag.cs" />
     <Compile Include="Assets\Movemnent1.cs" />
@@ -93,7 +90,7 @@
     <Compile Include="Assets\a1 using scripts\Destroybullet.cs" />
     <Compile Include="Assets\scripts\Destroythis.cs" />
     <Compile Include="Assets\scripts\script\getcomponent test\AccessTag2.cs" />
-    <Compile Include="Assets\ClickFreeze.cs" />
+    <Compile Include="Assets\3d models\freezescript\ClickFreeze.cs" />
     <Compile Include="Assets\USING SCRIPTS\health_score\CowHealth.cs" />
     <Compile Include="Assets\scripts\script\getcomponent test\CompareObjects.cs" />
     <Compile Include="Assets\USING SCRIPTS\health_score\killfuzzy.cs" />
@@ -110,6 +107,7 @@
     <Compile Include="Assets\USING SCRIPTS\spawners\RandomholdWeap.cs" />
     <Compile Include="Assets\USING SCRIPTS\scene\HealthtonextLevel.cs" />
     <Compile Include="Assets\scripts\script\aniamtion\Animation.cs" />
+    <Compile Include="Assets\3d models\freezescript\FreezeAiNow.cs" />
     <Compile Include="Assets\scripts\script\misc\Collections2.cs" />
     <Compile Include="Assets\a1 using scripts\InstanciateDeadCow.cs" />
     <Compile Include="Assets\USING SCRIPTS\UpdateText.cs" />
@@ -119,6 +117,7 @@
     <Compile Include="Assets\scripts\script\StartScene.cs" />
     <Compile Include="Assets\USING SCRIPTS\spawners\SpawnBomb.cs" />
     <Compile Include="Assets\scripts\script\OnTriggerEnterEvent.cs" />
+    <Compile Include="Assets\3d models\freezescript\ClickonRods.cs" />
     <Compile Include="Assets\USING SCRIPTS\InstanciteDeadCow2.cs" />
     <Compile Include="Assets\scripts\script\misc\Collections.cs" />
     <Compile Include="Assets\scripts\script\BombDestroy.cs" />
@@ -180,6 +179,7 @@
     <Compile Include="Assets\a1 using scripts\SceneLoader.cs" />
     <Compile Include="Assets\USING SCRIPTS\spawners\SelectedObjects.cs" />
     <Compile Include="Assets\scripts\script\getcomponent test\SelectedChar.cs" />
+    <Compile Include="Assets\3d models\freezescript\aiSpeedchange.cs" />
     <Compile Include="Assets\CowParent.cs" />
     <Compile Include="Assets\USING SCRIPTS\Ai\Aibehavior.cs" />
     <Compile Include="Assets\USING SCRIPTS\CowAI.cs" />
@@ -195,9 +195,7 @@
     <Compile Include="Assets\scripts\script\misc\CreateSOData.cs" />
     <Compile Include="Assets\USING SCRIPTS\Ai\StopAiSpeed.cs" />
     <Compile Include="Assets\USING SCRIPTS\health_score\cHANGEcOLOR.cs" />
-    <Compile Include="Assets\3d models\freezescript\aiSpeedchange.cs" />
-    <Compile Include="Assets\3d models\freezescript\FreezeAiNow.cs" />
-    <Compile Include="Assets\3d models\freezescript\ClickonRods.cs" />
+    <Compile Include="Assets\3d models\freezescript\ClickFreeze1.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
