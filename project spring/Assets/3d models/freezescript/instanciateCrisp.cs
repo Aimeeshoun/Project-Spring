@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickFreeze : MonoBehaviour
+public class instanciateCrisp : MonoBehaviour
+
 {
     public GameObject[] objects_;
     public GameObject object_;
@@ -18,36 +19,35 @@ public class ClickFreeze : MonoBehaviour
 
     public Quaternion Quaternion_;
     public Quaternion[] Quaternions;
-    public GameObject lighting_;
-    public GameObject lighting2;
+    public GameObject crispBear;
+    public GameObject crispBear2;
     public bool needinfo;
     public bool ishit;
-    
+
     public bool ishit2;
 
     public bool istrueee;
-    public ClickonRods click_on_rods;
+    public ClickFreeze click_on_rods;
     public int Timer;
 
-    public bool clickrod;
-    public bool isCrisp;
+    public bool Bearlit;
 
     // Start is called before the first frame update
     void Start()
     {
-    
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    
-        objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
-        lighting_ = GameObject.FindGameObjectWithTag("lightingpar");
 
-        click_on_rods = this.gameObject.GetComponent<ClickonRods>();
-        clickrod=click_on_rods.isclickedon;
+        objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
+        crispBear = GameObject.FindGameObjectWithTag("crispfuz*");
+
+        click_on_rods = this.gameObject.GetComponent<ClickFreeze>();
+        Bearlit = click_on_rods.;
 
 
 
@@ -66,32 +66,37 @@ public class ClickFreeze : MonoBehaviour
             Quaternion_ = killenemy_.other_obj_rotation2;
 
 
-            if (clickrod)
-            {
-
-                Timer = 1;
-
-                if (Timer == 1)
-                {
-                    lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
-                    Destroy(lighting2, .1f);
-                    isCrisp = true;
-                    Timer = 0;
-                }
-               
-                Timer = 0;
-            }
+            BringCrisp();
 
 
 
         }
-         
-            
-
-      
 
        
+
+
+
+
     }
 
+    public void BringCrisp()
+    {
+        if (Bearlit)
+        {
+
+            Timer = 1;
+
+            if (Timer == 1)
+            {
+                crispBear2 = Instantiate(crispBear, vec_, Quaternion_) as GameObject;
+                //  Destroy(crispBear2, .1f);
+
+            }
+
+            Timer = 0;
+        }
+
+
+    }
 
 }
