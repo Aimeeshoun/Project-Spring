@@ -47,7 +47,7 @@ public class instanciateCrisp : MonoBehaviour
         crispBear = GameObject.FindGameObjectWithTag("crispfuz*");
 
         click_on_rods = this.gameObject.GetComponent<ClickFreeze>();
-        Bearlit = click_on_rods.;
+        Bearlit = click_on_rods.isCrisp;
 
 
 
