@@ -81,7 +81,7 @@ public class ClickFreeze1 : MonoBehaviour
                 if (Timer == 1)
                 {
                     bigice2 = Instantiate(bigIce, vec_, Quaternion_) as GameObject;
-                    Destroy(bigice2, .1f);
+                    Destroy(bigice2, .3f);
                     littleice2 = Instantiate(littleice, vec_, Quaternion_) as GameObject;
                     Destroy(littleice2, .1f);
                     Timer = 0;
