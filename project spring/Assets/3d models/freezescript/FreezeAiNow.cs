@@ -38,16 +38,18 @@ public class FreezeAiNow : MonoBehaviour
             isClicked = clickonRods_.isclickedon;
             isCrisp_ = freeze_.isCrisp;
 
-           if (isClicked)
+            if (isClicked)
             {
+                isCrisp_ = freeze_.isCrisp;
                 StartCoroutine(Freeze());
-                Freeze(); ;
+                Freeze(); 
             }
 
 
             if (isCrisp_)
             {
-                yellowyes = true;
+                StartCoroutine(Freeze2());
+                Freeze2();
             }
 
            
@@ -71,6 +73,19 @@ public class FreezeAiNow : MonoBehaviour
 
         //After we have waited 5 seconds print the time again.
         isclicked3 = false;
+
+    }
+
+    IEnumerator Freeze2()
+    {
+        //Print the time of when the function is first called.
+        yellowyes = true;
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(.1f);
+
+        //After we have waited 5 seconds print the time again.
+        yellowyes = false;
 
     }
 }

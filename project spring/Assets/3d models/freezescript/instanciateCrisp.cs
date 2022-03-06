@@ -86,7 +86,7 @@ public class instanciateCrisp : MonoBehaviour
                 {
                     crispBear2 = Instantiate(crispBear, vec_, Quaternion_) as GameObject;
                     //  Destroy(crispBear2, .1f);
-
+                    Timer = 0;
                 }
 
                 Timer = 0;

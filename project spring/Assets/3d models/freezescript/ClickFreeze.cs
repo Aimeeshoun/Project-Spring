@@ -20,6 +20,7 @@ public class ClickFreeze : MonoBehaviour
     public Quaternion[] Quaternions;
     public GameObject lighting_;
     public GameObject lighting2;
+    public GameObject intcrip;
     public bool needinfo;
     public bool ishit;
     
@@ -31,6 +32,7 @@ public class ClickFreeze : MonoBehaviour
 
     public bool clickrod;
     public bool isCrisp;
+    public instanciateCrisp instanciateCrisp_;
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +47,12 @@ public class ClickFreeze : MonoBehaviour
     
         objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
         lighting_ = GameObject.FindGameObjectWithTag("lightingpar");
+        intcrip = GameObject.FindGameObjectWithTag("instanciatecrips");
 
         click_on_rods = this.gameObject.GetComponent<ClickonRods>();
         clickrod=click_on_rods.isclickedon;
 
-
+        instanciateCrisp_ = intcrip.GetComponent<instanciateCrisp>();
 
         foreach (GameObject object_ in objects_)
         {
@@ -74,9 +77,13 @@ public class ClickFreeze : MonoBehaviour
                 if (Timer == 1)
                 {
                     isCrisp = true;
-                    lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
                    
+                    lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
+                 //   Destroy(object_);
+                    instanciateCrisp_.BringCrisp();
                     Destroy(lighting2, .1f);
+
+
                   
                     Timer = 0;
                 }
