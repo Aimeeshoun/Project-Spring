@@ -14,10 +14,20 @@ public class meleeEnemy : MonoBehaviour
     public Transform transform_;
     public Quaternion other_obj_rotation;
     public Vector3 this_obj_;
+
+
+    public GameObject otherbear;
+    public bool ishit_;
+
+    public GameObject deadbear;
+    public GameObject deadbear2;
+    public int Timer;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        deadbear = GameObject.FindGameObjectWithTag("dead fuz");
+        Timer = 0;
     }
 
     // Update is called once per frame
@@ -40,7 +50,35 @@ public class meleeEnemy : MonoBehaviour
             other_obj_rotation = transform_.rotation;
             this_obj_ = transform_.position;
             bloodPar_ = Instantiate(particlesystem, this_obj_, other_obj_rotation);
-          //  bloodPar_.transform.parent = gameObject.transform;
+
+            if (oth_gameObject.tag == ("Fuzzy"))
+
+
+            {
+
+               
+                otherbear = oth_gameObject;
+                killScript=otherbear.GetComponent<KillEnemy>();
+                ishit_ = killScript.isdeadnow;
+                if (ishit_)
+                {
+                    Timer = 1;
+                    if(Timer == 1)
+                    {
+
+                        deadbear2 = Instantiate(deadbear, this_obj_, other_obj_rotation);
+                     // deadbear2.transform.parent = gameObject.transform;
+                        Destroy(deadbear2, 3f);
+                        Timer = 0;
+                    }
+                    Timer = 0;
+
+
+                }
+               
+            }
+            
+        
         }
 
 

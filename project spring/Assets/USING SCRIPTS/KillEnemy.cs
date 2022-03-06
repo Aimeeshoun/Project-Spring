@@ -42,12 +42,14 @@ public class KillEnemy : MonoBehaviour
     public Transform this_object2;
     public Vector3 this_obj_2;
     public Quaternion other_obj_rotation2;
-    
+
+    public bool isdeadnow;
 
     public void Start()
     {
         isdead = false;
         ishit = false;
+        isdeadnow = false;
     }
     // Update is called once per frame
     public void Update()
@@ -85,6 +87,13 @@ public class KillEnemy : MonoBehaviour
 
        
            }
+
+
+        if (Enemyheath ==1 || alienhealth_ <= 1)
+        {
+            isdeadnow = true;
+        }
+           
 
 
         if (Enemyheath <= 0 || alienhealth_ <= 0)

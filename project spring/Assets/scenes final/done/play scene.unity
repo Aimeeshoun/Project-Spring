@@ -36072,6 +36072,11 @@ MonoBehaviour:
   transform_: {fileID: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   this_obj_: {x: 0, y: 0, z: 0}
+  otherbear: {fileID: 0}
+  ishit_: 0
+  deadbear: {fileID: 0}
+  deadbear2: {fileID: 0}
+  Timer: 0
 --- !u!1 &1128739320
 GameObject:
   m_ObjectHideFlags: 0
@@ -36472,6 +36477,11 @@ MonoBehaviour:
   transform_: {fileID: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   this_obj_: {x: 0, y: 0, z: 0}
+  otherbear: {fileID: 0}
+  ishit_: 0
+  deadbear: {fileID: 0}
+  deadbear2: {fileID: 0}
+  Timer: 0
 --- !u!4 &1158133424
 Transform:
   m_ObjectHideFlags: 0
@@ -38656,6 +38666,11 @@ MonoBehaviour:
   transform_: {fileID: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   this_obj_: {x: 0, y: 0, z: 0}
+  otherbear: {fileID: 0}
+  ishit_: 0
+  deadbear: {fileID: 0}
+  deadbear2: {fileID: 0}
+  Timer: 0
 --- !u!1 &1267696595
 GameObject:
   m_ObjectHideFlags: 0
@@ -60870,6 +60885,11 @@ MonoBehaviour:
   transform_: {fileID: 0}
   other_obj_rotation: {x: 0, y: 0, z: 0, w: 0}
   this_obj_: {x: 0, y: 0, z: 0}
+  otherbear: {fileID: 0}
+  ishit_: 0
+  deadbear: {fileID: 0}
+  deadbear2: {fileID: 0}
+  Timer: 0
 --- !u!1 &2011361917
 GameObject:
   m_ObjectHideFlags: 0
@@ -63470,6 +63490,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 482443978}
     m_Modifications:
+    - target: {fileID: 275752317276573944, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 395765776235277154, guid: ba2d724cab25caf49991cc5fd9dc278b,
         type: 3}
       propertyPath: m_RootOrder
@@ -63690,6 +63715,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameObject (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612973843246681798, guid: ba2d724cab25caf49991cc5fd9dc278b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 770354782092585913, guid: ba2d724cab25caf49991cc5fd9dc278b, type: 3}
@@ -64253,6 +64283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: blood cube
       objectReference: {fileID: 0}
+    - target: {fileID: 3754481501933127415, guid: e61864656ac60964cbdc3c107230195d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 3754481501933127418, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -64281,7 +64316,7 @@ PrefabInstance:
     - target: {fileID: 3754481501970516736, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.078431375
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3754481501970516736, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
@@ -64301,7 +64336,7 @@ PrefabInstance:
     - target: {fileID: 3754481501970516736, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3754481501970516737, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
@@ -64371,7 +64406,7 @@ PrefabInstance:
     - target: {fileID: 3754481502757381110, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 423
+      value: -1738
       objectReference: {fileID: 0}
     - target: {fileID: 3754481502757381110, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
@@ -64381,7 +64416,7 @@ PrefabInstance:
     - target: {fileID: 3754481502757381110, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.000030518
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3754481502757381110, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
@@ -64426,7 +64461,7 @@ PrefabInstance:
     - target: {fileID: 3754481502757381111, guid: e61864656ac60964cbdc3c107230195d,
         type: 3}
       propertyPath: m_TagString
-      value: blooood
+      value: dead fuz
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e61864656ac60964cbdc3c107230195d, type: 3}
