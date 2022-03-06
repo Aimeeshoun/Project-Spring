@@ -13,7 +13,7 @@ public class aiSpeedchange : MonoBehaviour
     public GameObject grabFreezeholder;
     public FreezeAiNow freeze_;
     public float oldSpeed;
-    public bool isyellow;
+
 
     public void Awake()
     {
@@ -42,20 +42,24 @@ public class aiSpeedchange : MonoBehaviour
         }
 
 
+    }
 
+    public void Freeze4()
+    {
+        StartCoroutine(Freeze3());
+        Freeze3();
+    }
 
+  public  IEnumerator Freeze3()
+    {
+        //Print the time of when the function is first called.
+        navMeshAgent.speed = newSpeed;
 
-        IEnumerator Freeze3()
-        {
-            //Print the time of when the function is first called.
-            navMeshAgent.speed = newSpeed;
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(5);
 
-            //yield on a new YieldInstruction that waits for 5 seconds.
-            yield return new WaitForSeconds(5);
+        //After we have waited 5 seconds print the time again.
+        navMeshAgent.speed = oldSpeed;
 
-            //After we have waited 5 seconds print the time again.
-            navMeshAgent.speed = oldSpeed;
-
-        }
     }
 }

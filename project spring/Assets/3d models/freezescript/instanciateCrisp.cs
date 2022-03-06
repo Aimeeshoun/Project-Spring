@@ -32,6 +32,9 @@ public class instanciateCrisp : MonoBehaviour
 
     public bool Bearlit;
     public GameObject grabFreezeholder;
+    public GameObject bear_obj;
+
+    public bool isburn;
     // Start is called before the first frame update
     public void Start()
     {
@@ -49,23 +52,12 @@ public class instanciateCrisp : MonoBehaviour
         freeze_ = grabFreezeholder.GetComponent<FreezeAiNow>();
         Bearlit = freeze_.yellowyes;
 
-        BringCrisp();
-
-
-
-
-
-
-
-    }
-
-    public void BringCrisp()
-    {
+        //   BringCrisp();
 
         foreach (GameObject object_ in objects_)
         {
-
-            killenemy_ = object_.GetComponent<KillEnemy>();
+            bear_obj = object_;
+            killenemy_ = bear_obj.GetComponent<KillEnemy>();
 
 
 
@@ -75,28 +67,44 @@ public class instanciateCrisp : MonoBehaviour
             vec_ = killenemy_.this_obj_2;
 
             Quaternion_ = killenemy_.other_obj_rotation2;
+            if (isburn)
+            {
+                crispBear2 = Instantiate(crispBear, vec_, Quaternion_) as GameObject;
+                Destroy(object_, 1f);
+                //  Destroy(crispBear2, .1f);
 
+                isburn = false;
+
+            }
 
             if (Bearlit)
             {
-
-                Timer = 1;
-
-                if (Timer == 1)
-                {
-                    crispBear2 = Instantiate(crispBear, vec_, Quaternion_) as GameObject;
-                    //  Destroy(crispBear2, .1f);
-                    Timer = 0;
-                }
-
-                Timer = 0;
+                StartCoroutine(Freeze5());
+                Freeze5();
+                Bearlit = false;
             }
-
-
 
 
         }
 
+
+
+
+
     }
+
+
+    IEnumerator Freeze5()
+    {
+        //Print the time of when the function is first called.
+        isburn = true;
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(.1f);
+
+        //After we have waited 5 seconds print the time again.
+        isburn = false;
+    }
+
 
 }

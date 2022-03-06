@@ -38,6 +38,10 @@ public class ClickFreeze1 : MonoBehaviour
     public ParticleSystem littleicePar;
     public GameObject littleice;
     public GameObject littleice2;
+
+
+    public aiSpeedchange ai_speed;
+   
     // Start is called before the first frame update
     public void Start()
     {
@@ -63,7 +67,9 @@ public class ClickFreeze1 : MonoBehaviour
 
             killenemy_ = object_.GetComponent<KillEnemy>();
 
-
+            ai_speed = object_.GetComponent<aiSpeedchange>();
+            
+          
 
             transform_ = killenemy_.this_object2;
 
@@ -80,6 +86,7 @@ public class ClickFreeze1 : MonoBehaviour
 
                 if (Timer == 1)
                 {
+                    ai_speed.Freeze4();
                     bigice2 = Instantiate(bigIce, vec_, Quaternion_) as GameObject;
                     Destroy(bigice2, .3f);
                     littleice2 = Instantiate(littleice, vec_, Quaternion_) as GameObject;

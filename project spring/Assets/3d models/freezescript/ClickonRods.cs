@@ -33,8 +33,8 @@ public class ClickonRods : MonoBehaviour
                 isclickedon = true;
                 Timer = 0;
             }
-            
-            
+
+            click = false;
             
         }
     }

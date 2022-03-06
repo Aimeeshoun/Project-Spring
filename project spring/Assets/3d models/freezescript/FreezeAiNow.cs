@@ -34,8 +34,10 @@ public class FreezeAiNow : MonoBehaviour
            
 
             clickonRods_ = rod.GetComponent<ClickonRods>();
-            freeze_ = rod.GetComponent<ClickFreeze>();
             isClicked = clickonRods_.isclickedon;
+
+            freeze_ = rod.GetComponent<ClickFreeze>();
+         
             isCrisp_ = freeze_.isCrisp;
 
             if (isClicked)
@@ -82,7 +84,7 @@ public class FreezeAiNow : MonoBehaviour
         yellowyes = true;
 
         //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.5f);
 
         //After we have waited 5 seconds print the time again.
         yellowyes = false;

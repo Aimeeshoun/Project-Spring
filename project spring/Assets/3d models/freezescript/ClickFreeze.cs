@@ -29,11 +29,16 @@ public class ClickFreeze : MonoBehaviour
     public bool istrueee;
     public ClickonRods click_on_rods;
     public int Timer;
+    public int Timer2;
 
     public bool clickrod;
     public bool isCrisp;
     public instanciateCrisp instanciateCrisp_;
+    public aiSpeedchange ai_speed;
+    public bool isburn;
 
+
+    public GameObject bear_obj;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,10 +61,12 @@ public class ClickFreeze : MonoBehaviour
 
         foreach (GameObject object_ in objects_)
         {
+            bear_obj = object_;
 
-            killenemy_ = object_.GetComponent<KillEnemy>();
+               killenemy_ = bear_obj.GetComponent<KillEnemy>();
 
-
+            ai_speed= bear_obj.GetComponent<aiSpeedchange>();
+           
 
             transform_ = killenemy_.this_object2;
 
@@ -67,7 +74,11 @@ public class ClickFreeze : MonoBehaviour
             vec_ = killenemy_.this_obj_2;
 
             Quaternion_ = killenemy_.other_obj_rotation2;
+            if (isburn)
+            {
+                ai_speed.Freeze4();
 
+            }
 
             if (clickrod)
             {
@@ -79,10 +90,18 @@ public class ClickFreeze : MonoBehaviour
                     isCrisp = true;
                    
                     lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
-                 //   Destroy(object_);
-                    instanciateCrisp_.BringCrisp();
-                    Destroy(lighting2, .1f);
+                    
+                    Timer2 = 1;
 
+                    if (Timer2 == 1)
+                    {
+                        StartCoroutine(Freeze3());
+                        Freeze3();
+                        Timer2 = 0;
+                    }
+                    Timer2 = 0;
+                    Destroy(lighting2, .3f);
+                   
 
                   
                     Timer = 0;
@@ -91,7 +110,7 @@ public class ClickFreeze : MonoBehaviour
                 Timer = 0;
             }
 
-
+            
 
         }
          
@@ -100,6 +119,18 @@ public class ClickFreeze : MonoBehaviour
       
 
        
+    }
+    IEnumerator Freeze3()
+    {
+        //Print the time of when the function is first called.
+        isburn=true;
+
+        //yield on a new YieldInstruction that waits for 5 seconds.
+        yield return new WaitForSeconds(.2f);
+
+        //After we have waited 5 seconds print the time again.
+        isburn=false;
+
     }
 
 
