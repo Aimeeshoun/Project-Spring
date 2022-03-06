@@ -73,12 +73,14 @@ public class ClickFreeze : MonoBehaviour
 
                 if (Timer == 1)
                 {
-                    lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
-                    Destroy(lighting2, .1f);
                     isCrisp = true;
+                    lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
+                   
+                    Destroy(lighting2, .1f);
+                  
                     Timer = 0;
                 }
-               
+                
                 Timer = 0;
             }
 

@@ -27,29 +27,40 @@ public class instanciateCrisp : MonoBehaviour
     public bool ishit2;
 
     public bool istrueee;
-    public ClickFreeze click_on_rods;
+    public FreezeAiNow freeze_;
     public int Timer;
 
     public bool Bearlit;
-
+    public GameObject grabFreezeholder;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
 
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
 
 
         objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
-        crispBear = GameObject.FindGameObjectWithTag("crispfuz*");
+        crispBear = GameObject.FindGameObjectWithTag("crispfuz");
+        grabFreezeholder = GameObject.FindGameObjectWithTag("freeze holder");
+        freeze_ = grabFreezeholder.GetComponent<FreezeAiNow>();
+        Bearlit = freeze_.yellowyes;
 
-        click_on_rods = this.gameObject.GetComponent<ClickFreeze>();
-        Bearlit = click_on_rods.isCrisp;
+        BringCrisp();
 
 
+
+
+
+
+
+    }
+
+    public void BringCrisp()
+    {
 
         foreach (GameObject object_ in objects_)
         {
@@ -66,36 +77,25 @@ public class instanciateCrisp : MonoBehaviour
             Quaternion_ = killenemy_.other_obj_rotation2;
 
 
-            BringCrisp();
-
-
-
-        }
-
-       
-
-
-
-
-    }
-
-    public void BringCrisp()
-    {
-        if (Bearlit)
-        {
-
-            Timer = 1;
-
-            if (Timer == 1)
+            if (Bearlit)
             {
-                crispBear2 = Instantiate(crispBear, vec_, Quaternion_) as GameObject;
-                //  Destroy(crispBear2, .1f);
 
+                Timer = 1;
+
+                if (Timer == 1)
+                {
+                    crispBear2 = Instantiate(crispBear, vec_, Quaternion_) as GameObject;
+                    //  Destroy(crispBear2, .1f);
+
+                }
+
+                Timer = 0;
             }
 
-            Timer = 0;
-        }
 
+
+
+        }
 
     }
 

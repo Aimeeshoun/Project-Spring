@@ -13,9 +13,10 @@ public class FreezeAiNow : MonoBehaviour
     public bool isclicked3;
 
     public int Timer;
-
+    public ClickFreeze freeze_;
     public bool timeron;
-
+    public bool isCrisp_;
+    public bool yellowyes;
     // Start is called before the first frame update
     public void Start()
     {
@@ -26,14 +27,16 @@ public class FreezeAiNow : MonoBehaviour
     public void Update()
     {
         rods = GameObject.FindGameObjectsWithTag("rod");
-
+    //    yellowyes = false;
         foreach (GameObject rod in rods)
         {
 
-
+           
 
             clickonRods_ = rod.GetComponent<ClickonRods>();
+            freeze_ = rod.GetComponent<ClickFreeze>();
             isClicked = clickonRods_.isclickedon;
+            isCrisp_ = freeze_.isCrisp;
 
            if (isClicked)
             {
@@ -42,9 +45,12 @@ public class FreezeAiNow : MonoBehaviour
             }
 
 
+            if (isCrisp_)
+            {
+                yellowyes = true;
+            }
 
-
-
+           
 
 
         }

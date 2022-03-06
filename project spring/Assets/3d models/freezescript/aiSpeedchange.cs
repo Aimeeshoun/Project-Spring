@@ -13,7 +13,7 @@ public class aiSpeedchange : MonoBehaviour
     public GameObject grabFreezeholder;
     public FreezeAiNow freeze_;
     public float oldSpeed;
-
+    public bool isyellow;
 
     public void Awake()
     {
@@ -40,6 +40,9 @@ public class aiSpeedchange : MonoBehaviour
             Freeze3();
 
         }
+
+
+
 
 
         IEnumerator Freeze3()
