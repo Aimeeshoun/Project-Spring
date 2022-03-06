@@ -43,7 +43,7 @@ public class ClickFreeze : MonoBehaviour
 
     
         objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
-        lighting_ = GameObject.FindGameObjectWithTag("lighting");
+        lighting_ = GameObject.FindGameObjectWithTag("lightingpar");
 
         click_on_rods = this.gameObject.GetComponent<ClickonRods>();
         clickrod=click_on_rods.isclickedon;
