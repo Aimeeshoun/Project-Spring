@@ -36,6 +36,8 @@ public class DropWeapon : MonoBehaviour
 
 
             transform_.parent = null;
+            Destroy(gameobject_1, 7f);
+
         }
     }
 }
