@@ -167,6 +167,7 @@ MonoBehaviour:
   iseaten: 0
   thisGameobject: {fileID: 0}
   thisGameobjects: {fileID: 0}
+  Cowisdead2: 0
   cow1: {fileID: 0}
   cow2: {fileID: 0}
 --- !u!114 &208258748666788731
@@ -181,8 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa70b2aa508de474ab1427bc019d947b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cowHealth_: 300
-  cowMaxHealth_: 300
+  cowHealth_: 20000
+  cowMaxHealth_: 20000
 --- !u!1 &4891014641850946341
 GameObject:
   m_ObjectHideFlags: 0

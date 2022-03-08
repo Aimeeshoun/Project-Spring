@@ -11,24 +11,51 @@ public class GameOverCowDead : MonoBehaviour
  
     public bool isAlive;
 
-    void Update()
+
+    public GameObject skull;
+    public GameObject target;
+    public Transform targetTrans;
+    public Vector3 targetVec;
+    public Quaternion targetquar;
+    public GameObject newskull;
+
+    public bool isTime;
+    public bool GameOverMan;
+    public void Start()
+    {
+        skull = GameObject.FindGameObjectWithTag("skullpar");
+        target = GameObject.FindGameObjectWithTag("skulltaget");
+    }
+    public void Update()
     {
 
       
 
         cowsAlive_ = GameObject.FindGameObjectsWithTag("Cowbox");
 
-       
-            isAlive = true;
-       
+        targetTrans= target.transform;
+        targetVec = targetTrans.position;
+        targetquar = targetTrans.rotation;
+
+
+
+        isAlive = true;
+
+      
+        
 
         if (isAlive)
         {
-            if (cowsAlive_.Length == 0)
+            if (cowsAlive_.Length <= 0)
             {
 
 
-                GameOverScene();
+
+
+                StartCoroutine(SkullBorn2());
+                SkullBorn2();
+                
+               
 
             }
         }
@@ -37,6 +64,17 @@ public class GameOverCowDead : MonoBehaviour
     public void GameOverScene()
     {
         SceneManager.LoadScene("game over menu");
+    }
+
+  
+    public IEnumerator SkullBorn2()
+    {
+        newskull = Instantiate(skull, targetVec, targetquar) as GameObject;
+        Destroy(newskull, .3f);
+
+        yield return new WaitForSeconds(.4f);
+
+        GameOverScene();
     }
 }
 

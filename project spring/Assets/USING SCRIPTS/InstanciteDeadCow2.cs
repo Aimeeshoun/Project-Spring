@@ -187,7 +187,7 @@ public class InstanciteDeadCow2 : MonoBehaviour
         StartCoroutine(Killcow3());
         cowIsDead = true;
         Cowisdead2 = true;
-        Destroy(deadcow);
+        Destroy(deadcow,3f);
     }
 
 
