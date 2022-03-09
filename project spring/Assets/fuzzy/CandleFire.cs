@@ -16,7 +16,7 @@ public class CandleFire : MonoBehaviour
 
     public bool isOnFire;
     public bool isdead;
-    public bool isCreated = false;
+    public bool isCreated;
 
     public GameObject thefire;
 
@@ -36,15 +36,15 @@ public class CandleFire : MonoBehaviour
 
     public void Update()
     {
-        fuzzy_trans = other_candlebear.transform;
-        fuzzy_Vec = fuzzy_trans.position;
-        fuzzy_Rot = fuzzy_trans.rotation;
+      
        
        if(isOnFire)
         {
             if (!isCreated)
             {
                 firestarter2 = Instantiate(thefire, fuzzy_Vec, fuzzy_Rot) as GameObject;
+                Destroy(other_candlebear, .5f);
+                Destroy(firestarter2, .6f);
                 isCreated = true;
                 isOnFire = false;
             }
@@ -55,8 +55,15 @@ public class CandleFire : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+
+
         other_candlebear = other.gameObject;
 
+        if (other_candlebear.tag == "Fuzzy" )
+        fuzzy_trans = other_candlebear.transform;
+        fuzzy_Vec = fuzzy_trans.position;
+        fuzzy_Rot = fuzzy_trans.rotation;
+     
         isOnFire = true;
     }
 
