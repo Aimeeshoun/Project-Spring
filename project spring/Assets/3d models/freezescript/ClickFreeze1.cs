@@ -39,6 +39,8 @@ public class ClickFreeze1 : MonoBehaviour
     public GameObject littleice;
     public GameObject littleice2;
 
+    public bool iceishere;
+    public bool iceishere2;
 
     public aiSpeedchange ai_speed;
    
@@ -82,19 +84,26 @@ public class ClickFreeze1 : MonoBehaviour
             if (clickrod)
             {
 
-                Timer = 1;
-
-                if (Timer == 1)
-                {
+              
                     ai_speed.Freeze4();
-                    bigice2 = Instantiate(bigIce, vec_, Quaternion_) as GameObject;
+
+                    if (!iceishere)
+                    {
+                        bigice2 = Instantiate(bigIce, vec_, Quaternion_) as GameObject;
+                    }
+                 
                     Destroy(bigice2, .3f);
-                    littleice2 = Instantiate(littleice, vec_, Quaternion_) as GameObject;
+                 
+
+                    if (!iceishere2)
+                    {
+                        littleice2 = Instantiate(littleice, vec_, Quaternion_) as GameObject;
+                    }
+
+
                     Destroy(littleice2, .1f);
-                    Timer = 0;
-                }
-               
-                Timer = 0;
+                
+        
             }
 
 

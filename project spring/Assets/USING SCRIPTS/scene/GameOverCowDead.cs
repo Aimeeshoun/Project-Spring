@@ -21,6 +21,7 @@ public class GameOverCowDead : MonoBehaviour
 
     public bool isTime;
     public bool GameOverMan;
+    public bool Skull;
     public void Start()
     {
         skull = GameObject.FindGameObjectWithTag("skullpar");
@@ -69,8 +70,14 @@ public class GameOverCowDead : MonoBehaviour
   
     public IEnumerator SkullBorn2()
     {
-        newskull = Instantiate(skull, targetVec, targetquar) as GameObject;
-        Destroy(newskull, .3f);
+
+        if (!Skull)
+        {
+            newskull = Instantiate(skull, targetVec, targetquar) as GameObject;
+            Skull = true;
+        }
+      
+        Destroy(newskull, 1f);
 
         yield return new WaitForSeconds(.4f);
 
