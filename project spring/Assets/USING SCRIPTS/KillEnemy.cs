@@ -63,6 +63,14 @@ public class KillEnemy : MonoBehaviour
         //  Timer3 = 0;
         // Timer4 = 0;
 
+
+        if (Enemyheath == 5 || alienhealth_ <= 5)
+        {
+            isdeadnow = true;
+            ishit = true;
+        }
+
+
         if (alienhealth_ == 4 || alienhealth_ == 3)
         {
             Timer3 = 1;
@@ -89,10 +97,6 @@ public class KillEnemy : MonoBehaviour
            }
 
 
-        if (Enemyheath ==1 || alienhealth_ <= 1)
-        {
-            isdeadnow = true;
-        }
            
 
 

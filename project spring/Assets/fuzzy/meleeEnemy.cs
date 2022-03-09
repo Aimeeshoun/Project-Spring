@@ -51,10 +51,6 @@ public class meleeEnemy : MonoBehaviour
             this_obj_ = transform_.position;
             bloodPar_ = Instantiate(particlesystem, this_obj_, other_obj_rotation);
 
-            if (oth_gameObject.tag == ("Fuzzy"))
-
-
-            {
 
                
                 otherbear = oth_gameObject;
@@ -68,8 +64,9 @@ public class meleeEnemy : MonoBehaviour
 
                         deadbear2 = Instantiate(deadbear, this_obj_, other_obj_rotation);
                      // deadbear2.transform.parent = gameObject.transform;
-                        Destroy(deadbear2, 3f);
-                        Timer = 0;
+                        Destroy(deadbear2,.2f);
+                    Destroy(oth_gameObject, .2f);
+                    Timer = 0;
                     }
                     Timer = 0;
 
@@ -79,7 +76,7 @@ public class meleeEnemy : MonoBehaviour
             }
             
         
-        }
+        
 
 
 
