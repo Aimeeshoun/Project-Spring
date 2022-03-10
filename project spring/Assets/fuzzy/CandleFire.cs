@@ -36,9 +36,9 @@ public class CandleFire : MonoBehaviour
 
     public void Update()
     {
-      
-       
-       if(isOnFire)
+
+
+        if (isOnFire)
         {
             if (!isCreated)
             {
@@ -49,7 +49,7 @@ public class CandleFire : MonoBehaviour
                 isOnFire = false;
             }
         }
-    
+
     }
 
 
@@ -59,11 +59,11 @@ public class CandleFire : MonoBehaviour
 
         other_candlebear = other.gameObject;
 
-        if (other_candlebear.tag == "Fuzzy" )
-        fuzzy_trans = other_candlebear.transform;
+        if (other_candlebear.tag == "Fuzzy")
+            fuzzy_trans = other_candlebear.transform;
         fuzzy_Vec = fuzzy_trans.position;
         fuzzy_Rot = fuzzy_trans.rotation;
-     
+
         isOnFire = true;
     }
 
