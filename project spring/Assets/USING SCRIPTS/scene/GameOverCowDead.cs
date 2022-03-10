@@ -64,7 +64,7 @@ public class GameOverCowDead : MonoBehaviour
 
     public void GameOverScene()
     {
-        SceneManager.LoadScene("game over menu");
+        SceneManager.LoadScene("play scene");
     }
 
   

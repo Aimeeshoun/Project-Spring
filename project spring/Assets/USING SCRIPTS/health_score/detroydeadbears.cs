@@ -86,6 +86,7 @@ public class detroydeadbears : MonoBehaviour
                     }
 
                     timer = 0;
+                    Destroy(blood_, 3f);
                 }
 
 
