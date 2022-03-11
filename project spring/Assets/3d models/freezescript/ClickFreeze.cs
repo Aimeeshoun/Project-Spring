@@ -20,142 +20,79 @@ public class ClickFreeze : MonoBehaviour
     public Quaternion[] Quaternions;
     public GameObject lighting_;
     public GameObject lighting2;
-    public GameObject intcrip;
     public bool needinfo;
     public bool ishit;
-    
+
     public bool ishit2;
 
     public bool istrueee;
     public ClickonRods click_on_rods;
     public int Timer;
-    public int Timer2;
 
     public bool clickrod;
     public bool isCrisp;
-    public instanciateCrisp instanciateCrisp_;
-    public aiSpeedchange ai_speed;
-    public bool isburn;
 
-    public spraygun Spraygun_;
-    public GameObject bear_obj;
-    public GameObject[] this_gameobj;
-
-    public bool iswet;
-    public bool iswet2;
     // Start is called before the first frame update
-   public void Start()
+    void Start()
     {
-      
-    }
 
-    public void Awake()
-    {
-   
-      
     }
 
     // Update is called once per frame
-    public void Update()
+    void Update()
     {
-        this_gameobj = GameObject.FindGameObjectsWithTag("water gun");
-        foreach(GameObject gun in this_gameobj)
+
+
+        objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
+        lighting_ = GameObject.FindGameObjectWithTag("lightingpar");
+
+        click_on_rods = this.gameObject.GetComponent<ClickonRods>();
+        clickrod = click_on_rods.isclickedon;
+
+
+
+        foreach (GameObject object_ in objects_)
         {
-            Spraygun_ = gun.GetComponent<spraygun>();
-            iswet = Spraygun_.madepuddle;
-            if (iswet)
+
+            killenemy_ = object_.GetComponent<KillEnemy>();
+
+
+
+            transform_ = killenemy_.this_object2;
+
+
+            vec_ = killenemy_.this_obj_2;
+
+            Quaternion_ = killenemy_.other_obj_rotation2;
+
+
+            if (clickrod)
             {
-                iswet2 = true;
 
-            }
-        }
+                Timer = 1;
 
-
-            objects_ = GameObject.FindGameObjectsWithTag("Fuzzy");
-            lighting_ = GameObject.FindGameObjectWithTag("lightingpar");
-            intcrip = GameObject.FindGameObjectWithTag("instanciatecrips");
-
-
-            click_on_rods = this.gameObject.GetComponent<ClickonRods>();
-            clickrod = click_on_rods.isclickedon;
-
-            instanciateCrisp_ = intcrip.GetComponent<instanciateCrisp>();
-
-            foreach (GameObject object_ in objects_)
-            {
-                bear_obj = object_;
-
-                killenemy_ = bear_obj.GetComponent<KillEnemy>();
-
-                ai_speed = bear_obj.GetComponent<aiSpeedchange>();
-
-
-                transform_ = killenemy_.this_object2;
-
-
-                vec_ = killenemy_.this_obj_2;
-
-                Quaternion_ = killenemy_.other_obj_rotation2;
-                if (isburn)
+                if (Timer == 1)
                 {
+                    isCrisp = true;
+                    lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
 
-                if (iswet2)
-                {
-                    ai_speed.Freeze4();
-                }
-                }
-
-                if (clickrod)
-                {
-
-                    Timer = 1;
-
-                    if (Timer == 1)
-                    {
-                        isCrisp = true;
-
-                        lighting2 = Instantiate(lighting_, vec_, Quaternion_) as GameObject;
-
-                        Timer2 = 1;
-
-                        if (Timer2 == 1)
-                        {
-                            StartCoroutine(Freeze3());
-                            Freeze3();
-                            Timer2 = 0;
-                        }
-                        Timer2 = 0;
-                        Destroy(lighting2, .3f);
-
-
-
-                        Timer = 0;
-                    }
+                    Destroy(lighting2, .8f);
+                    Destroy(object_, 2f);
 
                     Timer = 0;
                 }
 
+                Timer = 0;
+            }
+
 
 
         }
 
-            
- 
 
-      
 
-       
-    }
-    IEnumerator Freeze3()
-    {
-        //Print the time of when the function is first called.
-        isburn=true;
 
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(.2f);
 
-        //After we have waited 5 seconds print the time again.
-        isburn=false;
 
     }
 
