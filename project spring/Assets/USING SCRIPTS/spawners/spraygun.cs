@@ -35,7 +35,9 @@ public class spraygun : MonoBehaviour
     public bool madepuddle;
     public bool iswet;
     public bool iswet2;
-
+    public bool ispar;
+    public bool needswater;
+    public bool puddlegone;
     public void Start()
     {
 
@@ -60,16 +62,25 @@ public class spraygun : MonoBehaviour
 
 public void Update()
     {
-
-
+    
+        if (iswet)
+        {
+            needswater = true;
+        }
 
         if (isclicked)
         {
-            waterpar2 = Instantiate(waterpar, gun4.transform.position, gun4.transform.rotation) as GameObject;
-            waterpar2.transform.SetParent(gun4.transform);
+
+            if (!ispar)
+            {
+                waterpar2 = Instantiate(waterpar, gun4.transform.position, gun4.transform.rotation) as GameObject;
+                waterpar2.transform.SetParent(gun4.transform);
+             
+                ispar = true;
+            }
+
             iswet = true;
 
-            water = true;
         }
 
         if (iswet)
@@ -78,19 +89,35 @@ public void Update()
             if (!iswet2)
             {
                 puddle2 = Instantiate(puddle, puddletargetvec, puddletargetqua) as GameObject;
-               
-                madepuddle = true;
-                iswet2 = true;
+
+                if (!puddlegone)
+                {
+
+
+                    Destroy(puddle2, 4f);
+
+
+                    if(puddle2 == null)
+                    {
+                        puddlegone = true;
+
+                    }
+                  
+                }
             }
 
+            madepuddle = true;
 
-          
 
         }
-
+   
+        if (puddlegone)
+        {
+            madepuddle = false;
+        }
     }
 
-    
+
     private void OnMouseDown()
     {
 
@@ -103,7 +130,7 @@ public void Update()
 
     private void OnMouseUp()
     {
-        Destroy(waterpar2);
+        Destroy(waterpar2,6f);
         
 
         isclicked = false;

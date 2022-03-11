@@ -51,18 +51,18 @@ public class ClickFreeze : MonoBehaviour
 
     public void Awake()
     {
-        this_gameobj = GameObject.FindGameObjectsWithTag("spraygun");
+   
       
     }
 
     // Update is called once per frame
     public void Update()
     {
-        this_gameobj = GameObject.FindGameObjectsWithTag("spraygun");
+        this_gameobj = GameObject.FindGameObjectsWithTag("water gun");
         foreach(GameObject gun in this_gameobj)
         {
             Spraygun_ = gun.GetComponent<spraygun>();
-            iswet = Spraygun_.water;
+            iswet = Spraygun_.madepuddle;
             if (iswet)
             {
                 iswet2 = true;
