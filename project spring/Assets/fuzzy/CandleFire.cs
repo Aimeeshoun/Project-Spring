@@ -44,7 +44,7 @@ public class CandleFire : MonoBehaviour
             {
                 firestarter2 = Instantiate(thefire, fuzzy_Vec, fuzzy_Rot) as GameObject;
                 Destroy(other_candlebear, .5f);
-                Destroy(firestarter2, .6f);
+                Destroy(firestarter2, 2f);
                 isCreated = true;
                 isOnFire = false;
             }

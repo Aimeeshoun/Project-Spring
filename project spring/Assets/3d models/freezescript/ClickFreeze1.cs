@@ -43,6 +43,7 @@ public class ClickFreeze1 : MonoBehaviour
     public bool iceishere2;
 
     public aiSpeedchange ai_speed;
+    public spraygun Spraygun_;
    
     // Start is called before the first frame update
     public void Start()

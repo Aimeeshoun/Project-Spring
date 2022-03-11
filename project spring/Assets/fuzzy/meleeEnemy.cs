@@ -64,8 +64,9 @@ public class meleeEnemy : MonoBehaviour
 
                         deadbear2 = Instantiate(deadbear, this_obj_, other_obj_rotation);
                      // deadbear2.transform.parent = gameObject.transform;
-                        Destroy(deadbear2,.2f);
-                    Destroy(oth_gameObject, .2f);
+                       
+                    Destroy(oth_gameObject, .1f);
+                    Destroy(deadbear2, .1f);
                     Timer = 0;
                     }
                     Timer = 0;

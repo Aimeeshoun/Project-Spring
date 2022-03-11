@@ -13,6 +13,7 @@ public class Instancer : MonoBehaviour
     public GameObject newbullet;
 
     public bool isclicked;
+    public bool isclicked2;
     public bool fire;
     public bool alreadyfired;
 
@@ -20,6 +21,11 @@ public class Instancer : MonoBehaviour
     public Transform trans;
     public Vector3 Pos;
     public Quaternion Rot;
+
+    public bool clickedonce;
+    public bool clickedon;
+
+    public bool isclickedonagain;
 
     public void Start()
     {
@@ -46,35 +52,106 @@ public class Instancer : MonoBehaviour
 
         Fire();
 
-
-
-    }
-
-    public void Fire()
-    {
-
-        if (!fire)
+        if (!clickedon)
         {
-            if (isclicked)
+            if (clickedonce)
             {
-                newbullet = Instantiate(bullet, Pos, Rot) as GameObject;
-                Destroy(newbullet, 3f);
-                fire = true;
+
+                if (isclicked)
+                {
+                    Fire();
+                }
+                clickedon = true;
             }
            
         }
 
-        
-  
+        if (clickedonce)
+        {
+            if (!isclickedonagain)
+            {
+
+                isclickedonagain = true;
+            }
+
+        }
+
+
+
+
+
+
+
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+    public void Fire()
+    {
+
+        if (isclicked)
+        {
+
+            if (!fire)
+            {
+                if (clickedonce == true)
+                {
+
+                    newbullet = Instantiate(bullet, Pos, Rot) as GameObject;
+                    Destroy(newbullet, 3f);
+                    fire = true;
+                }
+
+            }
+
+
+
+
+
+
+        }
+    }
+   
+
     private void OnMouseDown()
     {
-      
-        
-        isclicked = true;
 
+        if (!clickedon)
+        {
+            
+            isclicked = true;
+        }
+
+   
+
+
+
+    }
+
+    private void OnMouseUp()
+    {
+       if(!isclicked2)
+      
+        {
+            
+
+            clickedonce = true;
+            isclicked2 = true;
+
+
+         
+
+        }
 
 
     }
